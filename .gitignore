@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+.vscode/
+.idea/
+experiments/metrics/*.json
+!experiments/smoke_test.json
+!experiments/scorecard_baseline_v_random.json
+!experiments/scorecard_baseline_v_random.md

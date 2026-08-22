@@ -1,0 +1,29 @@
+- `[x]` **Step 0 — Fix Worker Execution**
+  - Fix `TaskAllocator` to assign tasks to hands.
+  - Fix `ActionExecutor` to process hand tasks.
+  - Smoke test: 5-game run vs random (720 turns).
+- `[x]` **Step 1 — Build Metrics Instrumentation**
+  - Implement external metric tracking per game.
+  - Track worker turns, crop yields, fertilizer, price impact, efficiency.
+- `[x]` **Step 2 — Benchmark Suite A/B/C**
+  - Run 30 games vs `random`.
+  - Run 30 games vs `starter`.
+  - Run 30 games vs `melon_maxxer`.
+- `[x]` **Step 3 — Build Scorecard**
+  - Extract final rewards and compute stats.
+  - Output to markdown table.
+- `[x]` **Step 4 — Failure Analysis**
+  - Identify bottlenecks (e.g., pathing failures, crop overproduction).
+  - Draft `V001_FAILURE_ANALYSIS.md`. identifying top economic losses.
+- `[/]` **Step 5 — Pathfinding & Economic Update**
+  - Add `ponytail:` comment to `step_toward()`.
+  - Implement exact pricing functions (`linear`, `sq`, `sqrt`, `log`, `hinge`).
+  - Unit test pricing curves and verify against env.
+  - Smoke test (5 games vs random).
+  - Before/after benchmark for shed bottleneck.
+- `[ ]` **Step 6 — A/B Strategy Testing**
+  - Implement variants V001-A through G.
+  - Re-run benchmark.
+- `[ ]` **Step 7 — Promotion & Reporting**
+  - Generate `agents/best_local.py`.
+  - Update `KAGGRICULTURE_PROJECT_BRIEF.md`.
