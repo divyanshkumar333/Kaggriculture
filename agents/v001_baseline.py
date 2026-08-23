@@ -184,12 +184,34 @@ class EconomicCalculator:
 # ==========================================
 # 4. Strategic Planner
 # ==========================================
+class StrategyConfig:
+    def __init__(self,
+                 crop_policy="MELON",
+                 min_sell_price=1,
+                 sell_batch_size=10,
+                 worker_roi_threshold=15.0,
+                 cash_reserve=50,
+                 expansion_policy="NONE",
+                 animal_policy="NONE",
+                 fertilizer_policy="NONE",
+                 production_limit=25):
+        self.crop_policy = crop_policy
+        self.min_sell_price = min_sell_price
+        self.sell_batch_size = sell_batch_size
+        self.worker_roi_threshold = worker_roi_threshold
+        self.cash_reserve = cash_reserve
+        self.expansion_policy = expansion_policy
+        self.animal_policy = animal_policy
+        self.fertilizer_policy = fertilizer_policy
+        self.production_limit = production_limit
+
 class StrategicPlanner:
-    def __init__(self, state: GameState, econ: EconomicCalculator):
+    def __init__(self, state: GameState, econ: EconomicCalculator, config: StrategyConfig = None):
         self.state = state
         self.econ = econ
+        self.config = config or StrategyConfig()
         self.mode = "BALANCED" 
-        self.reserve = 50 
+        self.reserve = self.config.cash_reserve 
 
 # ==========================================
 # 5. Daily Planner
@@ -204,6 +226,9 @@ class DailyPlanner:
     def plan_tasks(self):
         farm_tiles = self.state.my_farm.get("tiles", [])
         
+        simulated_seeds = dict(self.state.seeds)
+        simulated_shed = dict(self.state.shed)
+        
         for y in range(self.state.board_size):
             for x in range(self.state.board_size):
                 tile = farm_tiles[y][x]
@@ -216,10 +241,14 @@ class DailyPlanner:
                                 self.tasks.append(Task("HARVEST", 20, (x, y)))
                     elif tile.get("kind") in ["COOP", "PASTURE"]:
                         if not tile.get("fed_today", True):
-                            self.tasks.append(Task("FEED", 10, (x, y)))
+                            # FEED consumes WHEAT from shed
+                            if simulated_shed.get("WHEAT", 0) > 0:
+                                self.tasks.append(Task("FEED", 10, (x, y)))
+                                simulated_shed["WHEAT"] -= 1
                 elif tile is None:
-                    if self.state.seeds.get("MELON", 0) > 0:
-                        self.tasks.append(Task("PLANT", 30, (x, y), {"crop": "MELON"}))
+                    if simulated_seeds.get(self.strategy.config.crop_policy, 0) > 0:
+                        self.tasks.append(Task("PLANT", 30, (x, y), {"crop": self.strategy.config.crop_policy}))
+                        simulated_seeds[self.strategy.config.crop_policy] -= 1
         
         for product, qty in self.state.shed.items():
             if qty > 0:
@@ -230,19 +259,20 @@ class DailyPlanner:
                 sell_qty = 0
                 for i in range(qty):
                     p = self.econ.get_price_at_inventory(product, current_inv + i)
-                    if p > 1:
+                    if p > self.strategy.config.min_sell_price:
                         sell_qty += 1
                     else:
                         break
                 
-                # If we can sell some for > $1, queue it. Limit to 10 per order to not over-saturate a single turn
+                # If we can sell, queue it. Limit to batch size to not over-saturate a single turn
                 if sell_qty > 0:
-                    sell_qty = min(sell_qty, 10)
+                    sell_qty = min(sell_qty, self.strategy.config.sell_batch_size)
                     self.tasks.append(Task("SELL", 5, kwargs={"product": product, "quantity": sell_qty}))
                     
-        if self.state.seeds.get("MELON", 0) == 0 and self.state.money > self.strategy.reserve + CROPS["MELON"]["seed"]:
-            buy_qty = min(self.state.money // CROPS["MELON"]["seed"], 5)
-            self.tasks.append(Task("BUY_SEED", 50, kwargs={"product": "MELON", "quantity": buy_qty}))
+        target_crop = self.strategy.config.crop_policy
+        if self.state.seeds.get(target_crop, 0) == 0 and self.state.money > self.strategy.config.cash_reserve + CROPS[target_crop]["seed"]:
+            buy_qty = min(self.state.money // CROPS[target_crop]["seed"], 5)
+            self.tasks.append(Task("BUY_SEED", 50, kwargs={"product": target_crop, "quantity": buy_qty}))
         
         self.tasks.sort(key=lambda t: t.priority)
         return self.tasks
@@ -261,10 +291,10 @@ class TaskAllocator:
         active_workers = 1 + len(self.state.hands)
         
         cost_of_next_hire = self.econ.get_hire_cost(self.state.hires_today)
-        expected_roi = self.econ.marginal_roi_of_worker()
+        expected_roi = self.strategy.config.worker_roi_threshold # use configured ROI instead of hardcoded
         
         if len(unassigned_field_tasks) > active_workers and expected_roi > cost_of_next_hire:
-            if self.state.money > cost_of_next_hire + 50:
+            if self.state.money > cost_of_next_hire + self.strategy.config.cash_reserve:
                 self.tasks.append(Task("HIRE", 1))
 
         return {}

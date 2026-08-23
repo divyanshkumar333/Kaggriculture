@@ -167,5 +167,103 @@ class TestV001Bugs(unittest.TestCase):
         self.assertIn(hands_actions[0][0], ["EAST", "SOUTH"])
 
 
+    # ---------------------------------------------------------
+    # Test 1: One Seed / Many Tiles
+    # ---------------------------------------------------------
+    def test_one_seed_many_tiles(self):
+        obs = dict(self.base_obs)
+        obs["private"]["seeds"] = {"MELON": 1}
+        # By default base_obs has 100 None tiles (10x10)
+        state = GameState(obs)
+        econ = EconomicCalculator(state)
+        strategy = StrategicPlanner(state, econ)
+        planner = DailyPlanner(state, econ, strategy)
+        
+        tasks = planner.plan_tasks()
+        plant_tasks = [t for t in tasks if t.action_type == "PLANT"]
+        self.assertEqual(len(plant_tasks), 1, "Should generate exactly 1 PLANT task for 1 seed.")
+
+    # ---------------------------------------------------------
+    # Test 2: Five Seeds / Many Tiles
+    # ---------------------------------------------------------
+    def test_five_seeds_many_tiles(self):
+        obs = dict(self.base_obs)
+        obs["private"]["seeds"] = {"MELON": 5}
+        state = GameState(obs)
+        econ = EconomicCalculator(state)
+        strategy = StrategicPlanner(state, econ)
+        planner = DailyPlanner(state, econ, strategy)
+        
+        tasks = planner.plan_tasks()
+        plant_tasks = [t for t in tasks if t.action_type == "PLANT"]
+        self.assertEqual(len(plant_tasks), 5, "Should generate exactly 5 PLANT tasks for 5 seeds.")
+
+    # ---------------------------------------------------------
+    # Test 3: Zero Seeds
+    # ---------------------------------------------------------
+    def test_zero_seeds_many_tiles(self):
+        obs = dict(self.base_obs)
+        obs["private"]["seeds"] = {"MELON": 0}
+        state = GameState(obs)
+        econ = EconomicCalculator(state)
+        strategy = StrategicPlanner(state, econ)
+        planner = DailyPlanner(state, econ, strategy)
+        
+        tasks = planner.plan_tasks()
+        plant_tasks = [t for t in tasks if t.action_type == "PLANT"]
+        self.assertEqual(len(plant_tasks), 0, "Should generate exactly 0 PLANT tasks for 0 seeds.")
+
+    # ---------------------------------------------------------
+    # Test 4: More Seeds Than Tiles
+    # ---------------------------------------------------------
+    def test_more_seeds_than_tiles(self):
+        obs = dict(self.base_obs)
+        obs["private"]["seeds"] = {"MELON": 10}
+        # Restrict board to only 3 eligible tiles
+        for y in range(10):
+            for x in range(10):
+                obs["farms"][0]["tiles"][y][x] = {"kind": "LOCKED"} # fill with locked
+        
+        obs["farms"][0]["tiles"][0][0] = None
+        obs["farms"][0]["tiles"][0][1] = None
+        obs["farms"][0]["tiles"][0][2] = None
+        
+        state = GameState(obs)
+        econ = EconomicCalculator(state)
+        strategy = StrategicPlanner(state, econ)
+        planner = DailyPlanner(state, econ, strategy)
+        
+        tasks = planner.plan_tasks()
+        plant_tasks = [t for t in tasks if t.action_type == "PLANT"]
+        self.assertEqual(len(plant_tasks), 3, "Should generate exactly 3 PLANT tasks because only 3 tiles are eligible.")
+
+    # ---------------------------------------------------------
+    # Test 5: Worker Allocation
+    # ---------------------------------------------------------
+    def test_worker_allocation_phantom_tasks(self):
+        obs = dict(self.base_obs)
+        obs["private"]["seeds"] = {"MELON": 1}
+        # 100 empty tiles available
+        # 5 hands
+        obs["farms"][0]["hands"] = [[1, 1], [2, 2], [3, 3], [4, 4], [5, 5]]
+        
+        state = GameState(obs)
+        econ = EconomicCalculator(state)
+        strategy = StrategicPlanner(state, econ)
+        planner = DailyPlanner(state, econ, strategy)
+        tasks = planner.plan_tasks()
+        
+        allocator = TaskAllocator(state, econ, tasks)
+        assignments = allocator.allocate()
+        executor = ActionExecutor(state, econ)
+        result = executor.execute(tasks, assignments)
+        
+        # 1 seed = 1 PLANT task. So only 1 unit should receive a PLANT action.
+        all_unit_actions = [result["farmer"]] + result["hands"]
+        plant_actions = [a for a in all_unit_actions if a[0] == "PLANT"]
+        
+        self.assertEqual(len(plant_actions), 1, "Only 1 unit should execute a PLANT action when there is 1 seed.")
+
+
 if __name__ == "__main__":
     unittest.main()
