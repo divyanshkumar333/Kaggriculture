@@ -2,5 +2,5 @@
 
 | Agent | Opponent | Games | Win % | Avg Bank | Median | Std | Min | Max |
 | ----- | -------- | ----: | ----: | -------: | -----: | --: | --: | --: |
-| agents/v001_baseline.py | random | 5 | 100.0% | $22347.80 | $22366.00 | $36.40 | $22275.00 | $22366.00 |
-| random | agents/v001_baseline.py | 5 | 0.0% | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 |
+| agents/v001_expansion.py | agents/melon_maxxer.py | 10 | 100.0% | $16762.10 | $16404.50 | $2333.45 | $14086.00 | $21160.00 |
+| agents/melon_maxxer.py | agents/v001_expansion.py | 10 | 0.0% | $5028.50 | $5268.00 | $504.47 | $3949.00 | $5318.00 |

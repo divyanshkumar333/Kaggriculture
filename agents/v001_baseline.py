@@ -281,10 +281,11 @@ class DailyPlanner:
 # 6. Task Allocator
 # ==========================================
 class TaskAllocator:
-    def __init__(self, state: GameState, econ: EconomicCalculator, tasks):
+    def __init__(self, state: GameState, econ: EconomicCalculator, tasks, strategy):
         self.state = state
         self.econ = econ
         self.tasks = tasks
+        self.strategy = strategy
     
     def allocate(self):
         unassigned_field_tasks = [t for t in self.tasks if t.location is not None]
@@ -417,7 +418,7 @@ def agent(obs):
         
         tasks = planner.plan_tasks()
         
-        allocator = TaskAllocator(state, econ, tasks)
+        allocator = TaskAllocator(state, econ, tasks, strategy)
         assignments = allocator.allocate()
         
         executor = ActionExecutor(state, econ)
