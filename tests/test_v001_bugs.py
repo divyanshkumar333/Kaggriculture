@@ -114,7 +114,14 @@ class TestV001Bugs(unittest.TestCase):
         self.assertEqual(sell_tasks[0].kwargs["quantity"], 10, "Should queue exactly 10 items to sell.")
         
         # Pass to executor
-        allocator = TaskAllocator(state, econ, tasks)
+        # Mock strategy
+        class MockStrategy:
+            class MockConfig:
+                cash_reserve = 1000
+                worker_roi_threshold = 0
+            config = MockConfig()
+        
+        allocator = TaskAllocator(state, econ, tasks, MockStrategy())
         assignments = allocator.allocate()
         
         executor = ActionExecutor(state, econ)
@@ -154,7 +161,14 @@ class TestV001Bugs(unittest.TestCase):
         
         tasks = planner.plan_tasks()
         
-        allocator = TaskAllocator(state, econ, tasks)
+        # Mock strategy
+        class MockStrategy:
+            class MockConfig:
+                cash_reserve = 1000
+                worker_roi_threshold = 0
+            config = MockConfig()
+        
+        allocator = TaskAllocator(state, econ, tasks, MockStrategy())
         assignments = allocator.allocate()
         
         executor = ActionExecutor(state, econ)
@@ -253,7 +267,14 @@ class TestV001Bugs(unittest.TestCase):
         planner = DailyPlanner(state, econ, strategy)
         tasks = planner.plan_tasks()
         
-        allocator = TaskAllocator(state, econ, tasks)
+        # Mock strategy
+        class MockStrategy:
+            class MockConfig:
+                cash_reserve = 1000
+                worker_roi_threshold = 0
+            config = MockConfig()
+        
+        allocator = TaskAllocator(state, econ, tasks, MockStrategy())
         assignments = allocator.allocate()
         executor = ActionExecutor(state, econ)
         result = executor.execute(tasks, assignments)
