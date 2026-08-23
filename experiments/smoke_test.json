@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-23T00:57:57.301200",
+  "timestamp": "2026-08-23T15:19:58.556290",
   "agent1": "agents/v001_baseline.py",
   "agent2": "random",
   "games": 5,
@@ -10,24 +10,24 @@
   "ties": 0,
   "errors": 0,
   "a1_rewards": [
-    1757.0,
-    1757.0,
-    1757.0,
-    1757.0,
-    1757.0
+    29819.0,
+    28358.0,
+    29158.0,
+    31318.0,
+    28696.0
   ],
   "a2_rewards": [
     0,
     0,
     0,
     0,
-    290.0
+    0
   ],
   "game_logs": [
     {
       "game": 1,
       "seed": 42,
-      "a1_reward": 1757.0,
+      "a1_reward": 29819.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
@@ -35,7 +35,7 @@
     {
       "game": 2,
       "seed": 43,
-      "a1_reward": 1757.0,
+      "a1_reward": 28358.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
@@ -43,7 +43,7 @@
     {
       "game": 3,
       "seed": 44,
-      "a1_reward": 1757.0,
+      "a1_reward": 29158.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
@@ -51,7 +51,7 @@
     {
       "game": 4,
       "seed": 45,
-      "a1_reward": 1757.0,
+      "a1_reward": 31318.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
@@ -59,24 +59,24 @@
     {
       "game": 5,
       "seed": 46,
-      "a1_reward": 1757.0,
-      "a2_reward": 290.0,
+      "a1_reward": 28696.0,
+      "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
     }
   ],
   "stats_a1": {
-    "mean": 1757.0,
-    "median": 1757.0,
-    "std": 0.0,
-    "min": 1757.0,
-    "max": 1757.0
+    "mean": 29469.8,
+    "median": 29158.0,
+    "std": 1045.932005438212,
+    "min": 28358.0,
+    "max": 31318.0
   },
   "stats_a2": {
-    "mean": 58.0,
+    "mean": 0.0,
     "median": 0.0,
-    "std": 116.0,
+    "std": 0.0,
     "min": 0.0,
-    "max": 290.0
+    "max": 0.0
   }
 }

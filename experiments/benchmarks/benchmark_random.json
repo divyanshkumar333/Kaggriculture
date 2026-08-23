@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-23T00:49:01.734510",
+  "timestamp": "2026-08-23T15:20:30.293004",
   "agent1": "agents/v001_baseline.py",
   "agent2": "random",
   "games": 30,
@@ -10,74 +10,74 @@
   "ties": 0,
   "errors": 0,
   "a1_rewards": [
-    22275.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22446.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22446.0,
-    22366.0,
-    22366.0,
-    22366.0,
-    22366.0
+    29819.0,
+    28358.0,
+    29158.0,
+    28358.0,
+    28696.0,
+    29158.0,
+    29158.0,
+    29158.0,
+    29158.0,
+    29273.0,
+    28708.0,
+    30181.0,
+    30116.0,
+    29158.0,
+    28406.0,
+    29819.0,
+    28358.0,
+    28358.0,
+    30992.0,
+    28358.0,
+    29158.0,
+    29729.0,
+    29158.0,
+    29158.0,
+    29158.0,
+    28358.0,
+    29158.0,
+    28358.0,
+    29158.0,
+    29822.0
   ],
   "a2_rewards": [
     0,
-    90.0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    500.0,
+    0,
+    0,
+    0,
+    0,
     0,
     60.0,
     0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
     10.0,
     0,
-    0,
-    40.0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    20.0,
-    0,
-    0,
-    0,
-    0,
     180.0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
     0
   ],
   "game_logs": [
     {
       "game": 1,
       "seed": 42,
-      "a1_reward": 22275.0,
+      "a1_reward": 29819.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
@@ -85,15 +85,15 @@
     {
       "game": 2,
       "seed": 43,
-      "a1_reward": 22366.0,
-      "a2_reward": 90.0,
+      "a1_reward": 28358.0,
+      "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
     },
     {
       "game": 3,
       "seed": 44,
-      "a1_reward": 22366.0,
+      "a1_reward": 29158.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
@@ -101,15 +101,15 @@
     {
       "game": 4,
       "seed": 45,
-      "a1_reward": 22366.0,
-      "a2_reward": 60.0,
+      "a1_reward": 28358.0,
+      "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
     },
     {
       "game": 5,
       "seed": 46,
-      "a1_reward": 22366.0,
+      "a1_reward": 28696.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
@@ -117,15 +117,15 @@
     {
       "game": 6,
       "seed": 47,
-      "a1_reward": 22366.0,
-      "a2_reward": 10.0,
+      "a1_reward": 29158.0,
+      "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
     },
     {
       "game": 7,
       "seed": 48,
-      "a1_reward": 22366.0,
+      "a1_reward": 29158.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
@@ -133,23 +133,23 @@
     {
       "game": 8,
       "seed": 49,
-      "a1_reward": 22366.0,
-      "a2_reward": 0,
+      "a1_reward": 29158.0,
+      "a2_reward": 500.0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
     },
     {
       "game": 9,
       "seed": 50,
-      "a1_reward": 22366.0,
-      "a2_reward": 40.0,
+      "a1_reward": 29158.0,
+      "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
     },
     {
       "game": 10,
       "seed": 51,
-      "a1_reward": 22366.0,
+      "a1_reward": 29273.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
@@ -157,7 +157,7 @@
     {
       "game": 11,
       "seed": 52,
-      "a1_reward": 22366.0,
+      "a1_reward": 28708.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
@@ -165,7 +165,7 @@
     {
       "game": 12,
       "seed": 53,
-      "a1_reward": 22366.0,
+      "a1_reward": 30181.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
@@ -173,7 +173,7 @@
     {
       "game": 13,
       "seed": 54,
-      "a1_reward": 22366.0,
+      "a1_reward": 30116.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
@@ -181,15 +181,15 @@
     {
       "game": 14,
       "seed": 55,
-      "a1_reward": 22366.0,
-      "a2_reward": 0,
+      "a1_reward": 29158.0,
+      "a2_reward": 60.0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
     },
     {
       "game": 15,
       "seed": 56,
-      "a1_reward": 22366.0,
+      "a1_reward": 28406.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
@@ -197,15 +197,15 @@
     {
       "game": 16,
       "seed": 57,
-      "a1_reward": 22366.0,
-      "a2_reward": 20.0,
+      "a1_reward": 29819.0,
+      "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
     },
     {
       "game": 17,
       "seed": 58,
-      "a1_reward": 22366.0,
+      "a1_reward": 28358.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
@@ -213,7 +213,7 @@
     {
       "game": 18,
       "seed": 59,
-      "a1_reward": 22366.0,
+      "a1_reward": 28358.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
@@ -221,7 +221,7 @@
     {
       "game": 19,
       "seed": 60,
-      "a1_reward": 22366.0,
+      "a1_reward": 30992.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
@@ -229,7 +229,7 @@
     {
       "game": 20,
       "seed": 61,
-      "a1_reward": 22366.0,
+      "a1_reward": 28358.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
@@ -237,15 +237,15 @@
     {
       "game": 21,
       "seed": 62,
-      "a1_reward": 22366.0,
-      "a2_reward": 180.0,
+      "a1_reward": 29158.0,
+      "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
     },
     {
       "game": 22,
       "seed": 63,
-      "a1_reward": 22446.0,
+      "a1_reward": 29729.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
@@ -253,7 +253,7 @@
     {
       "game": 23,
       "seed": 64,
-      "a1_reward": 22366.0,
+      "a1_reward": 29158.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
@@ -261,7 +261,7 @@
     {
       "game": 24,
       "seed": 65,
-      "a1_reward": 22366.0,
+      "a1_reward": 29158.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
@@ -269,7 +269,7 @@
     {
       "game": 25,
       "seed": 66,
-      "a1_reward": 22366.0,
+      "a1_reward": 29158.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
@@ -277,7 +277,7 @@
     {
       "game": 26,
       "seed": 67,
-      "a1_reward": 22446.0,
+      "a1_reward": 28358.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
@@ -285,15 +285,15 @@
     {
       "game": 27,
       "seed": 68,
-      "a1_reward": 22366.0,
-      "a2_reward": 0,
+      "a1_reward": 29158.0,
+      "a2_reward": 10.0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
     },
     {
       "game": 28,
       "seed": 69,
-      "a1_reward": 22366.0,
+      "a1_reward": 28358.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
@@ -301,32 +301,32 @@
     {
       "game": 29,
       "seed": 70,
-      "a1_reward": 22366.0,
-      "a2_reward": 0,
+      "a1_reward": 29158.0,
+      "a2_reward": 180.0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": true
     },
     {
       "game": 30,
       "seed": 71,
-      "a1_reward": 22366.0,
+      "a1_reward": 29822.0,
       "a2_reward": 0,
       "winner": "agents/v001_baseline.py",
       "p1_is_a1": false
     }
   ],
   "stats_a1": {
-    "mean": 22368.3,
-    "median": 22366.0,
-    "std": 26.40852135201818,
-    "min": 22275.0,
-    "max": 22446.0
+    "mean": 29132.1,
+    "median": 29158.0,
+    "std": 643.510598203324,
+    "min": 28358.0,
+    "max": 30992.0
   },
   "stats_a2": {
-    "mean": 13.333333333333334,
+    "mean": 25.0,
     "median": 0.0,
-    "std": 36.90829476177709,
+    "std": 94.40162427981134,
     "min": 0.0,
-    "max": 180.0
+    "max": 500.0
   }
 }

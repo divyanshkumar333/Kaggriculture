@@ -58,8 +58,15 @@ class Task:
     def __repr__(self):
         return f"Task({self.action_type}, prio={self.priority}, loc={self.location}, kwargs={self.kwargs})"
 
+def is_ready_to_harvest(crop_name, planted_day, current_day):
+    crop_info = CROPS.get(crop_name)
+    if not crop_info:
+        return False
+    crop_age = current_day - planted_day
+    return crop_age >= crop_info["first_yield_day"]
+
 # ==========================================
-# 2. State Parser
+# 2. Game State Parser
 # ==========================================
 class GameState:
     def __init__(self, obs):
@@ -202,11 +209,8 @@ class DailyPlanner:
                         if not tile.get("watered_today", True):
                             self.tasks.append(Task("WATER", 10, (x, y)))
                         if tile.get("yield_units", 0) > 0:
-                            crop_info = CROPS.get(tile.get("crop", ""))
-                            if crop_info:
-                                crop_age = self.state.day - tile.get("planted_day", 0)
-                                if crop_age >= crop_info["first_yield_day"]:
-                                    self.tasks.append(Task("HARVEST", 20, (x, y)))
+                            if is_ready_to_harvest(tile.get("crop", ""), tile.get("planted_day", 0), self.state.day):
+                                self.tasks.append(Task("HARVEST", 20, (x, y)))
                     elif tile.get("kind") in ["COOP", "PASTURE"]:
                         if not tile.get("fed_today", True):
                             self.tasks.append(Task("FEED", 10, (x, y)))

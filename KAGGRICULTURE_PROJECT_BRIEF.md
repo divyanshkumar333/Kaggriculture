@@ -75,17 +75,17 @@ The following must be treated as configurable hypotheses to be validated through
 - **Reference Opponent:** `melon_maxxer` (baseline reference implementation).
 
 ## Tracking Best Agents
-- **BEST_LOCAL_AGENT:** N/A
-- **BEST_LOCAL_SCORE:** N/A
+- **BEST_LOCAL_AGENT:** `v001_baseline.py`
+- **BEST_LOCAL_SCORE:** ~$29,132
 - **BEST_KAGGLE_AGENT:** N/A
 - **BEST_KAGGLE_RATING:** N/A
 
 ## Milestones
-- **Milestone 1:** Produce a reliable local agent that completes 720 turns without catastrophic failures.
-- **Milestone 2:** Beat random consistently.
-- **Milestone 3:** Beat starter consistently.
-- **Milestone 4:** Beat Melon Maxxer consistently.
-- **Milestone 5:** Develop specialized strategy variants.
+- **[COMPLETED] Milestone 1:** Produce a reliable local agent that completes 720 turns without catastrophic failures.
+- **[COMPLETED] Milestone 2:** Beat random consistently.
+- **[COMPLETED] Milestone 3:** Beat starter consistently.
+- **[COMPLETED] Milestone 4:** Beat Melon Maxxer consistently.
+- **[IN PROGRESS] Milestone 5:** Develop specialized strategy variants (V001-A, B, C) and optimize economic modeling (Step 5).
 - **Milestone 6:** Find the strongest local strategy.
 - **Milestone 7:** Submit to Kaggle.
 - **Milestone 8:** Analyze real Kaggle episodes.
