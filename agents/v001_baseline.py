@@ -112,6 +112,7 @@ class EconomicCalculator:
         self.state = state
 
     def _eval_func(self, func_name, x, T):
+        x = max(0.0, x)
         if func_name == "linear":
             return x
         elif func_name == "sq":
@@ -119,12 +120,14 @@ class EconomicCalculator:
         elif func_name == "sqrt":
             return math.sqrt(x)
         elif func_name == "log":
-            return math.log(1 + x)
+            return math.log(1.0 + x)
         elif func_name == "log10":
-            return math.log10(1 + x)
+            return math.log10(1.0 + x)
         elif func_name == "hinge":
+            if not T or T <= 0:
+                return x
             u = x / T
-            return u + 8 * max(0, u - 1)**2
+            return u + 8.0 * max(0.0, u - 1.0)**2
         return x
 
     def get_price_at_inventory(self, product, inv):
@@ -153,7 +156,7 @@ class EconomicCalculator:
         val = self._eval_func(f_name, diff, T)
         
         price = base + sign * amp * val
-        return max(1, round(price))
+        return max(1, int(round(price)))
 
     def expected_sell_value(self, product, quantity):
         current_inv = self.state.market.get("inventory", {}).get(product, 10000)
