@@ -13,9 +13,8 @@ _METRICS = collections.defaultdict(lambda: {
     "workers": {"hired": 0, "cost": 0, "active_turns": 0, "idle_turns": 0, "movement_actions": 0, "useful_actions": 0},
     "farmer": {"active_turns": 0, "idle_turns": 0, "movement_actions": 0, "useful_actions": 0},
     "economy": {"total_spending": 0, "total_revenue": 0, "seed_spending": 0, "worker_spending": 0},
-    "crops": collections.defaultdict(lambda: {"planted": 0, "watered": 0, "harvested": 0, "deaths": 0}),
-    "market": collections.defaultdict(lambda: {"sold": 0, "revenue": 0}),
-    "_prev_plants": {}
+    "crops": collections.defaultdict(lambda: {"planted": 0, "watered": 0, "harvested": 0}),
+    "market": collections.defaultdict(lambda: {"sold": 0, "revenue": 0})
 })
 
 class MetricsTracker:
@@ -23,25 +22,6 @@ class MetricsTracker:
     def get():
         seed = os.environ.get("KAGGRICULTURE_SEED", "unknown")
         return _METRICS[seed]
-        
-    @staticmethod
-    def track_plants(state):
-        seed = os.environ.get("KAGGRICULTURE_SEED", "unknown")
-        m = _METRICS[seed]
-        
-        current_plants = {}
-        for y, row in enumerate(state.my_farm.get("tiles", [])):
-            for x, tile in enumerate(row):
-                if isinstance(tile, dict) and tile.get("kind") == "PLANT":
-                    current_plants[(x, y)] = tile
-                    
-        for loc, prev_plant in m["_prev_plants"].items():
-            if loc not in current_plants:
-                tile = state.get_tile(loc[0], loc[1])
-                if isinstance(tile, dict) and tile.get("kind") == "WEED":
-                    m["crops"][prev_plant["crop"]]["deaths"] += 1
-                    
-        m["_prev_plants"] = current_plants
     
     @staticmethod
     def save(player, step, final_money):
@@ -199,7 +179,40 @@ class EconomicCalculator:
         return fib(n)
 
     def marginal_roi_of_worker(self):
-        return 15.0 
+        # Simplified estimate
+        return 15.0
+
+    def evaluate_expansion_roi(self, quadrant, cost, strategy):
+        additional_tiles = 25
+        remaining_days = 30 - self.state.day
+        if remaining_days <= 0:
+            return -1
+        
+        crop = strategy.config.crop_policy
+        crop_info = CROPS[crop]
+        yield_per_cycle = crop_info.get("max_yield", 2)
+        cycle_length = crop_info["max_yield_day"]
+        yield_per_day = yield_per_cycle / cycle_length
+        
+        total_yield_added = additional_tiles * yield_per_day * remaining_days
+        
+        current_inv = self.state.market.get("inventory", {}).get(crop, 10000)
+        expected_price = sum(self.get_price_at_inventory(crop, current_inv + i) for i in range(int(total_yield_added))) / max(1, int(total_yield_added))
+        
+        expected_revenue = total_yield_added * expected_price
+        
+        actions_per_day = 1.16 # 1 plant + 12 water + 1 harvest = 14 / 12
+        total_actions = additional_tiles * actions_per_day * remaining_days
+        
+        worker_cost_per_day = self.get_hire_cost(self.state.hires_today)
+        cost_per_action = worker_cost_per_day / 24
+        worker_cost = total_actions * cost_per_action
+        
+        seed_cost_per_day = crop_info["seed"] / cycle_length
+        input_cost = additional_tiles * seed_cost_per_day * remaining_days
+        
+        ev = expected_revenue - cost - worker_cost - input_cost
+        return ev 
 
 # ==========================================
 # 4. Strategic Planner
@@ -211,10 +224,14 @@ class StrategyConfig:
                  sell_batch_size=10,
                  worker_roi_threshold=15.0,
                  cash_reserve=50,
-                 expansion_policy="NONE",
+                 expansion_policy="ROI",
                  animal_policy="NONE",
                  fertilizer_policy="NONE",
-                 production_limit=25):
+                 production_limit=25,
+                 urgency_weight=1000.0,
+                 economic_weight=1.0,
+                 distance_weight=1.0,
+                 regional_penalty=50.0):
         self.crop_policy = crop_policy
         self.min_sell_price = min_sell_price
         self.sell_batch_size = sell_batch_size
@@ -224,6 +241,10 @@ class StrategyConfig:
         self.animal_policy = animal_policy
         self.fertilizer_policy = fertilizer_policy
         self.production_limit = production_limit
+        self.urgency_weight = urgency_weight
+        self.economic_weight = economic_weight
+        self.distance_weight = distance_weight
+        self.regional_penalty = regional_penalty
 
 class StrategicPlanner:
     def __init__(self, state: GameState, econ: EconomicCalculator, config: StrategyConfig = None):
@@ -293,6 +314,21 @@ class DailyPlanner:
         if self.state.seeds.get(target_crop, 0) == 0 and self.state.money > self.strategy.config.cash_reserve + CROPS[target_crop]["seed"]:
             buy_qty = min(self.state.money // CROPS[target_crop]["seed"], 5)
             self.tasks.append(Task("BUY_SEED", 50, kwargs={"product": target_crop, "quantity": buy_qty}))
+            
+        if self.strategy.config.expansion_policy == "ROI":
+            unlocked = self.state.my_farm.get("unlocked_quadrants", ["NW"])
+            land_order = ["NE", "SW", "SE"]
+            land_prices = [1000, 2000, 4000]
+            
+            n_unlocked_extra = len(unlocked) - 1
+            if n_unlocked_extra < len(land_order):
+                next_quadrant = land_order[n_unlocked_extra]
+                cost = land_prices[n_unlocked_extra]
+                
+                ev = self.econ.evaluate_expansion_roi(next_quadrant, cost, self.strategy)
+                
+                if ev > 0 and self.state.money >= cost + self.strategy.config.cash_reserve:
+                    self.tasks.append(Task("BUY_LAND", 10))
         
         self.tasks.sort(key=lambda t: t.priority)
         return self.tasks
@@ -324,9 +360,10 @@ class TaskAllocator:
 # 7. Action Executor
 # ==========================================
 class ActionExecutor:
-    def __init__(self, state: GameState, econ: EconomicCalculator):
+    def __init__(self, state: GameState, econ: EconomicCalculator, strategy: StrategicPlanner):
         self.state = state
         self.econ = econ
+        self.strategy = strategy
         self.metrics = MetricsTracker.get()
         
     def step_toward(self, fx, fy, tx, ty):
@@ -343,7 +380,7 @@ class ActionExecutor:
         field_tasks = []
         
         for t in tasks:
-            if t.action_type in ["SELL", "BUY_SEED", "HIRE"]:
+            if t.action_type in ["SELL", "BUY_SEED", "HIRE", "BUY_LAND"]:
                 if t.action_type == "SELL":
                     market_actions.append(["SELL", t.kwargs["product"], t.kwargs["quantity"]])
                     # Track metrics
@@ -358,6 +395,22 @@ class ActionExecutor:
                     cost = CROPS.get(t.kwargs["product"], {}).get("seed", 0) * t.kwargs["quantity"]
                     self.metrics["economy"]["seed_spending"] += cost
                     self.metrics["economy"]["total_spending"] += cost
+                elif t.action_type == "BUY_LAND":
+                    market_actions.append(["BUY_LAND"])
+                    # Assuming we can correctly track land purchases if they succeed,
+                    # but for simplicity we track the cost when intended. The environment
+                    # deduces money immediately.
+                    unlocked = self.state.my_farm.get("unlocked_quadrants", ["NW"])
+                    n_unlocked_extra = len(unlocked) - 1
+                    if n_unlocked_extra < 3:
+                        land_prices = [1000, 2000, 4000]
+                        cost = land_prices[n_unlocked_extra]
+                        self.metrics["economy"]["total_spending"] += cost
+                        if "land_purchased" not in self.metrics["economy"]:
+                            self.metrics["economy"]["land_purchased"] = 0
+                            self.metrics["economy"]["land_spending"] = 0
+                        self.metrics["economy"]["land_purchased"] += 1
+                        self.metrics["economy"]["land_spending"] += cost
                 elif t.action_type == "HIRE":
                     market_actions.append(["HIRE"])
                     cost = self.econ.get_hire_cost(self.state.hires_today)
@@ -374,7 +427,40 @@ class ActionExecutor:
         for ui, (ux, uy) in enumerate(units):
             action = ["PASS"]
             if field_tasks:
-                field_tasks.sort(key=lambda t: (t.priority, abs(t.location[0] - ux) + abs(t.location[1] - uy)))
+                def score_task(t):
+                    tx, ty = t.location
+                    dist = abs(tx - ux) + abs(ty - uy)
+                    travel_cost = dist * self.strategy.config.distance_weight
+                    
+                    # Regional Penalty
+                    home_region = ui % 4
+                    task_region = (1 if tx >= 5 else 0) + (2 if ty >= 5 else 0) # 0: NW, 1: NE, 2: SW, 3: SE
+                    if home_region != task_region:
+                        travel_cost += self.strategy.config.regional_penalty
+                    
+                    urgency = 0
+                    economic_value = 0
+                    
+                    if t.action_type == "WATER":
+                        tile = self.state.get_tile(tx, ty)
+                        if tile and tile.get("kind") == "PLANT" and tile.get("consecutive_unwatered", 0) >= 1:
+                            urgency = self.strategy.config.urgency_weight
+                        else:
+                            urgency = 50.0
+                        economic_value = self.strategy.config.economic_weight * 20.0
+                    elif t.action_type == "HARVEST":
+                        economic_value = self.strategy.config.economic_weight * 50.0
+                        urgency = 10.0
+                    elif t.action_type == "PLANT":
+                        economic_value = self.strategy.config.economic_weight * 10.0
+                        urgency = 0.0
+                    elif t.action_type == "FEED":
+                        economic_value = self.strategy.config.economic_weight * 20.0
+                        urgency = 50.0
+                        
+                    return urgency + economic_value - travel_cost
+                    
+                field_tasks.sort(key=score_task, reverse=True)
                 target = field_tasks[0]
                 tx, ty = target.location
                 
@@ -385,6 +471,7 @@ class ActionExecutor:
                     else:
                         action = [target.action_type]
                         if target.action_type == "WATER":
+                            # Hacky tracking of watered crops (assuming target plant hasn't vanished)
                             tile = self.state.get_tile(tx, ty)
                             if tile and tile.get("kind") == "PLANT":
                                 self.metrics["crops"][tile["crop"]]["watered"] += 1
@@ -394,13 +481,6 @@ class ActionExecutor:
                                 self.metrics["crops"][tile["crop"]]["harvested"] += 1
                 else:
                     action = [self.step_toward(ux, uy, tx, ty)]
-                    
-                if "assignments_count" not in self.metrics["workers"]:
-                    self.metrics["workers"]["assignments_count"] = 0
-                    self.metrics["workers"]["total_assignment_distance"] = 0
-                self.metrics["workers"]["assignments_count"] += 1
-                self.metrics["workers"]["total_assignment_distance"] += abs(ux - tx) + abs(uy - ty)
-                
                 field_tasks.pop(0)
                 
             unit_actions.append(action)
@@ -435,8 +515,6 @@ class ActionExecutor:
 def agent(obs):
     try:
         state = GameState(obs)
-        MetricsTracker.track_plants(state)
-        
         if not state.my_farm:
             return {"farmer": ["PASS"], "hands": [], "market": []}
             
@@ -449,7 +527,7 @@ def agent(obs):
         allocator = TaskAllocator(state, econ, tasks, strategy)
         assignments = allocator.allocate()
         
-        executor = ActionExecutor(state, econ)
+        executor = ActionExecutor(state, econ, strategy)
         actions = executor.execute(tasks, assignments)
         
         MetricsTracker.save(state.player, state.step, state.money)

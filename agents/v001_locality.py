@@ -214,7 +214,10 @@ class StrategyConfig:
                  expansion_policy="NONE",
                  animal_policy="NONE",
                  fertilizer_policy="NONE",
-                 production_limit=25):
+                 production_limit=25,
+                 urgency_weight=1000.0,
+                 economic_weight=1.0,
+                 distance_weight=1.0):
         self.crop_policy = crop_policy
         self.min_sell_price = min_sell_price
         self.sell_batch_size = sell_batch_size
@@ -224,6 +227,9 @@ class StrategyConfig:
         self.animal_policy = animal_policy
         self.fertilizer_policy = fertilizer_policy
         self.production_limit = production_limit
+        self.urgency_weight = urgency_weight
+        self.economic_weight = economic_weight
+        self.distance_weight = distance_weight
 
 class StrategicPlanner:
     def __init__(self, state: GameState, econ: EconomicCalculator, config: StrategyConfig = None):
@@ -324,9 +330,10 @@ class TaskAllocator:
 # 7. Action Executor
 # ==========================================
 class ActionExecutor:
-    def __init__(self, state: GameState, econ: EconomicCalculator):
+    def __init__(self, state: GameState, econ: EconomicCalculator, strategy: StrategicPlanner):
         self.state = state
         self.econ = econ
+        self.strategy = strategy
         self.metrics = MetricsTracker.get()
         
     def step_toward(self, fx, fy, tx, ty):
@@ -374,7 +381,33 @@ class ActionExecutor:
         for ui, (ux, uy) in enumerate(units):
             action = ["PASS"]
             if field_tasks:
-                field_tasks.sort(key=lambda t: (t.priority, abs(t.location[0] - ux) + abs(t.location[1] - uy)))
+                def score_task(t):
+                    dist = abs(t.location[0] - ux) + abs(t.location[1] - uy)
+                    travel_cost = dist * self.strategy.config.distance_weight
+                    
+                    urgency = 0
+                    economic_value = 0
+                    
+                    if t.action_type == "WATER":
+                        tile = self.state.get_tile(t.location[0], t.location[1])
+                        if tile and tile.get("kind") == "PLANT" and tile.get("consecutive_unwatered", 0) >= 1:
+                            urgency = self.strategy.config.urgency_weight
+                        else:
+                            urgency = 50.0
+                        economic_value = self.strategy.config.economic_weight * 20.0
+                    elif t.action_type == "HARVEST":
+                        economic_value = self.strategy.config.economic_weight * 50.0
+                        urgency = 10.0
+                    elif t.action_type == "PLANT":
+                        economic_value = self.strategy.config.economic_weight * 10.0
+                        urgency = 0.0
+                    elif t.action_type == "FEED":
+                        economic_value = self.strategy.config.economic_weight * 20.0
+                        urgency = 50.0
+                        
+                    return urgency + economic_value - travel_cost
+                    
+                field_tasks.sort(key=score_task, reverse=True)
                 target = field_tasks[0]
                 tx, ty = target.location
                 
@@ -449,7 +482,7 @@ def agent(obs):
         allocator = TaskAllocator(state, econ, tasks, strategy)
         assignments = allocator.allocate()
         
-        executor = ActionExecutor(state, econ)
+        executor = ActionExecutor(state, econ, strategy)
         actions = executor.execute(tasks, assignments)
         
         MetricsTracker.save(state.player, state.step, state.money)
