@@ -459,18 +459,12 @@ class DailyPlanner:
                 
         target_crop = best_crop
         
-        # Animal Diversification Logic (V005-B)
-        best_animal = "NONE"
-        best_animal_profit_per_action = -999999
-        
-        for animal_name in ANIMALS.keys():
-            prof_per_action, net_prof = self.econ.get_animal_roi(animal_name, historical_cost_per_action)
-            if prof_per_action > best_animal_profit_per_action:
-                best_animal_profit_per_action = prof_per_action
-                best_animal = animal_name
+        # Animal Diversification Logic (V005-C - Best Animal Only)
+        best_animal = "SHEEP"
+        prof_per_action, net_prof = self.econ.get_animal_roi(best_animal, historical_cost_per_action)
                 
-        # Compare Crop vs Animal
-        if best_animal_profit_per_action > best_profit_per_action and best_animal_profit_per_action > 0:
+        # Compare vs 0 instead of crops
+        if prof_per_action > 0:
             if self.state.shed.get(best_animal, 0) == 0 and self.state.money > self.strategy.config.cash_reserve + ANIMALS[best_animal]["cost"]:
                 # Check if we have an empty matching structure first, if not, we must build one
                 structure_type = ANIMALS[best_animal]["structure"]
@@ -491,11 +485,6 @@ class DailyPlanner:
                                 
                 # Buy the animal
                 self.tasks.append(Task("BUY_ANIMAL", 50, kwargs={"product": best_animal, "quantity": 1}))
-        else:
-            if self.state.seeds.get(target_crop, 0) == 0 and self.state.money > self.strategy.config.cash_reserve + CROPS[target_crop]["seed"]:
-                if best_profit_per_action > 0:
-                    buy_qty = min(self.state.money // CROPS[target_crop]["seed"], 5)
-                    self.tasks.append(Task("BUY_SEED", 50, kwargs={"product": target_crop, "quantity": buy_qty}))
         
         self.tasks.sort(key=lambda t: t.priority)
         return self.tasks
