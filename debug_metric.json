@@ -1,0 +1,41 @@
+{
+  "workers": {
+    "hired": 203,
+    "cost": 904,
+    "active_turns": 1870,
+    "idle_turns": 2181,
+    "movement_actions": 1532,
+    "useful_actions": 338
+  },
+  "farmer": {
+    "active_turns": 592,
+    "idle_turns": 127,
+    "movement_actions": 353,
+    "useful_actions": 239
+  },
+  "economy": {
+    "total_spending": 6104,
+    "total_revenue": 32537,
+    "seed_spending": 5200,
+    "worker_spending": 904,
+    "final_money": 28192.0
+  },
+  "crops": {
+    "MELON": {
+      "planted": 61,
+      "watered": 479,
+      "harvested": 37
+    }
+  },
+  "market": {
+    "MELON": {
+      "sold": 188,
+      "revenue": 32537
+    }
+  },
+  "efficiency": {
+    "worker_utilization_pct": 46.16144161935324,
+    "farmer_utilization_pct": 82.336578581363,
+    "useful_actions_total": 577
+  }
+}

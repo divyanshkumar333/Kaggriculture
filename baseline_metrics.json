@@ -1,0 +1,19 @@
+{
+  "count": 15,
+  "final_money": 28136.0,
+  "total_revenue": 32371.4,
+  "total_spending": 6028.0,
+  "worker_cost": 956.0,
+  "seed_spending": 5072.0,
+  "land_spending": 0.0,
+  "land_purchased": 0.0,
+  "worker_utilization_pct": 43.84469142464584,
+  "farmer_utilization_pct": 75.99443671766342,
+  "melon_planted": 61.8,
+  "melon_harvested": 37.0,
+  "melon_sold": 188.0,
+  "workers_hired": 207.0,
+  "worker_idle_turns": 2309.8,
+  "worker_movement_actions": 1415.2,
+  "worker_useful_actions": 387.6
+}

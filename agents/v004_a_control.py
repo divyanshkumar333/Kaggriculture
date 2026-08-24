@@ -358,7 +358,7 @@ class TaskAllocator:
         metrics["workers"]["max_active"] = max(metrics["workers"]["max_active"], active_workers)
         metrics["labor"]["cycles"] += 1
         
-        # Calculate dynamic labor requirements for metrics (V003 logic for comparison only)
+        # Calculate dynamic labor requirements for the rest of the day
         empty_unlocked = 0
         farm_tiles = self.state.my_farm.get("tiles", [])
         for y in range(self.state.board_size):
@@ -369,12 +369,21 @@ class TaskAllocator:
         queued_plant_tasks = sum(1 for t in unassigned_field_tasks if t.action_type == "PLANT")
         uninstantiated_plant_tasks = max(0, empty_unlocked - queued_plant_tasks)
         
+        # Exact workload calculation based on routing approximations
+        # Moving to first task takes dist, then execution takes 1.
+        # Moving to next task takes ~1, execution takes 1 -> 2 actions per subsequent task.
+        # So total workload for N tasks is ~dist_to_first + 2 * (N - 1) + 1 
+        # which simplifies to dist_to_first + 2 * N - 1
+        # For simplicity and slight conservative padding, we use dist_to_first + 2 * N
         units = [self.state.farmer] + self.state.hands
         min_start_dist = 0
         if unassigned_field_tasks or uninstantiated_plant_tasks > 0:
+            # Assume tasks are distributed, we just find minimum distance from any worker to any existing task.
+            # If no existing tasks, we are just planting empty tiles, we use shed distance (since new seeds come from shed)
             if unassigned_field_tasks:
                 min_start_dist = min([abs(ux - tx) + abs(uy - ty) for ux, uy in units for t in unassigned_field_tasks for tx, ty in [t.location]], default=0)
             else:
+                # Shed is at 4, 4
                 min_start_dist = min([abs(ux - 4) + abs(uy - 4) for ux, uy in units], default=0)
                 
         total_tasks = len(unassigned_field_tasks) + uninstantiated_plant_tasks
@@ -385,18 +394,20 @@ class TaskAllocator:
         labor_deficit = required_actions - available_worker_actions
         labor_surplus = available_worker_actions - required_actions
         
+        # Track metrics
         metrics["labor"]["required_sum"] += required_actions
         metrics["labor"]["available_sum"] += available_worker_actions
         metrics["labor"]["deficit_sum"] += max(0, labor_deficit)
         metrics["labor"]["surplus_sum"] += max(0, labor_surplus)
         
         cost_of_next_hire = self.econ.get_hire_cost(self.state.hires_today)
-        expected_roi = self.strategy.config.worker_roi_threshold # use configured ROI instead of hardcoded
+        expected_roi = self.strategy.config.worker_roi_threshold
         
-        # V002 hiring logic (unmodified)
-        if len(unassigned_field_tasks) > active_workers and expected_roi > cost_of_next_hire:
-            if self.state.money > cost_of_next_hire + self.strategy.config.cash_reserve:
-                self.tasks.append(Task("HIRE", 1))
+        # Only hire if there is a deficit, remaining turns make it worthwhile (>3), and we have the ROI/funds.
+        if labor_deficit > 0 and remaining_turns > 3:
+            if expected_roi > cost_of_next_hire:
+                if self.state.money > cost_of_next_hire + self.strategy.config.cash_reserve:
+                    self.tasks.append(Task("HIRE", 1))
 
         return {}
 

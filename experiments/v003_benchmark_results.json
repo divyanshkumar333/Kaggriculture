@@ -1,0 +1,1442 @@
+[
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 101,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_101"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 102,
+    "p1_money": 29395.0,
+    "p2_money": 30.0,
+    "metrics_id": "v002_c_random_102"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 103,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_103"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 104,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_104"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 105,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_105"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 106,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_106"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 107,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_107"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 108,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_108"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 109,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_109"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 110,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_110"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 111,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_111"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 112,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_112"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 113,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_113"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 114,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_114"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 115,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_115"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 116,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_116"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 117,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_117"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 118,
+    "p1_money": 29495.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_118"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 119,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_119"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 120,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_120"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 121,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_121"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 122,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_122"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 123,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_123"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 124,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_124"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 125,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_125"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 126,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_126"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 127,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_127"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 128,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_128"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 129,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_129"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "random",
+    "seed": 130,
+    "p1_money": 29395.0,
+    "p2_money": 0.0,
+    "metrics_id": "v002_c_random_130"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 101,
+    "p1_money": 29395.0,
+    "p2_money": 3506.0,
+    "metrics_id": "v002_c_starter_101"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 102,
+    "p1_money": 29395.0,
+    "p2_money": 3688.0,
+    "metrics_id": "v002_c_starter_102"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 103,
+    "p1_money": 29395.0,
+    "p2_money": 3614.0,
+    "metrics_id": "v002_c_starter_103"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 104,
+    "p1_money": 29395.0,
+    "p2_money": 3431.0,
+    "metrics_id": "v002_c_starter_104"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 105,
+    "p1_money": 29395.0,
+    "p2_money": 3744.0,
+    "metrics_id": "v002_c_starter_105"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 106,
+    "p1_money": 29395.0,
+    "p2_money": 3611.0,
+    "metrics_id": "v002_c_starter_106"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 107,
+    "p1_money": 29395.0,
+    "p2_money": 3550.0,
+    "metrics_id": "v002_c_starter_107"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 108,
+    "p1_money": 29395.0,
+    "p2_money": 3460.0,
+    "metrics_id": "v002_c_starter_108"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 109,
+    "p1_money": 29395.0,
+    "p2_money": 3912.0,
+    "metrics_id": "v002_c_starter_109"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 110,
+    "p1_money": 29395.0,
+    "p2_money": 3702.0,
+    "metrics_id": "v002_c_starter_110"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 111,
+    "p1_money": 29395.0,
+    "p2_money": 3583.0,
+    "metrics_id": "v002_c_starter_111"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 112,
+    "p1_money": 29395.0,
+    "p2_money": 3421.0,
+    "metrics_id": "v002_c_starter_112"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 113,
+    "p1_money": 29395.0,
+    "p2_money": 3425.0,
+    "metrics_id": "v002_c_starter_113"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 114,
+    "p1_money": 29395.0,
+    "p2_money": 3728.0,
+    "metrics_id": "v002_c_starter_114"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 115,
+    "p1_money": 29395.0,
+    "p2_money": 3462.0,
+    "metrics_id": "v002_c_starter_115"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 116,
+    "p1_money": 29395.0,
+    "p2_money": 3431.0,
+    "metrics_id": "v002_c_starter_116"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 117,
+    "p1_money": 29395.0,
+    "p2_money": 3574.0,
+    "metrics_id": "v002_c_starter_117"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 118,
+    "p1_money": 29495.0,
+    "p2_money": 3651.0,
+    "metrics_id": "v002_c_starter_118"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 119,
+    "p1_money": 29395.0,
+    "p2_money": 3639.0,
+    "metrics_id": "v002_c_starter_119"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 120,
+    "p1_money": 29395.0,
+    "p2_money": 3557.0,
+    "metrics_id": "v002_c_starter_120"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 121,
+    "p1_money": 29395.0,
+    "p2_money": 3914.0,
+    "metrics_id": "v002_c_starter_121"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 122,
+    "p1_money": 29395.0,
+    "p2_money": 3460.0,
+    "metrics_id": "v002_c_starter_122"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 123,
+    "p1_money": 29395.0,
+    "p2_money": 3451.0,
+    "metrics_id": "v002_c_starter_123"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 124,
+    "p1_money": 29395.0,
+    "p2_money": 3460.0,
+    "metrics_id": "v002_c_starter_124"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 125,
+    "p1_money": 29395.0,
+    "p2_money": 3550.0,
+    "metrics_id": "v002_c_starter_125"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 126,
+    "p1_money": 29395.0,
+    "p2_money": 3425.0,
+    "metrics_id": "v002_c_starter_126"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 127,
+    "p1_money": 29395.0,
+    "p2_money": 4058.0,
+    "metrics_id": "v002_c_starter_127"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 128,
+    "p1_money": 29395.0,
+    "p2_money": 3431.0,
+    "metrics_id": "v002_c_starter_128"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 129,
+    "p1_money": 29395.0,
+    "p2_money": 3662.0,
+    "metrics_id": "v002_c_starter_129"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "starter",
+    "seed": 130,
+    "p1_money": 29395.0,
+    "p2_money": 3641.0,
+    "metrics_id": "v002_c_starter_130"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 101,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_101"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 102,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_102"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 103,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_103"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 104,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_104"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 105,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_105"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 106,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_106"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 107,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_107"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 108,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_108"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 109,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_109"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 110,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_110"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 111,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_111"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 112,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_112"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 113,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_113"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 114,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_114"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 115,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_115"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 116,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_116"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 117,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_117"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 118,
+    "p1_money": 29495.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_118"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 119,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_119"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 120,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_120"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 121,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_121"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 122,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_122"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 123,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_123"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 124,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_124"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 125,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_125"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 126,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_126"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 127,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_127"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 128,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_128"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 129,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_129"
+  },
+  {
+    "variant": "v002_c",
+    "opponent": "melon_maxxer",
+    "seed": 130,
+    "p1_money": 29395.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v002_c_melon_maxxer_130"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 101,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_101"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 102,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_102"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 103,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_103"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 104,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_104"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 105,
+    "p1_money": 30228.0,
+    "p2_money": 60.0,
+    "metrics_id": "v003_random_105"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 106,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_106"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 107,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_107"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 108,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_108"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 109,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_109"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 110,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_110"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 111,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_111"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 112,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_112"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 113,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_113"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 114,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_114"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 115,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_115"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 116,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_116"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 117,
+    "p1_money": 30234.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_117"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 118,
+    "p1_money": 30225.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_118"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 119,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_119"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 120,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_120"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 121,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_121"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 122,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_122"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 123,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_123"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 124,
+    "p1_money": 30219.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_124"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 125,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_125"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 126,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_126"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 127,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_127"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 128,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_128"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 129,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_129"
+  },
+  {
+    "variant": "v003",
+    "opponent": "random",
+    "seed": 130,
+    "p1_money": 30228.0,
+    "p2_money": 0.0,
+    "metrics_id": "v003_random_130"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 101,
+    "p1_money": 30228.0,
+    "p2_money": 3706.0,
+    "metrics_id": "v003_starter_101"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 102,
+    "p1_money": 30228.0,
+    "p2_money": 3601.0,
+    "metrics_id": "v003_starter_102"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 103,
+    "p1_money": 30228.0,
+    "p2_money": 3671.0,
+    "metrics_id": "v003_starter_103"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 104,
+    "p1_money": 30228.0,
+    "p2_money": 3482.0,
+    "metrics_id": "v003_starter_104"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 105,
+    "p1_money": 30228.0,
+    "p2_money": 3696.0,
+    "metrics_id": "v003_starter_105"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 106,
+    "p1_money": 30228.0,
+    "p2_money": 3592.0,
+    "metrics_id": "v003_starter_106"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 107,
+    "p1_money": 30228.0,
+    "p2_money": 3553.0,
+    "metrics_id": "v003_starter_107"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 108,
+    "p1_money": 30228.0,
+    "p2_money": 3421.0,
+    "metrics_id": "v003_starter_108"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 109,
+    "p1_money": 30228.0,
+    "p2_money": 3998.0,
+    "metrics_id": "v003_starter_109"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 110,
+    "p1_money": 30228.0,
+    "p2_money": 4490.0,
+    "metrics_id": "v003_starter_110"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 111,
+    "p1_money": 30228.0,
+    "p2_money": 3659.0,
+    "metrics_id": "v003_starter_111"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 112,
+    "p1_money": 30228.0,
+    "p2_money": 3482.0,
+    "metrics_id": "v003_starter_112"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 113,
+    "p1_money": 30228.0,
+    "p2_money": 3441.0,
+    "metrics_id": "v003_starter_113"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 114,
+    "p1_money": 30228.0,
+    "p2_money": 3596.0,
+    "metrics_id": "v003_starter_114"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 115,
+    "p1_money": 30228.0,
+    "p2_money": 3522.0,
+    "metrics_id": "v003_starter_115"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 116,
+    "p1_money": 30228.0,
+    "p2_money": 3441.0,
+    "metrics_id": "v003_starter_116"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 117,
+    "p1_money": 30234.0,
+    "p2_money": 3447.0,
+    "metrics_id": "v003_starter_117"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 118,
+    "p1_money": 30225.0,
+    "p2_money": 3431.0,
+    "metrics_id": "v003_starter_118"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 119,
+    "p1_money": 30228.0,
+    "p2_money": 3651.0,
+    "metrics_id": "v003_starter_119"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 120,
+    "p1_money": 30228.0,
+    "p2_money": 3600.0,
+    "metrics_id": "v003_starter_120"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 121,
+    "p1_money": 30228.0,
+    "p2_money": 3663.0,
+    "metrics_id": "v003_starter_121"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 122,
+    "p1_money": 30228.0,
+    "p2_money": 3460.0,
+    "metrics_id": "v003_starter_122"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 123,
+    "p1_money": 30228.0,
+    "p2_money": 3482.0,
+    "metrics_id": "v003_starter_123"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 124,
+    "p1_money": 30219.0,
+    "p2_money": 3431.0,
+    "metrics_id": "v003_starter_124"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 125,
+    "p1_money": 30228.0,
+    "p2_money": 3614.0,
+    "metrics_id": "v003_starter_125"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 126,
+    "p1_money": 30228.0,
+    "p2_money": 3421.0,
+    "metrics_id": "v003_starter_126"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 127,
+    "p1_money": 30228.0,
+    "p2_money": 3794.0,
+    "metrics_id": "v003_starter_127"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 128,
+    "p1_money": 30228.0,
+    "p2_money": 3528.0,
+    "metrics_id": "v003_starter_128"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 129,
+    "p1_money": 30228.0,
+    "p2_money": 3639.0,
+    "metrics_id": "v003_starter_129"
+  },
+  {
+    "variant": "v003",
+    "opponent": "starter",
+    "seed": 130,
+    "p1_money": 30228.0,
+    "p2_money": 3669.0,
+    "metrics_id": "v003_starter_130"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 101,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_101"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 102,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_102"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 103,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_103"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 104,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_104"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 105,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_105"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 106,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_106"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 107,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_107"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 108,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_108"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 109,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_109"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 110,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_110"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 111,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_111"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 112,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_112"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 113,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_113"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 114,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_114"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 115,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_115"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 116,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_116"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 117,
+    "p1_money": 30234.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_117"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 118,
+    "p1_money": 30225.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_118"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 119,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_119"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 120,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_120"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 121,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_121"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 122,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_122"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 123,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_123"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 124,
+    "p1_money": 30219.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_124"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 125,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_125"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 126,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_126"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 127,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_127"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 128,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_128"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 129,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_129"
+  },
+  {
+    "variant": "v003",
+    "opponent": "melon_maxxer",
+    "seed": 130,
+    "p1_money": 30228.0,
+    "p2_money": 2680.0,
+    "metrics_id": "v003_melon_maxxer_130"
+  }
+]
