@@ -117,6 +117,7 @@ We tested 4 isolated strategies to convert physical capacity into economic gain:
 - **V002-A (Control):** Baseline global allocator (Final Bank: $26,508)
 - **V002-B (Smart Sell):** Holds inventory if price hits floor (Final Bank: $26,676)
 - **V002-C (Throttle):** Halts seed purchases when market pipeline is saturated (Final Bank: **$29,398**)
-- **V002-D (Diversify):** Switches to Strawberry/Tomato (Final Bank: $24,714)
-
-**Conclusion:** V002-C (Production Throttling) is the massive winner. It correctly stops overproducing Melons, saving money on seeds and allowing workers to idle rather than perform unprofitable actions. Diversification (V002-D) failed because the worker fleet lacked the physical capacity to handle the intense daily watering required by Strawberry and Tomato crops, leading to massive crop deaths.
+- **V002-D### Current Champion
+**V008-D Dynamic Clusters (gents/v008_d_dynamic_clusters.py)**
+- Mean Final Bank: ~,844
+- Improvements over V007-B: Implemented dynamic cluster scaling based on labor surplus/deficit, which stabilized the farm's logistics, raised movement efficiency to 48.7%, and lowered watering misses to just 4.6 per game.

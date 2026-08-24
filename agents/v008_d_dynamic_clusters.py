@@ -365,7 +365,7 @@ class DailyPlanner:
                 tile = farm_tiles[y][x]
                 if isinstance(tile, dict):
                     if tile.get("kind") == "PLANT":
-                        existing_crops.append((x, y))
+                        existing_crops.append((x, y, tile.get("crop")))
                         if not tile.get("watered_today", True):
                             self.tasks.append(Task("WATER", 10, (x, y)))
                         if tile.get("yield_units", 0) > 0:
@@ -399,15 +399,59 @@ class DailyPlanner:
             best_tile = None
             best_cost = 999999
             
+            CROP_TASKS = {"WHEAT": 4, "CARROT": 5, "TOMATO": 6, "STRAWBERRY": 7, "MELON": 5}
+            CROP_VALUES = {"WHEAT": 3, "CARROT": 6, "TOMATO": 10, "STRAWBERRY": 25, "MELON": 40}
+            
+            # Estimate labor capacity and target clusters
+            active_workers = len(self.state.my_farm.get("hands", [])) + 1
+            current_tasks_count = len(self.tasks)
+            labor_capacity = (active_workers * 24) - current_tasks_count
+            target_cluster_count = max(1, labor_capacity // 30)
+            
+            # Simple cluster count estimation (distance <= 2)
+            current_cluster_count = 0
+            if existing_crops:
+                visited = set()
+                for p in existing_crops:
+                    loc = (p[0], p[1])
+                    if loc not in visited:
+                        current_cluster_count += 1
+                        q = [loc]
+                        while q:
+                            curr = q.pop(0)
+                            if curr not in visited:
+                                visited.add(curr)
+                                for other in existing_crops:
+                                    oloc = (other[0], other[1])
+                                    if oloc not in visited and abs(curr[0] - oloc[0]) + abs(curr[1] - oloc[1]) <= 2:
+                                        q.append(oloc)
+            
             for ex, ey in empty_tiles:
                 # Calculate cost for this empty tile
                 worker_travel_penalty = abs(fx - ex) + abs(fy - ey)
                 
                 if existing_crops:
-                    min_dist_to_crop = min(abs(cx - ex) + abs(cy - ey) for cx, cy in existing_crops)
-                    isolated_tile_penalty = 10 if min_dist_to_crop > 1 else 0
+                    min_dist_to_crop = min(abs(cx - ex) + abs(cy - ey) for cx, cy, _ in existing_crops)
                     
-                    cost = min_dist_to_crop + isolated_tile_penalty + (worker_travel_penalty * 0.1) # worker travel is secondary tiebreaker
+                    # cluster_density_bonus: count adjacent crops
+                    adjacent_crops = sum(1 for cx, cy, _ in existing_crops if abs(cx - ex) + abs(cy - ey) == 1)
+                    cluster_density_bonus = -1 * adjacent_crops
+                    
+                    # future_task_density_penalty: count future tasks within distance 3
+                    local_future_tasks = 0
+                    for cx, cy, ccrop in existing_crops:
+                        if abs(cx - ex) + abs(cy - ey) <= 3:
+                            local_future_tasks += CROP_TASKS.get(ccrop, 5)
+                            
+                    future_task_density_penalty = 10 if local_future_tasks > 30 else 0
+                    economic_value_bonus = CROP_VALUES.get(seed_to_plant, 5) * 0.1
+                    
+                    if min_dist_to_crop > 2 and current_cluster_count < target_cluster_count:
+                        isolated_tile_penalty = 0
+                    else:
+                        isolated_tile_penalty = 10 if min_dist_to_crop > 1 else 0
+                    
+                    cost = min_dist_to_crop + cluster_density_bonus + future_task_density_penalty - economic_value_bonus + isolated_tile_penalty + (worker_travel_penalty * 0.1)
                 else:
                     # If no crops exist, just cluster near the farmer to start the patch
                     cost = worker_travel_penalty
@@ -415,13 +459,16 @@ class DailyPlanner:
                 if cost < best_cost:
                     best_cost = cost
                     best_tile = (ex, ey)
+                    best_cost_min_dist = min_dist_to_crop if existing_crops else 999
                     
             if best_tile:
                 self.tasks.append(Task("PLANT", 30, best_tile, {"crop": seed_to_plant}))
                 simulated_seeds[seed_to_plant] -= 1
                 total_seeds_to_plant -= 1
                 empty_tiles.remove(best_tile)
-                existing_crops.append(best_tile)
+                existing_crops.append((best_tile[0], best_tile[1], seed_to_plant))
+                if best_cost_min_dist > 2:
+                    current_cluster_count += 1
             else:
                 break
         

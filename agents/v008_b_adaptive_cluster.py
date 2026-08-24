@@ -405,9 +405,18 @@ class DailyPlanner:
                 
                 if existing_crops:
                     min_dist_to_crop = min(abs(cx - ex) + abs(cy - ey) for cx, cy in existing_crops)
+                    
+                    # cluster_density_bonus: count adjacent crops
+                    adjacent_crops = sum(1 for cx, cy in existing_crops if abs(cx - ex) + abs(cy - ey) == 1)
+                    cluster_density_bonus = -1 * adjacent_crops
+                    
+                    # overcrowding_penalty: count crops within distance 3
+                    local_crops = sum(1 for cx, cy in existing_crops if abs(cx - ex) + abs(cy - ey) <= 3)
+                    overcrowding_penalty = 10 if local_crops > 8 else 0
+                    
                     isolated_tile_penalty = 10 if min_dist_to_crop > 1 else 0
                     
-                    cost = min_dist_to_crop + isolated_tile_penalty + (worker_travel_penalty * 0.1) # worker travel is secondary tiebreaker
+                    cost = min_dist_to_crop + cluster_density_bonus + overcrowding_penalty + isolated_tile_penalty + (worker_travel_penalty * 0.1)
                 else:
                     # If no crops exist, just cluster near the farmer to start the patch
                     cost = worker_travel_penalty
