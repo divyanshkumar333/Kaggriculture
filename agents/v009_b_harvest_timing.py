@@ -173,8 +173,6 @@ class MetricsTracker:
                 elif market_action and market_action[0] == "SELL":
                     item = market_action[1]
                     n = int(market_action[2]) if len(market_action) > 2 else 1
-                    # Approximate price using seed cost or standard price since we don't have exact market price here
-                    # Actually, the agent's metric for "revenue" uses the actual returned money diff. 
                     pass 
 
             # Track planting actions
@@ -578,6 +576,30 @@ class DailyPlanner:
         for crop_name in crop_actions.keys():
             seed_cost = CROPS.get(crop_name, {}).get("seed", 999)
             
+            # V009-B: Dynamically cap max yield based on remaining days in season (30 days total)
+            remaining_days = 30 - self.state.day
+            crop_info = CROPS.get(crop_name, {})
+            first_yield = crop_info.get("first_yield_day", 999)
+            
+            if remaining_days - 1 < first_yield:
+                achievable_yield = 0
+            else:
+                if crop_info.get("ongoing"):
+                    possible_productions = (remaining_days - 1 - first_yield) // 2 + 1
+                    actual_productions = min(crop_info["max_yield"], max(0, possible_productions))
+                    multiplier = actual_productions / float(crop_info["max_yield"])
+                    achievable_yield = int(crop_max_yield[crop_name] * multiplier)
+                else:
+                    window_start = (crop_info["max_yield_day"] + 1) // 2
+                    bonus_days = max(0, min(crop_info["max_yield_day"], remaining_days - 1) - window_start + 1)
+                    # Assume fertilized bonus if we have money/fertilizer policy, but for conservative estimate let's use +1 (unfertilized) or +2 (fertilized)
+                    # The agent doesn't use fertilizer currently, so +1
+                    base = 1
+                    actual_yield_count = min(crop_info["max_yield"], base + bonus_days * 1)
+                    # Scale according to crop_max_yield table which assumed max_yield (4 for wheat, but wait crop_max_yield has 6 for wheat which is fertilized)
+                    multiplier = actual_yield_count / float(crop_info["max_yield"])
+                    achievable_yield = int(crop_max_yield[crop_name] * multiplier)
+            
             # Count pipeline (shed + planted)
             planted_count = sum(1 for y in range(self.state.board_size) for x in range(self.state.board_size) 
                               if isinstance(farm_tiles[y][x], dict) and farm_tiles[y][x].get("kind") == "PLANT" and farm_tiles[y][x].get("crop") == crop_name)
@@ -588,7 +610,7 @@ class DailyPlanner:
             current_inv = self.state.market.get("inventory", {}).get(crop_name, 10000)
             sim_inv = current_inv + pipeline_qty
             expected_revenue = 0
-            for i in range(crop_max_yield[crop_name]):
+            for i in range(achievable_yield):
                 p = self.econ.get_price_at_inventory(crop_name, sim_inv + i)
                 expected_revenue += p
                 
@@ -860,8 +882,5 @@ def agent(obs):
         return actions
         
     except Exception as e:
-        with open("error.txt", "a") as f:
-            import traceback
-            traceback.print_exc(file=f)
         print(f"Agent Error: {e}")
         return {"farmer": ["PASS"], "hands": [], "market": []}
