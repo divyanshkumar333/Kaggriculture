@@ -58,7 +58,8 @@ def main():
         env = make("kaggriculture", configuration=config, debug=False)
         
         # Set environment variable so the agent can read the current seed for metrics tracking
-        os.environ["KAGGRICULTURE_SEED"] = str(seed)
+        if "KAGGRICULTURE_SEED" not in os.environ:
+            os.environ["KAGGRICULTURE_SEED"] = str(seed)
         
         try:
             # Swap order every other game to ensure fairness

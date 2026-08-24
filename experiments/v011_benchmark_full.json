@@ -1,0 +1,38 @@
+{
+  "agents/v011_a_control.py": {
+    "OVERALL": {
+      "mean": {
+        "final_money": 38997.75555555556,
+        "total_revenue": 51077.72222222222,
+        "seed_spending": 7445.0,
+        "worker_spending": 634.9666666666667,
+        "land_spending": 7000.0,
+        "hired": 157.32222222222222,
+        "crop_deaths": 50.2,
+        "movement_actions": 2044.4666666666667,
+        "useful_actions": 1439.2888888888888,
+        "idle_turns": 190.12222222222223,
+        "water_misses": 44.644444444444446,
+        "movement_efficiency": 0.4131429045283187
+      }
+    }
+  },
+  "agents/v011_b_spatial_zoning.py": {
+    "OVERALL": {
+      "mean": {
+        "final_money": 38877.98888888889,
+        "total_revenue": 51321.433333333334,
+        "seed_spending": 7821.666666666667,
+        "worker_spending": 621.7777777777778,
+        "land_spending": 7000.0,
+        "hired": 155.94444444444446,
+        "crop_deaths": 53.96666666666667,
+        "movement_actions": 1776.5444444444445,
+        "useful_actions": 1490.8666666666666,
+        "idle_turns": 343.3777777777778,
+        "water_misses": 47.888888888888886,
+        "movement_efficiency": 0.45628377206554965
+      }
+    }
+  }
+}

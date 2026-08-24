@@ -1,0 +1,82 @@
+{
+  "timestamp": "2026-08-24T21:39:37.020854",
+  "agent1": "agents/v013_d_stability_only.py",
+  "agent2": "random",
+  "games": 5,
+  "steps": 720,
+  "seed_start": 42,
+  "wins_a1": 5,
+  "wins_a2": 0,
+  "ties": 0,
+  "errors": 0,
+  "a1_rewards": [
+    38708.0,
+    31332.0,
+    29768.0,
+    26594.0,
+    27689.0
+  ],
+  "a2_rewards": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "game_logs": [
+    {
+      "game": 1,
+      "seed": 42,
+      "a1_reward": 38708.0,
+      "a2_reward": 0,
+      "winner": "agents/v013_d_stability_only.py",
+      "p1_is_a1": true
+    },
+    {
+      "game": 2,
+      "seed": 43,
+      "a1_reward": 31332.0,
+      "a2_reward": 0,
+      "winner": "agents/v013_d_stability_only.py",
+      "p1_is_a1": false
+    },
+    {
+      "game": 3,
+      "seed": 44,
+      "a1_reward": 29768.0,
+      "a2_reward": 0,
+      "winner": "agents/v013_d_stability_only.py",
+      "p1_is_a1": true
+    },
+    {
+      "game": 4,
+      "seed": 45,
+      "a1_reward": 26594.0,
+      "a2_reward": 0,
+      "winner": "agents/v013_d_stability_only.py",
+      "p1_is_a1": false
+    },
+    {
+      "game": 5,
+      "seed": 46,
+      "a1_reward": 27689.0,
+      "a2_reward": 0,
+      "winner": "agents/v013_d_stability_only.py",
+      "p1_is_a1": true
+    }
+  ],
+  "stats_a1": {
+    "mean": 30818.2,
+    "median": 29768.0,
+    "std": 4272.039625284391,
+    "min": 26594.0,
+    "max": 38708.0
+  },
+  "stats_a2": {
+    "mean": 0.0,
+    "median": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0
+  }
+}

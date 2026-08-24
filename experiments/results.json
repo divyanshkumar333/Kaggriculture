@@ -1,332 +1,42 @@
 {
-  "timestamp": "2026-08-24T19:54:02.676973",
-  "agent1": "agents/v009_b_harvest_timing.py",
+  "timestamp": "2026-08-25T00:09:11.709626",
+  "agent1": "agents/v014_d_combined.py",
   "agent2": "agents/melon_maxxer.py",
-  "games": 30,
+  "games": 1,
   "steps": 720,
-  "seed_start": 1000,
-  "wins_a1": 30,
+  "seed_start": 29,
+  "wins_a1": 1,
   "wins_a2": 0,
   "ties": 0,
   "errors": 0,
   "a1_rewards": [
-    36152.0,
-    36349.0,
-    36242.0,
-    36661.0,
-    35388.0,
-    38447.0,
-    35768.0,
-    36070.0,
-    36109.0,
-    36012.0,
-    37788.0,
-    35193.0,
-    38722.0,
-    35924.0,
-    38188.0,
-    38676.0,
-    38010.0,
-    35997.0,
-    35636.0,
-    35646.0,
-    35648.0,
-    37584.0,
-    35669.0,
-    36096.0,
-    36209.0,
-    37353.0,
-    38428.0,
-    36320.0,
-    36113.0,
-    38053.0
+    27268.0
   ],
   "a2_rewards": [
-    3906.0,
-    3906.0,
-    3906.0,
-    3906.0,
-    3906.0,
-    3922.0,
-    3906.0,
-    3906.0,
-    3906.0,
-    3906.0,
-    3922.0,
-    3906.0,
-    3922.0,
-    3906.0,
-    3922.0,
-    3922.0,
-    3922.0,
-    3906.0,
-    3906.0,
-    3906.0,
-    3906.0,
-    3922.0,
-    3906.0,
-    3906.0,
-    3906.0,
-    3922.0,
-    3922.0,
-    3906.0,
-    3906.0,
-    3922.0
+    3968.0
   ],
   "game_logs": [
     {
       "game": 1,
-      "seed": 1000,
-      "a1_reward": 36152.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
+      "seed": 29,
+      "a1_reward": 27268.0,
+      "a2_reward": 3968.0,
+      "winner": "agents/v014_d_combined.py",
       "p1_is_a1": true
-    },
-    {
-      "game": 2,
-      "seed": 1001,
-      "a1_reward": 36349.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": false
-    },
-    {
-      "game": 3,
-      "seed": 1002,
-      "a1_reward": 36242.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": true
-    },
-    {
-      "game": 4,
-      "seed": 1003,
-      "a1_reward": 36661.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": false
-    },
-    {
-      "game": 5,
-      "seed": 1004,
-      "a1_reward": 35388.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": true
-    },
-    {
-      "game": 6,
-      "seed": 1005,
-      "a1_reward": 38447.0,
-      "a2_reward": 3922.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": false
-    },
-    {
-      "game": 7,
-      "seed": 1006,
-      "a1_reward": 35768.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": true
-    },
-    {
-      "game": 8,
-      "seed": 1007,
-      "a1_reward": 36070.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": false
-    },
-    {
-      "game": 9,
-      "seed": 1008,
-      "a1_reward": 36109.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": true
-    },
-    {
-      "game": 10,
-      "seed": 1009,
-      "a1_reward": 36012.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": false
-    },
-    {
-      "game": 11,
-      "seed": 1010,
-      "a1_reward": 37788.0,
-      "a2_reward": 3922.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": true
-    },
-    {
-      "game": 12,
-      "seed": 1011,
-      "a1_reward": 35193.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": false
-    },
-    {
-      "game": 13,
-      "seed": 1012,
-      "a1_reward": 38722.0,
-      "a2_reward": 3922.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": true
-    },
-    {
-      "game": 14,
-      "seed": 1013,
-      "a1_reward": 35924.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": false
-    },
-    {
-      "game": 15,
-      "seed": 1014,
-      "a1_reward": 38188.0,
-      "a2_reward": 3922.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": true
-    },
-    {
-      "game": 16,
-      "seed": 1015,
-      "a1_reward": 38676.0,
-      "a2_reward": 3922.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": false
-    },
-    {
-      "game": 17,
-      "seed": 1016,
-      "a1_reward": 38010.0,
-      "a2_reward": 3922.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": true
-    },
-    {
-      "game": 18,
-      "seed": 1017,
-      "a1_reward": 35997.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": false
-    },
-    {
-      "game": 19,
-      "seed": 1018,
-      "a1_reward": 35636.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": true
-    },
-    {
-      "game": 20,
-      "seed": 1019,
-      "a1_reward": 35646.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": false
-    },
-    {
-      "game": 21,
-      "seed": 1020,
-      "a1_reward": 35648.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": true
-    },
-    {
-      "game": 22,
-      "seed": 1021,
-      "a1_reward": 37584.0,
-      "a2_reward": 3922.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": false
-    },
-    {
-      "game": 23,
-      "seed": 1022,
-      "a1_reward": 35669.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": true
-    },
-    {
-      "game": 24,
-      "seed": 1023,
-      "a1_reward": 36096.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": false
-    },
-    {
-      "game": 25,
-      "seed": 1024,
-      "a1_reward": 36209.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": true
-    },
-    {
-      "game": 26,
-      "seed": 1025,
-      "a1_reward": 37353.0,
-      "a2_reward": 3922.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": false
-    },
-    {
-      "game": 27,
-      "seed": 1026,
-      "a1_reward": 38428.0,
-      "a2_reward": 3922.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": true
-    },
-    {
-      "game": 28,
-      "seed": 1027,
-      "a1_reward": 36320.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": false
-    },
-    {
-      "game": 29,
-      "seed": 1028,
-      "a1_reward": 36113.0,
-      "a2_reward": 3906.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": true
-    },
-    {
-      "game": 30,
-      "seed": 1029,
-      "a1_reward": 38053.0,
-      "a2_reward": 3922.0,
-      "winner": "agents/v009_b_harvest_timing.py",
-      "p1_is_a1": false
     }
   ],
   "stats_a1": {
-    "mean": 36681.7,
-    "median": 36180.5,
-    "std": 1087.6998406423222,
-    "min": 35193.0,
-    "max": 38722.0
+    "mean": 27268.0,
+    "median": 27268.0,
+    "std": 0.0,
+    "min": 27268.0,
+    "max": 27268.0
   },
   "stats_a2": {
-    "mean": 3911.3333333333335,
-    "median": 3906.0,
-    "std": 7.542472332656509,
-    "min": 3906.0,
-    "max": 3922.0
+    "mean": 3968.0,
+    "median": 3968.0,
+    "std": 0.0,
+    "min": 3968.0,
+    "max": 3968.0
   }
 }

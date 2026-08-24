@@ -1,0 +1,38 @@
+{
+  "agents/v012_a_control.py": {
+    "OVERALL": {
+      "mean": {
+        "final_money": 39114.34444444445,
+        "total_revenue": 51168.48888888889,
+        "seed_spending": 7422.222222222223,
+        "worker_spending": 631.9222222222222,
+        "land_spending": 7000.0,
+        "hired": 157.07777777777778,
+        "crop_deaths": 51.333333333333336,
+        "movement_actions": 2039.0666666666666,
+        "useful_actions": 1430.4333333333334,
+        "idle_turns": 186.48888888888888,
+        "water_misses": 45.166666666666664,
+        "movement_efficiency": 0.41228803381851375
+      }
+    }
+  },
+  "agents/v012_b_soft_affinity.py": {
+    "OVERALL": {
+      "mean": {
+        "final_money": 37309.666666666664,
+        "total_revenue": 48181.87777777778,
+        "seed_spending": 6467.777777777777,
+        "worker_spending": 671.1,
+        "land_spending": 6733.333333333333,
+        "hired": 160.93333333333334,
+        "crop_deaths": 34.13333333333333,
+        "movement_actions": 2304.1,
+        "useful_actions": 1179.111111111111,
+        "idle_turns": 251.24444444444444,
+        "water_misses": 31.166666666666668,
+        "movement_efficiency": 0.3385126750858882
+      }
+    }
+  }
+}
