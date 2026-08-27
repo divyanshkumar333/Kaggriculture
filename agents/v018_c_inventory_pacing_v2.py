@@ -665,7 +665,7 @@ class DailyPlanner:
                     achievable_yield = int(crop_max_yield[crop_name] * multiplier)
             
             # --- V018-C Pipeline Pacing (C1) ---
-            TARGET_PIPELINE = float(os.environ.get("V018_C_TARGET_PIPELINE", 20.0))
+            TARGET_PIPELINE = float(os.environ.get("V018_C_TARGET_PIPELINE", 50.0))
             
             current_inv = self.state.market.get("inventory", {}).get(crop_name, 10000)
             market_excess = max(0, current_inv - 10000)
@@ -717,7 +717,6 @@ class DailyPlanner:
                 best_crop = crop_name
                 
         target_crop = best_crop
-        print("target_crop:", target_crop, "profit:", best_profit_per_action)
         if target_crop in CROPS and self.state.seeds.get(target_crop, 0) == 0 and self.state.money > self.strategy.config.cash_reserve + CROPS[target_crop]["seed"]:
             if best_profit_per_action > 0:
                 remaining_days = 30 - self.state.day

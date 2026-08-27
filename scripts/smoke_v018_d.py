@@ -35,7 +35,7 @@ for seed in seeds:
             traceback.print_exc()
             raise e
             
-    steps = env.run([wrapper, "random"])
+    steps = env.run([wrapper, "starter"])
     
     metrics_path = f"experiments/metrics/game_{seed}_p0.json"
     if os.path.exists(metrics_path):
