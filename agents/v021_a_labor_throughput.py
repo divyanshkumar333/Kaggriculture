@@ -9,8 +9,6 @@ from scipy.optimize import linear_sum_assignment
 # ==========================================
 # Metrics Tracking (Phase 3)
 # ==========================================
-# We use a global dict keyed by the seed (passed from experiments.py)
-# so the data persists across the 720 steps.
 _METRICS = collections.defaultdict(lambda: {
     "workers": {"hired": 0, "cost": 0, "active_turns": 0, "idle_turns": 0, "movement_actions": 0, "useful_actions": 0, "max_active": 0},
     "farmer": {"active_turns": 0, "idle_turns": 0, "movement_actions": 0, "useful_actions": 0},
@@ -29,7 +27,7 @@ _METRICS = collections.defaultdict(lambda: {
         "future_task_density_sum": 0,
         "samples": 0
     },
-        "v018": {
+    "v018": {
         "batches": [],
         "blocked_planting_quantity": 0,
         "empty_tile_days": 0,
@@ -152,13 +150,10 @@ class MetricsTracker:
             # Future task density (estimate active tasks around each crop)
             task_density = 0
             for loc, plant in current_plants.items():
-                # rough estimate of future tasks: 1 per day alive
                 crop_name = plant.get("crop", "WHEAT")
-                # default approx
                 future_tasks = 4
                 if crop_name == "MELON": future_tasks = 5
                 
-                # count neighbors within dist 3
                 neighbors = sum(1 for p in plants if p != loc and abs(p[0] - loc[0]) + abs(p[1] - loc[1]) <= 3)
                 task_density += future_tasks * neighbors
             m["spatial"]["future_task_density_sum"] += task_density / len(plants)
@@ -174,7 +169,6 @@ class MetricsTracker:
             m["final_shed"] = shed
             
         if actions and day is not None:
-            # Track market actions
             for market_action in actions.get("market", []):
                 if market_action and market_action[0] == "BUY_SEED":
                     crop = market_action[1]
@@ -187,13 +181,7 @@ class MetricsTracker:
                     first_yield = crop_info.get("first_yield_day", 999)
                     if day > 29 - first_yield:
                         m["timing"]["seeds_purchased_after_profitable"] += n
-                        
-                elif market_action and market_action[0] == "SELL":
-                    item = market_action[1]
-                    n = int(market_action[2]) if len(market_action) > 2 else 1
-                    pass 
 
-            # Track planting actions
             units = []
             if "farmer" in actions and actions["farmer"]:
                 units.append(actions["farmer"])
@@ -207,7 +195,6 @@ class MetricsTracker:
                     if day >= 20:
                         m["timing"]["late_season_crops_planted"] += 1
         
-        # Calculate efficiencies
         total_worker_turns = m["workers"]["active_turns"] + m["workers"]["idle_turns"]
         useful = m["farmer"]["useful_actions"] + m["workers"]["useful_actions"]
         total_movement = m["farmer"]["movement_actions"] + m["workers"]["movement_actions"]
@@ -228,12 +215,7 @@ class MetricsTracker:
             "future_task_density": m["spatial"]["future_task_density_sum"] / max(1, m["spatial"]["samples"])
         }
         
-        # Save periodically to ensure metrics are not lost
         if step % 20 == 0 or step >= 710:
-            if step >= 710:
-                # Need a way to get final shed state. We don't have state object here, 
-                # but we can do it in track_plants instead or the caller.
-                pass
             os.makedirs("experiments/metrics", exist_ok=True)
             
             def convert_defaultdicts(obj):
@@ -256,7 +238,7 @@ class MetricsTracker:
 # ==========================================
 class Task:
     def __init__(self, action_type, priority, location=None, kwargs=None):
-        self.action_type = action_type # WATER, HARVEST, PLANT, BUY_SEED, SELL, HIRE
+        self.action_type = action_type
         self.priority = priority
         self.location = location
         self.kwargs = kwargs or {}
@@ -271,6 +253,27 @@ def is_ready_to_harvest(crop_name, planted_day, current_day):
         return False
     crop_age = current_day - planted_day
     return crop_age >= crop_info["first_yield_day"]
+
+# ==========================================
+# Dynamic Plant Cap Calculation (V021-A)
+# ==========================================
+def get_daily_plant_cap(n_unlocked_quads):
+    custom = os.environ.get("V021_A_CAP")
+    if custom is not None:
+        return int(custom)
+    # Dynamic Plant Cap scaling with land:
+    # 1 quad (25 tiles) -> 4/day
+    # 2 quads (50 tiles) -> 6/day
+    # 3 quads (75 tiles) -> 8/day
+    # 4 quads (100 tiles) -> 10/day
+    if n_unlocked_quads <= 1:
+        return 4
+    elif n_unlocked_quads == 2:
+        return 6
+    elif n_unlocked_quads == 3:
+        return 8
+    else:
+        return 10
 
 # ==========================================
 # 2. Game State Parser
@@ -372,7 +375,6 @@ class EconomicCalculator:
         for _ in range(quantity):
             price = self.get_price_at_inventory(product, inv)
             if price <= 1:
-                # Still gives $1 but doesn't add to inventory
                 total_rev += 1
             else:
                 total_rev += price
@@ -384,9 +386,6 @@ class EconomicCalculator:
             if x <= 1: return 1
             return fib(x-1) + fib(x-2)
         return fib(n)
-
-    def marginal_roi_of_worker(self):
-        return 15.0 
 
 # ==========================================
 # 4. Strategic Planner
@@ -436,7 +435,6 @@ class DailyPlanner:
         simulated_seeds = dict(self.state.seeds)
         simulated_shed = dict(self.state.shed)
         
-        # First collect all crops to calculate clusters, and all empty tiles
         existing_crops = []
         empty_tiles = []
         
@@ -469,26 +467,16 @@ class DailyPlanner:
                                     else:
                                         urgency = price / max(1, turns_until)
                                 self.tasks.append(Task("HARVEST", 20, (x, y), {"urgency_score": urgency, "value_score": value}))
-                    elif tile.get("kind") in ["COOP", "PASTURE"]:
-                        if not tile.get("fed_today", True):
-                            if simulated_shed.get("WHEAT", 0) > 0:
-                                consecutive = tile.get("consecutive_unfed", 0)
-                                turns_until = (24 - self.state.hour) if consecutive >= 1 else (48 - self.state.hour)
-                                animal_name = tile.get("animal", "")
-                                animal_info = ANIMALS.get(animal_name, {})
-                                expected_loss = animal_info.get("cost", 300) + 100
-                                urgency = expected_loss / max(1, turns_until)
-                                self.tasks.append(Task("FEED", 10, (x, y), {"urgency_score": urgency, "value_score": 0}))
-                                simulated_shed["WHEAT"] -= 1
                 elif tile is None:
                     empty_tiles.append((x, y))
                     
-        # Plant target crops based on spatial fragmentation scores
         metrics = MetricsTracker.get()
         metrics["v018"]["empty_tile_days"] += len(empty_tiles)
         metrics["v018"]["productive_tile_days"] += len(existing_crops)
-        # --- V018-B Batch Cap ---
-        DAILY_PLANT_CAP = int(os.environ.get("V018_B_CAP", 4))
+        
+        # --- V021-A Dynamic Plant Cap ---
+        unlocked_quads = len(self.state.my_farm.get("unlocked_quadrants", []))
+        DAILY_PLANT_CAP = get_daily_plant_cap(unlocked_quads)
         
         for crop in list(simulated_seeds.keys()):
             if simulated_seeds[crop] > DAILY_PLANT_CAP:
@@ -498,12 +486,9 @@ class DailyPlanner:
                 simulated_seeds[crop] = DAILY_PLANT_CAP
                 
         total_seeds_to_plant = sum(simulated_seeds.values())
-        
-        # Farmer's position serves as a reference for worker travel penalty if no crops exist yet
         fx, fy = self.state.farmer
         
         while total_seeds_to_plant > 0 and empty_tiles:
-            # Pick a seed to plant (only if it can mature before season end)
             remaining_days = 30 - self.state.day
             seed_to_plant = None
             for available_crop, amount in list(simulated_seeds.items()):
@@ -524,13 +509,11 @@ class DailyPlanner:
             CROP_TASKS = {"WHEAT": 4, "CARROT": 5, "TOMATO": 6, "STRAWBERRY": 7, "MELON": 5}
             CROP_VALUES = {"WHEAT": 3, "CARROT": 6, "TOMATO": 10, "STRAWBERRY": 25, "MELON": 40}
             
-            # Estimate labor capacity and target clusters
             active_workers = len(self.state.my_farm.get("hands", [])) + 1
             current_tasks_count = len(self.tasks)
             labor_capacity = (active_workers * 24) - current_tasks_count
             target_cluster_count = max(1, labor_capacity // 30)
             
-            # Simple cluster count estimation (distance <= 2)
             current_cluster_count = 0
             if existing_crops:
                 visited = set()
@@ -549,17 +532,13 @@ class DailyPlanner:
                                         q.append(oloc)
             
             for ex, ey in empty_tiles:
-                # Calculate cost for this empty tile
                 worker_travel_penalty = abs(fx - ex) + abs(fy - ey)
                 
                 if existing_crops:
                     min_dist_to_crop = min(abs(cx - ex) + abs(cy - ey) for cx, cy, _ in existing_crops)
-                    
-                    # cluster_density_bonus: count adjacent crops
                     adjacent_crops = sum(1 for cx, cy, _ in existing_crops if abs(cx - ex) + abs(cy - ey) == 1)
                     cluster_density_bonus = -1 * adjacent_crops
                     
-                    # future_task_density_penalty: count future tasks within distance 3
                     local_future_tasks = 0
                     for cx, cy, ccrop in existing_crops:
                         if abs(cx - ex) + abs(cy - ey) <= 3:
@@ -575,7 +554,6 @@ class DailyPlanner:
                     
                     cost = min_dist_to_crop + cluster_density_bonus + future_task_density_penalty - economic_value_bonus + isolated_tile_penalty + (worker_travel_penalty * 0.1)
                 else:
-                    # If no crops exist, just cluster near the farmer to start the patch
                     cost = worker_travel_penalty
                     
                 if cost < best_cost:
@@ -605,9 +583,6 @@ class DailyPlanner:
         
         for product, qty in self.state.shed.items():
             if qty > 0:
-                # We want to sell up to maximum we can without hitting price floor
-                # The market accepts max 10 orders per turn overall, so we shouldn't submit small orders
-                # Let's find how many we can sell before marginal price drops to 1
                 current_inv = self.state.market.get("inventory", {}).get(product, 10000)
                 sell_qty = 0
                 for i in range(qty):
@@ -617,21 +592,16 @@ class DailyPlanner:
                     else:
                         break
                 
-                # If we can sell, queue it. Limit to batch size to not over-saturate a single turn
                 if sell_qty > 0:
                     sell_qty = min(sell_qty, self.strategy.config.sell_batch_size)
                     self.tasks.append(Task("SELL", 5, kwargs={"product": product, "quantity": sell_qty}))
                     
-        # Crop Diversification Logic (V004-B)
+        # Crop Selection Logic
         best_crop = self.strategy.config.crop_policy
         best_profit_per_action = -999999
         
-        crop_actions = {
-            "WHEAT": 5, "CARROT": 4, "TOMATO": 15, "STRAWBERRY": 20, "MELON": 12
-        }
-        crop_max_yield = {
-            "WHEAT": 6, "CARROT": 4, "TOMATO": 16, "STRAWBERRY": 16, "MELON": 6
-        }
+        crop_actions = {"WHEAT": 5, "CARROT": 4, "TOMATO": 15, "STRAWBERRY": 20, "MELON": 12}
+        crop_max_yield = {"WHEAT": 6, "CARROT": 4, "TOMATO": 16, "STRAWBERRY": 16, "MELON": 6}
         
         metrics = MetricsTracker.get()
         useful_actions = metrics["workers"]["useful_actions"] + metrics["farmer"]["useful_actions"]
@@ -644,8 +614,6 @@ class DailyPlanner:
             
         for crop_name in crop_actions.keys():
             seed_cost = CROPS.get(crop_name, {}).get("seed", 999)
-            
-            # V009-B: Dynamically cap max yield based on remaining days in season (30 days total)
             remaining_days = 30 - self.state.day
             crop_info = CROPS.get(crop_name, {})
             first_yield = crop_info.get("first_yield_day", 999)
@@ -661,36 +629,20 @@ class DailyPlanner:
                 else:
                     window_start = (crop_info["max_yield_day"] + 1) // 2
                     bonus_days = max(0, min(crop_info["max_yield_day"], remaining_days - 1) - window_start + 1)
-                    # Assume fertilized bonus if we have money/fertilizer policy, but for conservative estimate let's use +1 (unfertilized) or +2 (fertilized)
-                    # The agent doesn't use fertilizer currently, so +1
                     base = 1
                     actual_yield_count = min(crop_info["max_yield"], base + bonus_days * 1)
-                    # Scale according to crop_max_yield table which assumed max_yield (4 for wheat, but wait crop_max_yield has 6 for wheat which is fertilized)
                     multiplier = actual_yield_count / float(crop_info["max_yield"])
                     achievable_yield = int(crop_max_yield[crop_name] * multiplier)
             
-            # Count pipeline (shed + planted)
-            planted_count = sum(1 for y in range(self.state.board_size) for x in range(self.state.board_size) 
-                              if isinstance(farm_tiles[y][x], dict) and farm_tiles[y][x].get("kind") == "PLANT" and farm_tiles[y][x].get("crop") == crop_name)
-            
-            pipeline_qty = self.state.shed.get(crop_name, 0) + (planted_count + self.state.seeds.get(crop_name, 0)) * crop_max_yield[crop_name]
-            
-            # 1. Expected Revenue (of the new crop)
-            # V015-B: Calculate EV using current market price instead of adding the entire pipeline, 
-            # because the pipeline is slowly consumed by town shops over the 30 days.
             current_inv = self.state.market.get("inventory", {}).get(crop_name, 10000)
             expected_revenue = 0
             for i in range(achievable_yield):
                 p = self.econ.get_price_at_inventory(crop_name, current_inv + i)
                 expected_revenue += p
                 
-            # 2. Expected Worker Cost
             expected_worker_cost = crop_actions[crop_name] * historical_cost_per_action
-            
-            # 3. Expected Market Impact 
             expected_market_impact = 0 
             
-            # 4. Expected Crop Loss
             planted = metrics["crops"][crop_name]["planted"]
             deaths = metrics["crops"][crop_name]["deaths"]
             death_rate = (deaths / planted) if planted > 0 else 0
@@ -704,11 +656,9 @@ class DailyPlanner:
                 best_crop = crop_name
                 
         target_crop = best_crop
-        DAILY_PLANT_CAP = int(os.environ.get("V018_B_CAP", 4))
         current_seeds = self.state.seeds.get(target_crop, 0)
         
-        # FIX 1 & 2: Fractional Seed Stall & Lifecycle Guard
-        # Only buy seeds at start of day (hour == 0) or when completely out of seeds to prevent intra-day over-purchasing
+        # FIX 1 & 2 & Dynamic Cap: Fractional Seed Stall & Lifecycle Guard
         if self.state.hour == 0 or current_seeds == 0:
             needed_seeds = min(DAILY_PLANT_CAP - current_seeds, len(empty_tiles))
             if needed_seeds > 0 and self.state.money > self.strategy.config.cash_reserve + (CROPS[target_crop]["seed"] * needed_seeds):
@@ -719,20 +669,14 @@ class DailyPlanner:
                         if buy_qty > 0:
                             self.tasks.append(Task("BUY_SEED", 50, kwargs={"product": target_crop, "quantity": buy_qty}))
         
-        # Land Expansion Logic (V020-C: FIX 3 - Dynamic Operating Reserve & Lifecycle Cutoff)
-        # 1. Count number of empty unlocked tiles
-        # 2. If <= 5 empty tiles left and enough days remain in the season to recoup investment, buy land!
+        # Land Expansion Logic (V020-C Dynamic Operating Reserve & Lifecycle Cutoff)
         if len(empty_tiles) <= 5 and (30 - self.state.day) >= 12:
-            unlocked_quads = self.state.my_farm.get("unlocked_quadrants", [])
-            n_unlocked = len(unlocked_quads)
-            
+            unlocked_quads_list = self.state.my_farm.get("unlocked_quadrants", [])
+            n_unlocked = len(unlocked_quads_list)
             land_prices = [1000, 2000, 4000]
             
-            # Note: "NW" is given for free, so n_unlocked is 1 initially.
-            # We can unlock up to 3 extra quadrants: NE, SW, SE
             if n_unlocked >= 1 and n_unlocked <= 3:
                 next_cost = land_prices[n_unlocked - 1]
-                # Dynamic operating reserve: cash reserve + 1 full daily batch of seeds
                 operating_reserve = self.strategy.config.cash_reserve + (DAILY_PLANT_CAP * CROPS.get(target_crop, {}).get("seed", 80))
                 if self.state.money > next_cost + operating_reserve:
                     self.tasks.append(Task("BUY_LAND", priority=100))
@@ -741,7 +685,7 @@ class DailyPlanner:
         return self.tasks
 
 # ==========================================
-# 6. Task Allocator
+# 6. Task Allocator (V021-A Labor Scaling)
 # ==========================================
 class TaskAllocator:
     def __init__(self, state: GameState, econ: EconomicCalculator, tasks, strategy):
@@ -759,36 +703,25 @@ class TaskAllocator:
         metrics["workers"]["max_active"] = max(metrics["workers"]["max_active"], active_workers)
         metrics["labor"]["cycles"] += 1
         
-        # Calculate dynamic labor requirements for the rest of the day
-        empty_unlocked = 0
         farm_tiles = self.state.my_farm.get("tiles", [])
-        for y in range(self.state.board_size):
-            for x in range(self.state.board_size):
-                if farm_tiles[y][x] is None:
-                    empty_unlocked += 1
-                    
-        queued_plant_tasks = sum(1 for t in unassigned_field_tasks if t.action_type == "PLANT")
-        uninstantiated_plant_tasks = max(0, empty_unlocked - queued_plant_tasks)
         
-        # Exact workload calculation based on routing approximations
-        # Moving to first task takes dist, then execution takes 1.
-        # Moving to next task takes ~1, execution takes 1 -> 2 actions per subsequent task.
-        # So total workload for N tasks is ~dist_to_first + 2 * (N - 1) + 1 
-        # which simplifies to dist_to_first + 2 * N - 1
-        # For simplicity and slight conservative padding, we use dist_to_first + 2 * N
+        # Detailed workload calculation across all active responsibilities
+        unwatered_count = sum(1 for row in farm_tiles for t in row 
+                              if isinstance(t, dict) and t.get("kind") == "PLANT" and not t.get("watered_today", True))
+        harvest_count = sum(1 for row in farm_tiles for t in row 
+                            if isinstance(t, dict) and t.get("kind") == "PLANT" and t.get("yield_units", 0) > 0 
+                            and is_ready_to_harvest(t.get("crop", ""), t.get("planted_day", 0), self.state.day))
+        queued_plant_tasks = sum(1 for t in unassigned_field_tasks if t.action_type == "PLANT")
+        
         units = [self.state.farmer] + self.state.hands
         min_start_dist = 0
-        if unassigned_field_tasks or uninstantiated_plant_tasks > 0:
-            # Assume tasks are distributed, we just find minimum distance from any worker to any existing task.
-            # If no existing tasks, we are just planting empty tiles, we use shed distance (since new seeds come from shed)
-            if unassigned_field_tasks:
-                min_start_dist = min([abs(ux - tx) + abs(uy - ty) for ux, uy in units for t in unassigned_field_tasks for tx, ty in [t.location]], default=0)
-            else:
-                # Shed is at 4, 4
-                min_start_dist = min([abs(ux - 4) + abs(uy - 4) for ux, uy in units], default=0)
-                
-        total_tasks = len(unassigned_field_tasks) + uninstantiated_plant_tasks
-        required_actions = min_start_dist + (total_tasks * 2) if total_tasks > 0 else 0
+        if unassigned_field_tasks:
+            min_start_dist = min([abs(ux - tx) + abs(uy - ty) for ux, uy in units for t in unassigned_field_tasks for tx, ty in [t.location]], default=0)
+        else:
+            min_start_dist = min([abs(ux - 4) + abs(uy - 4) for ux, uy in units], default=0)
+            
+        total_active_tasks = unwatered_count + harvest_count + queued_plant_tasks
+        required_actions = min_start_dist + (total_active_tasks * 2) if total_active_tasks > 0 else 0
         
         available_worker_actions = active_workers * remaining_turns
         
@@ -802,18 +735,27 @@ class TaskAllocator:
         metrics["labor"]["surplus_sum"] += max(0, labor_surplus)
         
         cost_of_next_hire = self.econ.get_hire_cost(self.state.hires_today)
-        expected_roi = self.strategy.config.worker_roi_threshold
+        
+        # Workload-proportional marginal ROI (scale threshold with workload deficit, up to Fibonacci cost 34):
+        # Enables scaling labor up to 6-8 workers when real farm workload justifies it.
+        marginal_roi = min(35.0, max(self.strategy.config.worker_roi_threshold, (labor_deficit / 2.0) * 1.5))
+        
+        # Operating reserve protecting next day's seeds and safety cash
+        n_unlocked = len(self.state.my_farm.get("unlocked_quadrants", []))
+        daily_cap = get_daily_plant_cap(n_unlocked)
+        target_crop = self.strategy.config.crop_policy
+        operating_reserve = self.strategy.config.cash_reserve + (daily_cap * CROPS.get(target_crop, {}).get("seed", 80))
         
         # Only hire if there is a deficit, remaining turns make it worthwhile (>3), and we have the ROI/funds.
         if labor_deficit > 0 and remaining_turns > 3:
-            if expected_roi > cost_of_next_hire:
-                if self.state.money > cost_of_next_hire + self.strategy.config.cash_reserve:
+            if cost_of_next_hire <= marginal_roi:
+                if self.state.money > cost_of_next_hire + operating_reserve:
                     self.tasks.append(Task("HIRE", 1))
 
         return {}
 
 # ==========================================
-# 7. Action Executor
+# 7. Action Executor (V021-A Market Order Priority)
 # ==========================================
 class ActionExecutor:
     def __init__(self, state: GameState, econ: EconomicCalculator):
@@ -822,13 +764,27 @@ class ActionExecutor:
         self.metrics = MetricsTracker.get()
         
     def step_toward(self, fx, fy, tx, ty):
-        # ponytail: The grid has no hard obstacles (all tiles are passable), so greedy Manhattan L-routing 
-        # is optimal and identical in length to BFS. Kept step_toward() instead of building a full BFS graph search.
+        # ponytail: Greedy Manhattan L-routing is optimal and identical in length to BFS on open grid.
         if fx > tx: return "WEST"
         if fx < tx: return "EAST"
         if fy > ty: return "NORTH"
         if fy < ty: return "SOUTH"
         return "PASS"
+    
+    def _order_priority(self, action):
+        op = action[0]
+        if op == "HIRE":
+            return 100000  # Critical to spawn hands in same turn
+        elif op == "BUY_LAND":
+            return 90000
+        elif op == "BUY_SEED":
+            return 80000  # Needed for planting
+        elif op == "SELL":
+            product = action[1]
+            qty = action[2] if len(action) > 2 else 1
+            current_price = self.state.market.get("prices", {}).get(product, 1)
+            return 1000 + (current_price * qty)
+        return 0
     
     def execute(self, tasks, assignments):
         market_actions = []
@@ -838,13 +794,11 @@ class ActionExecutor:
             if t.action_type in ["SELL", "BUY_SEED", "HIRE", "BUY_LAND"]:
                 if t.action_type == "SELL":
                     market_actions.append(["SELL", t.kwargs["product"], t.kwargs["quantity"]])
-                    # Track metrics
                     self.metrics["market"][t.kwargs["product"]]["sold"] += t.kwargs["quantity"]
                     current_price = self.state.market.get("prices", {}).get(t.kwargs["product"], 1)
-                    # Simplified tracking of revenue assuming no immediate price drop within the same order
                     self.metrics["market"][t.kwargs["product"]]["revenue"] += current_price * t.kwargs["quantity"]
                     self.metrics["economy"]["total_revenue"] += current_price * t.kwargs["quantity"]
-                    # --- V018 Metrics ---
+                    
                     crop = t.kwargs["product"]
                     revenue = current_price * t.kwargs["quantity"]
                     if crop in ["TOMATO", "STRAWBERRY", "MELON"]:
@@ -859,7 +813,6 @@ class ActionExecutor:
 
                 elif t.action_type == "BUY_SEED":
                     market_actions.append(["BUY_SEED", t.kwargs["product"], t.kwargs["quantity"]])
-                    # Track metrics
                     cost = CROPS.get(t.kwargs["product"], {}).get("seed", 0) * t.kwargs["quantity"]
                     self.metrics["economy"]["seed_spending"] += cost
                     self.metrics["economy"]["total_spending"] += cost
@@ -872,7 +825,6 @@ class ActionExecutor:
                     self.metrics["economy"]["total_spending"] += cost
                 elif t.action_type == "BUY_LAND":
                     market_actions.append(["BUY_LAND"])
-                    
                     unlocked_quads = self.state.my_farm.get("unlocked_quadrants", [])
                     n_unlocked = len(unlocked_quads)
                     if n_unlocked >= 1 and n_unlocked <= 3:
@@ -886,7 +838,6 @@ class ActionExecutor:
                 
         units = [self.state.farmer] + self.state.hands
         unit_actions = []
-        
         assigned_targets = [None] * len(units)
 
         if field_tasks and units:
@@ -899,20 +850,10 @@ class ActionExecutor:
                     tx, ty = target.location
                     dist = abs(ux - tx) + abs(uy - ty)
                     
-                    # Compute a cost value for this worker-task pair
-                    cost = 0
-                    
-                    # 1. Hard Constraints (Urgent tasks that could expire)
-                    # For WATER, the plant dies 2 days after planted if not watered. 
-                    # If dist > remaining_time, it's impossible.
-                    # As a simpler heuristic for the baseline Strategy's priority:
-                    # Priority >= 1000 means it's an urgent watering task.
                     if target.priority >= 1000:
-                        # Massive negative cost ensures this task is matched to SOME worker
                         cost = -1000000 + dist * 10
                     else:
                         u_score = target.kwargs.get("urgency_score", 0)
-                        # Soft optimization: minimize distance, maximize priority + urgency
                         cost = (dist * 10) - target.priority - u_score
 
                     cost_matrix[i, j] = cost
@@ -931,7 +872,6 @@ class ActionExecutor:
                     if target.action_type == "PLANT":
                         action = ["PLANT", target.kwargs["crop"]]
                         self.metrics["crops"][target.kwargs["crop"]]["planted"] += 1
-                        # --- V018 Metrics ---
                         crop = target.kwargs["crop"]
                         metrics = MetricsTracker.get()
                         
@@ -967,7 +907,6 @@ class ActionExecutor:
                             tile = self.state.get_tile(tx, ty)
                             if tile and tile.get("kind") == "PLANT":
                                 self.metrics["crops"][tile["crop"]]["harvested"] += 1
-                                # --- V018 Metrics ---
                                 crop = tile["crop"]
                                 metrics = MetricsTracker.get()
                                 market_inv = self.state.market.get("inventory", {}).get(crop, 10000)
@@ -985,7 +924,6 @@ class ActionExecutor:
                 
             unit_actions.append(action)
             
-            # Track worker/farmer turns
             is_farmer = (ui == 0)
             target_metric = self.metrics["farmer"] if is_farmer else self.metrics["workers"]
             if action[0] == "PASS":
@@ -1000,7 +938,8 @@ class ActionExecutor:
         farmer_action = unit_actions[0] if unit_actions else ["PASS"]
         hands_actions = unit_actions[1:] if len(unit_actions) > 1 else []
         
-        # Enforce limits
+        # V021-A: Reorder market orders by priority before 10-order truncation
+        market_actions.sort(key=lambda a: self._order_priority(a), reverse=True)
         market_actions = market_actions[:10]
         
         return {
@@ -1032,7 +971,6 @@ def agent(obs):
         executor = ActionExecutor(state, econ)
         actions = executor.execute(tasks, assignments)
         
-        # Track batches at end of day
         m = MetricsTracker.get()
         if state.hour == 23:
             if "batches_today" in m["v018"]:

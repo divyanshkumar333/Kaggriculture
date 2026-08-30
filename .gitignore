@@ -9,3 +9,5 @@ experiments/metrics/*.json
 !experiments/smoke_test.json
 !experiments/scorecard_baseline_v_random.json
 !experiments/scorecard_baseline_v_random.md
+kaggle_episodes/
+

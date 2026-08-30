@@ -503,17 +503,12 @@ class DailyPlanner:
         fx, fy = self.state.farmer
         
         while total_seeds_to_plant > 0 and empty_tiles:
-            # Pick a seed to plant (only if it can mature before season end)
-            remaining_days = 30 - self.state.day
+            # Pick a seed to plant
             seed_to_plant = None
-            for available_crop, amount in list(simulated_seeds.items()):
+            for available_crop, amount in simulated_seeds.items():
                 if amount > 0:
-                    first_yield = CROPS.get(available_crop, {}).get("first_yield_day", 999)
-                    if remaining_days - 1 >= first_yield:
-                        seed_to_plant = available_crop
-                        break
-                    else:
-                        simulated_seeds[available_crop] = 0
+                    seed_to_plant = available_crop
+                    break
                     
             if not seed_to_plant:
                 break
@@ -704,25 +699,17 @@ class DailyPlanner:
                 best_crop = crop_name
                 
         target_crop = best_crop
-        DAILY_PLANT_CAP = int(os.environ.get("V018_B_CAP", 4))
-        current_seeds = self.state.seeds.get(target_crop, 0)
+        if self.state.seeds.get(target_crop, 0) == 0 and self.state.money > self.strategy.config.cash_reserve + CROPS[target_crop]["seed"]:
+            if best_profit_per_action > 0:
+                remaining_days = 30 - self.state.day
+                if remaining_days - 1 >= CROPS.get(target_crop, {}).get("first_yield_day", 999):
+                    buy_qty = min(self.state.money // CROPS[target_crop]["seed"], 5)
+                    self.tasks.append(Task("BUY_SEED", 50, kwargs={"product": target_crop, "quantity": buy_qty}))
         
-        # FIX 1 & 2: Fractional Seed Stall & Lifecycle Guard
-        # Only buy seeds at start of day (hour == 0) or when completely out of seeds to prevent intra-day over-purchasing
-        if self.state.hour == 0 or current_seeds == 0:
-            needed_seeds = min(DAILY_PLANT_CAP - current_seeds, len(empty_tiles))
-            if needed_seeds > 0 and self.state.money > self.strategy.config.cash_reserve + (CROPS[target_crop]["seed"] * needed_seeds):
-                if best_profit_per_action > 0:
-                    remaining_days = 30 - self.state.day
-                    if remaining_days - 1 >= CROPS.get(target_crop, {}).get("first_yield_day", 999):
-                        buy_qty = min(self.state.money // CROPS[target_crop]["seed"], needed_seeds)
-                        if buy_qty > 0:
-                            self.tasks.append(Task("BUY_SEED", 50, kwargs={"product": target_crop, "quantity": buy_qty}))
-        
-        # Land Expansion Logic (V020-C: FIX 3 - Dynamic Operating Reserve & Lifecycle Cutoff)
+        # Land Expansion Logic (V010-B)
         # 1. Count number of empty unlocked tiles
-        # 2. If <= 5 empty tiles left and enough days remain in the season to recoup investment, buy land!
-        if len(empty_tiles) <= 5 and (30 - self.state.day) >= 12:
+        # 2. If <= 5 empty tiles left, we are capacity constrained. Buy land!
+        if len(empty_tiles) <= 5:
             unlocked_quads = self.state.my_farm.get("unlocked_quadrants", [])
             n_unlocked = len(unlocked_quads)
             
@@ -732,9 +719,8 @@ class DailyPlanner:
             # We can unlock up to 3 extra quadrants: NE, SW, SE
             if n_unlocked >= 1 and n_unlocked <= 3:
                 next_cost = land_prices[n_unlocked - 1]
-                # Dynamic operating reserve: cash reserve + 1 full daily batch of seeds
-                operating_reserve = self.strategy.config.cash_reserve + (DAILY_PLANT_CAP * CROPS.get(target_crop, {}).get("seed", 80))
-                if self.state.money > next_cost + operating_reserve:
+                # Only buy if we have plenty of cash left over for seeds/labor
+                if self.state.money > next_cost + self.strategy.config.cash_reserve + 2000:
                     self.tasks.append(Task("BUY_LAND", priority=100))
         
         self.tasks.sort(key=lambda t: t.priority)

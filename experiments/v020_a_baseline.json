@@ -1,0 +1,992 @@
+{
+  "Self (V020-A)": {
+    "wins": 5,
+    "losses": 5,
+    "ties": 2,
+    "total": 12,
+    "win_rate": 41.66666666666667,
+    "mean_a": 20324.166666666668,
+    "median_a": 15124.0,
+    "min_a": 7275.0,
+    "max_a": 38185.0,
+    "mean_b": 17609.5,
+    "delta": 2714.666666666668,
+    "results": [
+      {
+        "seed": 100,
+        "reward_a": 38185.0,
+        "reward_b": 38185.0,
+        "outcome": "TIE",
+        "p0_is_a": true
+      },
+      {
+        "seed": 101,
+        "reward_a": 7275.0,
+        "reward_b": 7987.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      },
+      {
+        "seed": 102,
+        "reward_a": 31701.0,
+        "reward_b": 31701.0,
+        "outcome": "TIE",
+        "p0_is_a": true
+      },
+      {
+        "seed": 103,
+        "reward_a": 35435.0,
+        "reward_b": 27642.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 104,
+        "reward_a": 15661.0,
+        "reward_b": 17904.0,
+        "outcome": "LOSS",
+        "p0_is_a": true
+      },
+      {
+        "seed": 105,
+        "reward_a": 10106.0,
+        "reward_b": 6387.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 106,
+        "reward_a": 33167.0,
+        "reward_b": 10718.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 107,
+        "reward_a": 13198.0,
+        "reward_b": 15011.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      },
+      {
+        "seed": 108,
+        "reward_a": 10952.0,
+        "reward_b": 16429.0,
+        "outcome": "LOSS",
+        "p0_is_a": true
+      },
+      {
+        "seed": 109,
+        "reward_a": 23068.0,
+        "reward_b": 12086.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 110,
+        "reward_a": 10555.0,
+        "reward_b": 20892.0,
+        "outcome": "LOSS",
+        "p0_is_a": true
+      },
+      {
+        "seed": 111,
+        "reward_a": 14587.0,
+        "reward_b": 6372.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      }
+    ]
+  },
+  "Diversified (V004-B)": {
+    "wins": 5,
+    "losses": 7,
+    "ties": 0,
+    "total": 12,
+    "win_rate": 41.66666666666667,
+    "mean_a": 18536.5,
+    "median_a": 11854.5,
+    "min_a": 4551.0,
+    "max_a": 39078.0,
+    "mean_b": 21721.0,
+    "delta": -3184.5,
+    "results": [
+      {
+        "seed": 100,
+        "reward_a": 39078.0,
+        "reward_b": 18200.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 101,
+        "reward_a": 7606.0,
+        "reward_b": 20850.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      },
+      {
+        "seed": 102,
+        "reward_a": 27698.0,
+        "reward_b": 22702.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 103,
+        "reward_a": 30135.0,
+        "reward_b": 22391.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 104,
+        "reward_a": 36745.0,
+        "reward_b": 26023.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 105,
+        "reward_a": 4551.0,
+        "reward_b": 19323.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      },
+      {
+        "seed": 106,
+        "reward_a": 31325.0,
+        "reward_b": 20539.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 107,
+        "reward_a": 11485.0,
+        "reward_b": 24891.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      },
+      {
+        "seed": 108,
+        "reward_a": 4910.0,
+        "reward_b": 20173.0,
+        "outcome": "LOSS",
+        "p0_is_a": true
+      },
+      {
+        "seed": 109,
+        "reward_a": 12224.0,
+        "reward_b": 20183.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      },
+      {
+        "seed": 110,
+        "reward_a": 8718.0,
+        "reward_b": 24585.0,
+        "outcome": "LOSS",
+        "p0_is_a": true
+      },
+      {
+        "seed": 111,
+        "reward_a": 7963.0,
+        "reward_b": 20792.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      }
+    ]
+  },
+  "Animal (V005-D)": {
+    "wins": 3,
+    "losses": 9,
+    "ties": 0,
+    "total": 12,
+    "win_rate": 25.0,
+    "mean_a": 18479.0,
+    "median_a": 13744.5,
+    "min_a": 6835.0,
+    "max_a": 45048.0,
+    "mean_b": 24072.166666666668,
+    "delta": -5593.166666666668,
+    "results": [
+      {
+        "seed": 100,
+        "reward_a": 45048.0,
+        "reward_b": 25704.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 101,
+        "reward_a": 12940.0,
+        "reward_b": 21746.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      },
+      {
+        "seed": 102,
+        "reward_a": 8451.0,
+        "reward_b": 16522.0,
+        "outcome": "LOSS",
+        "p0_is_a": true
+      },
+      {
+        "seed": 103,
+        "reward_a": 17268.0,
+        "reward_b": 26620.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      },
+      {
+        "seed": 104,
+        "reward_a": 29895.0,
+        "reward_b": 28499.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 105,
+        "reward_a": 10548.0,
+        "reward_b": 17443.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      },
+      {
+        "seed": 106,
+        "reward_a": 17362.0,
+        "reward_b": 30972.0,
+        "outcome": "LOSS",
+        "p0_is_a": true
+      },
+      {
+        "seed": 107,
+        "reward_a": 6835.0,
+        "reward_b": 23226.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      },
+      {
+        "seed": 108,
+        "reward_a": 12122.0,
+        "reward_b": 24046.0,
+        "outcome": "LOSS",
+        "p0_is_a": true
+      },
+      {
+        "seed": 109,
+        "reward_a": 14549.0,
+        "reward_b": 20864.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      },
+      {
+        "seed": 110,
+        "reward_a": 35975.0,
+        "reward_b": 26500.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 111,
+        "reward_a": 10755.0,
+        "reward_b": 26724.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      }
+    ]
+  },
+  "Dynamic Clusters (V008-D)": {
+    "wins": 7,
+    "losses": 5,
+    "ties": 0,
+    "total": 12,
+    "win_rate": 58.333333333333336,
+    "mean_a": 25145.333333333332,
+    "median_a": 31224.0,
+    "min_a": 3319.0,
+    "max_a": 43002.0,
+    "mean_b": 21373.833333333332,
+    "delta": 3771.5,
+    "results": [
+      {
+        "seed": 100,
+        "reward_a": 36436.0,
+        "reward_b": 19267.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 101,
+        "reward_a": 26012.0,
+        "reward_b": 18998.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 102,
+        "reward_a": 42728.0,
+        "reward_b": 18523.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 103,
+        "reward_a": 38097.0,
+        "reward_b": 18930.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 104,
+        "reward_a": 43002.0,
+        "reward_b": 22798.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 105,
+        "reward_a": 3319.0,
+        "reward_b": 21550.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      },
+      {
+        "seed": 106,
+        "reward_a": 8891.0,
+        "reward_b": 23754.0,
+        "outcome": "LOSS",
+        "p0_is_a": true
+      },
+      {
+        "seed": 107,
+        "reward_a": 39845.0,
+        "reward_b": 23240.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 108,
+        "reward_a": 5855.0,
+        "reward_b": 20910.0,
+        "outcome": "LOSS",
+        "p0_is_a": true
+      },
+      {
+        "seed": 109,
+        "reward_a": 14151.0,
+        "reward_b": 24185.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      },
+      {
+        "seed": 110,
+        "reward_a": 36466.0,
+        "reward_b": 22715.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 111,
+        "reward_a": 6942.0,
+        "reward_b": 21616.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      }
+    ]
+  },
+  "Harvest Timing (V009-B)": {
+    "wins": 4,
+    "losses": 8,
+    "ties": 0,
+    "total": 12,
+    "win_rate": 33.33333333333333,
+    "mean_a": 19225.166666666668,
+    "median_a": 15957.0,
+    "min_a": 3723.0,
+    "max_a": 40439.0,
+    "mean_b": 24909.166666666668,
+    "delta": -5684.0,
+    "results": [
+      {
+        "seed": 100,
+        "reward_a": 36441.0,
+        "reward_b": 21150.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 101,
+        "reward_a": 21668.0,
+        "reward_b": 26473.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      },
+      {
+        "seed": 102,
+        "reward_a": 10246.0,
+        "reward_b": 27421.0,
+        "outcome": "LOSS",
+        "p0_is_a": true
+      },
+      {
+        "seed": 103,
+        "reward_a": 38137.0,
+        "reward_b": 19266.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 104,
+        "reward_a": 40439.0,
+        "reward_b": 22645.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 105,
+        "reward_a": 7741.0,
+        "reward_b": 25306.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      },
+      {
+        "seed": 106,
+        "reward_a": 21796.0,
+        "reward_b": 27368.0,
+        "outcome": "LOSS",
+        "p0_is_a": true
+      },
+      {
+        "seed": 107,
+        "reward_a": 6696.0,
+        "reward_b": 27681.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      },
+      {
+        "seed": 108,
+        "reward_a": 4720.0,
+        "reward_b": 25809.0,
+        "outcome": "LOSS",
+        "p0_is_a": true
+      },
+      {
+        "seed": 109,
+        "reward_a": 29906.0,
+        "reward_b": 25543.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 110,
+        "reward_a": 9189.0,
+        "reward_b": 26626.0,
+        "outcome": "LOSS",
+        "p0_is_a": true
+      },
+      {
+        "seed": 111,
+        "reward_a": 3723.0,
+        "reward_b": 23622.0,
+        "outcome": "LOSS",
+        "p0_is_a": false
+      }
+    ]
+  },
+  "Melon Maxxer": {
+    "wins": 12,
+    "losses": 0,
+    "ties": 0,
+    "total": 12,
+    "win_rate": 100.0,
+    "mean_a": 44304.416666666664,
+    "median_a": 43067.5,
+    "min_a": 38972.0,
+    "max_a": 58632.0,
+    "mean_b": 2680.0,
+    "delta": 41624.416666666664,
+    "results": [
+      {
+        "seed": 100,
+        "reward_a": 40657.0,
+        "reward_b": 2680.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 101,
+        "reward_a": 53510.0,
+        "reward_b": 2680.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 102,
+        "reward_a": 43107.0,
+        "reward_b": 2680.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 103,
+        "reward_a": 39256.0,
+        "reward_b": 2680.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 104,
+        "reward_a": 44509.0,
+        "reward_b": 2680.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 105,
+        "reward_a": 43949.0,
+        "reward_b": 2680.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 106,
+        "reward_a": 40183.0,
+        "reward_b": 2680.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 107,
+        "reward_a": 43028.0,
+        "reward_b": 2680.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 108,
+        "reward_a": 39732.0,
+        "reward_b": 2680.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 109,
+        "reward_a": 38972.0,
+        "reward_b": 2680.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 110,
+        "reward_a": 58632.0,
+        "reward_b": 2680.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 111,
+        "reward_a": 46118.0,
+        "reward_b": 2680.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      }
+    ]
+  },
+  "Melon Flooder": {
+    "wins": 12,
+    "losses": 0,
+    "ties": 0,
+    "total": 12,
+    "win_rate": 100.0,
+    "mean_a": 37762.916666666664,
+    "median_a": 38430.5,
+    "min_a": 31671.0,
+    "max_a": 42724.0,
+    "mean_b": 7948.5,
+    "delta": 29814.416666666664,
+    "results": [
+      {
+        "seed": 100,
+        "reward_a": 42000.0,
+        "reward_b": 7945.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 101,
+        "reward_a": 34693.0,
+        "reward_b": 7948.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 102,
+        "reward_a": 33550.0,
+        "reward_b": 7951.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 103,
+        "reward_a": 31671.0,
+        "reward_b": 7948.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 104,
+        "reward_a": 42125.0,
+        "reward_b": 7948.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 105,
+        "reward_a": 42724.0,
+        "reward_b": 7942.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 106,
+        "reward_a": 38405.0,
+        "reward_b": 7942.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 107,
+        "reward_a": 32194.0,
+        "reward_b": 7966.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 108,
+        "reward_a": 41385.0,
+        "reward_b": 7948.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 109,
+        "reward_a": 35477.0,
+        "reward_b": 7948.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 110,
+        "reward_a": 40475.0,
+        "reward_b": 7948.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 111,
+        "reward_a": 38456.0,
+        "reward_b": 7948.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      }
+    ]
+  },
+  "Balanced Optimizer": {
+    "wins": 12,
+    "losses": 0,
+    "ties": 0,
+    "total": 12,
+    "win_rate": 100.0,
+    "mean_a": 44294.166666666664,
+    "median_a": 43970.0,
+    "min_a": 34110.0,
+    "max_a": 54107.0,
+    "mean_b": 4849.666666666667,
+    "delta": 39444.5,
+    "results": [
+      {
+        "seed": 100,
+        "reward_a": 44519.0,
+        "reward_b": 5706.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 101,
+        "reward_a": 54107.0,
+        "reward_b": 5582.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 102,
+        "reward_a": 41548.0,
+        "reward_b": 2906.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 103,
+        "reward_a": 34110.0,
+        "reward_b": 3869.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 104,
+        "reward_a": 50191.0,
+        "reward_b": 4291.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 105,
+        "reward_a": 45583.0,
+        "reward_b": 5487.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 106,
+        "reward_a": 43421.0,
+        "reward_b": 7052.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 107,
+        "reward_a": 38154.0,
+        "reward_b": 6788.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 108,
+        "reward_a": 49656.0,
+        "reward_b": 4564.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 109,
+        "reward_a": 39670.0,
+        "reward_b": 3364.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 110,
+        "reward_a": 47825.0,
+        "reward_b": 3541.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 111,
+        "reward_a": 42746.0,
+        "reward_b": 5046.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      }
+    ]
+  },
+  "Starter": {
+    "wins": 12,
+    "losses": 0,
+    "ties": 0,
+    "total": 12,
+    "win_rate": 100.0,
+    "mean_a": 44428.583333333336,
+    "median_a": 43999.5,
+    "min_a": 38947.0,
+    "max_a": 57546.0,
+    "mean_b": 3597.3333333333335,
+    "delta": 40831.25,
+    "results": [
+      {
+        "seed": 100,
+        "reward_a": 40317.0,
+        "reward_b": 3514.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 101,
+        "reward_a": 51788.0,
+        "reward_b": 3629.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 102,
+        "reward_a": 44241.0,
+        "reward_b": 3587.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 103,
+        "reward_a": 42868.0,
+        "reward_b": 3607.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 104,
+        "reward_a": 43758.0,
+        "reward_b": 3484.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 105,
+        "reward_a": 44330.0,
+        "reward_b": 3637.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 106,
+        "reward_a": 39676.0,
+        "reward_b": 3629.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 107,
+        "reward_a": 44408.0,
+        "reward_b": 3579.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 108,
+        "reward_a": 40844.0,
+        "reward_b": 3512.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 109,
+        "reward_a": 38947.0,
+        "reward_b": 3710.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 110,
+        "reward_a": 57546.0,
+        "reward_b": 3748.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 111,
+        "reward_a": 44420.0,
+        "reward_b": 3532.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      }
+    ]
+  },
+  "Random": {
+    "wins": 12,
+    "losses": 0,
+    "ties": 0,
+    "total": 12,
+    "win_rate": 100.0,
+    "mean_a": 45801.083333333336,
+    "median_a": 44837.0,
+    "min_a": 38191.0,
+    "max_a": 53185.0,
+    "mean_b": 56.666666666666664,
+    "delta": 45744.41666666667,
+    "results": [
+      {
+        "seed": 100,
+        "reward_a": 44342.0,
+        "reward_b": 0.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 101,
+        "reward_a": 48598.0,
+        "reward_b": 0.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 102,
+        "reward_a": 43177.0,
+        "reward_b": 0.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 103,
+        "reward_a": 42133.0,
+        "reward_b": 0.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 104,
+        "reward_a": 45332.0,
+        "reward_b": 0.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 105,
+        "reward_a": 50589.0,
+        "reward_b": 0.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 106,
+        "reward_a": 51613.0,
+        "reward_b": 180.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 107,
+        "reward_a": 40298.0,
+        "reward_b": 280.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 108,
+        "reward_a": 53185.0,
+        "reward_b": 220.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 109,
+        "reward_a": 38191.0,
+        "reward_b": 0.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      },
+      {
+        "seed": 110,
+        "reward_a": 50208.0,
+        "reward_b": 0.0,
+        "outcome": "WIN",
+        "p0_is_a": true
+      },
+      {
+        "seed": 111,
+        "reward_a": 41947.0,
+        "reward_b": 0.0,
+        "outcome": "WIN",
+        "p0_is_a": false
+      }
+    ]
+  }
+}

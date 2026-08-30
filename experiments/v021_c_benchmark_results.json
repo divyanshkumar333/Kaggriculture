@@ -1,0 +1,2136 @@
+{
+  "h2h": {
+    "agent_a": "V021-C",
+    "agent_b": "V020-C",
+    "total_games": 12,
+    "wins_a": 0,
+    "wins_b": 12,
+    "ties": 0,
+    "win_rate_a": 0.0,
+    "mean_a": 8240.333333333334,
+    "mean_b": 39379.166666666664,
+    "min_a": 4694.0,
+    "median_a": 8337.5,
+    "delta": -31138.83333333333,
+    "games": [
+      {
+        "seed": 500,
+        "a_is_p0": true,
+        "a_reward": 8360.0,
+        "b_reward": 41481.0,
+        "a_win": false,
+        "b_win": true,
+        "tie": false
+      },
+      {
+        "seed": 501,
+        "a_is_p0": false,
+        "a_reward": 7898.0,
+        "b_reward": 40172.0,
+        "a_win": false,
+        "b_win": true,
+        "tie": false
+      },
+      {
+        "seed": 502,
+        "a_is_p0": true,
+        "a_reward": 10244.0,
+        "b_reward": 42357.0,
+        "a_win": false,
+        "b_win": true,
+        "tie": false
+      },
+      {
+        "seed": 503,
+        "a_is_p0": false,
+        "a_reward": 8691.0,
+        "b_reward": 41974.0,
+        "a_win": false,
+        "b_win": true,
+        "tie": false
+      },
+      {
+        "seed": 504,
+        "a_is_p0": true,
+        "a_reward": 4694.0,
+        "b_reward": 33434.0,
+        "a_win": false,
+        "b_win": true,
+        "tie": false
+      },
+      {
+        "seed": 505,
+        "a_is_p0": false,
+        "a_reward": 6424.0,
+        "b_reward": 29893.0,
+        "a_win": false,
+        "b_win": true,
+        "tie": false
+      },
+      {
+        "seed": 506,
+        "a_is_p0": true,
+        "a_reward": 6856.0,
+        "b_reward": 33960.0,
+        "a_win": false,
+        "b_win": true,
+        "tie": false
+      },
+      {
+        "seed": 507,
+        "a_is_p0": false,
+        "a_reward": 8315.0,
+        "b_reward": 41984.0,
+        "a_win": false,
+        "b_win": true,
+        "tie": false
+      },
+      {
+        "seed": 508,
+        "a_is_p0": true,
+        "a_reward": 9371.0,
+        "b_reward": 47379.0,
+        "a_win": false,
+        "b_win": true,
+        "tie": false
+      },
+      {
+        "seed": 509,
+        "a_is_p0": false,
+        "a_reward": 6773.0,
+        "b_reward": 29243.0,
+        "a_win": false,
+        "b_win": true,
+        "tie": false
+      },
+      {
+        "seed": 510,
+        "a_is_p0": true,
+        "a_reward": 9555.0,
+        "b_reward": 39425.0,
+        "a_win": false,
+        "b_win": true,
+        "tie": false
+      },
+      {
+        "seed": 511,
+        "a_is_p0": false,
+        "a_reward": 11703.0,
+        "b_reward": 51248.0,
+        "a_win": false,
+        "b_win": true,
+        "tie": false
+      }
+    ]
+  },
+  "field": [
+    {
+      "opponent": "Industrial Livestock",
+      "v020_c": {
+        "agent_a": "V020-C",
+        "agent_b": "Industrial Livestock",
+        "total_games": 12,
+        "wins_a": 12,
+        "wins_b": 0,
+        "ties": 0,
+        "win_rate_a": 100.0,
+        "mean_a": 41680.916666666664,
+        "mean_b": 147.0,
+        "min_a": 24270.0,
+        "median_a": 42534.5,
+        "delta": 41533.916666666664,
+        "games": [
+          {
+            "seed": 500,
+            "a_is_p0": true,
+            "a_reward": 40393.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 501,
+            "a_is_p0": false,
+            "a_reward": 42716.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 502,
+            "a_is_p0": true,
+            "a_reward": 47179.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 503,
+            "a_is_p0": false,
+            "a_reward": 38921.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 504,
+            "a_is_p0": true,
+            "a_reward": 24270.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 505,
+            "a_is_p0": false,
+            "a_reward": 45510.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 506,
+            "a_is_p0": true,
+            "a_reward": 36559.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 507,
+            "a_is_p0": false,
+            "a_reward": 44359.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 508,
+            "a_is_p0": true,
+            "a_reward": 34568.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 509,
+            "a_is_p0": false,
+            "a_reward": 57596.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 510,
+            "a_is_p0": true,
+            "a_reward": 45747.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 511,
+            "a_is_p0": false,
+            "a_reward": 42353.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          }
+        ]
+      },
+      "v021_c": {
+        "agent_a": "V021-C",
+        "agent_b": "Industrial Livestock",
+        "total_games": 12,
+        "wins_a": 12,
+        "wins_b": 0,
+        "ties": 0,
+        "win_rate_a": 100.0,
+        "mean_a": 24832.5,
+        "mean_b": 147.0,
+        "min_a": 22337.0,
+        "median_a": 24926.5,
+        "delta": 24685.5,
+        "games": [
+          {
+            "seed": 500,
+            "a_is_p0": true,
+            "a_reward": 25123.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 501,
+            "a_is_p0": false,
+            "a_reward": 24402.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 502,
+            "a_is_p0": true,
+            "a_reward": 24853.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 503,
+            "a_is_p0": false,
+            "a_reward": 23433.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 504,
+            "a_is_p0": true,
+            "a_reward": 24682.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 505,
+            "a_is_p0": false,
+            "a_reward": 22337.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 506,
+            "a_is_p0": true,
+            "a_reward": 24718.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 507,
+            "a_is_p0": false,
+            "a_reward": 25030.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 508,
+            "a_is_p0": true,
+            "a_reward": 25000.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 509,
+            "a_is_p0": false,
+            "a_reward": 25384.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 510,
+            "a_is_p0": true,
+            "a_reward": 25980.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 511,
+            "a_is_p0": false,
+            "a_reward": 27048.0,
+            "b_reward": 147.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          }
+        ]
+      }
+    },
+    {
+      "opponent": "Animal Optimizer (V005-D)",
+      "v020_c": {
+        "agent_a": "V020-C",
+        "agent_b": "Animal Optimizer (V005-D)",
+        "total_games": 12,
+        "wins_a": 12,
+        "wins_b": 0,
+        "ties": 0,
+        "win_rate_a": 100.0,
+        "mean_a": 33894.0,
+        "mean_b": 21676.916666666668,
+        "min_a": 24630.0,
+        "median_a": 32295.5,
+        "delta": 12217.083333333332,
+        "games": [
+          {
+            "seed": 500,
+            "a_is_p0": true,
+            "a_reward": 44936.0,
+            "b_reward": 25783.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 501,
+            "a_is_p0": false,
+            "a_reward": 36880.0,
+            "b_reward": 24181.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 502,
+            "a_is_p0": true,
+            "a_reward": 30160.0,
+            "b_reward": 24467.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 503,
+            "a_is_p0": false,
+            "a_reward": 30529.0,
+            "b_reward": 19262.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 504,
+            "a_is_p0": true,
+            "a_reward": 33848.0,
+            "b_reward": 20378.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 505,
+            "a_is_p0": false,
+            "a_reward": 38354.0,
+            "b_reward": 33482.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 506,
+            "a_is_p0": true,
+            "a_reward": 24630.0,
+            "b_reward": 17515.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 507,
+            "a_is_p0": false,
+            "a_reward": 49080.0,
+            "b_reward": 17099.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 508,
+            "a_is_p0": true,
+            "a_reward": 27553.0,
+            "b_reward": 18225.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 509,
+            "a_is_p0": false,
+            "a_reward": 26167.0,
+            "b_reward": 18453.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 510,
+            "a_is_p0": true,
+            "a_reward": 33725.0,
+            "b_reward": 21527.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 511,
+            "a_is_p0": false,
+            "a_reward": 30866.0,
+            "b_reward": 19751.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          }
+        ]
+      },
+      "v021_c": {
+        "agent_a": "V021-C",
+        "agent_b": "Animal Optimizer (V005-D)",
+        "total_games": 12,
+        "wins_a": 0,
+        "wins_b": 12,
+        "ties": 0,
+        "win_rate_a": 0.0,
+        "mean_a": 10796.083333333334,
+        "mean_b": 23521.25,
+        "min_a": 8144.0,
+        "median_a": 10946.0,
+        "delta": -12725.166666666666,
+        "games": [
+          {
+            "seed": 500,
+            "a_is_p0": true,
+            "a_reward": 8144.0,
+            "b_reward": 16519.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 501,
+            "a_is_p0": false,
+            "a_reward": 11577.0,
+            "b_reward": 29207.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 502,
+            "a_is_p0": true,
+            "a_reward": 11649.0,
+            "b_reward": 27841.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 503,
+            "a_is_p0": false,
+            "a_reward": 11346.0,
+            "b_reward": 18284.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 504,
+            "a_is_p0": true,
+            "a_reward": 12258.0,
+            "b_reward": 27247.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 505,
+            "a_is_p0": false,
+            "a_reward": 11180.0,
+            "b_reward": 20636.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 506,
+            "a_is_p0": true,
+            "a_reward": 10156.0,
+            "b_reward": 15664.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 507,
+            "a_is_p0": false,
+            "a_reward": 10712.0,
+            "b_reward": 13216.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 508,
+            "a_is_p0": true,
+            "a_reward": 10438.0,
+            "b_reward": 18137.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 509,
+            "a_is_p0": false,
+            "a_reward": 9533.0,
+            "b_reward": 16816.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 510,
+            "a_is_p0": true,
+            "a_reward": 9551.0,
+            "b_reward": 52378.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 511,
+            "a_is_p0": false,
+            "a_reward": 13009.0,
+            "b_reward": 26310.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          }
+        ]
+      }
+    },
+    {
+      "opponent": "Harvest Timing (V009-B)",
+      "v020_c": {
+        "agent_a": "V020-C",
+        "agent_b": "Harvest Timing (V009-B)",
+        "total_games": 12,
+        "wins_a": 12,
+        "wins_b": 0,
+        "ties": 0,
+        "win_rate_a": 100.0,
+        "mean_a": 33040.25,
+        "mean_b": 22961.916666666668,
+        "min_a": 22628.0,
+        "median_a": 34279.0,
+        "delta": 10078.333333333332,
+        "games": [
+          {
+            "seed": 500,
+            "a_is_p0": true,
+            "a_reward": 34729.0,
+            "b_reward": 21414.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 501,
+            "a_is_p0": false,
+            "a_reward": 35787.0,
+            "b_reward": 25743.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 502,
+            "a_is_p0": true,
+            "a_reward": 37938.0,
+            "b_reward": 21536.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 503,
+            "a_is_p0": false,
+            "a_reward": 28216.0,
+            "b_reward": 21495.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 504,
+            "a_is_p0": true,
+            "a_reward": 22628.0,
+            "b_reward": 20715.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 505,
+            "a_is_p0": false,
+            "a_reward": 28365.0,
+            "b_reward": 21299.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 506,
+            "a_is_p0": true,
+            "a_reward": 34336.0,
+            "b_reward": 21494.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 507,
+            "a_is_p0": false,
+            "a_reward": 39748.0,
+            "b_reward": 27164.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 508,
+            "a_is_p0": true,
+            "a_reward": 31122.0,
+            "b_reward": 25211.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 509,
+            "a_is_p0": false,
+            "a_reward": 29934.0,
+            "b_reward": 21429.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 510,
+            "a_is_p0": true,
+            "a_reward": 34222.0,
+            "b_reward": 21582.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 511,
+            "a_is_p0": false,
+            "a_reward": 39458.0,
+            "b_reward": 26461.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          }
+        ]
+      },
+      "v021_c": {
+        "agent_a": "V021-C",
+        "agent_b": "Harvest Timing (V009-B)",
+        "total_games": 12,
+        "wins_a": 0,
+        "wins_b": 12,
+        "ties": 0,
+        "win_rate_a": 0.0,
+        "mean_a": 10265.75,
+        "mean_b": 25464.583333333332,
+        "min_a": 7372.0,
+        "median_a": 10086.5,
+        "delta": -15198.833333333332,
+        "games": [
+          {
+            "seed": 500,
+            "a_is_p0": true,
+            "a_reward": 11294.0,
+            "b_reward": 29949.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 501,
+            "a_is_p0": false,
+            "a_reward": 12298.0,
+            "b_reward": 28870.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 502,
+            "a_is_p0": true,
+            "a_reward": 8589.0,
+            "b_reward": 29220.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 503,
+            "a_is_p0": false,
+            "a_reward": 10422.0,
+            "b_reward": 24142.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 504,
+            "a_is_p0": true,
+            "a_reward": 7372.0,
+            "b_reward": 23399.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 505,
+            "a_is_p0": false,
+            "a_reward": 8894.0,
+            "b_reward": 24230.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 506,
+            "a_is_p0": true,
+            "a_reward": 9751.0,
+            "b_reward": 27066.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 507,
+            "a_is_p0": false,
+            "a_reward": 11722.0,
+            "b_reward": 24539.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 508,
+            "a_is_p0": true,
+            "a_reward": 11799.0,
+            "b_reward": 24499.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 509,
+            "a_is_p0": false,
+            "a_reward": 8870.0,
+            "b_reward": 23749.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 510,
+            "a_is_p0": true,
+            "a_reward": 9700.0,
+            "b_reward": 22746.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 511,
+            "a_is_p0": false,
+            "a_reward": 12478.0,
+            "b_reward": 23166.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          }
+        ]
+      }
+    },
+    {
+      "opponent": "Diversified (V004-B)",
+      "v020_c": {
+        "agent_a": "V020-C",
+        "agent_b": "Diversified (V004-B)",
+        "total_games": 12,
+        "wins_a": 11,
+        "wins_b": 1,
+        "ties": 0,
+        "win_rate_a": 91.66666666666666,
+        "mean_a": 32461.416666666668,
+        "mean_b": 20390.75,
+        "min_a": 12519.0,
+        "median_a": 33966.0,
+        "delta": 12070.666666666668,
+        "games": [
+          {
+            "seed": 500,
+            "a_is_p0": true,
+            "a_reward": 36530.0,
+            "b_reward": 17705.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 501,
+            "a_is_p0": false,
+            "a_reward": 38453.0,
+            "b_reward": 22843.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 502,
+            "a_is_p0": true,
+            "a_reward": 34437.0,
+            "b_reward": 17640.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 503,
+            "a_is_p0": false,
+            "a_reward": 35332.0,
+            "b_reward": 18307.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 504,
+            "a_is_p0": true,
+            "a_reward": 24981.0,
+            "b_reward": 19448.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 505,
+            "a_is_p0": false,
+            "a_reward": 31343.0,
+            "b_reward": 18312.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 506,
+            "a_is_p0": true,
+            "a_reward": 31665.0,
+            "b_reward": 19204.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 507,
+            "a_is_p0": false,
+            "a_reward": 32581.0,
+            "b_reward": 23733.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 508,
+            "a_is_p0": true,
+            "a_reward": 35754.0,
+            "b_reward": 22624.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 509,
+            "a_is_p0": false,
+            "a_reward": 33495.0,
+            "b_reward": 19272.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 510,
+            "a_is_p0": true,
+            "a_reward": 12519.0,
+            "b_reward": 22286.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 511,
+            "a_is_p0": false,
+            "a_reward": 42447.0,
+            "b_reward": 23315.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          }
+        ]
+      },
+      "v021_c": {
+        "agent_a": "V021-C",
+        "agent_b": "Diversified (V004-B)",
+        "total_games": 12,
+        "wins_a": 0,
+        "wins_b": 12,
+        "ties": 0,
+        "win_rate_a": 0.0,
+        "mean_a": 12026.666666666666,
+        "mean_b": 21717.166666666668,
+        "min_a": 7411.0,
+        "median_a": 11498.5,
+        "delta": -9690.500000000002,
+        "games": [
+          {
+            "seed": 500,
+            "a_is_p0": true,
+            "a_reward": 10107.0,
+            "b_reward": 21872.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 501,
+            "a_is_p0": false,
+            "a_reward": 15324.0,
+            "b_reward": 19773.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 502,
+            "a_is_p0": true,
+            "a_reward": 9292.0,
+            "b_reward": 22071.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 503,
+            "a_is_p0": false,
+            "a_reward": 13731.0,
+            "b_reward": 17275.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 504,
+            "a_is_p0": true,
+            "a_reward": 7411.0,
+            "b_reward": 22264.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 505,
+            "a_is_p0": false,
+            "a_reward": 12878.0,
+            "b_reward": 17497.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 506,
+            "a_is_p0": true,
+            "a_reward": 10119.0,
+            "b_reward": 24718.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 507,
+            "a_is_p0": false,
+            "a_reward": 16261.0,
+            "b_reward": 22293.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 508,
+            "a_is_p0": true,
+            "a_reward": 15792.0,
+            "b_reward": 21876.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 509,
+            "a_is_p0": false,
+            "a_reward": 8842.0,
+            "b_reward": 27159.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 510,
+            "a_is_p0": true,
+            "a_reward": 9726.0,
+            "b_reward": 22281.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 511,
+            "a_is_p0": false,
+            "a_reward": 14837.0,
+            "b_reward": 21527.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          }
+        ]
+      }
+    },
+    {
+      "opponent": "Dynamic Clusters (V008-D)",
+      "v020_c": {
+        "agent_a": "V020-C",
+        "agent_b": "Dynamic Clusters (V008-D)",
+        "total_games": 12,
+        "wins_a": 12,
+        "wins_b": 0,
+        "ties": 0,
+        "win_rate_a": 100.0,
+        "mean_a": 33960.416666666664,
+        "mean_b": 22206.916666666668,
+        "min_a": 23025.0,
+        "median_a": 35216.0,
+        "delta": 11753.499999999996,
+        "games": [
+          {
+            "seed": 500,
+            "a_is_p0": true,
+            "a_reward": 35928.0,
+            "b_reward": 20166.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 501,
+            "a_is_p0": false,
+            "a_reward": 35783.0,
+            "b_reward": 24198.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 502,
+            "a_is_p0": true,
+            "a_reward": 36040.0,
+            "b_reward": 20572.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 503,
+            "a_is_p0": false,
+            "a_reward": 25156.0,
+            "b_reward": 21320.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 504,
+            "a_is_p0": true,
+            "a_reward": 23025.0,
+            "b_reward": 20465.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 505,
+            "a_is_p0": false,
+            "a_reward": 33697.0,
+            "b_reward": 20910.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 506,
+            "a_is_p0": true,
+            "a_reward": 35784.0,
+            "b_reward": 21740.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 507,
+            "a_is_p0": false,
+            "a_reward": 44428.0,
+            "b_reward": 25818.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 508,
+            "a_is_p0": true,
+            "a_reward": 32799.0,
+            "b_reward": 24001.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 509,
+            "a_is_p0": false,
+            "a_reward": 29937.0,
+            "b_reward": 21041.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 510,
+            "a_is_p0": true,
+            "a_reward": 34649.0,
+            "b_reward": 21135.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 511,
+            "a_is_p0": false,
+            "a_reward": 40299.0,
+            "b_reward": 25117.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          }
+        ]
+      },
+      "v021_c": {
+        "agent_a": "V021-C",
+        "agent_b": "Dynamic Clusters (V008-D)",
+        "total_games": 12,
+        "wins_a": 0,
+        "wins_b": 12,
+        "ties": 0,
+        "win_rate_a": 0.0,
+        "mean_a": 10698.916666666666,
+        "mean_b": 25195.583333333332,
+        "min_a": 7420.0,
+        "median_a": 10911.0,
+        "delta": -14496.666666666666,
+        "games": [
+          {
+            "seed": 500,
+            "a_is_p0": true,
+            "a_reward": 13230.0,
+            "b_reward": 23814.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 501,
+            "a_is_p0": false,
+            "a_reward": 12181.0,
+            "b_reward": 28454.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 502,
+            "a_is_p0": true,
+            "a_reward": 12746.0,
+            "b_reward": 21032.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 503,
+            "a_is_p0": false,
+            "a_reward": 10294.0,
+            "b_reward": 23818.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 504,
+            "a_is_p0": true,
+            "a_reward": 7420.0,
+            "b_reward": 22848.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 505,
+            "a_is_p0": false,
+            "a_reward": 8846.0,
+            "b_reward": 23730.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 506,
+            "a_is_p0": true,
+            "a_reward": 9711.0,
+            "b_reward": 26114.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 507,
+            "a_is_p0": false,
+            "a_reward": 11528.0,
+            "b_reward": 29205.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 508,
+            "a_is_p0": true,
+            "a_reward": 11655.0,
+            "b_reward": 28339.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 509,
+            "a_is_p0": false,
+            "a_reward": 8888.0,
+            "b_reward": 23189.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 510,
+            "a_is_p0": true,
+            "a_reward": 9688.0,
+            "b_reward": 22610.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          },
+          {
+            "seed": 511,
+            "a_is_p0": false,
+            "a_reward": 12200.0,
+            "b_reward": 29194.0,
+            "a_win": false,
+            "b_win": true,
+            "tie": false
+          }
+        ]
+      }
+    },
+    {
+      "opponent": "Melon Flooder",
+      "v020_c": {
+        "agent_a": "V020-C",
+        "agent_b": "Melon Flooder",
+        "total_games": 12,
+        "wins_a": 12,
+        "wins_b": 0,
+        "ties": 0,
+        "win_rate_a": 100.0,
+        "mean_a": 41958.0,
+        "mean_b": 8323.583333333334,
+        "min_a": 26053.0,
+        "median_a": 43522.0,
+        "delta": 33634.416666666664,
+        "games": [
+          {
+            "seed": 500,
+            "a_is_p0": true,
+            "a_reward": 43737.0,
+            "b_reward": 8269.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 501,
+            "a_is_p0": false,
+            "a_reward": 45212.0,
+            "b_reward": 8269.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 502,
+            "a_is_p0": true,
+            "a_reward": 39240.0,
+            "b_reward": 8269.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 503,
+            "a_is_p0": false,
+            "a_reward": 42706.0,
+            "b_reward": 8269.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 504,
+            "a_is_p0": true,
+            "a_reward": 46447.0,
+            "b_reward": 8269.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 505,
+            "a_is_p0": false,
+            "a_reward": 42470.0,
+            "b_reward": 8432.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 506,
+            "a_is_p0": true,
+            "a_reward": 45297.0,
+            "b_reward": 8269.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 507,
+            "a_is_p0": false,
+            "a_reward": 44518.0,
+            "b_reward": 8269.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 508,
+            "a_is_p0": true,
+            "a_reward": 46071.0,
+            "b_reward": 8433.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 509,
+            "a_is_p0": false,
+            "a_reward": 38438.0,
+            "b_reward": 8432.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 510,
+            "a_is_p0": true,
+            "a_reward": 26053.0,
+            "b_reward": 8402.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 511,
+            "a_is_p0": false,
+            "a_reward": 43307.0,
+            "b_reward": 8301.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          }
+        ]
+      },
+      "v021_c": {
+        "agent_a": "V021-C",
+        "agent_b": "Melon Flooder",
+        "total_games": 12,
+        "wins_a": 12,
+        "wins_b": 0,
+        "ties": 0,
+        "win_rate_a": 100.0,
+        "mean_a": 18287.833333333332,
+        "mean_b": 9027.583333333334,
+        "min_a": 16077.0,
+        "median_a": 18163.5,
+        "delta": 9260.249999999998,
+        "games": [
+          {
+            "seed": 500,
+            "a_is_p0": true,
+            "a_reward": 19249.0,
+            "b_reward": 9039.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 501,
+            "a_is_p0": false,
+            "a_reward": 18054.0,
+            "b_reward": 9039.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 502,
+            "a_is_p0": true,
+            "a_reward": 16077.0,
+            "b_reward": 9039.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 503,
+            "a_is_p0": false,
+            "a_reward": 21090.0,
+            "b_reward": 8902.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 504,
+            "a_is_p0": true,
+            "a_reward": 18811.0,
+            "b_reward": 9039.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 505,
+            "a_is_p0": false,
+            "a_reward": 19201.0,
+            "b_reward": 9039.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 506,
+            "a_is_p0": true,
+            "a_reward": 19392.0,
+            "b_reward": 9039.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 507,
+            "a_is_p0": false,
+            "a_reward": 18152.0,
+            "b_reward": 9039.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 508,
+            "a_is_p0": true,
+            "a_reward": 16915.0,
+            "b_reward": 9039.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 509,
+            "a_is_p0": false,
+            "a_reward": 18175.0,
+            "b_reward": 9039.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 510,
+            "a_is_p0": true,
+            "a_reward": 17285.0,
+            "b_reward": 9039.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 511,
+            "a_is_p0": false,
+            "a_reward": 17053.0,
+            "b_reward": 9039.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          }
+        ]
+      }
+    },
+    {
+      "opponent": "Starter",
+      "v020_c": {
+        "agent_a": "V020-C",
+        "agent_b": "Starter",
+        "total_games": 12,
+        "wins_a": 12,
+        "wins_b": 0,
+        "ties": 0,
+        "win_rate_a": 100.0,
+        "mean_a": 48578.333333333336,
+        "mean_b": 3547.4166666666665,
+        "min_a": 33187.0,
+        "median_a": 48324.5,
+        "delta": 45030.91666666667,
+        "games": [
+          {
+            "seed": 500,
+            "a_is_p0": true,
+            "a_reward": 47153.0,
+            "b_reward": 3818.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 501,
+            "a_is_p0": false,
+            "a_reward": 58901.0,
+            "b_reward": 3619.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 502,
+            "a_is_p0": true,
+            "a_reward": 46430.0,
+            "b_reward": 3431.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 503,
+            "a_is_p0": false,
+            "a_reward": 44827.0,
+            "b_reward": 3656.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 504,
+            "a_is_p0": true,
+            "a_reward": 55129.0,
+            "b_reward": 3425.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 505,
+            "a_is_p0": false,
+            "a_reward": 47693.0,
+            "b_reward": 3421.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 506,
+            "a_is_p0": true,
+            "a_reward": 53873.0,
+            "b_reward": 3571.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 507,
+            "a_is_p0": false,
+            "a_reward": 37597.0,
+            "b_reward": 3847.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 508,
+            "a_is_p0": true,
+            "a_reward": 52270.0,
+            "b_reward": 3421.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 509,
+            "a_is_p0": false,
+            "a_reward": 33187.0,
+            "b_reward": 3421.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 510,
+            "a_is_p0": true,
+            "a_reward": 56924.0,
+            "b_reward": 3518.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 511,
+            "a_is_p0": false,
+            "a_reward": 48956.0,
+            "b_reward": 3421.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          }
+        ]
+      },
+      "v021_c": {
+        "agent_a": "V021-C",
+        "agent_b": "Starter",
+        "total_games": 12,
+        "wins_a": 12,
+        "wins_b": 0,
+        "ties": 0,
+        "win_rate_a": 100.0,
+        "mean_a": 24142.083333333332,
+        "mean_b": 3588.3333333333335,
+        "min_a": 20139.0,
+        "median_a": 24829.5,
+        "delta": 20553.75,
+        "games": [
+          {
+            "seed": 500,
+            "a_is_p0": true,
+            "a_reward": 25354.0,
+            "b_reward": 3716.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 501,
+            "a_is_p0": false,
+            "a_reward": 24731.0,
+            "b_reward": 3807.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 502,
+            "a_is_p0": true,
+            "a_reward": 23017.0,
+            "b_reward": 3449.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 503,
+            "a_is_p0": false,
+            "a_reward": 25019.0,
+            "b_reward": 3639.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 504,
+            "a_is_p0": true,
+            "a_reward": 24928.0,
+            "b_reward": 3504.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 505,
+            "a_is_p0": false,
+            "a_reward": 25390.0,
+            "b_reward": 3524.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 506,
+            "a_is_p0": true,
+            "a_reward": 24688.0,
+            "b_reward": 3536.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 507,
+            "a_is_p0": false,
+            "a_reward": 20139.0,
+            "b_reward": 4019.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 508,
+            "a_is_p0": true,
+            "a_reward": 25101.0,
+            "b_reward": 3421.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 509,
+            "a_is_p0": false,
+            "a_reward": 22164.0,
+            "b_reward": 3447.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 510,
+            "a_is_p0": true,
+            "a_reward": 25188.0,
+            "b_reward": 3528.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 511,
+            "a_is_p0": false,
+            "a_reward": 23986.0,
+            "b_reward": 3470.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          }
+        ]
+      }
+    },
+    {
+      "opponent": "Random",
+      "v020_c": {
+        "agent_a": "V020-C",
+        "agent_b": "Random",
+        "total_games": 12,
+        "wins_a": 12,
+        "wins_b": 0,
+        "ties": 0,
+        "win_rate_a": 100.0,
+        "mean_a": 46321.5,
+        "mean_b": 0.0,
+        "min_a": 35599.0,
+        "median_a": 47436.5,
+        "delta": 46321.5,
+        "games": [
+          {
+            "seed": 500,
+            "a_is_p0": true,
+            "a_reward": 48775.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 501,
+            "a_is_p0": false,
+            "a_reward": 53775.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 502,
+            "a_is_p0": true,
+            "a_reward": 55671.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 503,
+            "a_is_p0": false,
+            "a_reward": 51175.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 504,
+            "a_is_p0": true,
+            "a_reward": 52725.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 505,
+            "a_is_p0": false,
+            "a_reward": 35599.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 506,
+            "a_is_p0": true,
+            "a_reward": 41562.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 507,
+            "a_is_p0": false,
+            "a_reward": 38283.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 508,
+            "a_is_p0": true,
+            "a_reward": 44233.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 509,
+            "a_is_p0": false,
+            "a_reward": 48532.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 510,
+            "a_is_p0": true,
+            "a_reward": 46341.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 511,
+            "a_is_p0": false,
+            "a_reward": 39187.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          }
+        ]
+      },
+      "v021_c": {
+        "agent_a": "V021-C",
+        "agent_b": "Random",
+        "total_games": 12,
+        "wins_a": 12,
+        "wins_b": 0,
+        "ties": 0,
+        "win_rate_a": 100.0,
+        "mean_a": 24881.083333333332,
+        "mean_b": 25.0,
+        "min_a": 23578.0,
+        "median_a": 24695.5,
+        "delta": 24856.083333333332,
+        "games": [
+          {
+            "seed": 500,
+            "a_is_p0": true,
+            "a_reward": 26321.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 501,
+            "a_is_p0": false,
+            "a_reward": 24670.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 502,
+            "a_is_p0": true,
+            "a_reward": 25907.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 503,
+            "a_is_p0": false,
+            "a_reward": 24958.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 504,
+            "a_is_p0": true,
+            "a_reward": 24541.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 505,
+            "a_is_p0": false,
+            "a_reward": 23698.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 506,
+            "a_is_p0": true,
+            "a_reward": 24757.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 507,
+            "a_is_p0": false,
+            "a_reward": 24721.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 508,
+            "a_is_p0": true,
+            "a_reward": 23578.0,
+            "b_reward": 50.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 509,
+            "a_is_p0": false,
+            "a_reward": 23807.0,
+            "b_reward": 180.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 510,
+            "a_is_p0": true,
+            "a_reward": 27471.0,
+            "b_reward": 0.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          },
+          {
+            "seed": 511,
+            "a_is_p0": false,
+            "a_reward": 24144.0,
+            "b_reward": 70.0,
+            "a_win": true,
+            "b_win": false,
+            "tie": false
+          }
+        ]
+      }
+    }
+  ]
+}
