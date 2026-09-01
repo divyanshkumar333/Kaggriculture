@@ -10,4 +10,5 @@ experiments/metrics/*.json
 !experiments/scorecard_baseline_v_random.json
 !experiments/scorecard_baseline_v_random.md
 kaggle_episodes/
-
+episode-*.json
+scratch/
