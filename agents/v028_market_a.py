@@ -599,7 +599,7 @@ def _premium_market_lead(obs, action, configuration):
                 if item in _PREMIUM_GOODS:
                     demand = _demand_per_day(obs_dict, configuration, item)
                     # If town demand is 0, unleash the full shed
-                    if demand < 1.1:
+                    if demand < 1.1: # Ignore base town center demand
                         shed = obs_dict.get("private", {}).get("shed", {})
                         total_stock = shed.get(item, 0)
                         if total_stock > 0:
@@ -611,7 +611,7 @@ def _premium_market_lead(obs, action, configuration):
     except Exception as e:
         raise RuntimeError(f"PREMIUM MARKET LEAD CRASH: {str(e)}") from e
 
-def x_agent(obs, configuration=None):
+def agent(obs, configuration=None):
     if configuration is None:
         configuration = {"turnsPerDay": 24, "townShopSellInterval": 4, "townCenterSellInterval": 24}
         
@@ -622,16 +622,3 @@ def x_agent(obs, configuration=None):
         return action
     except Exception as e:
         raise RuntimeError(f"V028-MARKET-A CRASHED: {str(e)}") from e
-
-def agent(obs, configuration=None):
-    if configuration is None:
-        configuration = {"turnsPerDay": 24, "townShopSellInterval": 4, "townCenterSellInterval": 24}
-        
-    try:
-        obs_dict = _to_dict(obs)
-        action = v027_agent(obs_dict)
-        action = _premium_market_lead(obs_dict, action, configuration)
-        action = _rank_sell_slots(obs_dict, action, configuration)
-        return action
-    except Exception as e:
-        raise RuntimeError(f"V028-MARKET-C CRASHED: {str(e)}") from e

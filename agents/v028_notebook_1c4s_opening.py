@@ -1,28 +1,17 @@
-"""
-Agent V027: Hierarchical Meta Policy (Causally Validated Champion)
-------------------------------------------------------------------
-Synthesizes the empirically and causally validated Grandmaster meta:
-1. Day 0 Opening: 2 Cows, 2 Sheep, 9 Melons, 5 Wheat, 5 Hires ($22 reserve).
-2. Staged Labor Scaling: 6 workers (D0-D2) -> 7 workers (D3-D5) -> 12 workers (D6+ with 2+ quads).
-3. Calibrated Cow Capacity: 8 Cows maximum (prevents the Milk Glut Trap and maintains $70+ milk prices).
-4. Delayed Strawberry Powerhouse: 40 Strawberries initiated on Day 8-9 (preserves $1,000+ D8 cash for Q2 unlock).
-5. Non-Destructive Crop Preservation: Continues strawberry harvesting through Day 30 (zero voluntary DIG destruction).
-6. Adaptive Shed Pacing: Dynamic batch sizes (8-12 units) with urgency threshold at >= 60 shed items and D27-30 liquidation.
-7. Micro Hungarian Shield: Provably safe zero-starve, zero-weed, zero-missed-watering spatial task assignment.
-"""
-
 import math
 from scipy.optimize import linear_sum_assignment
 
 SHED_TILES = [(4, 4), (5, 4), (4, 5), (5, 5)]
 
-DAY0_PASTURES = [(4, 4), (4, 3), (4, 2), (3, 4)]
+# V028 Modified Opening: 1 Cow, 4 Sheep
+DAY0_PASTURES = [(4, 4), (4, 3), (4, 2), (3, 4), (3, 3)]
 DAY0_MELONS = [
-    (3, 3), (3, 2), (3, 1), (3, 0),
-    (2, 3), (2, 2), (2, 1), (2, 0),
-    (1, 3)
+    (2, 4), (2, 3), (2, 2), (2, 1), (2, 0),
+    (1, 4), (1, 3), (1, 2), (1, 1), (1, 0),
+    (0, 4), (0, 3), (0, 2), (0, 1), (0, 0),
+    (3, 2), (3, 1), (3, 0), (4, 1)
 ]
-DAY0_WHEAT = [(1, 2), (1, 1), (1, 0), (0, 3), (0, 2)]
+DAY0_WHEAT = []
 
 COMPACT_PASTURE_LAYOUT = [
     (4, 3), (4, 2), (4, 1),
@@ -56,7 +45,7 @@ def get_move_toward(current, target):
     if cy > ty: return "NORTH"
     return "PASS"
 
-def v027_agent(obs):
+def agent(obs):
     player = obs["player"]
     me = obs["farms"][player]
     private = obs["private"]
@@ -130,27 +119,28 @@ def v027_agent(obs):
     # 1. MACRO STRATEGY & MARKET ORDERS
     # -------------------------------------------------------------------------
     if day == 0 and hour == 0:
-        # Phase 2 Causal Champion Opening: 2 Cows + 2 Sheep + 9 Melons + 5 Wheat + 5 Hires
-        market_orders.append(["BUY_PRODUCT", "WHEAT", 4])
-        for _ in range(5):
+        # V028 Hypothesis Opening: 1 Cow + 4 Sheep + 19 Melons + 4 Hires
+        market_orders.append(["BUY_PRODUCT", "WHEAT", 5])
+        for _ in range(4): # HIRE4
             market_orders.append(["HIRE"])
-        market_orders.append(["BUY_ANIMAL", "COW", 2])
-        market_orders.append(["BUY_ANIMAL", "SHEEP", 2])
-        market_orders.append(["BUY_SEED", "MELON", 9])
-        market_orders.append(["BUY_SEED", "WHEAT", 5])
-        market_orders.append(["BUY_PRODUCT", "WHEAT", 4])
+        market_orders.append(["BUY_ANIMAL", "COW", 1])
+        market_orders.append(["BUY_ANIMAL", "SHEEP", 4])
+        market_orders.append(["BUY_SEED", "MELON", 19])
         
     elif day > 0:
-        # STAGED LABOR SCALING (Hour 0)
+        # NOTEBOOK LABOR SCALING (Hour 0)
         if hour == 0:
-            if day < 3:
-                target_hands = 5 # 6 workers
-            elif day < 6:
-                target_hands = 6 # 7 workers
-            elif num_quads >= 2 and money >= 50:
-                target_hands = 11 # 12 workers (Causally validated 85% win rate)
-            else:
-                target_hands = 6
+            if day == 1: target_hands = 1 # Drops to 1 hire on Day 1
+            elif day == 2: target_hands = 2
+            elif day == 3: target_hands = 3
+            elif day == 4: target_hands = 3
+            elif day == 5: target_hands = 3
+            elif day == 6: target_hands = 4
+            elif day == 7: target_hands = 7
+            elif day == 8: target_hands = 6
+            elif day == 9: target_hands = 7
+            elif day >= 10: target_hands = 10
+            else: target_hands = 6
                 
             hires_today = me.get("hires_today", 0)
             if hires_today < target_hands and money >= 5:
@@ -180,15 +170,15 @@ def v027_agent(obs):
                 market_orders.append(["BUY_LAND"])
                 money -= 2000
                 
-            # Calibrated Cow Capacity (Optimal: 8 Cows)
+            # Calibrated Cow Capacity (Notebook expansion: reaches 8 by D8)
             cows_in_shed = shed.get("COW", 0)
-            if day >= 3 and day <= 15 and (num_cows + cows_in_shed) < 8:
-                while money >= 500 and (num_cows + cows_in_shed) < 8 and len(market_orders) < 8:
+            if day >= 5 and day <= 15 and (num_cows + cows_in_shed) < 9:
+                while money >= 500 and (num_cows + cows_in_shed) < 9 and len(market_orders) < 8:
                     market_orders.append(["BUY_ANIMAL", "COW", 1])
                     money -= 400
                     cows_in_shed += 1
                     
-            # Delayed Strawberry Powerhouse (Day 8-9 start, 40 capacity)
+            # Delayed Strawberry Powerhouse
             straw_seeds = seeds.get("STRAWBERRY", 0)
             if day >= 8 and day <= 20 and money >= 250:
                 if (num_strawberries + straw_seeds) < 40 and len(empty_unlocked_tiles) > 3:
@@ -253,7 +243,7 @@ def v027_agent(obs):
             if tiles[p[1]][p[0]] is None:
                 tasks.append({"type": "BUILD_PASTURE", "pos": p, "weight": WEIGHT_BUILD_STRUCTURE})
     else:
-        desired_pastures = min(12, num_cows + num_sheep + shed.get("COW", 0) + shed.get("SHEEP", 0) + 2)
+        desired_pastures = min(13, num_cows + num_sheep + shed.get("COW", 0) + shed.get("SHEEP", 0) + 2)
         total_structures = len(animals_on_board) + len(empty_structures)
         if total_structures < desired_pastures:
             for p in COMPACT_PASTURE_LAYOUT:
@@ -270,10 +260,6 @@ def v027_agent(obs):
             for p in DAY0_MELONS:
                 if tiles[p[1]][p[0]] is None:
                     tasks.append({"type": "PLANT", "pos": p, "weight": WEIGHT_PLANT_SEED, "crop": "MELON"})
-        if seeds.get("WHEAT", 0) > 0:
-            for p in DAY0_WHEAT:
-                if tiles[p[1]][p[0]] is None:
-                    tasks.append({"type": "PLANT", "pos": p, "weight": WEIGHT_PLANT_SEED, "crop": "WHEAT"})
     else:
         avail_straw_seeds = seeds.get("STRAWBERRY", 0)
         avail_wheat_seeds = seeds.get("WHEAT", 0)
@@ -308,17 +294,14 @@ def v027_agent(obs):
             dist = manhattan(u_pos, t["pos"])
             w = t["weight"]
             
-            # Distance penalty
             effective_cost = -w + (dist * 8)
             
-            # Feed bonus if unit already carries wheat
             if t["type"] == "FEED":
                 if u_wheat > 0:
                     effective_cost -= 150
                 elif current_wheat == 0:
-                    effective_cost += 3000 # Can't feed without wheat
+                    effective_cost += 3000
                     
-            # Animal placement check
             if t["type"] == "PLACE_ANIMAL":
                 an = t.get("animal")
                 if u_inv.get(an, 0) > 0:
@@ -339,10 +322,8 @@ def v027_agent(obs):
         u_pos = all_units[u_idx]
         u_inv = inventories[u_idx] if u_idx < len(inventories) and isinstance(inventories[u_idx], dict) else {}
         
-        # Check if unit needs to drop off heavy produce
         u_produce = sum(v for k, v in u_inv.items() if k not in ["COW", "SHEEP", "WHEAT"])
         if u_produce >= 8:
-            # Move to shed to drop off
             closest_shed = min(SHED_TILES, key=lambda s: manhattan(u_pos, s))
             if u_pos in SHED_TILES:
                 unit_actions[u_idx] = ["DROP"]
@@ -352,7 +333,6 @@ def v027_agent(obs):
                 continue
                 
         if u_idx not in assigned_tasks:
-            # Default to shed drop or PASS
             if u_produce > 0 and u_pos in SHED_TILES:
                 unit_actions[u_idx] = ["DROP"]
             else:
@@ -363,9 +343,7 @@ def v027_agent(obs):
         t_type = t["type"]
         t_pos = t["pos"]
         
-        # Check prerequisites for FEED and PLACE_ANIMAL
         if t_type == "FEED" and u_inv.get("WHEAT", 0) == 0 and shed.get("WHEAT", 0) > 0:
-            # Need to pick up wheat first
             if u_pos in SHED_TILES:
                 unit_actions[u_idx] = ["PICKUP", "WHEAT", min(5, shed.get("WHEAT", 0))]
             else:
@@ -383,7 +361,6 @@ def v027_agent(obs):
                     unit_actions[u_idx] = [get_move_toward(u_pos, closest_shed)]
                 continue
                 
-        # Action execution at tile
         if u_pos == t_pos:
             if t_type == "FEED": unit_actions[u_idx] = ["FEED"]
             elif t_type == "CARE": unit_actions[u_idx] = ["CARE"]
@@ -403,235 +380,3 @@ def v027_agent(obs):
         "hands": unit_actions[1:] if len(unit_actions) > 1 else [],
         "market": market_orders
     }
-
-import math
-
-_MARKET_PARAMS = {
-    "WHEAT": (25, 10000, 400, "sqrt", 0.8, "log", 0.2),
-    "CARROT": (35, 10000, 450, "log", 0.2, "sqrt", 0.7),
-    "TOMATO": (60, 10000, 200, "linear", 0.4, "sqrt", 0.6),
-    "STRAWBERRY": (120, 10000, 100, "sqrt", 0.7, "linear", 1.6),
-    "MELON": (250, 10000, 300, "log", 0.2, "sq", 3.6),
-    "EGG": (50, 10000, 332, "linear", 0.4, "log", 0.2),
-    "MILK": (160, 10000, 122, "sqrt", 0.6, "linear", 1.6),
-    "WOOL": (200, 10000, 105, "log", 0.2, "sq", 3.2),
-    "FERTILIZER": (100, 10000, 200, "linear", 0.4, "linear", 0.4),
-}
-
-_SHOP_PRODUCTS = {
-    "BAKERY": ("EGG", "WHEAT"),
-    "PIZZA_SHOP": ("MILK", "TOMATO", "WHEAT"),
-    "BRUNCH_SPOT": ("EGG", "WHEAT", "STRAWBERRY"),
-    "YARN_STORE": ("WOOL",),
-    "ICE_CREAM_SHOP": ("STRAWBERRY", "MILK", "WHEAT"),
-    "PET_CAFE": ("CARROT",),
-    "SMOOTHIE_SHOP": ("STRAWBERRY", "MILK"),
-    "FARMERS_MARKET": ("WHEAT", "CARROT", "TOMATO", "STRAWBERRY"),
-}
-
-_PRICE_FLOOR = 1
-_DEMAND_ALPHA = 0.25
-
-def _shape(name, value):
-    value = max(0.0, float(value))
-    if name == "linear": return value
-    if name == "sq": return value * value
-    if name == "sqrt": return math.sqrt(value)
-    if name == "log": return math.log1p(value)
-    if name == "log10": return math.log10(1.0 + value)
-    raise ValueError(name)
-
-def _market_price(item, inventory):
-    base, equilibrium, scale, below_func, below_target, above_func, above_target = _MARKET_PARAMS[item]
-    if inventory < equilibrium:
-        amplitude = below_target * base / _shape(below_func, scale)
-        price = base + amplitude * _shape(below_func, equilibrium - inventory)
-    else:
-        amplitude = above_target * base / _shape(above_func, scale)
-        price = base - amplitude * _shape(above_func, inventory - equilibrium)
-    return max(_PRICE_FLOOR, int(round(price)))
-
-def _is_sell(order):
-    return isinstance(order, (list, tuple)) and len(order) >= 3 and order[0] == "SELL" and order[1] in _MARKET_PARAMS
-
-def _impact_score(obs, order):
-    if not _is_sell(order):
-        return float("-inf")
-    item = str(order[1])
-    try:
-        quantity = max(0, int(order[2]))
-    except (ValueError, TypeError):
-        quantity = 0
-        
-    market = getattr(obs, "market", None)
-    if market is None and isinstance(obs, dict):
-        market = obs.get("market", {})
-        
-    inventory = getattr(market, "inventory", {}) if hasattr(market, "inventory") else (market.get("inventory", {}) if isinstance(market, dict) else {})
-    prices = getattr(market, "prices", {}) if hasattr(market, "prices") else (market.get("prices", {}) if isinstance(market, dict) else {})
-    
-    current_inventory = int(inventory.get(item, 10000)) if hasattr(inventory, "get") else 10000
-    
-    if hasattr(prices, "get") and item in prices:
-        current_quote = float(prices[item])
-    else:
-        current_quote = float(_market_price(item, current_inventory))
-        
-    later_quote = float(_market_price(item, current_inventory + quantity))
-    return float(quantity) * max(0.0, current_quote - later_quote)
-
-def _demand_per_day(obs, configuration, item):
-    town = getattr(obs, "town", {}) if hasattr(obs, "town") else (obs.get("town", {}) if isinstance(obs, dict) else {})
-    shops = getattr(town, "unlocked_shops", []) if hasattr(town, "unlocked_shops") else (town.get("unlocked_shops", []) if isinstance(town, dict) else [])
-    
-    turns_per_day = 24
-    if configuration:
-        turns_per_day = int(getattr(configuration, "turnsPerDay", 24) if hasattr(configuration, "turnsPerDay") else configuration.get("turnsPerDay", 24))
-        
-    shop_interval = 4
-    if configuration:
-        shop_interval = max(1, int(getattr(configuration, "townShopSellInterval", 4) if hasattr(configuration, "townShopSellInterval") else configuration.get("townShopSellInterval", 4)))
-        
-    demand = 0.0
-    for shop in shops:
-        products = _SHOP_PRODUCTS.get(shop, ())
-        if item in products:
-            demand += (turns_per_day / shop_interval) * (2 if len(products) == 1 else 1)
-            
-    if item != "FERTILIZER":
-        center_interval = 24
-        if configuration:
-            center_interval = max(1, int(getattr(configuration, "townCenterSellInterval", 24) if hasattr(configuration, "townCenterSellInterval") else configuration.get("townCenterSellInterval", 24)))
-            
-        demand += (turns_per_day / center_interval) * 1
-    return demand
-
-def _order_score(obs, configuration, order):
-    score = _impact_score(obs, order)
-    if score <= 0 or not _is_sell(order):
-        return score
-    item = str(order[1])
-    quantity = max(0, int(order[2]))
-    
-    market = getattr(obs, "market", None)
-    if market is None and isinstance(obs, dict):
-        market = obs.get("market", {})
-        
-    inventory = getattr(market, "inventory", {}) if hasattr(market, "inventory") else (market.get("inventory", {}) if isinstance(market, dict) else {})
-    current_inventory = int(inventory.get(item, 10000)) if hasattr(inventory, "get") else 10000
-    
-    demand = max(0.25, _demand_per_day(obs, configuration, item))
-    excess = max(0.0, current_inventory + quantity - 10000)
-    urgency = min(1.0, (excess / demand) / 10.0)
-    return score * (1.0 + _DEMAND_ALPHA * urgency)
-
-def _rank_sell_slots(obs, action, configuration):
-    try:
-        market = list(action.get("market", []))
-        rows = []
-        for index, order in enumerate(market):
-            if _is_sell(order):
-                score = _order_score(obs, configuration, order)
-                rows.append((score, -index, list(order)))
-                
-        if len(rows) < 2:
-            return action
-            
-        rows.sort(reverse=True)
-        ranked = iter(row[2] for row in rows)
-        action["market"] = [next(ranked) if _is_sell(order) else order for order in market]
-        return action
-    except Exception as e:
-        raise RuntimeError(f"MARKET IMPACT ORDERING CRASH: {str(e)}") from e
-
-def _to_dict(obs):
-    if isinstance(obs, dict):
-        return obs
-    return {
-        "player": obs.player,
-        "step": obs.step,
-        "day": obs.day,
-        "hour": obs.hour,
-        "farms": [
-            {
-                "money": f.money,
-                "tiles": f.tiles,
-                "farmer": f.farmer,
-                "hands": f.hands,
-                "unlocked_quadrants": f.unlocked_quadrants,
-                "hires_today": f.hires_today
-            } for f in obs.farms
-        ],
-        "private": {
-            "shed": obs.private.shed,
-            "seeds": obs.private.seeds,
-            "inventories": obs.private.inventories
-        },
-        "market": {
-            "inventory": getattr(obs.market, "inventory", {}),
-            "prices": getattr(obs.market, "prices", {})
-        },
-        "town": {
-            "unlocked_shops": getattr(obs.town, "unlocked_shops", [])
-        }
-    }
-
-
-_PREMIUM_GOODS = {"MELON", "MILK", "STRAWBERRY", "WOOL"}
-
-def _premium_market_lead(obs, action, configuration):
-    try:
-        market = list(action.get("market", []))
-        
-        # 1. Check if town demand is 0 for premium goods this turn
-        obs_dict = _to_dict(obs)
-        
-        # 2. To apply Premium Market Lead strictly as defined:
-        # "When the current turn has no matching town demand, increase the SELL quantity 
-        # to exactly match the available inventory in the shed, overriding the batch size limit."
-        # This forces the sale of *all* available premium stock before the price crashes 
-        # on the next turn, rather than drip-feeding it in batches.
-        
-        new_market = []
-        for order in market:
-            if isinstance(order, (list, tuple)) and len(order) >= 3 and order[0] == "SELL":
-                item = order[1]
-                if item in _PREMIUM_GOODS:
-                    demand = _demand_per_day(obs_dict, configuration, item)
-                    # If town demand is 0, unleash the full shed
-                    if demand < 1.1:
-                        shed = obs_dict.get("private", {}).get("shed", {})
-                        total_stock = shed.get(item, 0)
-                        if total_stock > 0:
-                            order = ["SELL", item, total_stock]
-            new_market.append(order)
-            
-        action["market"] = new_market
-        return action
-    except Exception as e:
-        raise RuntimeError(f"PREMIUM MARKET LEAD CRASH: {str(e)}") from e
-
-def x_agent(obs, configuration=None):
-    if configuration is None:
-        configuration = {"turnsPerDay": 24, "townShopSellInterval": 4, "townCenterSellInterval": 24}
-        
-    try:
-        obs_dict = _to_dict(obs)
-        action = v027_agent(obs_dict)
-        action = _premium_market_lead(obs_dict, action, configuration)
-        return action
-    except Exception as e:
-        raise RuntimeError(f"V028-MARKET-A CRASHED: {str(e)}") from e
-
-def agent(obs, configuration=None):
-    if configuration is None:
-        configuration = {"turnsPerDay": 24, "townShopSellInterval": 4, "townCenterSellInterval": 24}
-        
-    try:
-        obs_dict = _to_dict(obs)
-        action = v027_agent(obs_dict)
-        action = _premium_market_lead(obs_dict, action, configuration)
-        action = _rank_sell_slots(obs_dict, action, configuration)
-        return action
-    except Exception as e:
-        raise RuntimeError(f"V028-MARKET-C CRASHED: {str(e)}") from e

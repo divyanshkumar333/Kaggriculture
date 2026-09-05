@@ -404,6 +404,7 @@ def v027_agent(obs):
         "market": market_orders
     }
 
+
 import math
 
 _MARKET_PARAMS = {
@@ -576,53 +577,6 @@ def _to_dict(obs):
         }
     }
 
-
-_PREMIUM_GOODS = {"MELON", "MILK", "STRAWBERRY", "WOOL"}
-
-def _premium_market_lead(obs, action, configuration):
-    try:
-        market = list(action.get("market", []))
-        
-        # 1. Check if town demand is 0 for premium goods this turn
-        obs_dict = _to_dict(obs)
-        
-        # 2. To apply Premium Market Lead strictly as defined:
-        # "When the current turn has no matching town demand, increase the SELL quantity 
-        # to exactly match the available inventory in the shed, overriding the batch size limit."
-        # This forces the sale of *all* available premium stock before the price crashes 
-        # on the next turn, rather than drip-feeding it in batches.
-        
-        new_market = []
-        for order in market:
-            if isinstance(order, (list, tuple)) and len(order) >= 3 and order[0] == "SELL":
-                item = order[1]
-                if item in _PREMIUM_GOODS:
-                    demand = _demand_per_day(obs_dict, configuration, item)
-                    # If town demand is 0, unleash the full shed
-                    if demand < 1.1:
-                        shed = obs_dict.get("private", {}).get("shed", {})
-                        total_stock = shed.get(item, 0)
-                        if total_stock > 0:
-                            order = ["SELL", item, total_stock]
-            new_market.append(order)
-            
-        action["market"] = new_market
-        return action
-    except Exception as e:
-        raise RuntimeError(f"PREMIUM MARKET LEAD CRASH: {str(e)}") from e
-
-def x_agent(obs, configuration=None):
-    if configuration is None:
-        configuration = {"turnsPerDay": 24, "townShopSellInterval": 4, "townCenterSellInterval": 24}
-        
-    try:
-        obs_dict = _to_dict(obs)
-        action = v027_agent(obs_dict)
-        action = _premium_market_lead(obs_dict, action, configuration)
-        return action
-    except Exception as e:
-        raise RuntimeError(f"V028-MARKET-A CRASHED: {str(e)}") from e
-
 def agent(obs, configuration=None):
     if configuration is None:
         configuration = {"turnsPerDay": 24, "townShopSellInterval": 4, "townCenterSellInterval": 24}
@@ -630,8 +584,7 @@ def agent(obs, configuration=None):
     try:
         obs_dict = _to_dict(obs)
         action = v027_agent(obs_dict)
-        action = _premium_market_lead(obs_dict, action, configuration)
         action = _rank_sell_slots(obs_dict, action, configuration)
         return action
     except Exception as e:
-        raise RuntimeError(f"V028-MARKET-C CRASHED: {str(e)}") from e
+        raise RuntimeError(f"V028-MARKET-B CRASHED: {str(e)}") from e
