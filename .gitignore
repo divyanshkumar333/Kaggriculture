@@ -12,3 +12,8 @@ experiments/metrics/*.json
 kaggle_episodes/
 episode-*.json
 scratch/
+datasets/
+bootstrap_v4/
+models/
+*.msgpack
+*.json.gz
