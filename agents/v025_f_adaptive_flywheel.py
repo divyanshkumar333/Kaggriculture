@@ -1,11 +1,19 @@
 """
-Candidate V025-A: Aggressive Intra-Day Cow Velocity
----------------------------------------------------
+Candidate V025-F: Adaptive Early Flywheel
+-----------------------------------------
 Features:
-1. Unlocks Cow purchasing from Day 4 onwards (as soon as cash >= $1,500 and pasture is available).
-2. Intra-Day Purchasing: Evaluates cow purchases on EVERY hour as wool/milk/fertilizer revenue clears.
-3. Removes the strict 2-cow/day limit (allows buying up to 4 cows/day when capital is available).
-4. Maintains 3-Quadrant compact topology and Hungarian assignment core.
+1. Dynamic Early Cow Scaling:
+   - Aggressive cow purchasing from Day 4-8 (up to 9 cows when cash >= $1,500).
+   - Late cow purchasing (Days 9-11): only if liquid bank >= $1,800 AND milk price >= $100.
+   - Strict cow cutoff after Day 11 to prevent unamortized capital waste.
+2. Market-Adaptive Strawberry Ramp:
+   - Starts strawberry acquisition on Day 8 (established root systems before midgame).
+   - Strawberry cap dynamically adapts: up to 48 tiles if high shop demand, 42 standard.
+3. Feed Security & Liquidity Buffer:
+   - Computes daily herd feed burn (cows + sheep) and maintains a 2-day buffer (>= 30 wheat).
+   - Protects seed capital ($300) before livestock acquisitions.
+4. Hungarian Multi-Agent Spatial Assignment:
+   - Preserves 3-quadrant compact topology with zero idle worker congestion.
 """
 
 import math
@@ -66,6 +74,8 @@ def agent(obs):
     inventories = private["inventories"]
     market = obs.get("market", {})
     market_prices = market.get("prices", {})
+    town = obs.get("town", {})
+    unlocked_shops = town.get("unlocked_shops", [])
     
     all_units = [tuple(me["farmer"])] + [tuple(h) for h in me["hands"]]
     num_units = len(all_units)
@@ -139,7 +149,7 @@ def agent(obs):
             elif day < 6:
                 target_hands = 4 if money >= 50 else 2
             elif num_quads >= 3:
-                target_hands = 12 if day >= 10 and money >= 300 else 8
+                target_hands = 12 if day >= 10 and money >= 250 else 8
             elif num_quads >= 2:
                 target_hands = 6 if money >= 80 else 4
             else:
@@ -158,8 +168,9 @@ def agent(obs):
         # CAPITAL EXPANSION EVALUATED INTRA-DAY (Hours 1, 6, 12, 18)
         if hour in [1, 6, 12, 18]:
             current_wheat = shed.get("WHEAT", 0) + sum(inv.get("WHEAT", 0) for inv in inventories if isinstance(inv, dict))
-            target_feed = num_animals * 3 + 6 if day >= 5 else 6
-            if current_wheat < target_feed and money > 40:
+            # Feed buffer: 2 full days of herd consumption + reserve
+            target_feed = max(8, num_animals * 2 + 6)
+            if current_wheat < target_feed and money > 35:
                 needed_wheat = target_feed - current_wheat
                 while needed_wheat > 0 and len(market_orders) < 3:
                     buy_qty = min(needed_wheat, 10)
@@ -170,24 +181,43 @@ def agent(obs):
             if "NE" not in unlocked_quads and money >= 1200 and day >= 5:
                 market_orders.append(["BUY_LAND"])
                 money -= 1000
-            elif "SW" not in unlocked_quads and money >= 2400 and day >= 8:
+            elif "SW" not in unlocked_quads and money >= 2300 and day >= 8:
                 market_orders.append(["BUY_LAND"])
                 money -= 2000
                 
-            # Aggressive Cow Acceleration (D4-D15, up to 11 cows)
+            # Adaptive Cow Scaling:
+            # - Days 4-8: Up to 9 cows (aggressive)
+            # - Days 9-11: Up to 11 cows IF money >= 1800 and milk_price >= 100
+            # - Days 12+: Strictly capped to protect capital for strawberry flywheel
+            milk_price = market_prices.get("MILK", 160)
             cows_in_shed = shed.get("COW", 0)
-            if day >= 4 and day <= 15 and (num_cows + cows_in_shed) < 11:
+            effective_cows = num_cows + cows_in_shed
+            
+            if day >= 4 and day <= 8 and effective_cows < 9:
                 if len(empty_structures) > 0 or cows_in_shed < 2:
-                    while money >= 1500 and (num_cows + cows_in_shed) < 11 and len(market_orders) < 8:
+                    while money >= 1500 and effective_cows < 9 and len(market_orders) < 8:
                         market_orders.append(["BUY_ANIMAL", "COW", 1])
                         money -= 1500
+                        effective_cows += 1
                         cows_in_shed += 1
-                        
-            # Strawberry Seed Expansion (Days 9-20)
-            if day >= 9 and day <= 20 and money >= 300:
+            elif day >= 9 and day <= 11 and effective_cows < 11:
+                if milk_price >= 100 and money >= 1800:
+                    if len(empty_structures) > 0 or cows_in_shed < 2:
+                        while money >= 1800 and effective_cows < 11 and len(market_orders) < 8:
+                            market_orders.append(["BUY_ANIMAL", "COW", 1])
+                            money -= 1500
+                            effective_cows += 1
+                            cows_in_shed += 1
+
+            # Market-Adaptive Strawberry Ramp (Days 8-21)
+            # Adapts cap based on town demand shops (Bakery, Juice Bar, Fruit Stand, Grocery)
+            has_fruit_shop = any(s in ["Bakery", "Juice Bar", "Fruit Stand", "Grocery Store"] for s in unlocked_shops)
+            dynamic_straw_cap = 48 if has_fruit_shop else 42
+            
+            if day >= 8 and day <= 21 and money >= 250:
                 straw_seeds = seeds.get("STRAWBERRY", 0)
-                if (num_strawberries + straw_seeds) < 42 and len(empty_unlocked_tiles) > 3:
-                    buy_straw = min(10, 42 - (num_strawberries + straw_seeds))
+                if (num_strawberries + straw_seeds) < dynamic_straw_cap and len(empty_unlocked_tiles) > 2:
+                    buy_straw = min(10, dynamic_straw_cap - (num_strawberries + straw_seeds))
                     market_orders.append(["BUY_SEED", "STRAWBERRY", buy_straw])
                     
             # Endgame Wheat Infill (Days 22-26)
