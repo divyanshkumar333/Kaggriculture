@@ -187,7 +187,7 @@ def _town_demand_now(obs, item, step):
     return demand
 
 def _future_target(step, item):
-    for offset in range(1, 31):
+    for offset in (1, 2, 3, 4, 5):
         fut = step + offset
         if 0 <= fut < len(_ACTIONS):
             q = sum(

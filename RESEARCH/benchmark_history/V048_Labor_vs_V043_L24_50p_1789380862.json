@@ -1,0 +1,46 @@
+{
+  "candidate": "V048_Labor",
+  "baseline": "V043_L24",
+  "candidate_path": "agents/v048_hybrid_v43_labor_only.py",
+  "baseline_path": "agents/v043_v16_lookahead24.py",
+  "pairs": 50,
+  "total_matches": 100,
+  "elapsed_seconds": 332.5,
+  "match_record": {
+    "a_wins": 0,
+    "b_wins": 100,
+    "ties": 0,
+    "win_rate": 0.0
+  },
+  "paired_record": {
+    "a_wins": 0,
+    "b_wins": 50,
+    "ties": 0,
+    "win_rate": 0.0,
+    "mean_paired_delta": -200032.0,
+    "median_paired_delta": -203774.0
+  },
+  "cash_stats": {
+    "V048_Labor": {
+      "mean": 22701.9,
+      "median": 22827.0,
+      "p10": 10500.7,
+      "p90": 33384.6,
+      "min": 5840.0,
+      "max": 42429.0
+    },
+    "V043_L24": {
+      "mean": 122717.9,
+      "median": 124723.0,
+      "p10": 70464.2,
+      "p90": 162884.8,
+      "min": 49076.0,
+      "max": 172195.0
+    },
+    "net_mean_delta": -100016.0
+  },
+  "failures": {
+    "errors_V048_Labor": 0,
+    "errors_V043_L24": 0
+  }
+}

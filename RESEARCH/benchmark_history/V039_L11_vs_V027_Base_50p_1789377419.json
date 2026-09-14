@@ -1,0 +1,46 @@
+{
+  "candidate": "V039_L11",
+  "baseline": "V027_Base",
+  "candidate_path": "agents/v039_v16_lookahead11.py",
+  "baseline_path": "agents/v027_baseline.py",
+  "pairs": 50,
+  "total_matches": 100,
+  "elapsed_seconds": 2.1,
+  "match_record": {
+    "a_wins": 0,
+    "b_wins": 0,
+    "ties": 100,
+    "win_rate": 0.0
+  },
+  "paired_record": {
+    "a_wins": 0,
+    "b_wins": 0,
+    "ties": 50,
+    "win_rate": 0.0,
+    "mean_paired_delta": 0.0,
+    "median_paired_delta": 0.0
+  },
+  "cash_stats": {
+    "V039_L11": {
+      "mean": 0.0,
+      "median": 0.0,
+      "p10": 0.0,
+      "p90": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "V027_Base": {
+      "mean": 0.0,
+      "median": 0.0,
+      "p10": 0.0,
+      "p90": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "net_mean_delta": 0.0
+  },
+  "failures": {
+    "errors_V039_L11": 100,
+    "errors_V027_Base": 100
+  }
+}

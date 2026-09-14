@@ -1,12 +1,18 @@
 """
-Agent V032: V031 + 4-Step Front-Running Lookahead
-------------------------------------------------
-Extends V030:
-- Checks step + 1, then step + 2, then step + 3 for planned sales.
-- If an item has planned sales at step + 3 and steps +1 and +2 have 0, pulls
-  forward to step and records debt on step + 3.
-- Tests whether a 3-step horizon captures further market margin or causes
-  premature capital/inventory over-commitment.
+Agent V029: V16-RC5 + Clean Market Price-Impact Sell Ordering
+-------------------------------------------------------------
+Preserves the complete, causally-validated V16-RC5 foundation:
+- 8C / 4S high-throughput field and market route
+- Actor-local weed repair with 8-step replay alignment
+- Stateful premium market front-running for MELON, MILK, STRAWBERRY, WOOL
+- Strict debt repayment scheduling (_repay)
+
+Enhancement:
+- Rank existing SELL slots dynamically by instantaneous price impact:
+  Orders with higher marginal price sensitivity (e.g. MELON, STRAWBERRY)
+  are scheduled into earlier market slots within the turn, capturing higher
+  marginal quotes before market depth is depressed by other sales.
+- Zero modification to planned quantities or non-sell orders.
 """
 
 import base64
@@ -20,8 +26,8 @@ _ACTIONS = json.loads(zlib.decompress(base64.b85decode(
 
 _FR_ITEMS = ('MELON', 'MILK', 'STRAWBERRY', 'WOOL')
 _FR_STATE = {
-    0: {"last_step": -1, "due": {}},
-    1: {"last_step": -1, "due": {}},
+    0: {"last_step": -1, "due_step": -1, "due": {}},
+    1: {"last_step": -1, "due_step": -1, "due": {}},
 }
 _WEED_STATE = {0: {}, 1: {}}
 _WEED_REPLAY_STEPS = 8
@@ -166,13 +172,11 @@ def _fr_state(obs, step):
     seat = _seat(obs)
     state = _FR_STATE[seat]
     if step == 0 or step < int(state.get("last_step", -1)):
-        state = {"last_step": step, "due": {}}
+        state = {"last_step": step, "due_step": -1, "due": {}}
         _FR_STATE[seat] = state
     state["last_step"] = step
-    due = state.setdefault("due", {})
-    for s in list(due.keys()):
-        if int(s) < step:
-            del due[s]
+    if 0 <= int(state.get("due_step", -1)) < step:
+        state["due_step"], state["due"] = -1, {}
     return state
 
 def _town_demand_now(obs, item, step):
@@ -186,18 +190,15 @@ def _town_demand_now(obs, item, step):
             demand += 2 if len(products) == 1 else 1
     return demand
 
-def _future_target(step, item):
-    for offset in range(1, 31):
-        fut = step + offset
-        if 0 <= fut < len(_ACTIONS):
-            q = sum(
-                max(0, int(order[2]))
-                for order in (_ACTIONS[fut].get("market") or [])
-                if len(order) >= 3 and order[0] == "SELL" and order[1] == item
-            )
-            if q > 0:
-                return fut, q
-    return None, 0
+def _future_quantity(step, item):
+    future = step + 1
+    if not 0 <= future < len(_ACTIONS):
+        return 0
+    return sum(
+        max(0, int(order[2]))
+        for order in (_ACTIONS[future].get("market") or [])
+        if len(order) >= 3 and order[0] == "SELL" and order[1] == item
+    )
 
 def _pickup_reserve(action, item):
     reserve = 0
@@ -217,10 +218,9 @@ def _existing_sell(action, item):
     )
 
 def _repay(action, state, step):
-    due_map = state.get("due", {})
-    if step not in due_map:
+    if int(state.get("due_step", -1)) != step:
         return action
-    due = {str(item): max(0, int(quantity)) for item, quantity in dict(due_map[step]).items()}
+    due = {str(item): max(0, int(quantity)) for item, quantity in dict(state.get("due", {})).items()}
     action = _copy_action(action)
     market = []
     for raw in action.get("market") or []:
@@ -235,7 +235,7 @@ def _repay(action, state, step):
             order[2] = requested
         market.append(order)
     action["market"] = market[:10]
-    del due_map[step]
+    state["due_step"], state["due"] = -1, {}
     return action
 
 def _front_run(action, obs, state, step):
@@ -243,16 +243,15 @@ def _front_run(action, obs, state, step):
         return action
     private = _get(obs, "private", {}) or {}
     shed = _get(private, "shed", {}) or {}
-    due_map = state.setdefault("due", {})
+    moved = {}
     action = _copy_action(action)
-    
     for item in _FR_ITEMS:
-        target_step, target_qty = _future_target(step, item)
-        if target_qty <= 0 or target_step is None or _town_demand_now(obs, item, step) > 0:
+        target = _future_quantity(step, item)
+        if target <= 0 or _town_demand_now(obs, item, step) > 0:
             continue
         stock = max(0, int(_get(shed, item, 0) or 0))
         reserve = _pickup_reserve(action, item) + _existing_sell(action, item)
-        quantity = min(target_qty, max(0, stock - reserve))
+        quantity = min(target, max(0, stock - reserve))
         if quantity <= 0:
             continue
         market = [list(order) for order in (action.get("market") or [])]
@@ -264,10 +263,10 @@ def _front_run(action, obs, state, step):
         else:
             continue
         action["market"] = market[:10]
-        
-        step_due = due_map.setdefault(target_step, {})
-        step_due[item] = step_due.get(item, 0) + quantity
-        
+        moved[item] = moved.get(item, 0) + quantity
+    if moved:
+        state["due_step"] = step + 1
+        state["due"] = moved
     return action
 
 def _is_sell(order):

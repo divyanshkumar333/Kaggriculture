@@ -1,12 +1,13 @@
 """
-Agent V032: V031 + 4-Step Front-Running Lookahead
+Agent V030: V029 + 2-Step Front-Running Lookahead
 ------------------------------------------------
-Extends V030:
-- Checks step + 1, then step + 2, then step + 3 for planned sales.
-- If an item has planned sales at step + 3 and steps +1 and +2 have 0, pulls
-  forward to step and records debt on step + 3.
-- Tests whether a 3-step horizon captures further market margin or causes
-  premature capital/inventory over-commitment.
+Extends V029 (Impact-Ranked Champion):
+- When step + 1 has a planned sale, front-runs from step + 1 (identical to V029).
+- When step + 1 has ZERO planned sales for a premium good, checks step + 2.
+  If step + 2 has a planned sale and shed holds available inventory, pulls
+  from step + 2 to step, capturing a 2-turn market queue lead.
+- Dynamic multi-step repayment schedule ensures exact debt clearing on the
+  original step without overselling or inventory depletion.
 """
 
 import base64
@@ -170,6 +171,7 @@ def _fr_state(obs, step):
         _FR_STATE[seat] = state
     state["last_step"] = step
     due = state.setdefault("due", {})
+    # purge expired steps
     for s in list(due.keys()):
         if int(s) < step:
             del due[s]
@@ -187,16 +189,27 @@ def _town_demand_now(obs, item, step):
     return demand
 
 def _future_target(step, item):
-    for offset in range(1, 31):
-        fut = step + offset
-        if 0 <= fut < len(_ACTIONS):
-            q = sum(
-                max(0, int(order[2]))
-                for order in (_ACTIONS[fut].get("market") or [])
-                if len(order) >= 3 and order[0] == "SELL" and order[1] == item
-            )
-            if q > 0:
-                return fut, q
+    future1 = step + 1
+    if 0 <= future1 < len(_ACTIONS):
+        q1 = sum(
+            max(0, int(order[2]))
+            for order in (_ACTIONS[future1].get("market") or [])
+            if len(order) >= 3 and order[0] == "SELL" and order[1] == item
+        )
+        if q1 > 0:
+            return future1, q1
+            
+    # If step + 1 has no sale, look ahead to step + 2
+    future2 = step + 2
+    if 0 <= future2 < len(_ACTIONS):
+        q2 = sum(
+            max(0, int(order[2]))
+            for order in (_ACTIONS[future2].get("market") or [])
+            if len(order) >= 3 and order[0] == "SELL" and order[1] == item
+        )
+        if q2 > 0:
+            return future2, q2
+            
     return None, 0
 
 def _pickup_reserve(action, item):
@@ -265,6 +278,7 @@ def _front_run(action, obs, state, step):
             continue
         action["market"] = market[:10]
         
+        # Record repayment debt for the target step
         step_due = due_map.setdefault(target_step, {})
         step_due[item] = step_due.get(item, 0) + quantity
         

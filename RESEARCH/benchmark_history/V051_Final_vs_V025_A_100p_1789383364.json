@@ -1,0 +1,46 @@
+{
+  "candidate": "V051_Final",
+  "baseline": "V025_A",
+  "candidate_path": "agents/v051_v16_lookahead30_final.py",
+  "baseline_path": "agents/v025_a_aggressive_cows.py",
+  "pairs": 100,
+  "total_matches": 200,
+  "elapsed_seconds": 448.8,
+  "match_record": {
+    "a_wins": 200,
+    "b_wins": 0,
+    "ties": 0,
+    "win_rate": 1.0
+  },
+  "paired_record": {
+    "a_wins": 100,
+    "b_wins": 0,
+    "ties": 0,
+    "win_rate": 1.0,
+    "mean_paired_delta": 134194.1,
+    "median_paired_delta": 133840.0
+  },
+  "cash_stats": {
+    "V051_Final": {
+      "mean": 110146.5,
+      "median": 108411.0,
+      "p10": 86789.6,
+      "p90": 138906.8,
+      "min": 63067.0,
+      "max": 167233.0
+    },
+    "V025_A": {
+      "mean": 43049.5,
+      "median": 36787.0,
+      "p10": 23091.8,
+      "p90": 76775.2,
+      "min": 3382.0,
+      "max": 98125.0
+    },
+    "net_mean_delta": 67097.0
+  },
+  "failures": {
+    "errors_V051_Final": 0,
+    "errors_V025_A": 0
+  }
+}

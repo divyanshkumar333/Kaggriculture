@@ -187,7 +187,7 @@ def _town_demand_now(obs, item, step):
     return demand
 
 def _future_target(step, item):
-    for offset in range(1, 31):
+    for offset in range(1, 25):
         fut = step + offset
         if 0 <= fut < len(_ACTIONS):
             q = sum(
@@ -314,6 +314,148 @@ def _rank_sell_slots(obs, action):
     action["market"] = new_market
     return action
 
+def _hybrid_v27_market(action, obs, step):
+    action = _copy_action(action)
+    player = _get(obs, "player", 0)
+    farms = _get(obs, "farms", [])
+    if player >= len(farms): return action
+    me = farms[player]
+    money = _get(me, "money", 0)
+    day = _get(obs, "day", 0)
+    hour = _get(obs, "hour", 0)
+    unlocked_quads = _get(me, "unlocked_quadrants", [])
+    num_quads = len(unlocked_quads)
+    hires_today = _get(me, "hires_today", 0)
+    
+    market = action.get("market", [])
+    
+    # 1. Dynamic labor scaling from V027
+    if hour == 0:
+        if day < 3: target_hands = 5
+        elif day < 6: target_hands = 6
+        elif num_quads >= 2 and money >= 50: target_hands = 11
+        else: target_hands = 6
+        
+        while hires_today < target_hands and money >= 5 and len(market) < 10:
+            market.append(["HIRE"])
+            hires_today += 1
+            money -= 5
+            
+    action["market"] = market[:10]
+    return action
+
+def _manhattan(p1, p2):
+    return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
+
+def _get_move_toward(current, target):
+    cx, cy = current
+    tx, ty = target
+    if cx < tx: return "EAST"
+    if cx > tx: return "WEST"
+    if cy < ty: return "SOUTH"
+    if cy > ty: return "NORTH"
+    return "PASS"
+
+def _hybrid_v27_worker_dispatch(action, obs):
+    action = _copy_action(action)
+    player = _get(obs, "player", 0)
+    farms = _get(obs, "farms", [])
+    if player >= len(farms): return action
+    me = farms[player]
+    
+    hands = action.get("hands", [])
+    all_units = [tuple(_get(me, "farmer", [0,0]))] + [tuple(h) for h in _get(me, "hands", [])]
+    unit_actions = [action.get("farmer", ["PASS"])] + hands
+    
+    # Identify unassigned hands (only those generating 'PASS' explicitly, skipping the farmer if possible)
+    idle_indices = []
+    for i, a in enumerate(unit_actions):
+        if a and a[0] == "PASS" and i > 0:
+            idle_indices.append(i)
+            
+    if not idle_indices:
+        return action
+        
+    # Simple Greedy Dispatch for idle units
+    tiles = _get(me, "tiles", [])
+    tasks = []
+    
+    for r in range(10):
+        for c in range(10):
+            t = tiles[r][c] if r < len(tiles) and c < len(tiles[r]) else "LOCKED"
+            if isinstance(t, dict):
+                kind = t.get("kind")
+                if kind == "WEED":
+                    tasks.append({"type": "DIG", "pos": (c, r), "weight": 1200})
+                elif kind in ["COOP", "PASTURE"] and t.get("animal"):
+                    if not t.get("fed_today", False):
+                        tasks.append({"type": "FEED", "pos": (c, r), "weight": 1600})
+                    if not t.get("cared_today", False):
+                        tasks.append({"type": "CARE", "pos": (c, r), "weight": 1400})
+                    if t.get("yield_units", 0) > 0:
+                        tasks.append({"type": "HARVEST", "pos": (c, r), "weight": 950})
+                    if t.get("fertilizer_available", False):
+                        tasks.append({"type": "COLLECT_FERTILIZER", "pos": (c, r), "weight": 900})
+                elif kind == "PLANT":
+                    if t.get("yield_units", 0) > 0:
+                        tasks.append({"type": "HARVEST", "pos": (c, r), "weight": 850})
+                    elif not t.get("watered_today", False):
+                        tasks.append({"type": "WATER", "pos": (c, r), "weight": 1000 + (t.get("consecutive_unwatered", 0) * 1000)})
+                        
+    if not tasks:
+        return action
+        
+    tasks.sort(key=lambda x: x["weight"], reverse=True)
+    assigned_tiles = set()
+    
+    private = _get(obs, "private", {})
+    shed = _get(private, "shed", {})
+    inventories = _get(private, "inventories", [])
+    shed_tiles = [(4, 4), (5, 4), (4, 5), (5, 5)]
+    
+    for idx in idle_indices:
+        if idx >= len(all_units): continue
+        u_pos = all_units[idx]
+        u_inv = inventories[idx] if idx < len(inventories) and isinstance(inventories[idx], dict) else {}
+        
+        # Heavy produce check
+        u_produce = sum(v for k, v in u_inv.items() if k not in ["COW", "SHEEP", "WHEAT"])
+        if u_produce >= 8:
+            closest_shed = min(shed_tiles, key=lambda s: _manhattan(u_pos, s))
+            if u_pos in shed_tiles:
+                unit_actions[idx] = ["DROP"]
+            else:
+                unit_actions[idx] = [_get_move_toward(u_pos, closest_shed)]
+            continue
+
+        best_task = None
+        for t in tasks:
+            if t["pos"] not in assigned_tiles:
+                if t["type"] == "FEED" and u_inv.get("WHEAT", 0) == 0 and shed.get("WHEAT", 0) == 0:
+                    continue # Cannot feed without wheat
+                best_task = t
+                break
+                
+        if best_task:
+            assigned_tiles.add(best_task["pos"])
+            t_pos = best_task["pos"]
+            
+            if best_task["type"] == "FEED" and u_inv.get("WHEAT", 0) == 0:
+                # Must get wheat
+                if u_pos in shed_tiles:
+                    unit_actions[idx] = ["PICKUP", "WHEAT", 5]
+                else:
+                    closest_shed = min(shed_tiles, key=lambda s: _manhattan(u_pos, s))
+                    unit_actions[idx] = [_get_move_toward(u_pos, closest_shed)]
+            else:
+                if u_pos == t_pos:
+                    unit_actions[idx] = [best_task["type"]]
+                else:
+                    unit_actions[idx] = [_get_move_toward(u_pos, t_pos)]
+                    
+    action["hands"] = unit_actions[1:]
+    return action
+
 def agent(obs, configuration=None):
     try:
         step = min(max(0, int(_get(obs, "step", 0) or 0)), len(_ACTIONS) - 1)
@@ -321,8 +463,11 @@ def agent(obs, configuration=None):
         state = _fr_state(obs, step)
         action = _repay(action, state, step)
         action = _front_run(action, obs, state, step)
+        action = _hybrid_v27_market(action, obs, step)
         action = _rank_sell_slots(obs, action)
-        return _align_hands(action, obs)
+        action = _align_hands(action, obs)
+        action = _hybrid_v27_worker_dispatch(action, obs)
+        return action
     except Exception:
         farm = _farm(obs, _seat(obs))
         return {

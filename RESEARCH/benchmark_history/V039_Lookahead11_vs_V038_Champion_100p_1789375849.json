@@ -1,0 +1,46 @@
+{
+  "candidate": "V039_Lookahead11",
+  "baseline": "V038_Champion",
+  "candidate_path": "agents/v039_v16_lookahead11.py",
+  "baseline_path": "agents/v038_v16_lookahead10.py",
+  "pairs": 100,
+  "total_matches": 200,
+  "elapsed_seconds": 296.3,
+  "match_record": {
+    "a_wins": 197,
+    "b_wins": 3,
+    "ties": 0,
+    "win_rate": 0.985
+  },
+  "paired_record": {
+    "a_wins": 100,
+    "b_wins": 0,
+    "ties": 0,
+    "win_rate": 1.0,
+    "mean_paired_delta": 3496.2,
+    "median_paired_delta": 3254.5
+  },
+  "cash_stats": {
+    "V039_Lookahead11": {
+      "mean": 92032.1,
+      "median": 89846.5,
+      "p10": 65664.0,
+      "p90": 123048.0,
+      "min": 39057.0,
+      "max": 146216.0
+    },
+    "V038_Champion": {
+      "mean": 90284.0,
+      "median": 88261.0,
+      "p10": 63807.5,
+      "p90": 121170.2,
+      "min": 37785.0,
+      "max": 144045.0
+    },
+    "net_mean_delta": 1748.1
+  },
+  "failures": {
+    "errors_V039_Lookahead11": 0,
+    "errors_V038_Champion": 0
+  }
+}

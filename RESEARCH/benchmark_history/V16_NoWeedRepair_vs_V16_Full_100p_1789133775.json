@@ -1,0 +1,46 @@
+{
+  "candidate": "V16_NoWeedRepair",
+  "baseline": "V16_Full",
+  "candidate_path": "agents/ablations/v16_no_weed_repair.py",
+  "baseline_path": "agents/public_v16_rc5.py",
+  "pairs": 100,
+  "total_matches": 200,
+  "elapsed_seconds": 265.7,
+  "match_record": {
+    "a_wins": 32,
+    "b_wins": 85,
+    "ties": 83,
+    "win_rate": 0.16
+  },
+  "paired_record": {
+    "a_wins": 3,
+    "b_wins": 61,
+    "ties": 36,
+    "win_rate": 0.03,
+    "mean_paired_delta": -1715.9,
+    "median_paired_delta": -808.0
+  },
+  "cash_stats": {
+    "V16_NoWeedRepair": {
+      "mean": 90573.5,
+      "median": 86980.0,
+      "p10": 59857.6,
+      "p90": 128384.7,
+      "min": 39419.0,
+      "max": 151247.0
+    },
+    "V16_Full": {
+      "mean": 91431.4,
+      "median": 87681.0,
+      "p10": 59989.9,
+      "p90": 129851.0,
+      "min": 39419.0,
+      "max": 152927.0
+    },
+    "net_mean_delta": -857.9
+  },
+  "failures": {
+    "errors_V16_NoWeedRepair": 0,
+    "errors_V16_Full": 0
+  }
+}

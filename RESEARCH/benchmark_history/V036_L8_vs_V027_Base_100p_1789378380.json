@@ -1,0 +1,46 @@
+{
+  "candidate": "V036_L8",
+  "baseline": "V027_Base",
+  "candidate_path": "agents/v036_v16_lookahead8.py",
+  "baseline_path": "agents/v027_hierarchical_meta.py",
+  "pairs": 100,
+  "total_matches": 200,
+  "elapsed_seconds": 943.8,
+  "match_record": {
+    "a_wins": 200,
+    "b_wins": 0,
+    "ties": 0,
+    "win_rate": 1.0
+  },
+  "paired_record": {
+    "a_wins": 100,
+    "b_wins": 0,
+    "ties": 0,
+    "win_rate": 1.0,
+    "mean_paired_delta": 120308.2,
+    "median_paired_delta": 121912.0
+  },
+  "cash_stats": {
+    "V036_L8": {
+      "mean": 107954.9,
+      "median": 110082.5,
+      "p10": 75685.7,
+      "p90": 144170.4,
+      "min": 49488.0,
+      "max": 167345.0
+    },
+    "V027_Base": {
+      "mean": 47800.8,
+      "median": 45557.0,
+      "p10": 24466.4,
+      "p90": 78030.0,
+      "min": 12658.0,
+      "max": 95191.0
+    },
+    "net_mean_delta": 60154.1
+  },
+  "failures": {
+    "errors_V036_L8": 0,
+    "errors_V027_Base": 0
+  }
+}

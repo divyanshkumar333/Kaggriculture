@@ -1,0 +1,46 @@
+{
+  "candidate": "V16",
+  "baseline": "V27_Public",
+  "candidate_path": "agents/public_v16_rc5.py",
+  "baseline_path": "agents/public_v27_reset.py",
+  "pairs": 100,
+  "total_matches": 200,
+  "elapsed_seconds": 291.7,
+  "match_record": {
+    "a_wins": 200,
+    "b_wins": 0,
+    "ties": 0,
+    "win_rate": 1.0
+  },
+  "paired_record": {
+    "a_wins": 100,
+    "b_wins": 0,
+    "ties": 0,
+    "win_rate": 1.0,
+    "mean_paired_delta": 34583.4,
+    "median_paired_delta": 32669.5
+  },
+  "cash_stats": {
+    "V16": {
+      "mean": 94524.9,
+      "median": 88611.5,
+      "p10": 65935.6,
+      "p90": 129691.2,
+      "min": 42261.0,
+      "max": 154791.0
+    },
+    "V27_Public": {
+      "mean": 77233.2,
+      "median": 72553.0,
+      "p10": 53468.0,
+      "p90": 109345.0,
+      "min": 34034.0,
+      "max": 136878.0
+    },
+    "net_mean_delta": 17291.7
+  },
+  "failures": {
+    "errors_V16": 0,
+    "errors_V27_Public": 0
+  }
+}

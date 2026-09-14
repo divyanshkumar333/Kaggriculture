@@ -1,0 +1,46 @@
+{
+  "candidate": "V051_Final",
+  "baseline": "V16_Public",
+  "candidate_path": "agents/v051_v16_lookahead30_final.py",
+  "baseline_path": "agents/public_v16_rc5.py",
+  "pairs": 100,
+  "total_matches": 200,
+  "elapsed_seconds": 487.9,
+  "match_record": {
+    "a_wins": 29,
+    "b_wins": 171,
+    "ties": 0,
+    "win_rate": 0.145
+  },
+  "paired_record": {
+    "a_wins": 9,
+    "b_wins": 91,
+    "ties": 0,
+    "win_rate": 0.09,
+    "mean_paired_delta": -2350.0,
+    "median_paired_delta": -2384.5
+  },
+  "cash_stats": {
+    "V051_Final": {
+      "mean": 89401.7,
+      "median": 85731.0,
+      "p10": 60974.0,
+      "p90": 123802.1,
+      "min": 38825.0,
+      "max": 141687.0
+    },
+    "V16_Public": {
+      "mean": 90576.7,
+      "median": 87041.0,
+      "p10": 61845.4,
+      "p90": 124563.1,
+      "min": 38712.0,
+      "max": 142533.0
+    },
+    "net_mean_delta": -1175.0
+  },
+  "failures": {
+    "errors_V051_Final": 0,
+    "errors_V16_Public": 0
+  }
+}

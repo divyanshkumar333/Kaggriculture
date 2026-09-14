@@ -1,0 +1,46 @@
+{
+  "candidate": "V16_NoRepay",
+  "baseline": "V16_Full",
+  "candidate_path": "agents/ablations/v16_no_repay.py",
+  "baseline_path": "agents/public_v16_rc5.py",
+  "pairs": 100,
+  "total_matches": 200,
+  "elapsed_seconds": 264.8,
+  "match_record": {
+    "a_wins": 27,
+    "b_wins": 173,
+    "ties": 0,
+    "win_rate": 0.135
+  },
+  "paired_record": {
+    "a_wins": 5,
+    "b_wins": 95,
+    "ties": 0,
+    "win_rate": 0.05,
+    "mean_paired_delta": -1105.2,
+    "median_paired_delta": -1223.0
+  },
+  "cash_stats": {
+    "V16_NoRepay": {
+      "mean": 90293.0,
+      "median": 86571.5,
+      "p10": 59304.3,
+      "p90": 128504.0,
+      "min": 39328.0,
+      "max": 148749.0
+    },
+    "V16_Full": {
+      "mean": 90845.6,
+      "median": 87553.0,
+      "p10": 59848.5,
+      "p90": 129005.1,
+      "min": 38917.0,
+      "max": 148833.0
+    },
+    "net_mean_delta": -552.6
+  },
+  "failures": {
+    "errors_V16_NoRepay": 0,
+    "errors_V16_Full": 0
+  }
+}

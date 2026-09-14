@@ -1,0 +1,35 @@
+8.3s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.3s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.3s 3 0.00s - to python to disable frozen modules.
+8.3s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+9.0s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+9.0s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+9.0s 7 0.00s - to python to disable frozen modules.
+9.0s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+56.3s 9 [kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO: Successfully loaded OpenSpiel environments: 41.
+56.3s 10 [kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO: OpenSpiel games skipped: 0.
+56.3s 11 Environment: kaggriculture v0.1.0
+56.3s 12 Players: [2]
+56.3s 13 Max steps: 720
+59.3s 14 Player: 0
+59.3s 15 Player 0's Unlocked Farm Areas: ['NW']
+59.3s 16 WHEAT Price: 26
+59.3s 17 CARROT Price: 36
+59.3s 18 TOMATO Price: 60
+59.3s 19 STRAWBERRY Price: 128
+59.3s 20 MELON Price: 256
+59.3s 21 EGG Price: 50
+59.3s 22 MILK Price: 169
+59.3s 23 WOOL Price: 206
+59.3s 24 FERTILIZER Price: 100
+62.3s 25 Player 0: reward=6099.0, status=DONE
+62.3s 26 Player 1: reward=0.0, status=DONE
+66.3s 27 Writing submission.py
+73.3s 28 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+73.3s 29 cells[i][c] = re.sub('\\\\\|', '|', cell)
+73.5s 30 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+73.5s 31 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+74.3s 32 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+75.2s 33 [NbConvertApp] Writing 23855669 bytes to __notebook__.ipynb
+78.2s 34 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+80.3s 35 [NbConvertApp] Writing 24153692 bytes to __results__.html

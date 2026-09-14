@@ -1,0 +1,46 @@
+{
+  "candidate": "V16_NoFrontRun",
+  "baseline": "V16_Full",
+  "candidate_path": "agents/ablations/v16_no_frontrun.py",
+  "baseline_path": "agents/public_v16_rc5.py",
+  "pairs": 100,
+  "total_matches": 200,
+  "elapsed_seconds": 264.9,
+  "match_record": {
+    "a_wins": 0,
+    "b_wins": 200,
+    "ties": 0,
+    "win_rate": 0.0
+  },
+  "paired_record": {
+    "a_wins": 0,
+    "b_wins": 100,
+    "ties": 0,
+    "win_rate": 0.0,
+    "mean_paired_delta": -3962.7,
+    "median_paired_delta": -3986.0
+  },
+  "cash_stats": {
+    "V16_NoFrontRun": {
+      "mean": 89902.0,
+      "median": 86333.0,
+      "p10": 58692.7,
+      "p90": 128170.4,
+      "min": 38660.0,
+      "max": 148644.0
+    },
+    "V16_Full": {
+      "mean": 91883.3,
+      "median": 88485.0,
+      "p10": 61040.6,
+      "p90": 130110.4,
+      "min": 39892.0,
+      "max": 149767.0
+    },
+    "net_mean_delta": -1981.4
+  },
+  "failures": {
+    "errors_V16_NoFrontRun": 0,
+    "errors_V16_Full": 0
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "candidate": "V049_LaborFix",
+  "baseline": "V043_L24",
+  "candidate_path": "agents/v049_hybrid_v43_labor_fix.py",
+  "baseline_path": "agents/v043_v16_lookahead24.py",
+  "pairs": 50,
+  "total_matches": 100,
+  "elapsed_seconds": 320.1,
+  "match_record": {
+    "a_wins": 0,
+    "b_wins": 100,
+    "ties": 0,
+    "win_rate": 0.0
+  },
+  "paired_record": {
+    "a_wins": 0,
+    "b_wins": 50,
+    "ties": 0,
+    "win_rate": 0.0,
+    "mean_paired_delta": -207689.3,
+    "median_paired_delta": -214222.5
+  },
+  "cash_stats": {
+    "V049_LaborFix": {
+      "mean": 23221.0,
+      "median": 24207.0,
+      "p10": 13136.3,
+      "p90": 32403.6,
+      "min": 6035.0,
+      "max": 42264.0
+    },
+    "V043_L24": {
+      "mean": 127065.7,
+      "median": 128702.0,
+      "p10": 87145.6,
+      "p90": 162688.3,
+      "min": 58468.0,
+      "max": 177192.0
+    },
+    "net_mean_delta": -103844.7
+  },
+  "failures": {
+    "errors_V049_LaborFix": 0,
+    "errors_V043_L24": 0
+  }
+}
