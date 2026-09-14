@@ -1,0 +1,46 @@
+{
+  "candidate": "V055_Hybrid_Labor",
+  "baseline": "V053_MarketAdaptive",
+  "candidate_path": "agents/v055_hybrid_labor.py",
+  "baseline_path": "agents/v053_market_adaptive.py",
+  "pairs": 100,
+  "total_matches": 200,
+  "elapsed_seconds": 266.0,
+  "match_record": {
+    "a_wins": 0,
+    "b_wins": 200,
+    "ties": 0,
+    "win_rate": 0.0
+  },
+  "paired_record": {
+    "a_wins": 0,
+    "b_wins": 100,
+    "ties": 0,
+    "win_rate": 0.0,
+    "mean_paired_delta": -49369.2,
+    "median_paired_delta": -51995.0
+  },
+  "cash_stats": {
+    "V055_Hybrid_Labor": {
+      "mean": 74562.0,
+      "median": 73819.0,
+      "p10": 46429.9,
+      "p90": 100852.4,
+      "min": 29398.0,
+      "max": 124829.0
+    },
+    "V053_MarketAdaptive": {
+      "mean": 99246.7,
+      "median": 100698.0,
+      "p10": 62536.4,
+      "p90": 135771.3,
+      "min": 37492.0,
+      "max": 164405.0
+    },
+    "net_mean_delta": -24684.6
+  },
+  "failures": {
+    "errors_V055_Hybrid_Labor": 0,
+    "errors_V053_MarketAdaptive": 0
+  }
+}

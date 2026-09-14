@@ -1,0 +1,46 @@
+{
+  "candidate": "V055_Hybrid_Labor",
+  "baseline": "V027_Base",
+  "candidate_path": "agents/v055_hybrid_labor.py",
+  "baseline_path": "agents/v027_hierarchical_meta.py",
+  "pairs": 100,
+  "total_matches": 200,
+  "elapsed_seconds": 143.7,
+  "match_record": {
+    "a_wins": 0,
+    "b_wins": 200,
+    "ties": 0,
+    "win_rate": 0.0
+  },
+  "paired_record": {
+    "a_wins": 0,
+    "b_wins": 100,
+    "ties": 0,
+    "win_rate": 0.0,
+    "mean_paired_delta": -184195.6,
+    "median_paired_delta": -192276.0
+  },
+  "cash_stats": {
+    "V055_Hybrid_Labor": {
+      "mean": 3000.0,
+      "median": 3000.0,
+      "p10": 3000.0,
+      "p90": 3000.0,
+      "min": 3000.0,
+      "max": 3000.0
+    },
+    "V027_Base": {
+      "mean": 95097.8,
+      "median": 98926.5,
+      "p10": 65556.3,
+      "p90": 112305.5,
+      "min": 41919.0,
+      "max": 122360.0
+    },
+    "net_mean_delta": -92097.8
+  },
+  "failures": {
+    "errors_V055_Hybrid_Labor": 0,
+    "errors_V027_Base": 0
+  }
+}
