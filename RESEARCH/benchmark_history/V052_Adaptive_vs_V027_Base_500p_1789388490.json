@@ -1,0 +1,46 @@
+{
+  "candidate": "V052_Adaptive",
+  "baseline": "V027_Base",
+  "candidate_path": "agents/v052_v16_adaptive.py",
+  "baseline_path": "agents/v027_hierarchical_meta.py",
+  "pairs": 500,
+  "total_matches": 1000,
+  "elapsed_seconds": 1205.7,
+  "match_record": {
+    "a_wins": 1000,
+    "b_wins": 0,
+    "ties": 0,
+    "win_rate": 1.0
+  },
+  "paired_record": {
+    "a_wins": 500,
+    "b_wins": 0,
+    "ties": 0,
+    "win_rate": 1.0,
+    "mean_paired_delta": 126046.0,
+    "median_paired_delta": 128529.5
+  },
+  "cash_stats": {
+    "V052_Adaptive": {
+      "mean": 113322.9,
+      "median": 112583.0,
+      "p10": 77654.9,
+      "p90": 150381.6,
+      "min": 42825.0,
+      "max": 172917.0
+    },
+    "V027_Base": {
+      "mean": 50299.9,
+      "median": 46484.0,
+      "p10": 24110.2,
+      "p90": 83351.3,
+      "min": 9566.0,
+      "max": 98200.0
+    },
+    "net_mean_delta": 63023.0
+  },
+  "failures": {
+    "errors_V052_Adaptive": 0,
+    "errors_V027_Base": 0
+  }
+}

@@ -34,3 +34,7 @@
 | **EXP-028** | 2026-09-14 | **V051_Final** (L30) | **V027_Base** | 500 / 1000 | 1000 - 0 - 0 | 100.0% | +$61,680 | **FINAL AUDIT (1000 Matches)** |
 | **EXP-029** | 2026-09-14 | **V051_Final** (L30) | **V025-A** | 100 / 200 | 200 - 0 - 0 | 100.0% | +$67,097 | **FINAL AUDIT vs Prev Gen** |
 | **EXP-030** | 2026-09-14 | V051_Final (L30) | V16_Public | 100 / 200 | 29 - 171 - 0 | 14.5% | -$1,175 | **Prisoner's Dilemma Loss** |
+| **EXP-031** | 2026-09-14 | **V052_Adaptive** | **V051_Final** | 500 / 1000 | 959 - 41 - 0 | 95.9% | +$1,687 | Adaptive Mechanism Triggers (L1) |
+| **EXP-032** | 2026-09-14 | **V052_Adaptive** | **V16_Public** | 500 / 1000 | 940 - 60 - 0 | 94.0% | +$911 | Vulnerability ELIMINATED |
+| **EXP-033** | 2026-09-14 | **V052_Adaptive** | **V027_Base** | 500 / 1000 | 1000 - 0 - 0 | 100.0% | +$63,023 | Broad Field Dominance Preserved |
+| **EXP-034** | 2026-09-14 | **V052_Adaptive** | **V025_A** | 500 / 1000 | 1000 - 0 - 0 | 100.0% | +$18,420 | Broad Field Dominance Preserved |
