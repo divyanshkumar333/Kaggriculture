@@ -4,14 +4,14 @@
     "date": "2026-09-14 16:07:25.317000",
     "description": "Detects spoilers mathematically via inventory deltas and falls back to optimal Depth 4.",
     "status": "SubmissionStatus.COMPLETE",
-    "publicScore": 921.5
+    "publicScore": 1025.6
   },
   {
     "ref": "56233064",
     "date": "2026-09-14 14:22:09.743000",
     "description": "Testing anti-spoiler adaptation",
     "status": "SubmissionStatus.COMPLETE",
-    "publicScore": 1057.4
+    "publicScore": 1074.8
   },
   {
     "ref": "56229416",
