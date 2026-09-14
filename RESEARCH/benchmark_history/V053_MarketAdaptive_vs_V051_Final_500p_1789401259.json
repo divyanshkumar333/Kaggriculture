@@ -1,0 +1,46 @@
+{
+  "candidate": "V053_MarketAdaptive",
+  "baseline": "V051_Final",
+  "candidate_path": "agents/v053_market_adaptive.py",
+  "baseline_path": "agents/v051_v16_lookahead30_final.py",
+  "pairs": 50,
+  "total_matches": 100,
+  "elapsed_seconds": 253.8,
+  "match_record": {
+    "a_wins": 63,
+    "b_wins": 37,
+    "ties": 0,
+    "win_rate": 0.63
+  },
+  "paired_record": {
+    "a_wins": 34,
+    "b_wins": 16,
+    "ties": 0,
+    "win_rate": 0.68,
+    "mean_paired_delta": 240.1,
+    "median_paired_delta": 326.5
+  },
+  "cash_stats": {
+    "V053_MarketAdaptive": {
+      "mean": 88326.8,
+      "median": 85358.0,
+      "p10": 53861.8,
+      "p90": 133111.5,
+      "min": 42244.0,
+      "max": 150516.0
+    },
+    "V051_Final": {
+      "mean": 88206.7,
+      "median": 85154.5,
+      "p10": 53592.3,
+      "p90": 132845.3,
+      "min": 41961.0,
+      "max": 150359.0
+    },
+    "net_mean_delta": 120.1
+  },
+  "failures": {
+    "errors_V053_MarketAdaptive": 0,
+    "errors_V051_Final": 0
+  }
+}

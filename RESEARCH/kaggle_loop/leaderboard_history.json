@@ -1,0 +1,86 @@
+[
+  {
+    "ref": "56234996",
+    "date": "2026-09-14 16:07:25.317000",
+    "description": "Detects spoilers mathematically via inventory deltas and falls back to optimal Depth 4.",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": 781.1
+  },
+  {
+    "ref": "56233064",
+    "date": "2026-09-14 14:22:09.743000",
+    "description": "Testing anti-spoiler adaptation",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": 1057.4
+  },
+  {
+    "ref": "56229416",
+    "date": "2026-09-14 11:12:19.313000",
+    "description": "V051 (Lookahead 30) - 2900+ Candidate",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": 1033.8
+  },
+  {
+    "ref": "56039461",
+    "date": "2026-09-05 19:33:37.700000",
+    "description": "V028 Market C Synergy (Premium Lead + Impact Ordering)",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": 591.8
+  },
+  {
+    "ref": "56032309",
+    "date": "2026-09-05 12:07:04.873000",
+    "description": "",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": 608.5
+  },
+  {
+    "ref": "56026408",
+    "date": "2026-09-05 06:21:21.433000",
+    "description": "V025-A Aggressive Early Cow Flywheel",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": 653.5
+  },
+  {
+    "ref": "56026365",
+    "date": "2026-09-05 06:19:27.697000",
+    "description": "V025-A Aggressive Early Cow Flywheel",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": 639.6
+  },
+  {
+    "ref": "56018982",
+    "date": "2026-09-04 20:00:00.607000",
+    "description": "V025-A Early Flywheel & Intra-Day Cow Velocity",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": 671.9
+  },
+  {
+    "ref": "55946810",
+    "date": "2026-09-01 19:42:25.123000",
+    "description": "V022-C Multi-Product Market Batching & Town Sink Exploitation",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": 570.9
+  },
+  {
+    "ref": "55899068",
+    "date": "2026-08-30 19:56:11.967000",
+    "description": "V020-C Surgical Competitive -- fractional seed replenishment, lifecycle-aware planting, and dynamic land operating reserve.",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": 522.9
+  },
+  {
+    "ref": "55897931",
+    "date": "2026-08-30 18:39:19.703000",
+    "description": "",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": 515.7
+  },
+  {
+    "ref": "55825538",
+    "date": "2026-08-27 19:29:39.270000",
+    "description": "V018-B Batch Cap Champion \u2014 dynamic crop selection, Hungarian task allocation, land expansion, and daily plant cap optimization.",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": 521.1
+  }
+]

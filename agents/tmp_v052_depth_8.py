@@ -20,8 +20,8 @@ _ACTIONS = json.loads(zlib.decompress(base64.b85decode(
 
 _FR_ITEMS = ('MELON', 'MILK', 'STRAWBERRY', 'WOOL')
 _FR_STATE = {
-    0: {"last_step": -1, "due": {}, "spoiler_score": 0, "prev_inv": {}, "last_action": None},
-    1: {"last_step": -1, "due": {}, "spoiler_score": 0, "prev_inv": {}, "last_action": None},
+    0: {"last_step": -1, "due": {}, "v16_matches": 0, "is_v16": False},
+    1: {"last_step": -1, "due": {}, "v16_matches": 0, "is_v16": False},
 }
 _WEED_STATE = {0: {}, 1: {}}
 _WEED_REPLAY_STEPS = 8
@@ -166,37 +166,8 @@ def _fr_state(obs, step):
     seat = _seat(obs)
     state = _FR_STATE[seat]
     if step == 0 or step < int(state.get("last_step", -1)):
-        state = {"last_step": step, "due": {}, "spoiler_score": 0, "prev_inv": {}, "last_action": None}
+        state = {"last_step": step, "due": {}, "v16_matches": 0, "is_v16": False}
         _FR_STATE[seat] = state
-
-    # --- SPOILER DETECTION VIA MARKET DELTA ---
-    # Only check in early game when V051 strictly holds, but spoilers dump.
-    if 0 < step <= 150:
-        market_inv = _get(_get(obs, "market", {}), "inventory", {})
-        prev_inv = state.get("prev_inv", {})
-        last_action = state.get("last_action") or {}
-        
-        our_sales = {}
-        for order in (last_action.get("market") or []):
-            if len(order) >= 3 and order[0] == "SELL":
-                item = order[1]
-                qty = max(0, int(order[2]))
-                our_sales[item] = our_sales.get(item, 0) + qty
-                
-        for item in ["WHEAT", "CARROT", "TOMATO", "STRAWBERRY", "MELON", "MILK", "EGG", "WOOL"]:
-            curr = int(market_inv.get(item, 10000))
-            prev = int(prev_inv.get(item, 10000))
-            ours = our_sales.get(item, 0)
-            
-            # If inventory rose more than our sales, the opponent MUST have sold!
-            opp_sales_min = curr - prev - ours
-            if opp_sales_min > 0:
-                state["spoiler_score"] = state.get("spoiler_score", 0) + opp_sales_min
-                
-    market_inv = _get(_get(obs, "market", {}), "inventory", {})
-    state["prev_inv"] = dict(market_inv)
-    # ------------------------------------------
-
     state["last_step"] = step
     due = state.setdefault("due", {})
     for s in list(due.keys()):
@@ -216,8 +187,7 @@ def _town_demand_now(obs, item, step):
     return demand
 
 def _future_target(step, item, state):
-    # If opponent has leaked early sales, they are a spoiler. Fallback to optimal Depth 4.
-    max_lookahead = 4 if state.get("spoiler_score", 0) > 0 else 30
+    max_lookahead = 8 if state.get("is_v16", False) else 30
     for offset in range(1, max_lookahead + 1):
         fut = step + offset
         if 0 <= fut < len(_ACTIONS):
@@ -350,10 +320,24 @@ def agent(obs, configuration=None):
         step = min(max(0, int(_get(obs, "step", 0) or 0)), len(_ACTIONS) - 1)
         action = _weed_repair_action(obs, _copy_action(_ACTIONS[step]), step)
         state = _fr_state(obs, step)
+        
+        # Lineage Detection Logic
+        seat = _seat(obs)
+        opp_seat = 1 - seat
+        farms = obs.get("farms", [])
+        if len(farms) > max(seat, opp_seat):
+            me = farms[seat]
+            opp = farms[opp_seat]
+            my_farmer = me.get("farmer")
+            opp_farmer = opp.get("farmer")
+            if my_farmer and opp_farmer and my_farmer == opp_farmer:
+                state["v16_matches"] = state.get("v16_matches", 0) + 1
+            if state.get("v16_matches", 0) >= 10:
+                state["is_v16"] = True
+                
         action = _repay(action, state, step)
         action = _front_run(action, obs, state, step)
         action = _rank_sell_slots(obs, action)
-        state["last_action"] = _copy_action(action)
         return _align_hands(action, obs)
     except Exception:
         farm = _farm(obs, _seat(obs))

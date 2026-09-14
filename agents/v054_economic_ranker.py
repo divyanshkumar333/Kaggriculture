@@ -317,13 +317,24 @@ def _impact_score(obs, order):
         quantity = max(0, int(order[2]))
     except (TypeError, ValueError):
         return 0.0
+    if quantity == 0:
+        return 0.0
+        
     market = _get(obs, "market", {}) or {}
     inventory = _get(market, "inventory", {}) or {}
-    prices = _get(market, "prices", {}) or {}
     current_inventory = int(_get(inventory, item, 10000) or 0)
-    current_quote = float(_get(prices, item, _market_price(item, current_inventory)) or 0)
-    later_quote = float(_market_price(item, current_inventory + quantity))
-    return float(quantity) * max(0.0, current_quote - later_quote)
+    
+    # Calculate EXACT revenue that this sell order would generate NOW
+    revenue_now = 0
+    for i in range(quantity):
+        revenue_now += _market_price(item, current_inventory + i)
+        
+    # Calculate revenue if we delay 1 turn and the market is flooded by 10 units
+    revenue_later = 0
+    for i in range(quantity):
+        revenue_later += _market_price(item, current_inventory + 10 + i)
+        
+    return float(revenue_now - revenue_later)
 
 def _rank_sell_slots(obs, action):
     market = list(action.get("market") or [])

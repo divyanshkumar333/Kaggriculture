@@ -1,0 +1,46 @@
+{
+  "candidate": "V052_Fallback_D24",
+  "baseline": "V16_Public",
+  "candidate_path": "agents/tmp_v052_depth_24.py",
+  "baseline_path": "agents/public_v16_rc5.py",
+  "pairs": 100,
+  "total_matches": 200,
+  "elapsed_seconds": 324.8,
+  "match_record": {
+    "a_wins": 189,
+    "b_wins": 11,
+    "ties": 0,
+    "win_rate": 0.945
+  },
+  "paired_record": {
+    "a_wins": 100,
+    "b_wins": 0,
+    "ties": 0,
+    "win_rate": 1.0,
+    "mean_paired_delta": 1782.6,
+    "median_paired_delta": 1777.0
+  },
+  "cash_stats": {
+    "V052_Fallback_D24": {
+      "mean": 91367.3,
+      "median": 87975.0,
+      "p10": 60346.2,
+      "p90": 129727.4,
+      "min": 39683.0,
+      "max": 149637.0
+    },
+    "V16_Public": {
+      "mean": 90476.0,
+      "median": 86957.0,
+      "p10": 59379.9,
+      "p90": 128657.0,
+      "min": 39110.0,
+      "max": 148927.0
+    },
+    "net_mean_delta": 891.3
+  },
+  "failures": {
+    "errors_V052_Fallback_D24": 0,
+    "errors_V16_Public": 0
+  }
+}

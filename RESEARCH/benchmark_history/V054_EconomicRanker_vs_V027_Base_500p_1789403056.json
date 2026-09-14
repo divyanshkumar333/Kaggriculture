@@ -1,0 +1,46 @@
+{
+  "candidate": "V054_EconomicRanker",
+  "baseline": "V027_Base",
+  "candidate_path": "agents/v054_economic_ranker.py",
+  "baseline_path": "agents/v027_hierarchical_meta.py",
+  "pairs": 100,
+  "total_matches": 200,
+  "elapsed_seconds": 241.2,
+  "match_record": {
+    "a_wins": 200,
+    "b_wins": 0,
+    "ties": 0,
+    "win_rate": 1.0
+  },
+  "paired_record": {
+    "a_wins": 100,
+    "b_wins": 0,
+    "ties": 0,
+    "win_rate": 1.0,
+    "mean_paired_delta": 124022.3,
+    "median_paired_delta": 127311.5
+  },
+  "cash_stats": {
+    "V054_EconomicRanker": {
+      "mean": 112587.8,
+      "median": 110353.5,
+      "p10": 81482.0,
+      "p90": 149580.0,
+      "min": 47416.0,
+      "max": 172227.0
+    },
+    "V027_Base": {
+      "mean": 50576.7,
+      "median": 48608.0,
+      "p10": 25474.5,
+      "p90": 83559.2,
+      "min": 10108.0,
+      "max": 98752.0
+    },
+    "net_mean_delta": 62011.2
+  },
+  "failures": {
+    "errors_V054_EconomicRanker": 0,
+    "errors_V027_Base": 0
+  }
+}

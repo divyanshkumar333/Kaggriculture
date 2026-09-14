@@ -1,0 +1,46 @@
+{
+  "candidate": "V053_MarketAdaptive",
+  "baseline": "V025_A",
+  "candidate_path": "agents/v053_market_adaptive.py",
+  "baseline_path": "agents/public_v27_reset.py",
+  "pairs": 50,
+  "total_matches": 100,
+  "elapsed_seconds": 253.1,
+  "match_record": {
+    "a_wins": 100,
+    "b_wins": 0,
+    "ties": 0,
+    "win_rate": 1.0
+  },
+  "paired_record": {
+    "a_wins": 50,
+    "b_wins": 0,
+    "ties": 0,
+    "win_rate": 1.0,
+    "mean_paired_delta": 34142.5,
+    "median_paired_delta": 32524.0
+  },
+  "cash_stats": {
+    "V053_MarketAdaptive": {
+      "mean": 98342.9,
+      "median": 99562.5,
+      "p10": 63190.3,
+      "p90": 144322.0,
+      "min": 51534.0,
+      "max": 149689.0
+    },
+    "V025_A": {
+      "mean": 81271.7,
+      "median": 82760.0,
+      "p10": 50865.6,
+      "p90": 118451.0,
+      "min": 40784.0,
+      "max": 125405.0
+    },
+    "net_mean_delta": 17071.3
+  },
+  "failures": {
+    "errors_V053_MarketAdaptive": 0,
+    "errors_V025_A": 0
+  }
+}
