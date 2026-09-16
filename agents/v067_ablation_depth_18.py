@@ -20,8 +20,8 @@ _ACTIONS = json.loads(zlib.decompress(base64.b85decode(
 
 _FR_ITEMS = ('MELON', 'MILK', 'STRAWBERRY', 'WOOL')
 _FR_STATE = {
-    0: {"last_step": -1, "due": {}, "spoiler_score": 0, "prev_inv": {}, "last_action": None},
-    1: {"last_step": -1, "due": {}, "spoiler_score": 0, "prev_inv": {}, "last_action": None},
+    0: {"last_step": -1, "due": {}, "v16_matches": 0, "is_v16": False},
+    1: {"last_step": -1, "due": {}, "v16_matches": 0, "is_v16": False},
 }
 _WEED_STATE = {0: {}, 1: {}}
 _WEED_REPLAY_STEPS = 8
@@ -166,88 +166,9 @@ def _fr_state(obs, step):
     seat = _seat(obs)
     state = _FR_STATE[seat]
     if step == 0 or step < int(state.get("last_step", -1)):
-        state = {"last_step": step, "due": {}, "spoiler_score": 0, "prev_inv": {}, "last_action": None, "opp_shed": {}, "opp_plants": {}, "opp_animals": {}}
+        state = {"last_step": step, "due": {}, "v16_matches": 0, "is_v16": False}
         _FR_STATE[seat] = state
-
-    opp_idx = 1 - obs["player"]
-    opp_farm = _get(obs, "farms", [])[opp_idx] if len(_get(obs, "farms", [])) > opp_idx else {}
-    
-    # 1. Infer harvests by tracking opponent board
-    prev_plants = state.setdefault("opp_plants", {})
-    prev_animals = state.setdefault("opp_animals", {})
-    curr_plants = {}
-    curr_animals = {}
-    
-    for y, row in enumerate(_get(opp_farm, "tiles", []) or []):
-        for x, tile in enumerate(row or []):
-            if isinstance(tile, dict):
-                if tile.get("kind") == "PLANT":
-                    crop = str(tile.get("crop", ""))
-                    yu = int(tile.get("yield_units", 0) or 0)
-                    curr_plants[(x, y)] = {"crop": crop, "yu": yu}
-                elif tile.get("kind") in ["COOP", "PASTURE"] and "animal" in tile:
-                    an = str(tile.get("animal", ""))
-                    yu = int(tile.get("yield_units", 0) or 0)
-                    curr_animals[(x, y)] = {"animal": an, "yu": yu}
-                    
-    opp_shed = state.setdefault("opp_shed", {})
-    
-    # Harvests from plants
-    for pos, prev in prev_plants.items():
-        crop = prev["crop"]
-        prev_yu = prev["yu"]
-        curr = curr_plants.get(pos)
-        harvested = 0
-        if curr is None and prev_yu > 0:
-            harvested = prev_yu # Assumed harvested if it disappeared with yield
-        elif curr is not None and curr["crop"] == crop and curr["yu"] < prev_yu:
-            harvested = prev_yu - curr["yu"]
-        if harvested > 0:
-            opp_shed[crop] = opp_shed.get(crop, 0) + harvested
-
-    # Harvests from animals
-    for pos, prev in prev_animals.items():
-        an = prev["animal"]
-        prev_yu = prev["yu"]
-        curr = curr_animals.get(pos)
-        harvested = 0
-        if curr is not None and curr["animal"] == an and curr["yu"] < prev_yu:
-            harvested = prev_yu - curr["yu"]
-        if harvested > 0:
-            item = "EGG" if an == "GOOSE" else "MILK" if an == "COW" else "WOOL"
-            opp_shed[item] = opp_shed.get(item, 0) + harvested
-            
-    # 2. Subtract Opponent Market Sales
-    market_inv = _get(_get(obs, "market", {}), "inventory", {})
-    prev_inv = state.get("prev_inv", {})
-    last_action = state.get("last_action") or {}
-    
-    our_sales = {}
-    for order in (last_action.get("market") or []):
-        if isinstance(order, (list, tuple)) and len(order) >= 3 and order[0] == "SELL":
-            item = str(order[1])
-            qty = max(0, int(order[2]))
-            our_sales[item] = our_sales.get(item, 0) + qty
-            
-    for item in ["WHEAT", "CARROT", "TOMATO", "STRAWBERRY", "MELON", "MILK", "EGG", "WOOL"]:
-        curr = int(market_inv.get(item, 10000))
-        prev = int(prev_inv.get(item, 10000))
-        ours = our_sales.get(item, 0)
-        opp_sales = max(0, curr - prev - ours)
-        if opp_sales > 0:
-            opp_shed[item] = max(0, opp_shed.get(item, 0) - opp_sales)
-            
-    # 3. Subtract Town Consumption (both players lose inventory to town)
-    for item in ["WHEAT", "CARROT", "TOMATO", "STRAWBERRY", "MELON", "MILK", "EGG", "WOOL"]:
-        demand = _town_demand_now(obs, item, step)
-        if demand > 0:
-            opp_shed[item] = max(0, opp_shed.get(item, 0) - demand)
-            
-    state["opp_plants"] = curr_plants
-    state["opp_animals"] = curr_animals
-    state["prev_inv"] = dict(market_inv)
     state["last_step"] = step
-    
     due = state.setdefault("due", {})
     for s in list(due.keys()):
         if int(s) < step:
@@ -266,17 +187,7 @@ def _town_demand_now(obs, item, step):
     return demand
 
 def _future_target(step, item, state):
-    # Generalized: If opponent has this item in their shed, they can crash it next turn.
-    # We will front-run them if they have a non-trivial amount (>=2), or if we are late game.
-    opp_shed = state.get("opp_shed", {})
-    opp_qty = opp_shed.get(item, 0)
-    
-    # If they hold it, they might sell it next turn.
-    if opp_qty >= 2:
-        return step + 1, opp_qty
-        
-    # Fallback to normal V16 self-lookahead if they don't have it.
-    max_lookahead = 30
+    max_lookahead = 18 if state.get("is_v16", False) else 30
     for offset in range(1, max_lookahead + 1):
         fut = step + offset
         if 0 <= fut < len(_ACTIONS):
@@ -409,10 +320,24 @@ def agent(obs, configuration=None):
         step = min(max(0, int(_get(obs, "step", 0) or 0)), len(_ACTIONS) - 1)
         action = _weed_repair_action(obs, _copy_action(_ACTIONS[step]), step)
         state = _fr_state(obs, step)
+        
+        # Lineage Detection Logic
+        seat = _seat(obs)
+        opp_seat = 1 - seat
+        farms = obs.get("farms", [])
+        if len(farms) > max(seat, opp_seat):
+            me = farms[seat]
+            opp = farms[opp_seat]
+            my_farmer = me.get("farmer")
+            opp_farmer = opp.get("farmer")
+            if my_farmer and opp_farmer and my_farmer == opp_farmer:
+                state["v16_matches"] = state.get("v16_matches", 0) + 1
+            if state.get("v16_matches", 0) >= 10:
+                state["is_v16"] = True
+                
         action = _repay(action, state, step)
         action = _front_run(action, obs, state, step)
         action = _rank_sell_slots(obs, action)
-        state["last_action"] = _copy_action(action)
         return _align_hands(action, obs)
     except Exception:
         farm = _farm(obs, _seat(obs))

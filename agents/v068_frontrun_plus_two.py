@@ -273,7 +273,7 @@ def _future_target(step, item, state):
     
     # If they hold it, they might sell it next turn.
     if opp_qty >= 2:
-        return step + 1, opp_qty
+        return step + 2, opp_qty
         
     # Fallback to normal V16 self-lookahead if they don't have it.
     max_lookahead = 30

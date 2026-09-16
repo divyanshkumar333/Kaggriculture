@@ -1,0 +1,42 @@
+[
+  {
+    "candidate": "v065_ablation_melon_only",
+    "hypothesis": "Tracking only Melons provides 95% of V057 value.",
+    "mechanism": "V057 with _FR_ITEMS = (MELON,)",
+    "predicted_kaggle_behavior": "Should match V057 unless Strawberry tracking was crucial.",
+    "confidence": "MEDIUM",
+    "expected_improvement": "None, ablation test"
+  },
+  {
+    "candidate": "v066_ablation_strawberry_only",
+    "hypothesis": "Tracking only Strawberries provides the value.",
+    "mechanism": "V057 with _FR_ITEMS = (STRAWBERRY,)",
+    "predicted_kaggle_behavior": "Will likely lose to Melon Frontrunners but dominate passive Strawberry players.",
+    "confidence": "MEDIUM",
+    "expected_improvement": "None, ablation test"
+  },
+  {
+    "candidate": "v067_ablation_depth_18",
+    "hypothesis": "Using a shorter lookahead baseline makes V057 more reactive.",
+    "mechanism": "V057 layered over V052 base",
+    "predicted_kaggle_behavior": "Should score roughly similar to V057, testing base sequence sensitivity.",
+    "confidence": "LOW",
+    "expected_improvement": "Minor if depth 18 paths better mid-game"
+  },
+  {
+    "candidate": "v068_frontrun_plus_two",
+    "hypothesis": "Frontrunning by 2 turns exploits opponents who frontrun by 1 turn.",
+    "mechanism": "target_step = step + 2",
+    "predicted_kaggle_behavior": "Should beat V057 clones by dumping slightly earlier.",
+    "confidence": "HIGH",
+    "expected_improvement": "Could push rating higher if meta is saturated with V057 clones"
+  },
+  {
+    "candidate": "v069_hybrid_spoiler",
+    "hypothesis": "Combining static Melon dumping (Hour 0) with dynamic Strawberry tracking crushes pure dynamic agents.",
+    "mechanism": "Hardcoded Hour 0 Melon dump + V057 logic for Strawberries",
+    "predicted_kaggle_behavior": "Should absolutely dominate V057 and V16.",
+    "confidence": "HIGH",
+    "expected_improvement": "Potential new 1200+ champion"
+  }
+]
