@@ -3,3 +3,4 @@
 {"cycle": 2, "candidate_id": "v067_ablation_depth_18", "hypothesis": "Using a shorter lookahead baseline makes V057 more reactive.", "strategy_family": "Dynamic Frontrunner (V052 Base)", "timestamp": "2026-09-16T11:05:28.225969"}
 {"cycle": 2, "candidate_id": "v068_frontrun_plus_two", "hypothesis": "Frontrunning by 2 turns exploits opponents who frontrun by 1 turn.", "strategy_family": "Dynamic Frontrunner (Turn+2)", "timestamp": "2026-09-16T11:05:28.225969"}
 {"cycle": 2, "candidate_id": "v069_hybrid_spoiler", "hypothesis": "Combining static Melon dumping with dynamic Strawberry tracking crushes pure dynamic agents.", "strategy_family": "Hybrid Frontrunner", "timestamp": "2026-09-16T11:05:28.225969"}
+{"candidate_id": "001_meta_classifier", "timestamp": "2026-09-17T20:29", "hypothesis": "001_meta_classifier.md", "strategy_family": "Runtime Hybrid Classifier", "local_results": "Smoke test passed against random.", "Kaggle_rating": null, "episode_count": 0}

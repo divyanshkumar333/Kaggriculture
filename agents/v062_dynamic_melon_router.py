@@ -422,30 +422,11 @@ def v057_agent(obs, configuration=None):
             "market": [],
         }
 
-# ==============================================================================
-# V063 META ROUTER (LIGHTWEIGHT ML-DERIVED AGENT)
-# ==============================================================================
-# BACKGROUND:
-# An XGBoost Value Model was trained on 360,000+ steps from 500+ replays.
-# Feature importance revealed that `o_melons` (opponent melon capability) is the 
-# single most critical opponent feature for determining win probability (Importance: 0.125).
-#
-# Instead of deploying a heavyweight XGBoost model into the Kaggle environment, 
-# this agent extracts that learned structure into a lightweight, zero-shot 
-# 1-node decision tree (Binary Classifier).
-#
-# LOGIC:
-# If `o_melons > 0` (Opponent has planted Melons) -> Route to Dumper (v060 logic).
-# Else -> Route to Profit Maximizer (v057 logic).
-#
-# This routing allows us to score ~164k against weak bots while tying ~106k 
-# against aggressive Melon dumpers.
-# ==============================================================================
-
+# --- V062 DYNAMIC ROUTER ---
 _ROUTER_STATE = {"opp_has_melons": False}
 
 def agent(obs, configuration=None):
-    # 1. Feature Extraction: Check if opponent has planted Melons (o_melons > 0)
+    # 1. Check if opponent has any Melons (planted)
     seat = 1 if int(obs.get("player", 0) or 0) == 1 else 0
     opp_seat = 1 - seat
     farms = obs.get("farms", [])
@@ -461,10 +442,10 @@ def agent(obs, configuration=None):
             if _ROUTER_STATE["opp_has_melons"]:
                 break
     
-    # 2. Base Strategy Generation (v057)
+    # 2. Get the base action from v057
     action = v057_agent(obs, configuration)
     
-    # 3. Decision Tree Routing (If o_melons > 0: Dump)
+    # 3. If opponent has Melons, we must aggressively DUMP our Melons
     if _ROUTER_STATE["opp_has_melons"]:
         farm = farms[seat] if seat < len(farms) else {}
         private = obs.get("private", {})
@@ -476,11 +457,9 @@ def agent(obs, configuration=None):
         if melons > 0:
             new_market = []
             for order in action.get("market", []):
-                # Remove any existing MELON sell orders so we can front-run
                 if len(order) >= 2 and order[0] == "SELL" and order[1] == "MELON":
                     continue
                 new_market.append(order)
-            # Insert maximum priority MELON dump
             new_market.insert(0, ["SELL", "MELON", melons])
             action["market"] = new_market[:10]
             
