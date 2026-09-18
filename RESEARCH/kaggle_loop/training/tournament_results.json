@@ -1,0 +1,4941 @@
+{
+  "stats": {
+    "v051_v16_lookahead30_final.py": {
+      "wins": 100.0,
+      "matches": 140,
+      "score_sum": 14204553.0
+    },
+    "v025_a_aggressive_cows.py": {
+      "wins": 32,
+      "matches": 140,
+      "score_sum": 7899170.0
+    },
+    "v027_hierarchical_meta.py": {
+      "wins": 49,
+      "matches": 140,
+      "score_sum": 8197327.0
+    },
+    "v057_generalized_spoiler.py": {
+      "wins": 100.0,
+      "matches": 140,
+      "score_sum": 13955507.0
+    },
+    "v059_strawberry_flywheel.py": {
+      "wins": 10.0,
+      "matches": 140,
+      "score_sum": 1468955.0
+    },
+    "v060_melon_frontrunner.py": {
+      "wins": 126.0,
+      "matches": 140,
+      "score_sum": 14346415.0
+    },
+    "v063_meta_router.py": {
+      "wins": 73.0,
+      "matches": 140,
+      "score_sum": 13943088.0
+    }
+  },
+  "results": [
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 99539.0,
+      "score1": 99593.0,
+      "seed": 0,
+      "margin": -54.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 120590.0,
+      "score1": 120590.0,
+      "seed": 1,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 44946.0,
+      "score1": 44808.0,
+      "seed": 2,
+      "margin": 138.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 86714.0,
+      "score1": 86714.0,
+      "seed": 3,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 114508.0,
+      "score1": 114647.0,
+      "seed": 4,
+      "margin": -139.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 66417.0,
+      "score1": 66417.0,
+      "seed": 5,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 117150.0,
+      "score1": 115732.0,
+      "seed": 6,
+      "margin": 1418.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 122888.0,
+      "score1": 122888.0,
+      "seed": 7,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 78981.0,
+      "score1": 78981.0,
+      "seed": 8,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 79856.0,
+      "score1": 79856.0,
+      "seed": 9,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 99488.0,
+      "score1": 32546.0,
+      "seed": 0,
+      "margin": 66942.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 110303.0,
+      "score1": 44794.0,
+      "seed": 1,
+      "margin": 65509.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 127855.0,
+      "score1": 55254.0,
+      "seed": 2,
+      "margin": 72601.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 74058.0,
+      "score1": 39092.0,
+      "seed": 3,
+      "margin": 34966.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 133756.0,
+      "score1": 71334.0,
+      "seed": 4,
+      "margin": 62422.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 108633.0,
+      "score1": 46613.0,
+      "seed": 5,
+      "margin": 62020.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 109422.0,
+      "score1": 33847.0,
+      "seed": 6,
+      "margin": 75575.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 130006.0,
+      "score1": 55076.0,
+      "seed": 7,
+      "margin": 74930.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 124871.0,
+      "score1": 47295.0,
+      "seed": 8,
+      "margin": 77576.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 74778.0,
+      "score1": 11296.0,
+      "seed": 9,
+      "margin": 63482.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 96119.0,
+      "score1": 38501.0,
+      "seed": 0,
+      "margin": 57618.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 121954.0,
+      "score1": 49615.0,
+      "seed": 1,
+      "margin": 72339.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 112001.0,
+      "score1": 46104.0,
+      "seed": 2,
+      "margin": 65897.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 91389.0,
+      "score1": 33870.0,
+      "seed": 3,
+      "margin": 57519.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 135371.0,
+      "score1": 57006.0,
+      "seed": 4,
+      "margin": 78365.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 149413.0,
+      "score1": 75054.0,
+      "seed": 5,
+      "margin": 74359.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 140056.0,
+      "score1": 72396.0,
+      "seed": 6,
+      "margin": 67660.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 81941.0,
+      "score1": 23004.0,
+      "seed": 7,
+      "margin": 58937.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 121791.0,
+      "score1": 53140.0,
+      "seed": 8,
+      "margin": 68651.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 134654.0,
+      "score1": 66659.0,
+      "seed": 9,
+      "margin": 67995.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 66106.0,
+      "score1": 67092.0,
+      "seed": 0,
+      "margin": -986.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 80734.0,
+      "score1": 80724.0,
+      "seed": 1,
+      "margin": 10.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 95172.0,
+      "score1": 95130.0,
+      "seed": 2,
+      "margin": 42.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 107118.0,
+      "score1": 106636.0,
+      "seed": 3,
+      "margin": 482.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 139544.0,
+      "score1": 139527.0,
+      "seed": 4,
+      "margin": 17.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 76273.0,
+      "score1": 75584.0,
+      "seed": 5,
+      "margin": 689.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 109487.0,
+      "score1": 110419.0,
+      "seed": 6,
+      "margin": -932.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 88001.0,
+      "score1": 89329.0,
+      "seed": 7,
+      "margin": -1328.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 35183.0,
+      "score1": 35194.0,
+      "seed": 8,
+      "margin": -11.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 54563.0,
+      "score1": 55161.0,
+      "seed": 9,
+      "margin": -598.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 157889.0,
+      "score1": 24147.0,
+      "seed": 0,
+      "margin": 133742.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 101532.0,
+      "score1": 25.0,
+      "seed": 1,
+      "margin": 101507.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 155048.0,
+      "score1": 27.0,
+      "seed": 2,
+      "margin": 155021.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 124804.0,
+      "score1": 402.0,
+      "seed": 3,
+      "margin": 124402.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 122910.0,
+      "score1": 5.0,
+      "seed": 4,
+      "margin": 122905.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 83693.0,
+      "score1": 63.0,
+      "seed": 5,
+      "margin": 83630.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 95187.0,
+      "score1": 28.0,
+      "seed": 6,
+      "margin": 95159.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 124881.0,
+      "score1": 27.0,
+      "seed": 7,
+      "margin": 124854.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 113513.0,
+      "score1": 25.0,
+      "seed": 8,
+      "margin": 113488.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 75822.0,
+      "score1": 15.0,
+      "seed": 9,
+      "margin": 75807.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 80251.0,
+      "score1": 80677.0,
+      "seed": 0,
+      "margin": -426.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 98053.0,
+      "score1": 98904.0,
+      "seed": 1,
+      "margin": -851.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 82323.0,
+      "score1": 82727.0,
+      "seed": 2,
+      "margin": -404.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 94954.0,
+      "score1": 96895.0,
+      "seed": 3,
+      "margin": -1941.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 43506.0,
+      "score1": 44070.0,
+      "seed": 4,
+      "margin": -564.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 107152.0,
+      "score1": 107638.0,
+      "seed": 5,
+      "margin": -486.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 134749.0,
+      "score1": 135578.0,
+      "seed": 6,
+      "margin": -829.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 55255.0,
+      "score1": 56105.0,
+      "seed": 7,
+      "margin": -850.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 96250.0,
+      "score1": 99077.0,
+      "seed": 8,
+      "margin": -2827.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 74847.0,
+      "score1": 75452.0,
+      "seed": 9,
+      "margin": -605.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 45770.0,
+      "score1": 45464.0,
+      "seed": 0,
+      "margin": 306.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 60425.0,
+      "score1": 59216.0,
+      "seed": 1,
+      "margin": 1209.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 98002.0,
+      "score1": 97315.0,
+      "seed": 2,
+      "margin": 687.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 105839.0,
+      "score1": 105288.0,
+      "seed": 3,
+      "margin": 551.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 79299.0,
+      "score1": 78529.0,
+      "seed": 4,
+      "margin": 770.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 71546.0,
+      "score1": 71535.0,
+      "seed": 5,
+      "margin": 11.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 72647.0,
+      "score1": 71692.0,
+      "seed": 6,
+      "margin": 955.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 96214.0,
+      "score1": 94797.0,
+      "seed": 7,
+      "margin": 1417.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 82800.0,
+      "score1": 83177.0,
+      "seed": 8,
+      "margin": -377.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v051_v16_lookahead30_final.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 112500.0,
+      "score1": 112352.0,
+      "seed": 9,
+      "margin": 148.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 5439.0,
+      "score1": 65338.0,
+      "seed": 0,
+      "margin": -59899.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 82994.0,
+      "score1": 138778.0,
+      "seed": 1,
+      "margin": -55784.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 54167.0,
+      "score1": 119142.0,
+      "seed": 2,
+      "margin": -64975.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 89460.0,
+      "score1": 145328.0,
+      "seed": 3,
+      "margin": -55868.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 74190.0,
+      "score1": 143519.0,
+      "seed": 4,
+      "margin": -69329.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 43254.0,
+      "score1": 123201.0,
+      "seed": 5,
+      "margin": -79947.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 32941.0,
+      "score1": 106790.0,
+      "seed": 6,
+      "margin": -73849.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 54668.0,
+      "score1": 126392.0,
+      "seed": 7,
+      "margin": -71724.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 62216.0,
+      "score1": 122698.0,
+      "seed": 8,
+      "margin": -60482.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 77746.0,
+      "score1": 147660.0,
+      "seed": 9,
+      "margin": -69914.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 36900.0,
+      "score1": 37839.0,
+      "seed": 0,
+      "margin": -939.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 31607.0,
+      "score1": 36379.0,
+      "seed": 1,
+      "margin": -4772.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 52630.0,
+      "score1": 49974.0,
+      "seed": 2,
+      "margin": 2656.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 50855.0,
+      "score1": 47658.0,
+      "seed": 3,
+      "margin": 3197.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 76766.0,
+      "score1": 77042.0,
+      "seed": 4,
+      "margin": -276.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 51171.0,
+      "score1": 48292.0,
+      "seed": 5,
+      "margin": 2879.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 75234.0,
+      "score1": 80638.0,
+      "seed": 6,
+      "margin": -5404.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 78277.0,
+      "score1": 77599.0,
+      "seed": 7,
+      "margin": 678.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 60373.0,
+      "score1": 57157.0,
+      "seed": 8,
+      "margin": 3216.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 18589.0,
+      "score1": 15856.0,
+      "seed": 9,
+      "margin": 2733.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 30072.0,
+      "score1": 48122.0,
+      "seed": 0,
+      "margin": -18050.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 34431.0,
+      "score1": 41763.0,
+      "seed": 1,
+      "margin": -7332.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 48656.0,
+      "score1": 60811.0,
+      "seed": 2,
+      "margin": -12155.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 29577.0,
+      "score1": 45626.0,
+      "seed": 3,
+      "margin": -16049.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 22215.0,
+      "score1": 36420.0,
+      "seed": 4,
+      "margin": -14205.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 49832.0,
+      "score1": 52398.0,
+      "seed": 5,
+      "margin": -2566.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 68868.0,
+      "score1": 73145.0,
+      "seed": 6,
+      "margin": -4277.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 28176.0,
+      "score1": 45027.0,
+      "seed": 7,
+      "margin": -16851.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 35048.0,
+      "score1": 46632.0,
+      "seed": 8,
+      "margin": -11584.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 19376.0,
+      "score1": 38838.0,
+      "seed": 9,
+      "margin": -19462.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 49258.0,
+      "score1": 122567.0,
+      "seed": 0,
+      "margin": -73309.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 71688.0,
+      "score1": 139415.0,
+      "seed": 1,
+      "margin": -67727.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 51066.0,
+      "score1": 120269.0,
+      "seed": 2,
+      "margin": -69203.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 45324.0,
+      "score1": 111686.0,
+      "seed": 3,
+      "margin": -66362.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 64767.0,
+      "score1": 123164.0,
+      "seed": 4,
+      "margin": -58397.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 14634.0,
+      "score1": 61497.0,
+      "seed": 5,
+      "margin": -46863.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 36807.0,
+      "score1": 115434.0,
+      "seed": 6,
+      "margin": -78627.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 12669.0,
+      "score1": 79453.0,
+      "seed": 7,
+      "margin": -66784.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 54148.0,
+      "score1": 118613.0,
+      "seed": 8,
+      "margin": -64465.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 51079.0,
+      "score1": 119758.0,
+      "seed": 9,
+      "margin": -68679.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 86248.0,
+      "score1": 19753.0,
+      "seed": 0,
+      "margin": 66495.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 53837.0,
+      "score1": 20454.0,
+      "seed": 1,
+      "margin": 33383.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 109982.0,
+      "score1": 35395.0,
+      "seed": 2,
+      "margin": 74587.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 63976.0,
+      "score1": 26390.0,
+      "seed": 3,
+      "margin": 37586.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 72471.0,
+      "score1": 14599.0,
+      "seed": 4,
+      "margin": 57872.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 105415.0,
+      "score1": 18953.0,
+      "seed": 5,
+      "margin": 86462.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 95946.0,
+      "score1": 14160.0,
+      "seed": 6,
+      "margin": 81786.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 102245.0,
+      "score1": 27984.0,
+      "seed": 7,
+      "margin": 74261.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 114608.0,
+      "score1": 25096.0,
+      "seed": 8,
+      "margin": 89512.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 60367.0,
+      "score1": 81.0,
+      "seed": 9,
+      "margin": 60286.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 50863.0,
+      "score1": 83050.0,
+      "seed": 0,
+      "margin": -32187.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 46565.0,
+      "score1": 77644.0,
+      "seed": 1,
+      "margin": -31079.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 35252.0,
+      "score1": 88231.0,
+      "seed": 2,
+      "margin": -52979.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 33022.0,
+      "score1": 70789.0,
+      "seed": 3,
+      "margin": -37767.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 42040.0,
+      "score1": 111607.0,
+      "seed": 4,
+      "margin": -69567.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 39918.0,
+      "score1": 95002.0,
+      "seed": 5,
+      "margin": -55084.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 97144.0,
+      "score1": 100437.0,
+      "seed": 6,
+      "margin": -3293.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 70129.0,
+      "score1": 140889.0,
+      "seed": 7,
+      "margin": -70760.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 20308.0,
+      "score1": 56680.0,
+      "seed": 8,
+      "margin": -36372.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 71332.0,
+      "score1": 96013.0,
+      "seed": 9,
+      "margin": -24681.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 28146.0,
+      "score1": 89413.0,
+      "seed": 0,
+      "margin": -61267.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 49309.0,
+      "score1": 111868.0,
+      "seed": 1,
+      "margin": -62559.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 84658.0,
+      "score1": 155152.0,
+      "seed": 2,
+      "margin": -70494.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 22119.0,
+      "score1": 96102.0,
+      "seed": 3,
+      "margin": -73983.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 64600.0,
+      "score1": 122360.0,
+      "seed": 4,
+      "margin": -57760.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 84623.0,
+      "score1": 154968.0,
+      "seed": 5,
+      "margin": -70345.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 61632.0,
+      "score1": 121007.0,
+      "seed": 6,
+      "margin": -59375.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 54587.0,
+      "score1": 124110.0,
+      "seed": 7,
+      "margin": -69523.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 81588.0,
+      "score1": 143695.0,
+      "seed": 8,
+      "margin": -62107.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v025_a_aggressive_cows.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 30388.0,
+      "score1": 98494.0,
+      "seed": 9,
+      "margin": -68106.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 27960.0,
+      "score1": 84051.0,
+      "seed": 0,
+      "margin": -56091.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 55645.0,
+      "score1": 113603.0,
+      "seed": 1,
+      "margin": -57958.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 28192.0,
+      "score1": 87709.0,
+      "seed": 2,
+      "margin": -59517.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 53132.0,
+      "score1": 122744.0,
+      "seed": 3,
+      "margin": -69612.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 53291.0,
+      "score1": 121137.0,
+      "seed": 4,
+      "margin": -67846.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 29626.0,
+      "score1": 88602.0,
+      "seed": 5,
+      "margin": -58976.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 58734.0,
+      "score1": 127514.0,
+      "seed": 6,
+      "margin": -68780.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 36149.0,
+      "score1": 95392.0,
+      "seed": 7,
+      "margin": -59243.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 35167.0,
+      "score1": 91544.0,
+      "seed": 8,
+      "margin": -56377.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 84537.0,
+      "score1": 156426.0,
+      "seed": 9,
+      "margin": -71889.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 45551.0,
+      "score1": 38926.0,
+      "seed": 0,
+      "margin": 6625.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 89749.0,
+      "score1": 94977.0,
+      "seed": 1,
+      "margin": -5228.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 53745.0,
+      "score1": 44816.0,
+      "seed": 2,
+      "margin": 8929.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 82160.0,
+      "score1": 81965.0,
+      "seed": 3,
+      "margin": 195.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 49768.0,
+      "score1": 34611.0,
+      "seed": 4,
+      "margin": 15157.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 77309.0,
+      "score1": 67415.0,
+      "seed": 5,
+      "margin": 9894.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 58346.0,
+      "score1": 35907.0,
+      "seed": 6,
+      "margin": 22439.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 73441.0,
+      "score1": 70435.0,
+      "seed": 7,
+      "margin": 3006.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 51065.0,
+      "score1": 48560.0,
+      "seed": 8,
+      "margin": 2505.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 66079.0,
+      "score1": 55030.0,
+      "seed": 9,
+      "margin": 11049.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 49734.0,
+      "score1": 50640.0,
+      "seed": 0,
+      "margin": -906.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 52300.0,
+      "score1": 53371.0,
+      "seed": 1,
+      "margin": -1071.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 92686.0,
+      "score1": 100168.0,
+      "seed": 2,
+      "margin": -7482.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 38391.0,
+      "score1": 40165.0,
+      "seed": 3,
+      "margin": -1774.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 51198.0,
+      "score1": 48181.0,
+      "seed": 4,
+      "margin": 3017.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 36553.0,
+      "score1": 35150.0,
+      "seed": 5,
+      "margin": 1403.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 42450.0,
+      "score1": 41413.0,
+      "seed": 6,
+      "margin": 1037.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 71309.0,
+      "score1": 70121.0,
+      "seed": 7,
+      "margin": 1188.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 48296.0,
+      "score1": 44452.0,
+      "seed": 8,
+      "margin": 3844.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 90827.0,
+      "score1": 90901.0,
+      "seed": 9,
+      "margin": -74.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 89308.0,
+      "score1": 164850.0,
+      "seed": 0,
+      "margin": -75542.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 91494.0,
+      "score1": 167514.0,
+      "seed": 1,
+      "margin": -76020.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 90372.0,
+      "score1": 163612.0,
+      "seed": 2,
+      "margin": -73240.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 56469.0,
+      "score1": 119263.0,
+      "seed": 3,
+      "margin": -62794.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 72855.0,
+      "score1": 130176.0,
+      "seed": 4,
+      "margin": -57321.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 49010.0,
+      "score1": 117845.0,
+      "seed": 5,
+      "margin": -68835.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 81328.0,
+      "score1": 151677.0,
+      "seed": 6,
+      "margin": -70349.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 23947.0,
+      "score1": 83193.0,
+      "seed": 7,
+      "margin": -59246.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 30232.0,
+      "score1": 84907.0,
+      "seed": 8,
+      "margin": -54675.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 66138.0,
+      "score1": 133353.0,
+      "seed": 9,
+      "margin": -67215.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 67031.0,
+      "score1": 23982.0,
+      "seed": 0,
+      "margin": 43049.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 102565.0,
+      "score1": 19293.0,
+      "seed": 1,
+      "margin": 83272.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 99309.0,
+      "score1": 7247.0,
+      "seed": 2,
+      "margin": 92062.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 61570.0,
+      "score1": 12266.0,
+      "seed": 3,
+      "margin": 49304.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 107395.0,
+      "score1": 28468.0,
+      "seed": 4,
+      "margin": 78927.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 85630.0,
+      "score1": 7603.0,
+      "seed": 5,
+      "margin": 78027.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 102792.0,
+      "score1": 32155.0,
+      "seed": 6,
+      "margin": 70637.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 86017.0,
+      "score1": 4358.0,
+      "seed": 7,
+      "margin": 81659.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 86264.0,
+      "score1": 3016.0,
+      "seed": 8,
+      "margin": 83248.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 91574.0,
+      "score1": 13418.0,
+      "seed": 9,
+      "margin": 78156.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 57113.0,
+      "score1": 121235.0,
+      "seed": 0,
+      "margin": -64122.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 48726.0,
+      "score1": 105170.0,
+      "seed": 1,
+      "margin": -56444.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 38617.0,
+      "score1": 100733.0,
+      "seed": 2,
+      "margin": -62116.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 74160.0,
+      "score1": 151760.0,
+      "seed": 3,
+      "margin": -77600.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 25553.0,
+      "score1": 81988.0,
+      "seed": 4,
+      "margin": -56435.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 74660.0,
+      "score1": 137412.0,
+      "seed": 5,
+      "margin": -62752.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 70112.0,
+      "score1": 124866.0,
+      "seed": 6,
+      "margin": -54754.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 83657.0,
+      "score1": 151221.0,
+      "seed": 7,
+      "margin": -67564.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 90443.0,
+      "score1": 158056.0,
+      "seed": 8,
+      "margin": -67613.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 64521.0,
+      "score1": 135821.0,
+      "seed": 9,
+      "margin": -71300.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 34846.0,
+      "score1": 105867.0,
+      "seed": 0,
+      "margin": -71021.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 14749.0,
+      "score1": 66730.0,
+      "seed": 1,
+      "margin": -51981.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 35434.0,
+      "score1": 106209.0,
+      "seed": 2,
+      "margin": -70775.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 65650.0,
+      "score1": 133069.0,
+      "seed": 3,
+      "margin": -67419.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 58846.0,
+      "score1": 125167.0,
+      "seed": 4,
+      "margin": -66321.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 42180.0,
+      "score1": 101424.0,
+      "seed": 5,
+      "margin": -59244.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 45789.0,
+      "score1": 106617.0,
+      "seed": 6,
+      "margin": -60828.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 84592.0,
+      "score1": 158787.0,
+      "seed": 7,
+      "margin": -74195.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 29737.0,
+      "score1": 65520.0,
+      "seed": 8,
+      "margin": -35783.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v027_hierarchical_meta.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 38785.0,
+      "score1": 103283.0,
+      "seed": 9,
+      "margin": -64498.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 63449.0,
+      "score1": 63009.0,
+      "seed": 0,
+      "margin": 440.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 130769.0,
+      "score1": 129169.0,
+      "seed": 1,
+      "margin": 1600.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 125312.0,
+      "score1": 126455.0,
+      "seed": 2,
+      "margin": -1143.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 53782.0,
+      "score1": 53728.0,
+      "seed": 3,
+      "margin": 54.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 71814.0,
+      "score1": 70223.0,
+      "seed": 4,
+      "margin": 1591.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 107982.0,
+      "score1": 106079.0,
+      "seed": 5,
+      "margin": 1903.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 55402.0,
+      "score1": 55563.0,
+      "seed": 6,
+      "margin": -161.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 103783.0,
+      "score1": 105066.0,
+      "seed": 7,
+      "margin": -1283.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 90644.0,
+      "score1": 90800.0,
+      "seed": 8,
+      "margin": -156.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 100544.0,
+      "score1": 100922.0,
+      "seed": 9,
+      "margin": -378.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 94918.0,
+      "score1": 24918.0,
+      "seed": 0,
+      "margin": 70000.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 106674.0,
+      "score1": 26302.0,
+      "seed": 1,
+      "margin": 80372.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 125867.0,
+      "score1": 50487.0,
+      "seed": 2,
+      "margin": 75380.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 98916.0,
+      "score1": 31823.0,
+      "seed": 3,
+      "margin": 67093.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 109164.0,
+      "score1": 34616.0,
+      "seed": 4,
+      "margin": 74548.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 101640.0,
+      "score1": 17926.0,
+      "seed": 5,
+      "margin": 83714.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 121969.0,
+      "score1": 50973.0,
+      "seed": 6,
+      "margin": 70996.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 125572.0,
+      "score1": 47291.0,
+      "seed": 7,
+      "margin": 78281.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 89194.0,
+      "score1": 21170.0,
+      "seed": 8,
+      "margin": 68024.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 105200.0,
+      "score1": 36816.0,
+      "seed": 9,
+      "margin": 68384.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 105270.0,
+      "score1": 41423.0,
+      "seed": 0,
+      "margin": 63847.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 155471.0,
+      "score1": 88443.0,
+      "seed": 1,
+      "margin": 67028.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 81199.0,
+      "score1": 22849.0,
+      "seed": 2,
+      "margin": 58350.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 112873.0,
+      "score1": 45223.0,
+      "seed": 3,
+      "margin": 67650.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 108137.0,
+      "score1": 36803.0,
+      "seed": 4,
+      "margin": 71334.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 127738.0,
+      "score1": 50161.0,
+      "seed": 5,
+      "margin": 77577.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 43341.0,
+      "score1": 8478.0,
+      "seed": 6,
+      "margin": 34863.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 102389.0,
+      "score1": 38231.0,
+      "seed": 7,
+      "margin": 64158.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 80362.0,
+      "score1": 22028.0,
+      "seed": 8,
+      "margin": 58334.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 138615.0,
+      "score1": 70729.0,
+      "seed": 9,
+      "margin": 67886.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 61552.0,
+      "score1": 61552.0,
+      "seed": 0,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 64347.0,
+      "score1": 64347.0,
+      "seed": 1,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 73639.0,
+      "score1": 73639.0,
+      "seed": 2,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 132507.0,
+      "score1": 132507.0,
+      "seed": 3,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 110007.0,
+      "score1": 110007.0,
+      "seed": 4,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 53519.0,
+      "score1": 53519.0,
+      "seed": 5,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 112655.0,
+      "score1": 112849.0,
+      "seed": 6,
+      "margin": -194.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 68744.0,
+      "score1": 68744.0,
+      "seed": 7,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 60045.0,
+      "score1": 60045.0,
+      "seed": 8,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 72612.0,
+      "score1": 72612.0,
+      "seed": 9,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 85841.0,
+      "score1": 0,
+      "seed": 0,
+      "margin": 85841.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 99674.0,
+      "score1": 319.0,
+      "seed": 1,
+      "margin": 99355.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 145046.0,
+      "score1": 4068.0,
+      "seed": 2,
+      "margin": 140978.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 124433.0,
+      "score1": 69.0,
+      "seed": 3,
+      "margin": 124364.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 111610.0,
+      "score1": 1.0,
+      "seed": 4,
+      "margin": 111609.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 114748.0,
+      "score1": 24.0,
+      "seed": 5,
+      "margin": 114724.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 140661.0,
+      "score1": 20383.0,
+      "seed": 6,
+      "margin": 120278.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 117542.0,
+      "score1": 3105.0,
+      "seed": 7,
+      "margin": 114437.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 116597.0,
+      "score1": 98.0,
+      "seed": 8,
+      "margin": 116499.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 118892.0,
+      "score1": 93.0,
+      "seed": 9,
+      "margin": 118799.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 60623.0,
+      "score1": 60751.0,
+      "seed": 0,
+      "margin": -128.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 78574.0,
+      "score1": 79802.0,
+      "seed": 1,
+      "margin": -1228.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 70866.0,
+      "score1": 71186.0,
+      "seed": 2,
+      "margin": -320.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 130517.0,
+      "score1": 134948.0,
+      "seed": 3,
+      "margin": -4431.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 136626.0,
+      "score1": 137851.0,
+      "seed": 4,
+      "margin": -1225.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 52355.0,
+      "score1": 54556.0,
+      "seed": 5,
+      "margin": -2201.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 126206.0,
+      "score1": 127701.0,
+      "seed": 6,
+      "margin": -1495.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 89757.0,
+      "score1": 90956.0,
+      "seed": 7,
+      "margin": -1199.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 141170.0,
+      "score1": 143777.0,
+      "seed": 8,
+      "margin": -2607.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 64283.0,
+      "score1": 66964.0,
+      "seed": 9,
+      "margin": -2681.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 75323.0,
+      "score1": 75269.0,
+      "seed": 0,
+      "margin": 54.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 102523.0,
+      "score1": 102346.0,
+      "seed": 1,
+      "margin": 177.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 96670.0,
+      "score1": 96404.0,
+      "seed": 2,
+      "margin": 266.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 100879.0,
+      "score1": 99530.0,
+      "seed": 3,
+      "margin": 1349.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 116257.0,
+      "score1": 114821.0,
+      "seed": 4,
+      "margin": 1436.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 97124.0,
+      "score1": 96858.0,
+      "seed": 5,
+      "margin": 266.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 58759.0,
+      "score1": 58207.0,
+      "seed": 6,
+      "margin": 552.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 116659.0,
+      "score1": 116453.0,
+      "seed": 7,
+      "margin": 206.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 99110.0,
+      "score1": 100585.0,
+      "seed": 8,
+      "margin": -1475.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v057_generalized_spoiler.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 92916.0,
+      "score1": 92710.0,
+      "seed": 9,
+      "margin": 206.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 1.0,
+      "score1": 117520.0,
+      "seed": 0,
+      "margin": -117519.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 10.0,
+      "score1": 129790.0,
+      "seed": 1,
+      "margin": -129780.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 1.0,
+      "score1": 104141.0,
+      "seed": 2,
+      "margin": -104140.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 30093.0,
+      "score1": 160701.0,
+      "seed": 3,
+      "margin": -130608.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 20438.0,
+      "score1": 140400.0,
+      "seed": 4,
+      "margin": -119962.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 40.0,
+      "score1": 133934.0,
+      "seed": 5,
+      "margin": -133894.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 24305.0,
+      "score1": 135031.0,
+      "seed": 6,
+      "margin": -110726.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 20.0,
+      "score1": 113779.0,
+      "seed": 7,
+      "margin": -113759.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 67.0,
+      "score1": 114732.0,
+      "seed": 8,
+      "margin": -114665.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 11601.0,
+      "score1": 156236.0,
+      "seed": 9,
+      "margin": -144635.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 18934.0,
+      "score1": 93838.0,
+      "seed": 0,
+      "margin": -74904.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 29948.0,
+      "score1": 61179.0,
+      "seed": 1,
+      "margin": -31231.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 33143.0,
+      "score1": 91827.0,
+      "seed": 2,
+      "margin": -58684.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 28058.0,
+      "score1": 104232.0,
+      "seed": 3,
+      "margin": -76174.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 23915.0,
+      "score1": 116800.0,
+      "seed": 4,
+      "margin": -92885.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 2059.0,
+      "score1": 95596.0,
+      "seed": 5,
+      "margin": -93537.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 34548.0,
+      "score1": 110781.0,
+      "seed": 6,
+      "margin": -76233.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 22830.0,
+      "score1": 98424.0,
+      "seed": 7,
+      "margin": -75594.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 7050.0,
+      "score1": 114749.0,
+      "seed": 8,
+      "margin": -107699.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 24.0,
+      "score1": 60639.0,
+      "seed": 9,
+      "margin": -60615.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 36104.0,
+      "score1": 103159.0,
+      "seed": 0,
+      "margin": -67055.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 37069.0,
+      "score1": 84092.0,
+      "seed": 1,
+      "margin": -47023.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 64.0,
+      "score1": 63598.0,
+      "seed": 2,
+      "margin": -63534.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 12458.0,
+      "score1": 85039.0,
+      "seed": 3,
+      "margin": -72581.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 43.0,
+      "score1": 79919.0,
+      "seed": 4,
+      "margin": -79876.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 22210.0,
+      "score1": 87120.0,
+      "seed": 5,
+      "margin": -64910.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 35463.0,
+      "score1": 89118.0,
+      "seed": 6,
+      "margin": -53655.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 21715.0,
+      "score1": 88422.0,
+      "seed": 7,
+      "margin": -66707.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 26480.0,
+      "score1": 100040.0,
+      "seed": 8,
+      "margin": -73560.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 2921.0,
+      "score1": 64564.0,
+      "seed": 9,
+      "margin": -61643.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 24287.0,
+      "score1": 158466.0,
+      "seed": 0,
+      "margin": -134179.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 49.0,
+      "score1": 93976.0,
+      "seed": 1,
+      "margin": -93927.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 1498.0,
+      "score1": 143082.0,
+      "seed": 2,
+      "margin": -141584.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 32109.0,
+      "score1": 172997.0,
+      "seed": 3,
+      "margin": -140888.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 3.0,
+      "score1": 126879.0,
+      "seed": 4,
+      "margin": -126876.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 15.0,
+      "score1": 92317.0,
+      "seed": 5,
+      "margin": -92302.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 0,
+      "score1": 89950.0,
+      "seed": 6,
+      "margin": -89950.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 95.0,
+      "score1": 83406.0,
+      "seed": 7,
+      "margin": -83311.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 2965.0,
+      "score1": 143114.0,
+      "seed": 8,
+      "margin": -140149.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 25828.0,
+      "score1": 144271.0,
+      "seed": 9,
+      "margin": -118443.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 42.0,
+      "score1": 80.0,
+      "seed": 0,
+      "margin": -38.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 1922.0,
+      "score1": 2276.0,
+      "seed": 1,
+      "margin": -354.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 24492.0,
+      "score1": 25707.0,
+      "seed": 2,
+      "margin": -1215.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 17884.0,
+      "score1": 17486.0,
+      "seed": 3,
+      "margin": 398.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 104.0,
+      "score1": 104.0,
+      "seed": 4,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 11.0,
+      "score1": 206.0,
+      "seed": 5,
+      "margin": -195.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 19943.0,
+      "score1": 21039.0,
+      "seed": 6,
+      "margin": -1096.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 25304.0,
+      "score1": 3467.0,
+      "seed": 7,
+      "margin": 21837.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 6710.0,
+      "score1": 11114.0,
+      "seed": 8,
+      "margin": -4404.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 32.0,
+      "score1": 32.0,
+      "seed": 9,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 6.0,
+      "score1": 124275.0,
+      "seed": 0,
+      "margin": -124269.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 19996.0,
+      "score1": 141161.0,
+      "seed": 1,
+      "margin": -121165.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 51.0,
+      "score1": 115552.0,
+      "seed": 2,
+      "margin": -115501.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 25661.0,
+      "score1": 175407.0,
+      "seed": 3,
+      "margin": -149746.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 23234.0,
+      "score1": 169904.0,
+      "seed": 4,
+      "margin": -146670.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 9843.0,
+      "score1": 99558.0,
+      "seed": 5,
+      "margin": -89715.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 15.0,
+      "score1": 127587.0,
+      "seed": 6,
+      "margin": -127572.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 378.0,
+      "score1": 144837.0,
+      "seed": 7,
+      "margin": -144459.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 23.0,
+      "score1": 140177.0,
+      "seed": 8,
+      "margin": -140154.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 24250.0,
+      "score1": 121103.0,
+      "seed": 9,
+      "margin": -96853.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 12536.0,
+      "score1": 148128.0,
+      "seed": 0,
+      "margin": -135592.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 82.0,
+      "score1": 120776.0,
+      "seed": 1,
+      "margin": -120694.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 2.0,
+      "score1": 109506.0,
+      "seed": 2,
+      "margin": -109504.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 24886.0,
+      "score1": 168100.0,
+      "seed": 3,
+      "margin": -143214.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 24.0,
+      "score1": 79800.0,
+      "seed": 4,
+      "margin": -79776.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 25684.0,
+      "score1": 171334.0,
+      "seed": 5,
+      "margin": -145650.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 87.0,
+      "score1": 125666.0,
+      "seed": 6,
+      "margin": -125579.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 37.0,
+      "score1": 71797.0,
+      "seed": 7,
+      "margin": -71760.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 19569.0,
+      "score1": 127059.0,
+      "seed": 8,
+      "margin": -107490.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v059_strawberry_flywheel.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 86.0,
+      "score1": 131240.0,
+      "seed": 9,
+      "margin": -131154.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 101653.0,
+      "score1": 99898.0,
+      "seed": 0,
+      "margin": 1755.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 76999.0,
+      "score1": 77493.0,
+      "seed": 1,
+      "margin": -494.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 98982.0,
+      "score1": 98211.0,
+      "seed": 2,
+      "margin": 771.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 72353.0,
+      "score1": 72267.0,
+      "seed": 3,
+      "margin": 86.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 73139.0,
+      "score1": 71811.0,
+      "seed": 4,
+      "margin": 1328.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 122508.0,
+      "score1": 118916.0,
+      "seed": 5,
+      "margin": 3592.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 93799.0,
+      "score1": 91969.0,
+      "seed": 6,
+      "margin": 1830.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 76364.0,
+      "score1": 73713.0,
+      "seed": 7,
+      "margin": 2651.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 114747.0,
+      "score1": 112015.0,
+      "seed": 8,
+      "margin": 2732.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 68537.0,
+      "score1": 67828.0,
+      "seed": 9,
+      "margin": 709.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 60508.0,
+      "score1": 26696.0,
+      "seed": 0,
+      "margin": 33812.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 79486.0,
+      "score1": 82889.0,
+      "seed": 1,
+      "margin": -3403.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 82253.0,
+      "score1": 51626.0,
+      "seed": 2,
+      "margin": 30627.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 85175.0,
+      "score1": 59514.0,
+      "seed": 3,
+      "margin": 25661.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 146484.0,
+      "score1": 87397.0,
+      "seed": 4,
+      "margin": 59087.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 81243.0,
+      "score1": 24805.0,
+      "seed": 5,
+      "margin": 56438.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 66559.0,
+      "score1": 30830.0,
+      "seed": 6,
+      "margin": 35729.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 132411.0,
+      "score1": 71054.0,
+      "seed": 7,
+      "margin": 61357.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 120174.0,
+      "score1": 51567.0,
+      "seed": 8,
+      "margin": 68607.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 73310.0,
+      "score1": 11132.0,
+      "seed": 9,
+      "margin": 62178.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 162897.0,
+      "score1": 86538.0,
+      "seed": 0,
+      "margin": 76359.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 110149.0,
+      "score1": 63702.0,
+      "seed": 1,
+      "margin": 46447.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 172393.0,
+      "score1": 98145.0,
+      "seed": 2,
+      "margin": 74248.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 113107.0,
+      "score1": 36704.0,
+      "seed": 3,
+      "margin": 76403.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 119238.0,
+      "score1": 41192.0,
+      "seed": 4,
+      "margin": 78046.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 125110.0,
+      "score1": 50621.0,
+      "seed": 5,
+      "margin": 74489.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 135469.0,
+      "score1": 65357.0,
+      "seed": 6,
+      "margin": 70112.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 99077.0,
+      "score1": 41118.0,
+      "seed": 7,
+      "margin": 57959.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 111237.0,
+      "score1": 40941.0,
+      "seed": 8,
+      "margin": 70296.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 109242.0,
+      "score1": 47780.0,
+      "seed": 9,
+      "margin": 61462.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 78780.0,
+      "score1": 77229.0,
+      "seed": 0,
+      "margin": 1551.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 41175.0,
+      "score1": 40816.0,
+      "seed": 1,
+      "margin": 359.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 108859.0,
+      "score1": 108193.0,
+      "seed": 2,
+      "margin": 666.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 67182.0,
+      "score1": 64913.0,
+      "seed": 3,
+      "margin": 2269.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 81410.0,
+      "score1": 79900.0,
+      "seed": 4,
+      "margin": 1510.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 105486.0,
+      "score1": 104474.0,
+      "seed": 5,
+      "margin": 1012.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 98741.0,
+      "score1": 98997.0,
+      "seed": 6,
+      "margin": -256.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 97686.0,
+      "score1": 95571.0,
+      "seed": 7,
+      "margin": 2115.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 72936.0,
+      "score1": 71896.0,
+      "seed": 8,
+      "margin": 1040.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 95607.0,
+      "score1": 94994.0,
+      "seed": 9,
+      "margin": 613.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 106591.0,
+      "score1": 2.0,
+      "seed": 0,
+      "margin": 106589.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 100665.0,
+      "score1": 44.0,
+      "seed": 1,
+      "margin": 100621.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 170531.0,
+      "score1": 20877.0,
+      "seed": 2,
+      "margin": 149654.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 140677.0,
+      "score1": 3.0,
+      "seed": 3,
+      "margin": 140674.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 107587.0,
+      "score1": 86.0,
+      "seed": 4,
+      "margin": 107501.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 164636.0,
+      "score1": 16845.0,
+      "seed": 5,
+      "margin": 147791.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 148402.0,
+      "score1": 910.0,
+      "seed": 6,
+      "margin": 147492.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 80148.0,
+      "score1": 28.0,
+      "seed": 7,
+      "margin": 80120.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 150432.0,
+      "score1": 19478.0,
+      "seed": 8,
+      "margin": 130954.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 157637.0,
+      "score1": 11762.0,
+      "seed": 9,
+      "margin": 145875.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 91455.0,
+      "score1": 90199.0,
+      "seed": 0,
+      "margin": 1256.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 58096.0,
+      "score1": 56322.0,
+      "seed": 1,
+      "margin": 1774.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 108442.0,
+      "score1": 108442.0,
+      "seed": 2,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 128995.0,
+      "score1": 125524.0,
+      "seed": 3,
+      "margin": 3471.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 59845.0,
+      "score1": 59905.0,
+      "seed": 4,
+      "margin": -60.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 105816.0,
+      "score1": 106689.0,
+      "seed": 5,
+      "margin": -873.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 128037.0,
+      "score1": 125891.0,
+      "seed": 6,
+      "margin": 2146.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 130718.0,
+      "score1": 130718.0,
+      "seed": 7,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 121356.0,
+      "score1": 121356.0,
+      "seed": 8,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 81095.0,
+      "score1": 81095.0,
+      "seed": 9,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 97285.0,
+      "score1": 94948.0,
+      "seed": 0,
+      "margin": 2337.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 89717.0,
+      "score1": 88324.0,
+      "seed": 1,
+      "margin": 1393.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 130474.0,
+      "score1": 127529.0,
+      "seed": 2,
+      "margin": 2945.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 68239.0,
+      "score1": 67050.0,
+      "seed": 3,
+      "margin": 1189.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 63755.0,
+      "score1": 63460.0,
+      "seed": 4,
+      "margin": 295.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 77948.0,
+      "score1": 75189.0,
+      "seed": 5,
+      "margin": 2759.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 81499.0,
+      "score1": 81193.0,
+      "seed": 6,
+      "margin": 306.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 73587.0,
+      "score1": 71953.0,
+      "seed": 7,
+      "margin": 1634.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 100973.0,
+      "score1": 97923.0,
+      "seed": 8,
+      "margin": 3050.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v060_melon_frontrunner.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 136887.0,
+      "score1": 136115.0,
+      "seed": 9,
+      "margin": 772.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 68035.0,
+      "score1": 68346.0,
+      "seed": 0,
+      "margin": -311.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 82189.0,
+      "score1": 82935.0,
+      "seed": 1,
+      "margin": -746.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 95134.0,
+      "score1": 95649.0,
+      "seed": 2,
+      "margin": -515.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 124128.0,
+      "score1": 125716.0,
+      "seed": 3,
+      "margin": -1588.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 122763.0,
+      "score1": 124559.0,
+      "seed": 4,
+      "margin": -1796.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 77085.0,
+      "score1": 77605.0,
+      "seed": 5,
+      "margin": -520.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 86030.0,
+      "score1": 86926.0,
+      "seed": 6,
+      "margin": -896.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 112286.0,
+      "score1": 112695.0,
+      "seed": 7,
+      "margin": -409.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 79201.0,
+      "score1": 79291.0,
+      "seed": 8,
+      "margin": -90.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v051_v16_lookahead30_final.py",
+      "score0": 92202.0,
+      "score1": 92348.0,
+      "seed": 9,
+      "margin": -146.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 114361.0,
+      "score1": 35273.0,
+      "seed": 0,
+      "margin": 79088.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 161062.0,
+      "score1": 100303.0,
+      "seed": 1,
+      "margin": 60759.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 149031.0,
+      "score1": 86764.0,
+      "seed": 2,
+      "margin": 62267.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 129573.0,
+      "score1": 62984.0,
+      "seed": 3,
+      "margin": 66589.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 144333.0,
+      "score1": 68108.0,
+      "seed": 4,
+      "margin": 76225.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 147804.0,
+      "score1": 78963.0,
+      "seed": 5,
+      "margin": 68841.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 119944.0,
+      "score1": 45929.0,
+      "seed": 6,
+      "margin": 74015.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 148394.0,
+      "score1": 80122.0,
+      "seed": 7,
+      "margin": 68272.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 141877.0,
+      "score1": 86181.0,
+      "seed": 8,
+      "margin": 55696.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v025_a_aggressive_cows.py",
+      "score0": 125983.0,
+      "score1": 67937.0,
+      "seed": 9,
+      "margin": 58046.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 106155.0,
+      "score1": 36941.0,
+      "seed": 0,
+      "margin": 69214.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 75406.0,
+      "score1": 25537.0,
+      "seed": 1,
+      "margin": 49869.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 97683.0,
+      "score1": 42421.0,
+      "seed": 2,
+      "margin": 55262.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 81321.0,
+      "score1": 31107.0,
+      "seed": 3,
+      "margin": 50214.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 102764.0,
+      "score1": 58844.0,
+      "seed": 4,
+      "margin": 43920.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 126029.0,
+      "score1": 61128.0,
+      "seed": 5,
+      "margin": 64901.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 99906.0,
+      "score1": 29679.0,
+      "seed": 6,
+      "margin": 70227.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 106095.0,
+      "score1": 51202.0,
+      "seed": 7,
+      "margin": 54893.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 105874.0,
+      "score1": 42029.0,
+      "seed": 8,
+      "margin": 63845.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v027_hierarchical_meta.py",
+      "score0": 167707.0,
+      "score1": 95349.0,
+      "seed": 9,
+      "margin": 72358.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 94229.0,
+      "score1": 94324.0,
+      "seed": 0,
+      "margin": -95.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 79323.0,
+      "score1": 79495.0,
+      "seed": 1,
+      "margin": -172.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 123220.0,
+      "score1": 123355.0,
+      "seed": 2,
+      "margin": -135.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 70421.0,
+      "score1": 70785.0,
+      "seed": 3,
+      "margin": -364.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 75982.0,
+      "score1": 76602.0,
+      "seed": 4,
+      "margin": -620.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 99932.0,
+      "score1": 103275.0,
+      "seed": 5,
+      "margin": -3343.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 31941.0,
+      "score1": 31943.0,
+      "seed": 6,
+      "margin": -2.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 52258.0,
+      "score1": 52956.0,
+      "seed": 7,
+      "margin": -698.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 114723.0,
+      "score1": 116689.0,
+      "seed": 8,
+      "margin": -1966.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v057_generalized_spoiler.py",
+      "score0": 97301.0,
+      "score1": 97921.0,
+      "seed": 9,
+      "margin": -620.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 99919.0,
+      "score1": 10.0,
+      "seed": 0,
+      "margin": 99909.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 117038.0,
+      "score1": 9005.0,
+      "seed": 1,
+      "margin": 108033.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 151897.0,
+      "score1": 22257.0,
+      "seed": 2,
+      "margin": 129640.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 112278.0,
+      "score1": 41.0,
+      "seed": 3,
+      "margin": 112237.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 120476.0,
+      "score1": 126.0,
+      "seed": 4,
+      "margin": 120350.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 76686.0,
+      "score1": 90.0,
+      "seed": 5,
+      "margin": 76596.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 88231.0,
+      "score1": 56.0,
+      "seed": 6,
+      "margin": 88175.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 145108.0,
+      "score1": 27.0,
+      "seed": 7,
+      "margin": 145081.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 123280.0,
+      "score1": 26840.0,
+      "seed": 8,
+      "margin": 96440.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v059_strawberry_flywheel.py",
+      "score0": 144799.0,
+      "score1": 7.0,
+      "seed": 9,
+      "margin": 144792.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 84885.0,
+      "score1": 85873.0,
+      "seed": 0,
+      "margin": -988.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 85752.0,
+      "score1": 87477.0,
+      "seed": 1,
+      "margin": -1725.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 100292.0,
+      "score1": 99834.0,
+      "seed": 2,
+      "margin": 458.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 62725.0,
+      "score1": 63796.0,
+      "seed": 3,
+      "margin": -1071.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 49062.0,
+      "score1": 50094.0,
+      "seed": 4,
+      "margin": -1032.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 42304.0,
+      "score1": 44232.0,
+      "seed": 5,
+      "margin": -1928.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 86122.0,
+      "score1": 87550.0,
+      "seed": 6,
+      "margin": -1428.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 54104.0,
+      "score1": 56112.0,
+      "seed": 7,
+      "margin": -2008.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 100069.0,
+      "score1": 101963.0,
+      "seed": 8,
+      "margin": -1894.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v060_melon_frontrunner.py",
+      "score0": 72707.0,
+      "score1": 75573.0,
+      "seed": 9,
+      "margin": -2866.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 73534.0,
+      "score1": 72978.0,
+      "seed": 0,
+      "margin": 556.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 72554.0,
+      "score1": 72554.0,
+      "seed": 1,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 100050.0,
+      "score1": 99741.0,
+      "seed": 2,
+      "margin": 309.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 83680.0,
+      "score1": 82686.0,
+      "seed": 3,
+      "margin": 994.0,
+      "win0": 1,
+      "win1": 0
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 58268.0,
+      "score1": 58268.0,
+      "seed": 4,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 86050.0,
+      "score1": 86050.0,
+      "seed": 5,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 108006.0,
+      "score1": 109252.0,
+      "seed": 6,
+      "margin": -1246.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 44577.0,
+      "score1": 44653.0,
+      "seed": 7,
+      "margin": -76.0,
+      "win0": 0,
+      "win1": 1
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 88740.0,
+      "score1": 88740.0,
+      "seed": 8,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    },
+    {
+      "agent0": "v063_meta_router.py",
+      "agent1": "v063_meta_router.py",
+      "score0": 72904.0,
+      "score1": 72904.0,
+      "seed": 9,
+      "margin": 0.0,
+      "win0": 0.5,
+      "win1": 0.5
+    }
+  ]
+}

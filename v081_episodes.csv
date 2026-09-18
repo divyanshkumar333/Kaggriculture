@@ -1,0 +1,4 @@
+id,createTime,endTime,state,type
+110407389,2026-09-18 10:46:25.876000,2026-09-18 10:49:21.446000,EpisodeState.COMPLETED,EpisodeType.EPISODE_TYPE_VALIDATION
+
+Use "kaggle competitions replay <episode_id>" to download a replay, or "kaggle competitions logs <episode_id> <agent_index>" for agent logs.
