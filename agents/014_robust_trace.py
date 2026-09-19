@@ -75,12 +75,28 @@ def _market_price(item, inventory):
     return max(1, int(round(price)))
 
 def _get(value, key, default=None):
-    if isinstance(value, dict):
-        return value.get(key, default)
-    getter = getattr(value, "get", None)
-    if callable(getter):
-        return getter(key, default)
-    return getattr(value, key, default)
+    try:
+        if isinstance(value, dict):
+            return value.get(key, default)
+        
+        # Kaggle Observation objects have attributes
+        if hasattr(value, key):
+            val = getattr(value, key)
+            if val is not None:
+                return val
+        
+        # Fallback for weird proxy objects
+        if hasattr(value, 'get'):
+            val = value.get(key)
+            if val is not None:
+                return val
+                
+    except Exception as e:
+        import traceback; traceback.print_exc()
+        raise e # FAIL LOUDLY
+        pass
+        
+    return default
 
 def _copy_action(action):
     action = copy.deepcopy(action or {})
@@ -414,7 +430,9 @@ def agent(obs, configuration=None):
         action = _rank_sell_slots(obs, action)
         state["last_action"] = _copy_action(action)
         return _align_hands(action, obs)
-    except Exception:
+    except Exception as e:
+        import traceback; traceback.print_exc()
+        raise e # FAIL LOUDLY
         farm = _farm(obs, _seat(obs))
         return {
             "farmer": ["PASS"],
