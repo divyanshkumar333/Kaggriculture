@@ -1,0 +1,14 @@
+{
+  "main.py vs agents/v025_a_aggressive_cows.py": "  Paired win rate: 100.0%",
+  "main.py vs agents/v057_generalized_spoiler.py": "  Paired win rate: 0.0%",
+  "main.py vs agents/v085_grandmaster_roi.py": "  Paired win rate: 100.0%",
+  "agents/v025_a_aggressive_cows.py vs main.py": "  Paired win rate: 0.0%",
+  "agents/v025_a_aggressive_cows.py vs agents/v057_generalized_spoiler.py": "  Paired win rate: 0.0%",
+  "agents/v025_a_aggressive_cows.py vs agents/v085_grandmaster_roi.py": "  Paired win rate: 100.0%",
+  "agents/v057_generalized_spoiler.py vs main.py": "  Paired win rate: 87.5%",
+  "agents/v057_generalized_spoiler.py vs agents/v025_a_aggressive_cows.py": "  Paired win rate: 100.0%",
+  "agents/v057_generalized_spoiler.py vs agents/v085_grandmaster_roi.py": "  Paired win rate: 100.0%",
+  "agents/v085_grandmaster_roi.py vs main.py": "  Paired win rate: 0.0%",
+  "agents/v085_grandmaster_roi.py vs agents/v025_a_aggressive_cows.py": "  Paired win rate: 0.0%",
+  "agents/v085_grandmaster_roi.py vs agents/v057_generalized_spoiler.py": "  Paired win rate: 0.0%"
+}

@@ -1,21 +1,6 @@
 {
-  "agent": "main.py",
-  "agent_name": "V032_Lookahead4_FrontRun_OppShed",
-  "git_commit": "7998a1ad9714fc1fee128824c02222ce72053436",
-  "sha256": "8a9b079d66836e0dbe1fc7630979a0a1f1d7624e366c40fb0e58a16945be903c",
-  "engine_version": "1.32.7",
-  "verified_W": null,
-  "verified_T": null,
-  "verified_L": null,
-  "win_score": null,
-  "validation_seeds": [],
-  "meta_panel": ["v036_v16_lookahead8", "v027_hierarchical_meta", "v025_a_aggressive_cows"],
-  "last_kaggle_score": null,
-  "last_kaggle_submission": null,
-  "confidence": "UNVERIFIED_AS_OF_TAKEOVER",
-  "status": "CHAMPION",
-  "notes": "main.py is V032 lineage with opponent-shed inference, 30-step front-run, repay, impact-ranking. Promoted through EXP-001 through EXP-034. Champion_history.md records V036 as local champ but main.py decoded trace is same architecture. Need fresh benchmark to confirm exact version. Status frozen as CHAMPION pending verification.",
-  "frozen_at": "2026-09-20T09:30:00Z",
-  "active_a": "main.py",
-  "active_b": "agents/v085_grandmaster_roi.py"
+  "notes": "V057 established as CURRENT_CHAMPION after sweeping the NxN matrix 100% vs V025-A/V085 and crushing main.py 100%/87.5%.",
+  "hash": "2765fb6bb62b60da275ec45d7f9eae6ad87854e485f722cc83a1a014be48981d",
+  "agent_path": "agents/v057_generalized_spoiler.py",
+  "date_established": "2026-09-20T12.36.54Z"
 }

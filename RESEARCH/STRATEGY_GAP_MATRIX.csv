@@ -1,0 +1,11 @@
+Opponent,Day,Champ_Workers,Opp_Workers,Champ_Cows,Opp_Cows,Champ_CropArea,Opp_CropArea,Champ_Cash,Opp_Cash
+v025_a_aggressive_cows,0,0,0,0,0,0,0,3000.0,3000.0
+v025_a_aggressive_cows,6,0,0,2,0,19,6,14.0,1041.0
+v025_a_aggressive_cows,12,0,0,7,9,56,10,4376.0,4093.0
+v025_a_aggressive_cows,24,0,0,7,11,62,29,77977.0,33359.0
+v025_a_aggressive_cows,27,0,0,7,11,62,32,94982.0,39399.0
+v057_generalized_spoiler,0,0,0,0,0,0,0,3000.0,3000.0
+v057_generalized_spoiler,6,0,0,2,2,19,19,2.0,2.0
+v057_generalized_spoiler,12,0,0,8,8,61,61,9748.0,10512.0
+v057_generalized_spoiler,24,0,0,8,8,62,62,44863.0,46101.0
+v057_generalized_spoiler,27,0,0,8,8,62,61,51448.0,54114.0

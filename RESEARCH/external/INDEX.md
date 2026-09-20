@@ -34,7 +34,23 @@ Date: 2026-09-20
   5. Terminal behavior: explicit sell-all sequence starting turn 600
 - What it teaches: Deadline-aware scheduling >> Hungarian arbitrary matching
 
-### D. Meta Research
+### D. Sellesta / Kaggriculture
+- Key mechanisms: [TBD - Pending Analysis]
+- Status: Needs Research
+
+### E. CDrookieDc / kaggriculture
+- Key mechanisms: [TBD - Pending Analysis]
+- Status: Needs Research
+
+### F. diffmap / kaggricultureRL
+- Key mechanisms: [TBD - Pending Analysis]
+- Status: Needs Research
+
+### G. rishabhyadav03 / Kaggriculture
+- Key mechanisms: [TBD - Pending Analysis]
+- Status: Needs Research
+
+### H. Meta Research
 - Competition deadline: September 30, 2026
 - Top known score: 3090.1 (Kaito Fukami)
 - RL approaches: PPO/JAX (10k steps/sec) used by some top agents
