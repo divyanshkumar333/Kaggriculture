@@ -1,0 +1,2 @@
+Day 1 Hour 0 market: [['HIRE'], ['HIRE'], ['SELL', 'WHEAT', 4]]
+Day 2 Hour 0 market: []

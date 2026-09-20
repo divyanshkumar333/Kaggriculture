@@ -1,0 +1,2 @@
+Day 1 Hour 0: hires_today=0
+Day 2 Hour 0: hires_today=0

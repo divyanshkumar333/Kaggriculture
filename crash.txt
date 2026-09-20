@@ -1,0 +1,384 @@
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 364, in agent
+    action = _impact_rank(obs, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Setup\kaggle\kaggriculture\scripts/v100test2.py", line 210, in _impact_rank
+    sell_indices = [x[2] for x in sorted([(s[1], s[2]) for s in scored])]
+                    ~^^^
+IndexError: tuple index out of range

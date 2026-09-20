@@ -1,0 +1,54 @@
+{
+  "version": "2026-09-20",
+  "families": {
+    "TRACE_REPLAY": {
+      "description": "Pure pre-recorded action sequence from a single high-scoring game",
+      "members": ["v079_ai_after_hours_core", "v081_kaggle_83k_trace", "v092_replay_seed", "v092b_replay_seed"],
+      "strengths": ["deterministic", "high single-game score"],
+      "weaknesses": ["no adaptation", "seed-specific", "opponent-agnostic"]
+    },
+    "LOOKAHEAD_FRONTRUN": {
+      "description": "V16 trace + N-step forward lookahead for opponent sell front-running + market impact ordering",
+      "members": ["v029", "v030", "v031", "v032", "v033", "v034", "v035", "v036", "v051", "v052", "main.py"],
+      "strengths": ["opponent shed inference", "repay scheduling", "weed repair"],
+      "weaknesses": ["still trace-constrained", "opponent model is delta-based not belief-based"]
+    },
+    "COW_FLYWHEEL": {
+      "description": "Aggressive early cow purchase for milk revenue flywheel",
+      "members": ["v025_a_aggressive_cows", "v095_5cow_opening", "v097_cow_expansion_limit"],
+      "strengths": ["early milk income", "high labor throughput"],
+      "weaknesses": ["milk glut if both players run cows", "capital-heavy"]
+    },
+    "BERRY_SPOILER": {
+      "description": "Strawberry-focused to exploit cow glut situations",
+      "members": ["v059_strawberry_flywheel", "v063_strawberry_frontrunner"],
+      "strengths": ["alternative premium income", "market diversification"],
+      "weaknesses": ["slower startup than cows", "requires sustained watering"]
+    },
+    "MELON_FRONTRUN": {
+      "description": "Melon-focused for high-price first-mover advantage",
+      "members": ["v060_melon_frontrunner", "v096_12melon_opening", "v023_melon_god"],
+      "strengths": ["very high melon base price", "front-run opportunity"],
+      "weaknesses": ["long growth time", "capital intensive", "price crashes on glut"]
+    },
+    "GRANDMASTER_ROI": {
+      "description": "ROI-driven adaptive portfolio with dynamic labor, market-aware selling, opponent model",
+      "members": ["v085_grandmaster_roi"],
+      "strengths": ["market-aware", "adaptive labor", "terminal strategy"],
+      "weaknesses": ["complex dependency chains", "harder to validate"]
+    },
+    "ADAPTIVE_THRESHOLD": {
+      "description": "Opening policy + opponent-reactive threshold switching",
+      "members": ["v052_v16_adaptive", "v098_shop_reactive", "v099_adaptive_master"],
+      "strengths": ["handles common opponent types"],
+      "weaknesses": ["single binary threshold is too coarse", "not Bayesian despite documentation claims"]
+    },
+    "PUBLIC_META": {
+      "description": "Public competition agents used as opponents",
+      "members": ["public_v16_rc5", "public_v27_reset"],
+      "strengths": ["realistic competitive opponents"],
+      "weaknesses": ["publicly known, can be exploited"]
+    }
+  },
+  "notes": "Do not count different replay seeds of the same trace as different strategies. Strategy lineage is determined by decision architecture, not trace ID."
+}

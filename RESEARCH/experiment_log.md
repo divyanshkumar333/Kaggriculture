@@ -38,3 +38,70 @@
 | **EXP-032** | 2026-09-14 | **V052_Adaptive** | **V16_Public** | 500 / 1000 | 940 - 60 - 0 | 94.0% | +$911 | Vulnerability ELIMINATED |
 | **EXP-033** | 2026-09-14 | **V052_Adaptive** | **V027_Base** | 500 / 1000 | 1000 - 0 - 0 | 100.0% | +$63,023 | Broad Field Dominance Preserved |
 | **EXP-034** | 2026-09-14 | **V052_Adaptive** | **V025_A** | 500 / 1000 | 1000 - 0 - 0 | 100.0% | +$18,420 | Broad Field Dominance Preserved |
+
+## Session 2 (2026-09-20, Cycle 1 Takeover)
+
+### Setup Actions (not experiments)
+- Ran full repository audit (all agents, RESEARCH/, scripts/, V099 audit)
+- Confirmed engine: kaggle-environments 1.32.7
+- Confirmed Python venv: .venv\Scripts\python.exe
+- Frozen champion: main.py (V032 lineage)
+- Created RESEARCH/CURRENT_CHAMPION.json
+- Created RESEARCH/LESSONS.md
+- Created RESEARCH/meta/strategy_families.json
+- Created RESEARCH/V099_IMPLEMENTATION_AUDIT.md
+- Created scripts/bench_paired.py (sequential paired harness)
+- Created .agents/skills/kaggriculture-autoresearch/SKILL.md
+- Created reports/LATEST_STATUS.md
+
+### Champion Verification (EXP-035-SMOKE-CONTROL)
+- Date: 2026-09-20
+- Agent: main.py vs agents/public_v27_reset.py
+- Seeds: 7700-7707 (8 pairs, 16 matches)
+- Result: **8W/0T/0L**, mean delta +$12,759 (CI: +$11,360..+$14,048)
+- Status: Champion CONFIRMED healthy
+
+| ID | Date | Candidate | Opponent | Pairs | W | T | L | Win% | Delta | Status |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **EXP-035** | 2026-09-20 | V100_grandmaster_frontrun | CHAMPION_main | 8 | TBD | TBD | TBD | TBD | TBD | SMOKE RUNNING |
+| **EXP-036** | 2026-09-20 | V101_TerminalLiquid | CHAMPION_main | 4 / 8 | 0 - 0 - 8 | 0.0% | -,645 | **REJECTED (FrontRun is already optimal)** |
+
+### EXP-035: V100_grandmaster_frontrun vs CHAMPION_main — REJECTED
+
+- Date: 2026-09-20
+- Seeds: 7800-7807 (8 pairs)
+- W=0, T=0, L=8
+- Mean delta: -$151,832 (CI: -$160,530..-$142,938)
+- Status: **CATASTROPHIC FAILURE — REJECTED**
+- Root cause: Day 0 opening budget overflow
+  - V100 spent: 34 wheat @ $25 = $850, 11 hires = $88, 2 cows @ $1500 = $3000 = $3,938 TOTAL
+  - Starting money: $3,000
+  - Agent bankrupt on Day 0, never recovered
+  - Fix: use V025-A proven opening ($2,952 total)
+
+### VULNERABILITY CONFIRMATION: CHAMPION_main vs public_v16_rc5
+
+- Date: 2026-09-20
+- Seeds: 7900-7907 (8 pairs)
+- W=0, T=0, L=8
+- Mean delta: -$3,190 (CI: -$4,088..-$2,360)
+- Status: **VULNERABILITY CONFIRMED** (narrow loss, -$2.7k to -$5.6k per game)
+- Root cause: Prisoner''s Dilemma — both run V16 trace. Front-run creates symmetric debt.
+  Both agents earn nearly equal amounts; opponent wins by small margin.
+  The specific V16 trace favors player 0 seat in some seeds.
+- Priority fix: EXP-036 terminal controller OR strategy diversification
+
+### EXP-035b: V100b_gm_fixed_opening vs CHAMPION_main — RUNNING
+
+- Date: 2026-09-20
+- Seeds: 8100-8107 (8 pairs)
+- Status: SMOKE RUNNING
+- Hypothesis: Correct opening budget + phase-aware macro + front-run overlay can match champion
+
+### EXP-036: Terminal Liquidation � REJECTED
+- Hypothesis: Ignored trace and dumped shed on Day 25+ to extract margin.
+- Result: Failed across 7 variants (V106-V112, V101). Mean loss -.
+- Root Cause: Champion's _front_run already optimally liquidates the shed immediately upon harvest. Stripping trace actions (like HIRE) causes unharvested yield to rot, creating a net loss.
+
+### EXP-037: Prisoner's Dilemma Resolution � PLANNED
+- Target: Resolve the -.4k loss to public_v16_rc5 by tuning the 30-day front-run depth to avoid symmetric market crashing.

@@ -266,28 +266,14 @@ def _town_demand_now(obs, item, step):
     return demand
 
 def _future_target(step, item, state):
-    # Generalized: If opponent has this item in their shed, they can crash it next turn.
-    # We will front-run them if they have a non-trivial amount (>=2), or if we are late game.
-    opp_shed = state.get("opp_shed", {})
-    opp_qty = opp_shed.get(item, 0)
-    
-    # If they hold it, they might sell it next turn.
-    if opp_qty >= 2:
-        return step + 1, opp_qty
-        
-    # Fallback to normal V16 self-lookahead if they don't have it.
-    max_lookahead = 30
+    max_lookahead = 2
     for offset in range(1, max_lookahead + 1):
         fut = step + offset
         if 0 <= fut < len(_ACTIONS):
-            q = sum(
-                max(0, int(order[2]))
-                for order in (_ACTIONS[fut].get("market") or [])
-                if len(order) >= 3 and order[0] == "SELL" and order[1] == item
-            )
+            q = sum((max(0, int(order[2])) for order in _ACTIONS[fut].get('market') or [] if len(order) >= 3 and order[0] == 'SELL' and (order[1] == item)))
             if q > 0:
-                return fut, q
-    return None, 0
+                return (fut, q)
+    return (None, 0)
 
 def _pickup_reserve(action, item):
     reserve = 0

@@ -1,0 +1,4 @@
+Day 1 Hour 0: money=172.0 hires=0 market=[['HIRE'], ['HIRE'], ['SELL', 'WHEAT', 4]]
+Day 1 Hour 1: hands=2
+Day 2 Hour 0: money=281.0 hires=0 market=[['HIRE'], ['HIRE'], ['SELL', 'FERTILIZER', 1], ['SELL', 'FERTILIZER', 1], ['SELL', 'WHEAT', 2]]
+Day 2 Hour 1: hands=2
