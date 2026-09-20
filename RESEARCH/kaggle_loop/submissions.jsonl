@@ -4,3 +4,6 @@
 {"cycle": 2, "candidate_id": "v068_frontrun_plus_two", "hypothesis": "Frontrunning by 2 turns exploits opponents who frontrun by 1 turn.", "strategy_family": "Dynamic Frontrunner (Turn+2)", "timestamp": "2026-09-16T11:05:28.225969"}
 {"cycle": 2, "candidate_id": "v069_hybrid_spoiler", "hypothesis": "Combining static Melon dumping with dynamic Strawberry tracking crushes pure dynamic agents.", "strategy_family": "Hybrid Frontrunner", "timestamp": "2026-09-16T11:05:28.225969"}
 {"candidate_id": "001_meta_classifier", "timestamp": "2026-09-17T20:29", "hypothesis": "001_meta_classifier.md", "strategy_family": "Runtime Hybrid Classifier", "local_results": "Smoke test passed against random.", "Kaggle_rating": null, "episode_count": 0}
+{"timestamp": "2026-09-20T18:30:40", "ref": "56403691", "agent_path": "submission.tar.gz", "description": "V058 Generalized Spoiler (Promoted from V057) - Fix __file__", "score": 449.8, "status": "COMPLETE"}
+{"timestamp": "2026-09-20T18:45:09", "ref": "56403913", "agent_path": "submission_v057_control.py", "description": "V057 Control (Restoring 1187 baseline)", "score": 855.6, "status": "COMPLETE"}
+{"timestamp": "2026-09-20T18:46:04", "ref": "56403931", "agent_path": "submission_v058_challenger.tar.gz", "description": "V058 Generalized Spoiler (Repaired HIRE5 Trace)", "score": 767.4, "status": "COMPLETE"}

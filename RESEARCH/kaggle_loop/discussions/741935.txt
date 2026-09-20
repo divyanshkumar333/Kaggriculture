@@ -1,0 +1,20 @@
+Topic #741935: Handling Pathfinding Overhead: A Look-Ahead Heuristic Approach
+  Author: Matheus Finger
+  Posted: 2026-09-18 15:05:18.929000
+  Votes: 0  Comments: 1
+
+I know a lot of competitors are focusing on imitation models, but I decided to take a step back and focus on the core optimization of the agent's movement mechanics to gain an edge in efficiency.
+
+Calculating the absolute shortest path across all valid tiles every turn quickly leads to timeouts. To handle this, I implemented a pruning mechanism: the agent scans the board and scores tiles using a greedy heuristic (action_weight / (distance + 1)), filtering only the Top 10 candidates. From this reduced pool, it runs a Depth-2 look-ahead, evaluating the combined score of navigating to a first target (c1) and then immediately to a second (c2), executing the step that maximizes this sum.
+
+This keeps execution times low while preventing the agent from crossing the entire map for a single high-priority action when a cluster of profitable tiles is right next to it.
+
+How are you all managing routing complexity? Are you relying on strict optimization models for pathfinding, or utilizing limited-depth heuristics to navigate the farm?
+
+Comments:
+├─ WOOSUNG YOON (2026-09-18 15:35:05.463000) [+0]
+│  (1) Vehicle Routing Problem: https://developers.google.com/optimization/routing/vrp?hl=en
+│  
+│  (2) The Job Shop Problem: https://developers.google.com/optimization/scheduling/job_shop?hl=en
+│  
+│  (3) Zero-s...

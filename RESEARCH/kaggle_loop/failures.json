@@ -1,0 +1,14 @@
+[
+  {
+    "submission_id": "56403691",
+    "timestamp": "2026-09-20T18:30:40",
+    "initial_rating": 600.0,
+    "final_rating": 449.8,
+    "lowest_rating": 310.6,
+    "failure_classification": "B (packaging/import issue) + F (corrupted action trace causing disastrous economic plan)",
+    "description": "fix_memory.py replaced HIRE5 opening trace with 1-worker melon rush; agent starved with 1 worker and 0 livestock, scoring 19k vs 46k in live matches.",
+    "resolved": true,
+    "fix_submission_control": "56403913",
+    "fix_submission_challenger": "56403931"
+  }
+]

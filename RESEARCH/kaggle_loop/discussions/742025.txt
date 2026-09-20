@@ -1,0 +1,12 @@
+Topic #742025: How do you decide which crops to plant?
+  Author: Ana Riquele
+  Posted: 2026-09-19 00:17:10.285000
+  Votes: 0  Comments: 1
+
+Hello! Kaggriculture is my very first Kaggle competition, and I’m trying to understand which factors are the most important when deciding which crops to choose.
+I’ve thought about considering variables like selling price, productivity, seed cost, and growth time. However, I’m still unsure about how to balance all of this to find a method that truly maximizes returns.
+Which conditions or features do you consider the most important for this decision?
+
+Comments:
+├─ Zukas F. (2026-09-19 02:37:45.887000) [+0]
+│  I would start by estimating the profit each crop can generate and the resources needed to obtain it. The variables you mentioned are a good starting point, but I would also consider labor, market d...

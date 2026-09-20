@@ -1,0 +1,26 @@
+{
+  "active_control_submission": {
+    "ref": "56403913",
+    "name": "submission_v057_control.py",
+    "score": 855.6,
+    "episodes_won": 3,
+    "episodes_total": 3,
+    "status": "CLIMBING"
+  },
+  "active_challenger_submission": {
+    "ref": "56403931",
+    "name": "submission_v058_challenger.tar.gz",
+    "score": 767.4,
+    "episodes_won": 2,
+    "episodes_total": 2,
+    "status": "CLIMBING"
+  },
+  "failed_submission": {
+    "ref": "56403691",
+    "name": "submission.tar.gz",
+    "score": 449.8,
+    "root_cause": "fix_memory.py corrupted HIRE5 opening into 1-hand melon rush, causing collapse to $19k"
+  },
+  "daily_submissions_remaining": 0,
+  "last_updated": "2026-09-21T00:35:00+05:30"
+}

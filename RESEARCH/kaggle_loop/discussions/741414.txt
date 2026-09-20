@@ -1,0 +1,27 @@
+Topic #741414: Final week tool: replay analyzer to squeeze points before the deadline
+  Author: RamónLópez
+  Posted: 2026-09-15 04:16:25.228000
+  Votes: 7  Comments: 3
+
+Hi everyone — with the season closing on 23 September, I wanted to share an open-source tool I built for this competition: Kaggriculture Ops Lab (an independent, community-made project, not affiliated with Kaggle).
+
+It parses your replay JSON in the browser (nothing is uploaded unless you choose to share) and shows you:
+
+Net profit by crop and animal, turn by turn
+Cash flow, P&amp;L by category, and the decisions that cost you points
+Batch analysis of multiple replays to compare strategies
+A live leaderboard tracker and campaign gallery for the final push
+It's free, open-source (14 analysis scripts included), and available in 8 languages. I built it because I wanted to understand my own agent's decisions — and it helped me find real mistakes.
+
+🔗 https://kaggriculture-ops-lab.lovable.app
+
+Feedback welcome — especially bugs before the deadline. Good luck in the final stretch! 🏁****
+
+Comments:
+├─ 守银摄金难铜 (2026-09-16 03:52:48.540000) [+1]
+│  Great product! The only issue is that the calculations may not be entirely accurate. Wheat can be used to feed animals, and both the animals themselves and the wheat they consume have their own val...
+├─ Prema Ananda (2026-09-15 10:17:04.063000) [+0]
+│  Thanks a lot for sharing this tool! Really great job on the UI. I have a bunch of custom backend scripts for post-match economic analytics, but they definitely lack such colorful visualization. App...
+├─ RamónLópez (2026-09-15 04:18:35.607000) [+0]
+│  "I came here to build a farming agent. I ended up building a replay-measurement pipeline"
+│  Same evolution here — started measuring replays and ended up building an open-source dashboard around it. I...

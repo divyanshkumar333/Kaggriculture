@@ -1,0 +1,16 @@
+Topic #742063: Overview game discrepancies.
+  Author: Giorgio Valocchi
+  Posted: 2026-09-19 11:58:17.437000
+  Votes: 0  Comments: 0
+
+Hi, I was trying to understand the game dynamics and I found a couple of discrepancies.
+
+The overview object type table for melon still shows time to first yield as 10, even though, to my understanding, it should be 6.
+
+It has already been mentioned in the following discussion, but the correction has not been applied to the overview table yet:
+
+https://www.kaggle.com/competitions/kaggriculture/discussion/732450
+
+Also, the sentence "All plants must be watered every day." is misleading, as they "can be watered every day", but they actually have to be watered every other day, as it is specified later in the overview.
+
+No comments

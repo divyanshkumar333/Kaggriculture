@@ -1,0 +1,18 @@
+Topic #742083: Disproportionate Rating Drop After a Close Defeat
+  Author: rishavsaigal
+  Posted: 2026-09-19 17:31:11.777000
+  Votes: 0  Comments: 5
+
+Why did a 1-point loss result in a -106 rating penalty? In my recent match against 'Hello Sam Franscisco' (Final: 103,148 vs. 103,147), I received a heavy 106-point deduction. Even though it was a loss, does the system not account for score margin, or is the penalty strictly dictated by an Elo/MMR gap and high rating volatility?
+
+Comments:
+├─ Gideon Oba (2026-09-19 18:22:49.850000) [+0]
+│  Each match has 3 outcomes: "WIN|DRAW|LOSS". Here is an example: if your bot is deterministic, the first match between your agents would result in a draw. Draws are rare against other bots unless th...
+  ├─ Gideon Oba (2026-09-19 18:49:26.287000) [+0]
+  │  Another thing is that the market value of livestock and crop products changes per day.
+  ├─ rishavsaigal (2026-09-19 19:41:13.100000) [+0]
+  │  I understood that logic but isn't that unfair if there is a dollar loss vs with a huge margin with no determinstic pattern of scoring against the opponent
+    ├─ Gideon Oba (2026-09-19 20:12:11.153000) [+0]
+    │  Yes, it feels that way, but now I'm focusing on training my agent on win rates and profit margins, not just profits. Before, I struggled to get my agent to pass $60,000 on all worlds, then $100,000 😅.
+    ├─ Gideon Oba (2026-09-19 20:15:14.647000) [+0]
+    │  To add to my comment it was self-play 😂😂

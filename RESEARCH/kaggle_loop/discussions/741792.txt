@@ -1,0 +1,22 @@
+Topic #741792: A question about players using the same pattern
+  Author: WOOSUNG YOON
+  Posted: 2026-09-17 13:19:38.103000
+  Votes: 0  Comments: 5
+
+This looks similar to a strategy that uses the Replay shown in the Public Notebook.
+In this competition, do the opponent’s distribution and the randomly appearing shops have almost no effect?
+
+It seems as if the strategy distribution has shifted very gradually, little by little.
+
+Comments:
+├─ Sayaka Miki (2026-09-17 13:30:48.460000) [+7]
+│  Well the model just learned to play like that…I noticed it too and maybe it's some kind of local optimum solution. It's not very healty and is hackable (see my matchs with ymg_aq). Still trying to ...
+  ├─ WOOSUNG YOON (2026-09-17 14:02:00.183000) [+1]
+  │  I’m always learning a lot.
+  │  Thank you for taking the time to reply.
+  ├─ Gerardo Del Toro (2026-09-17 23:41:03.340000) [+0]
+  │  @linkinpony Can you disclose if it's RL based, and if it is, whether it's deciding on a macro or micro level? I am experimenting with RL, but still not great results. Would be encouraging if you ar...
+    ├─ Sayaka Miki (2026-09-18 00:22:17.243000) [+1]
+    │  Yes it's RL. I can't disclose more details, but base on my bad experience in Orbit Wars (which I tried to write tons of rules and heavy search), I believe RL is right.
+├─ Krzysztof Gonia (2026-09-18 09:50:20.540000) [+0]
+│  If you just replay other games and don't implement online solver it's hard to build shop dependent strategy because you have to have continuation for each variant. Some moves are good enough to cov...
