@@ -1,0 +1,11 @@
+{
+  "source_url": "kaggle kernels output kaitofukami/25-27-strict-future-v27-midgame-meta-reset",
+  "notebook_slug": "kaitofukami/25-27-strict-future-v27-midgame-meta-reset",
+  "version": "v27",
+  "public_score": 3090.1,
+  "sha256": "f48c21166eac68d1b05a401f04f94a2eb6154e65415af64893672365ff33c7b8",
+  "engine_version": "1.29.3",
+  "license": "Kaggle Default",
+  "download_time": "2026-09-20T13:24:57Z",
+  "archive_members": ["main.py"]
+}

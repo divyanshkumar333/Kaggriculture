@@ -1,0 +1,9 @@
+{
+  "pools": {
+    "discovery": {"start": 10000, "end": 10063, "size": 64, "description": "Quick hypothesis screening"},
+    "validation": {"start": 11000, "end": 11063, "size": 64, "description": "Confirming discovery results"},
+    "promotion": {"start": 12000, "end": 12127, "size": 128, "description": "Final gate before champion replacement"}
+  },
+  "frozen": true,
+  "note": "NEVER modify these pools after inspecting candidate performance. NEVER reuse promotion seeds while searching."
+}

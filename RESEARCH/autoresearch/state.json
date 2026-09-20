@@ -1,0 +1,22 @@
+{
+  "loop_version": 2,
+  "current_phase": "BENCHMARK_INTEGRITY_CHECK",
+  "pipeline": [
+    "READ",
+    "CHECK_BENCHMARK_INTEGRITY",
+    "RESEARCH",
+    "HYPOTHESIS",
+    "IMPLEMENT",
+    "COMMIT",
+    "SMOKE",
+    "VALIDATION",
+    "ADVERSARIAL",
+    "PROMOTION",
+    "REVERT_IF_FAILED",
+    "LOG_LESSON",
+    "REPEAT"
+  ],
+  "integrity_status": "CORRECTING",
+  "last_experiment": null,
+  "experiments_run": 0
+}

@@ -1,0 +1,17 @@
+{
+  "agent_a": "V057",
+  "agent_b": "main",
+  "pool": "validation",
+  "start_seed": 11000,
+  "seed_blocks": 16,
+  "total_games": 32,
+  "W": 23,
+  "T": 0,
+  "L": 9,
+  "win_score": 0.7188,
+  "ci_win_lo": 0.5625,
+  "ci_win_hi": 0.875,
+  "mean_cash_delta": 1148.28,
+  "ci_cash_lo": 635.28,
+  "ci_cash_hi": 1653.38
+}

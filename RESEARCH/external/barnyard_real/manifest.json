@@ -1,0 +1,11 @@
+{
+  "source_url": "kaggle kernels output romanrozen/strong-barnyard-economist",
+  "notebook_slug": "romanrozen/strong-barnyard-economist",
+  "version": "strong-barnyard-economist",
+  "public_score": 3034.8,
+  "sha256": "997e6bfc5234534e246e945bc61c87858ebf997ab85b0a5c9427dd4ed710f1b6",
+  "engine_version": "1.29.3",
+  "license": "Apache 2.0",
+  "download_time": "2026-09-20T13:25:02Z",
+  "archive_members": ["main.py"]
+}

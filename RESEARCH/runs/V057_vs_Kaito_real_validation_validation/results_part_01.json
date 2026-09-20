@@ -1,0 +1,17 @@
+{
+  "agent_a": "V057",
+  "agent_b": "Kaito_real_validation",
+  "pool": "validation",
+  "start_seed": 11000,
+  "seed_blocks": 8,
+  "total_games": 16,
+  "W": 16,
+  "T": 0,
+  "L": 0,
+  "win_score": 1.0,
+  "ci_win_lo": 1.0,
+  "ci_win_hi": 1.0,
+  "mean_cash_delta": 16389.81,
+  "ci_cash_lo": 14278.75,
+  "ci_cash_hi": 18533.75
+}

@@ -1,0 +1,21 @@
+mechanic,V057,Kaito_v27,Barnyard,other_3000+,evidence,reproducible?,causal_test_available?,priority
+opening,Fixed Trace,Fixed Trace,Fixed Trace,Unknown,INDEX.md,Yes,Yes,LOW
+workers,Fixed Assignment,Fixed Assignment,Queue-aware priority,Unknown,INDEX.md,Yes,Yes,MEDIUM
+animals,Static Scaling,Static Scaling,Production Atlas,Unknown,INDEX.md,Yes,No,MEDIUM
+crops,Static Scaling,Static Scaling,Queue-aware planting,Unknown,INDEX.md,Yes,No,MEDIUM
+land,Fixed Trace,Fixed Trace,Fixed Trace,Unknown,INDEX.md,Yes,Yes,LOW
+production,Blind Execution,Midgame Meta Reset,Production Atlas,Unknown,INDEX.md,Yes,Yes,HIGH
+feeding,Fixed Trace,Fixed Trace,Queue-aware priority,Unknown,INDEX.md,Yes,No,MEDIUM
+care,Fixed Trace,Fixed Trace,Queue-aware priority,Unknown,INDEX.md,Yes,No,MEDIUM
+fertilizer,Fixed Trace,Fixed Trace,Queue-aware priority,Unknown,INDEX.md,Yes,No,LOW
+movement,Fixed Trace,Fixed Trace,Queue-aware priority,Unknown,INDEX.md,Yes,No,LOW
+task scheduling,Index Match,Index Match,Deadline Ordered,Unknown,INDEX.md,Yes,No,HIGH
+shop response,None,Midgame Meta Reset,None,Unknown,INDEX.md,Yes,Yes,MEDIUM
+market,Impact Ranking,Impact Ranking,Impact Ranking,Unknown,INDEX.md,Yes,Yes,LOW
+sell ordering,Impact Ranking,Impact Ranking,Terminal Liquidator,Unknown,INDEX.md,Yes,Yes,LOW
+front-running,Trace Lookahead,State Inference,None,Unknown,INDEX.md,Yes,Yes,MEDIUM
+strict future,No,Yes,Unknown,Unknown,INDEX.md,Yes,Yes,HIGH
+branching,No,Midgame Meta Reset,Decision Edge,Unknown,INDEX.md,Yes,Yes,HIGH
+terminal,Natural Wind-down,Safe Liquidation,Explicit Sell-All,Unknown,INDEX.md,Yes,Yes,HIGH
+fallback,None,Order-Slot Safety,Unknown,Unknown,INDEX.md,Yes,Yes,MEDIUM
+state persistence,Weed/Debt Only,Weed/Debt Only,Yes,Unknown,INDEX.md,Yes,No,LOW

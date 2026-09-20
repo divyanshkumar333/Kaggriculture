@@ -1,0 +1,9 @@
+{
+  "champion": "v057_generalized_spoiler",
+  "champion_path": "agents/v057_generalized_spoiler.py",
+  "status": "PROVISIONAL CHAMPION",
+  "note": "V057 is PROVISIONAL until corrected CRN benchmark reproduces its advantage over main, V025-A, and V085. Do NOT upgrade to VERIFIED LOCAL CHAMPION until all three matchups pass on the VALIDATION pool.",
+  "promoted_at": null,
+  "benchmark_integrity": "PENDING",
+  "verified_matchups": []
+}

@@ -1,0 +1,17 @@
+{
+  "agent_a": "v057_generalized_spoiler",
+  "agent_b": "main",
+  "pool": "custom",
+  "seed_blocks": 2,
+  "start_seed": 11000,
+  "total_games": 4,
+  "W": 4,
+  "T": 0,
+  "L": 0,
+  "win_score": 1.0,
+  "ci_win_lo": 1.0,
+  "ci_win_hi": 1.0,
+  "mean_cash_delta": 2266.25,
+  "ci_cash_lo": 2117.5,
+  "ci_cash_hi": 2415.0
+}

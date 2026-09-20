@@ -5,6 +5,7 @@ Date: 2026-09-20
 ## Sources Identified
 
 ### A. Kaito Fukami — v27 Midgame Meta Reset (public score: 3090.1)
+- Status: SYNTHETIC_HYPOTHESIS_ONLY (Real artifact in RESEARCH/external/kaito_v27_real)
 - Source: Kaggle public notebook
 - Key mechanisms:
   1. Strict-future observability constraint (no future actions peeking)
@@ -26,6 +27,7 @@ Date: 2026-09-20
 - Status: Not yet adapted
 
 ### C. Barnyard Economist (Roman Rozen)
+- Status: SYNTHETIC_HYPOTHESIS_ONLY (Real artifact in RESEARCH/external/barnyard_real)
 - Key mechanisms:
   1. Queue-aware farming: tasks queued by deadline, not by priority
   2. Route preservation: once a macro is chosen, execution doesn't switch
@@ -59,6 +61,11 @@ Date: 2026-09-20
   - "one-turn fertilizer preemption" is a known technique
   - Replay hunting is popular
   - Market timing (sell sequencing) is key differentiator
+
+## Engine Version Compatibility
+- **Local Environment**: `kaggle-environments == 1.32.7`
+- **Kaito v27 Logs**: Research engine `1.32.6`, Notebook engine `1.29.3`
+- **Note**: The public leaderboard scores for historical artifacts (e.g., Kaito's 3090.1) were generated on slightly older engine versions. Minor patch differences rarely affect deterministic logic but could impact exact timing/rendering.
 
 ## Priority Adapter List
 

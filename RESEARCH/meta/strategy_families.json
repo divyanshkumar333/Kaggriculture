@@ -45,7 +45,7 @@
     },
     "PUBLIC_META": {
       "description": "Public competition agents used as opponents",
-      "members": ["public_v16_rc5", "public_v27_reset"],
+      "members": ["public_v16_rc5", "public_v27_reset (SYNTHETIC_HYPOTHESIS_ONLY)"],
       "strengths": ["realistic competitive opponents"],
       "weaknesses": ["publicly known, can be exploited"]
     }
