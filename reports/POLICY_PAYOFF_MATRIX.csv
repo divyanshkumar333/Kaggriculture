@@ -1,0 +1,7 @@
+candidate,opponent,W,T,L,win_score,win_rate,mean_cash,margin
+V025-A,V097,31,0,1,31.0,0.97,82738,-1497
+V025-A,V059_BerryFlywheel,32,0,0,32.0,1.00,81670,1600
+V097,V025-A,2,0,30,2.0,0.06,47394,869
+V097,V059_BerryFlywheel,32,0,0,32.0,1.00,42998,-7
+V059_BerryFlywheel,V025-A,0,0,32,0.0,0.00,25154,-393
+V059_BerryFlywheel,V097,0,0,32,0.0,0.00,14390,268

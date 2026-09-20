@@ -1,0 +1,16 @@
+panel,strategy_family,source,version,engine,date,trace,known_score,limitations
+HISTORICAL_META,replay tape,episode-103558339-replay.json,V001,1.32.7,2026-08-01,historic_1,140000,Passive market handling
+HISTORICAL_META,melon-heavy,agents/017_melon_tomato.py,V017,1.32.7,2026-08-10,None,120000,Vulnerable to melon gluts
+HISTORICAL_META,mixed crop,agents/v002_e_combined.py,V002,1.32.7,2026-08-05,None,90000,Low capital efficiency
+CURRENT_META,cow-heavy,agents/v025_a_aggressive_cows.py,V025,1.32.7,2026-09-01,None,160000,Susceptible to milk gluts
+CURRENT_META,strawberry-heavy,agents/v059_strawberry_flywheel.py,V059,1.32.7,2026-09-02,None,155000,Requires high labor pool
+CURRENT_META,high worker,agents/v022_b_dynamic_labor.py,V022,1.32.7,2026-08-25,None,135000,Overspends on hiring
+CURRENT_META,low worker,agents/v032_grandmaster.py,V032,1.32.7,2026-08-28,None,140000,Bottlenecks on watering
+CURRENT_META,terminal liquidation,agents/v070_dynamic_roi_agent.py,V070,1.32.7,2026-09-03,None,150000,Weak early game
+CURRENT_META,fast expansion,agents/v010_b_land_expansion.py,V010,1.32.7,2026-08-20,None,110000,Capital drain
+CURRENT_META,slow expansion,agents/v013_robust_trace.py,V013,1.32.7,2026-08-21,None,130000,Space constrained
+ADVERSARIAL_META,market-pressure,agents/v057_generalized_spoiler.py,V057,1.32.7,2026-09-04,None,135000,Can self-sabotage own revenue
+ADVERSARIAL_META,shop-reactive,agents/v079_ai_after_hours_core.py,V079,1.32.7,2026-09-04,None,145000,Overfits to town RNG
+ADVERSARIAL_META,sheep/goose-heavy,agents/opp_industrial_livestock.py,V021,1.32.7,2026-08-24,None,120000,High feed cost
+ADVERSARIAL_META,mirror,self,latest,1.32.7,2026-09-05,None,0,Perfect correlation
+ADVERSARIAL_META,random,random,1.0,1.32.7,2026-09-05,None,5000,Baseline sanity check

@@ -1,0 +1,8 @@
+{
+    "dataset_size": 23,
+    "worker_count": {
+        "median": 8.0,
+        "mode": 8,
+        "max": 15
+    }
+}

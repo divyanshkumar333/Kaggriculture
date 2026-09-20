@@ -1,0 +1,27 @@
+{
+    "V051": {
+        "win_score": 8,
+        "total_matches": 16,
+        "win_rate": 0.5
+    },
+    "V014": {
+        "win_score": 0,
+        "total_matches": 16,
+        "win_rate": 0.0
+    },
+    "V025-A": {
+        "win_score": 0,
+        "total_matches": 16,
+        "win_rate": 0.0
+    },
+    "V032/Main": {
+        "win_score": 0,
+        "total_matches": 16,
+        "win_rate": 0.0
+    },
+    "V085": {
+        "win_score": 0,
+        "total_matches": 16,
+        "win_rate": 0.0
+    }
+}

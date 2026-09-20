@@ -1,0 +1,16 @@
+{
+    "timestamp": "2026-09-19T14:05:00Z",
+    "git_commit": "90b4d3b464ac7ee65f47fef858da274710661a6f",
+    "engine_version": "1.32.7",
+    "python_version": "3.11",
+    "baseline_candidates": [
+        "V025-A",
+        "V051",
+        "V057",
+        "V014",
+        "V032/main",
+        "V085",
+        "V095"
+    ],
+    "notes": "Frozen forensic baseline before Phase 3 search."
+}
