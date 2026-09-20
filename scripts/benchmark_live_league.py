@@ -117,7 +117,7 @@ def main():
         writer = csv.writer(f)
         writer.writerow(["Cluster", "Trace", "Seed", "V057_Seat", "V057_Cash", "Opponent_Cash", "V057_Score"])
         
-        with concurrent.futures.ProcessPoolExecutor(max_workers=1) as executor:
+        with concurrent.futures.ProcessPoolExecutor(max_workers=os.cpu_count() or 4) as executor:
             future_to_trace = {executor.submit(_worker, t): (t[1], [rep[0] for rep in representatives if rep[1] == t[1]][0]) for t in tasks}
             for future in concurrent.futures.as_completed(future_to_trace):
                 trace_path, cluster = future_to_trace[future]

@@ -7,6 +7,8 @@ Saves raw per-game results.
 import argparse
 import csv
 import os
+os.environ["OPENBLAS_NUM_THREADS"] = "1"
+os.environ["OMP_NUM_THREADS"] = "1"
 import sys
 from pathlib import Path
 import importlib.util
