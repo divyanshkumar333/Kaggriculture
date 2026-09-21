@@ -7,3 +7,4 @@
 {"timestamp": "2026-09-20T18:30:40", "ref": "56403691", "agent_path": "submission.tar.gz", "description": "V058 Generalized Spoiler (Promoted from V057) - Fix __file__", "score": 449.8, "status": "COMPLETE"}
 {"timestamp": "2026-09-20T18:45:09", "ref": "56403913", "agent_path": "submission_v057_control.py", "description": "V057 Control (Restoring 1187 baseline)", "score": 855.6, "status": "COMPLETE"}
 {"timestamp": "2026-09-20T18:46:04", "ref": "56403931", "agent_path": "submission_v058_challenger.tar.gz", "description": "V058 Generalized Spoiler (Repaired HIRE5 Trace)", "score": 767.4, "status": "COMPLETE"}
+{"timestamp": "2026-09-21T05:17:57", "ref": "56417252", "agent_path": "submission_v104_quote_priority.tar.gz", "description": "V104 Quote Priority (2945 Chassis - duplicate-commodity order sort)", "score": null, "status": "PENDING"}

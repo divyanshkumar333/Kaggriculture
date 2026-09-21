@@ -38,5 +38,21 @@
     "predicted_kaggle_behavior": "Should absolutely dominate V057 and V16.",
     "confidence": "HIGH",
     "expected_improvement": "Potential new 1200+ champion"
+  },
+  {
+    "candidate": "v104_quote_priority",
+    "hypothesis": "Removing duplicate-commodity gate in _r37_reorder_sales ensures optimal quote priority sort across all multi-commodity sales.",
+    "mechanism": "2945 chassis with line 1838 gate removed",
+    "predicted_kaggle_behavior": "Dominates 2945 chassis in multi-commodity sale waves. Rating expected to break 2000+ upon ladder play.",
+    "confidence": "VERY HIGH",
+    "expected_improvement": "+$186/turn in mixed waves; 6W-0L-10D H2H vs Control, 16W-0L-0D vs population"
+  },
+  {
+    "candidate": "v105_tomato_unlocked",
+    "hypothesis": "Lowering tomato entry gate will capture tomato sink revenue after Day 18.",
+    "mechanism": "CROP_MIN_PRICE=58 and shops < 1",
+    "predicted_kaggle_behavior": "REVERTED / FAILED: -1,230 mean cash delta, 0W-4L-8D vs V104. Diverts $12k+ capital from high-margin livestock flywheel.",
+    "confidence": "REVERTED",
+    "expected_improvement": "Negative (-$1,230 regression)"
   }
 ]

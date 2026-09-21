@@ -1,0 +1,27 @@
+{
+  "h2h": {
+    "n": 16,
+    "quote_wins": 6,
+    "ctrl_wins": 0,
+    "draws": 10,
+    "quote_mean_cash": 97330.625,
+    "ctrl_mean_cash": 97330.25,
+    "delta_mean_cash": 0.375,
+    "quote_median_cash": 92923.5,
+    "ctrl_median_cash": 92923.0,
+    "quote_var_cash": 311593838.984375,
+    "ctrl_var_cash": 311587119.9375,
+    "quote_mean_sales": 4886921.375,
+    "ctrl_mean_sales": 4886921.375,
+    "quote_mean_prem": 2401159.5,
+    "ctrl_mean_prem": 2401159.5
+  },
+  "population": {
+    "n": 16,
+    "quote_wins": 16,
+    "ctrl_wins": 16,
+    "quote_mean_cash": 107413.3125,
+    "ctrl_mean_cash": 107412.8125,
+    "delta_mean_cash": 0.5
+  }
+}

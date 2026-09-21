@@ -1,0 +1,543 @@
+{
+  "test1_premium_vs_bulk_cross": {
+    "p0_rev": 2179.0,
+    "p1_rev": 2048.0,
+    "delta": 131.0,
+    "prices_before": {
+      "WHEAT": 25,
+      "CARROT": 35,
+      "TOMATO": 60,
+      "STRAWBERRY": 120,
+      "MELON": 250,
+      "EGG": 50,
+      "MILK": 160,
+      "WOOL": 200,
+      "FERTILIZER": 100
+    },
+    "prices_after": {
+      "WHEAT": 21,
+      "CARROT": 35,
+      "TOMATO": 60,
+      "STRAWBERRY": 84,
+      "MELON": 256,
+      "EGG": 50,
+      "MILK": 169,
+      "WOOL": 206,
+      "FERTILIZER": 100
+    },
+    "inv_before": {
+      "WHEAT": 10000,
+      "CARROT": 10000,
+      "TOMATO": 10000,
+      "STRAWBERRY": 10000,
+      "MELON": 10000,
+      "EGG": 10000,
+      "MILK": 10000,
+      "WOOL": 10000,
+      "FERTILIZER": 10000
+    },
+    "inv_after": {
+      "WHEAT": 10099,
+      "CARROT": 9999,
+      "TOMATO": 9999,
+      "STRAWBERRY": 10019,
+      "MELON": 9999,
+      "EGG": 9999,
+      "MILK": 9999,
+      "WOOL": 9999,
+      "FERTILIZER": 10000
+    },
+    "p0_orders": [
+      [
+        "SELL",
+        "STRAWBERRY",
+        10
+      ],
+      [
+        "SELL",
+        "WHEAT",
+        50
+      ]
+    ],
+    "p1_orders": [
+      [
+        "SELL",
+        "WHEAT",
+        50
+      ],
+      [
+        "SELL",
+        "STRAWBERRY",
+        10
+      ]
+    ]
+  },
+  "test2_symmetric_premium_lead": {
+    "p0_rev": 2123.0,
+    "p1_rev": 2123.0,
+    "delta": 0.0,
+    "prices_before": {
+      "WHEAT": 25,
+      "CARROT": 35,
+      "TOMATO": 60,
+      "STRAWBERRY": 120,
+      "MELON": 250,
+      "EGG": 50,
+      "MILK": 160,
+      "WOOL": 200,
+      "FERTILIZER": 100
+    },
+    "prices_after": {
+      "WHEAT": 21,
+      "CARROT": 35,
+      "TOMATO": 60,
+      "STRAWBERRY": 84,
+      "MELON": 256,
+      "EGG": 50,
+      "MILK": 169,
+      "WOOL": 206,
+      "FERTILIZER": 100
+    },
+    "inv_before": {
+      "WHEAT": 10000,
+      "CARROT": 10000,
+      "TOMATO": 10000,
+      "STRAWBERRY": 10000,
+      "MELON": 10000,
+      "EGG": 10000,
+      "MILK": 10000,
+      "WOOL": 10000,
+      "FERTILIZER": 10000
+    },
+    "inv_after": {
+      "WHEAT": 10099,
+      "CARROT": 9999,
+      "TOMATO": 9999,
+      "STRAWBERRY": 10019,
+      "MELON": 9999,
+      "EGG": 9999,
+      "MILK": 9999,
+      "WOOL": 9999,
+      "FERTILIZER": 10000
+    },
+    "p0_orders": [
+      [
+        "SELL",
+        "STRAWBERRY",
+        10
+      ],
+      [
+        "SELL",
+        "WHEAT",
+        50
+      ]
+    ],
+    "p1_orders": [
+      [
+        "SELL",
+        "STRAWBERRY",
+        10
+      ],
+      [
+        "SELL",
+        "WHEAT",
+        50
+      ]
+    ]
+  },
+  "test3_symmetric_bulk_lead": {
+    "p0_rev": 2123.0,
+    "p1_rev": 2123.0,
+    "delta": 0.0,
+    "prices_before": {
+      "WHEAT": 25,
+      "CARROT": 35,
+      "TOMATO": 60,
+      "STRAWBERRY": 120,
+      "MELON": 250,
+      "EGG": 50,
+      "MILK": 160,
+      "WOOL": 200,
+      "FERTILIZER": 100
+    },
+    "prices_after": {
+      "WHEAT": 21,
+      "CARROT": 35,
+      "TOMATO": 60,
+      "STRAWBERRY": 84,
+      "MELON": 256,
+      "EGG": 50,
+      "MILK": 169,
+      "WOOL": 206,
+      "FERTILIZER": 100
+    },
+    "inv_before": {
+      "WHEAT": 10000,
+      "CARROT": 10000,
+      "TOMATO": 10000,
+      "STRAWBERRY": 10000,
+      "MELON": 10000,
+      "EGG": 10000,
+      "MILK": 10000,
+      "WOOL": 10000,
+      "FERTILIZER": 10000
+    },
+    "inv_after": {
+      "WHEAT": 10099,
+      "CARROT": 9999,
+      "TOMATO": 9999,
+      "STRAWBERRY": 10019,
+      "MELON": 9999,
+      "EGG": 9999,
+      "MILK": 9999,
+      "WOOL": 9999,
+      "FERTILIZER": 10000
+    },
+    "p0_orders": [
+      [
+        "SELL",
+        "WHEAT",
+        50
+      ],
+      [
+        "SELL",
+        "STRAWBERRY",
+        10
+      ]
+    ],
+    "p1_orders": [
+      [
+        "SELL",
+        "WHEAT",
+        50
+      ],
+      [
+        "SELL",
+        "STRAWBERRY",
+        10
+      ]
+    ]
+  },
+  "test4_chunking_hazard": {
+    "p0_rev": 1046.0,
+    "p1_rev": 997.0,
+    "delta": 49.0,
+    "prices_before": {
+      "WHEAT": 25,
+      "CARROT": 35,
+      "TOMATO": 60,
+      "STRAWBERRY": 120,
+      "MELON": 250,
+      "EGG": 50,
+      "MILK": 160,
+      "WOOL": 200,
+      "FERTILIZER": 100
+    },
+    "prices_after": {
+      "WHEAT": 26,
+      "CARROT": 35,
+      "TOMATO": 60,
+      "STRAWBERRY": 84,
+      "MELON": 256,
+      "EGG": 50,
+      "MILK": 169,
+      "WOOL": 206,
+      "FERTILIZER": 100
+    },
+    "inv_before": {
+      "WHEAT": 10000,
+      "CARROT": 10000,
+      "TOMATO": 10000,
+      "STRAWBERRY": 10000,
+      "MELON": 10000,
+      "EGG": 10000,
+      "MILK": 10000,
+      "WOOL": 10000,
+      "FERTILIZER": 10000
+    },
+    "inv_after": {
+      "WHEAT": 9999,
+      "CARROT": 9999,
+      "TOMATO": 9999,
+      "STRAWBERRY": 10019,
+      "MELON": 9999,
+      "EGG": 9999,
+      "MILK": 9999,
+      "WOOL": 9999,
+      "FERTILIZER": 10000
+    },
+    "p0_orders": [
+      [
+        "SELL",
+        "STRAWBERRY",
+        10
+      ]
+    ],
+    "p1_orders": [
+      [
+        "SELL",
+        "STRAWBERRY",
+        5
+      ],
+      [
+        "SELL",
+        "STRAWBERRY",
+        5
+      ]
+    ]
+  },
+  "test5_v104_duplicate_gating": {
+    "p0_rev": 1344.0,
+    "p1_rev": 1158.0,
+    "delta": 186.0,
+    "prices_before": {
+      "WHEAT": 25,
+      "CARROT": 35,
+      "TOMATO": 60,
+      "STRAWBERRY": 120,
+      "MELON": 250,
+      "EGG": 50,
+      "MILK": 160,
+      "WOOL": 200,
+      "FERTILIZER": 100
+    },
+    "prices_after": {
+      "WHEAT": 23,
+      "CARROT": 35,
+      "TOMATO": 60,
+      "STRAWBERRY": 84,
+      "MELON": 256,
+      "EGG": 50,
+      "MILK": 169,
+      "WOOL": 206,
+      "FERTILIZER": 100
+    },
+    "inv_before": {
+      "WHEAT": 10000,
+      "CARROT": 10000,
+      "TOMATO": 10000,
+      "STRAWBERRY": 10000,
+      "MELON": 10000,
+      "EGG": 10000,
+      "MILK": 10000,
+      "WOOL": 10000,
+      "FERTILIZER": 10000
+    },
+    "inv_after": {
+      "WHEAT": 10019,
+      "CARROT": 9999,
+      "TOMATO": 9999,
+      "STRAWBERRY": 10019,
+      "MELON": 9999,
+      "EGG": 9999,
+      "MILK": 9999,
+      "WOOL": 9999,
+      "FERTILIZER": 10000
+    },
+    "p0_orders": [
+      [
+        "SELL",
+        "STRAWBERRY",
+        10
+      ],
+      [
+        "SELL",
+        "WHEAT",
+        10
+      ]
+    ],
+    "p1_orders": [
+      [
+        "SELL",
+        "WHEAT",
+        5
+      ],
+      [
+        "SELL",
+        "WHEAT",
+        5
+      ],
+      [
+        "SELL",
+        "STRAWBERRY",
+        10
+      ]
+    ]
+  },
+  "test6_multipremium_clash": {
+    "p0_rev": 6798.0,
+    "p1_rev": 6870.0,
+    "delta": -72.0,
+    "prices_before": {
+      "WHEAT": 25,
+      "CARROT": 35,
+      "TOMATO": 60,
+      "STRAWBERRY": 120,
+      "MELON": 250,
+      "EGG": 50,
+      "MILK": 160,
+      "WOOL": 200,
+      "FERTILIZER": 100
+    },
+    "prices_after": {
+      "WHEAT": 26,
+      "CARROT": 35,
+      "TOMATO": 60,
+      "STRAWBERRY": 84,
+      "MELON": 246,
+      "EGG": 50,
+      "MILK": 120,
+      "WOOL": 179,
+      "FERTILIZER": 100
+    },
+    "inv_before": {
+      "WHEAT": 10000,
+      "CARROT": 10000,
+      "TOMATO": 10000,
+      "STRAWBERRY": 10000,
+      "MELON": 10000,
+      "EGG": 10000,
+      "MILK": 10000,
+      "WOOL": 10000,
+      "FERTILIZER": 10000
+    },
+    "inv_after": {
+      "WHEAT": 9999,
+      "CARROT": 9999,
+      "TOMATO": 9999,
+      "STRAWBERRY": 10019,
+      "MELON": 10019,
+      "EGG": 9999,
+      "MILK": 10019,
+      "WOOL": 10019,
+      "FERTILIZER": 10000
+    },
+    "p0_orders": [
+      [
+        "SELL",
+        "MELON",
+        10
+      ],
+      [
+        "SELL",
+        "MILK",
+        10
+      ],
+      [
+        "SELL",
+        "WOOL",
+        10
+      ],
+      [
+        "SELL",
+        "STRAWBERRY",
+        10
+      ]
+    ],
+    "p1_orders": [
+      [
+        "SELL",
+        "STRAWBERRY",
+        10
+      ],
+      [
+        "SELL",
+        "WOOL",
+        10
+      ],
+      [
+        "SELL",
+        "MILK",
+        10
+      ],
+      [
+        "SELL",
+        "MELON",
+        10
+      ]
+    ]
+  },
+  "test7_marginal_collapse": {
+    "WHEAT": {
+      "base_price": 25,
+      "rev_10": 237,
+      "avg_p_10": 23.7,
+      "rev_50": 1127,
+      "avg_p_50": 22.54,
+      "rev_100": 2193,
+      "avg_p_100": 21.93
+    },
+    "CARROT": {
+      "base_price": 35,
+      "rev_10": 328,
+      "avg_p_10": 32.8,
+      "rev_50": 1482,
+      "avg_p_50": 29.64,
+      "rev_100": 2738,
+      "avg_p_100": 27.38
+    },
+    "TOMATO": {
+      "base_price": 60,
+      "rev_10": 550,
+      "avg_p_10": 55.0,
+      "rev_50": 2411,
+      "avg_p_50": 48.22,
+      "rev_100": 4318,
+      "avg_p_100": 43.18
+    },
+    "STRAWBERRY": {
+      "base_price": 120,
+      "rev_10": 1113,
+      "avg_p_10": 111.3,
+      "rev_50": 3648,
+      "avg_p_50": 72.96,
+      "rev_100": 3847,
+      "avg_p_100": 38.47
+    },
+    "MELON": {
+      "base_price": 250,
+      "rev_10": 2498,
+      "avg_p_10": 249.8,
+      "rev_50": 12098,
+      "avg_p_50": 241.96,
+      "rev_100": 21721,
+      "avg_p_100": 217.21
+    },
+    "EGG": {
+      "base_price": 50,
+      "rev_10": 474,
+      "avg_p_10": 47.4,
+      "rev_50": 2244,
+      "avg_p_50": 44.88,
+      "rev_100": 4371,
+      "avg_p_100": 43.71
+    },
+    "MILK": {
+      "base_price": 160,
+      "rev_10": 1506,
+      "avg_p_10": 150.6,
+      "rev_50": 5430,
+      "avg_p_50": 108.6,
+      "rev_100": 6205,
+      "avg_p_100": 62.05
+    },
+    "WOOL": {
+      "base_price": 200,
+      "rev_10": 1983,
+      "avg_p_10": 198.3,
+      "rev_50": 7655,
+      "avg_p_50": 153.1,
+      "rev_100": 7969,
+      "avg_p_100": 79.69
+    },
+    "FERTILIZER": {
+      "base_price": 100,
+      "rev_10": 991,
+      "avg_p_10": 99.1,
+      "rev_50": 4755,
+      "avg_p_50": 95.1,
+      "rev_100": 9010,
+      "avg_p_100": 90.1
+    }
+  }
+}
