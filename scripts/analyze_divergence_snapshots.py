@@ -1,3 +1,6 @@
+import os
+os.environ['OPENBLAS_NUM_THREADS'] = '1'
+os.environ['OMP_NUM_THREADS'] = '1'
 """
 Phase 7.5: Divergence Analysis
 Runs V057 vs Kaito on a few seeds and extracts state snapshots at days 0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 29.

@@ -1,0 +1,859 @@
+{
+  "0": {
+    "sells": {
+      "WHEAT": 18297,
+      "FERTILIZER": 10357,
+      "WOOL": 7184,
+      "MILK": 8257,
+      "MELON": 6072,
+      "EGG": 8077,
+      "STRAWBERRY": 6253,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": []
+  },
+  "1": {
+    "sells": {
+      "WHEAT": 10406,
+      "FERTILIZER": 8447,
+      "WOOL": 9580,
+      "MILK": 4421,
+      "MELON": 1172,
+      "EGG": 1169,
+      "STRAWBERRY": 10390,
+      "CARROT": 1182,
+      "TOMATO": 1100
+    },
+    "shop_triggers": []
+  },
+  "2": {
+    "sells": {
+      "WHEAT": 18294,
+      "FERTILIZER": 10352,
+      "WOOL": 7177,
+      "MILK": 8244,
+      "MELON": 6072,
+      "EGG": 8074,
+      "STRAWBERRY": 6253,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": []
+  },
+  "3": {
+    "sells": {
+      "WHEAT": 25285,
+      "FERTILIZER": 18351,
+      "WOOL": 12594,
+      "MILK": 9319,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13265,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    },
+    "shop_triggers": []
+  },
+  "4": {
+    "sells": {
+      "WHEAT": 25282,
+      "FERTILIZER": 18341,
+      "WOOL": 12694,
+      "MILK": 9322,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13265,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    },
+    "shop_triggers": []
+  },
+  "5": {
+    "sells": {
+      "WHEAT": 25292,
+      "FERTILIZER": 18343,
+      "WOOL": 12733,
+      "MILK": 9342,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13299,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    },
+    "shop_triggers": []
+  },
+  "6": {
+    "sells": {
+      "WHEAT": 25282,
+      "FERTILIZER": 18343,
+      "WOOL": 12694,
+      "MILK": 9322,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13265,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    },
+    "shop_triggers": []
+  },
+  "7": {
+    "sells": {
+      "WHEAT": 25282,
+      "FERTILIZER": 18343,
+      "WOOL": 12694,
+      "MILK": 9322,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13265,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    },
+    "shop_triggers": []
+  },
+  "8": {
+    "sells": {
+      "WHEAT": 25282,
+      "FERTILIZER": 18342,
+      "WOOL": 12702,
+      "MILK": 9322,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13265,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    },
+    "shop_triggers": []
+  },
+  "9": {
+    "sells": {
+      "WHEAT": 18287,
+      "FERTILIZER": 10324,
+      "WOOL": 7300,
+      "MILK": 8221,
+      "MELON": 6072,
+      "STRAWBERRY": 6250,
+      "EGG": 8018,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": []
+  },
+  "10": {
+    "sells": {
+      "WHEAT": 25307,
+      "FERTILIZER": 18348,
+      "WOOL": 12594,
+      "MILK": 9319,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13265,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    },
+    "shop_triggers": []
+  },
+  "11": {
+    "sells": {
+      "WHEAT": 25282,
+      "FERTILIZER": 18342,
+      "WOOL": 12594,
+      "MILK": 9322,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13265,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    },
+    "shop_triggers": []
+  },
+  "12": {
+    "sells": {
+      "WHEAT": 18421,
+      "FERTILIZER": 10380,
+      "WOOL": 7368,
+      "MILK": 8220,
+      "MELON": 6072,
+      "STRAWBERRY": 6263,
+      "EGG": 8018,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": []
+  },
+  "100": {
+    "sells": {
+      "WHEAT": 18297,
+      "FERTILIZER": 10350,
+      "WOOL": 7184,
+      "MILK": 8251,
+      "MELON": 6072,
+      "EGG": 8078,
+      "STRAWBERRY": 6260,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": []
+  },
+  "101": {
+    "sells": {
+      "WHEAT": 18322,
+      "FERTILIZER": 10349,
+      "WOOL": 7198,
+      "MILK": 8269,
+      "MELON": 6072,
+      "EGG": 8084,
+      "STRAWBERRY": 6293,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "BAKERY",
+        "BAKERY"
+      ],
+      [
+        "BRUNCH_SPOT",
+        "PET_CAFE"
+      ]
+    ]
+  },
+  "103": {
+    "sells": {
+      "WHEAT": 21619,
+      "FERTILIZER": 10339,
+      "WOOL": 7252,
+      "MILK": 8316,
+      "MELON": 6072,
+      "EGG": 8162,
+      "STRAWBERRY": 6318,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "BAKERY",
+        "BRUNCH_SPOT"
+      ],
+      [
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT"
+      ],
+      [
+        "PET_CAFE",
+        "BAKERY"
+      ]
+    ]
+  },
+  "104": {
+    "sells": {
+      "WHEAT": 18741,
+      "FERTILIZER": 10339,
+      "WOOL": 7249,
+      "MILK": 8316,
+      "MELON": 6072,
+      "EGG": 8149,
+      "STRAWBERRY": 6295,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "BAKERY",
+        "FARMERS_MARKET"
+      ],
+      [
+        "FARMERS_MARKET",
+        "FARMERS_MARKET"
+      ]
+    ]
+  },
+  "105": {
+    "sells": {
+      "WHEAT": 18322,
+      "FERTILIZER": 10351,
+      "WOOL": 7200,
+      "MILK": 8269,
+      "MELON": 6072,
+      "EGG": 8084,
+      "STRAWBERRY": 6293,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "BAKERY",
+        "ICE_CREAM_SHOP"
+      ],
+      [
+        "BRUNCH_SPOT",
+        "BAKERY"
+      ],
+      [
+        "BRUNCH_SPOT",
+        "ICE_CREAM_SHOP"
+      ],
+      [
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP"
+      ],
+      [
+        "FARMERS_MARKET",
+        "PIZZA_SHOP"
+      ],
+      [
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP"
+      ],
+      [
+        "ICE_CREAM_SHOP",
+        "BAKERY"
+      ],
+      [
+        "ICE_CREAM_SHOP",
+        "BRUNCH_SPOT"
+      ],
+      [
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET"
+      ],
+      [
+        "ICE_CREAM_SHOP",
+        "ICE_CREAM_SHOP"
+      ],
+      [
+        "ICE_CREAM_SHOP",
+        "PET_CAFE"
+      ],
+      [
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP"
+      ],
+      [
+        "PET_CAFE",
+        "ICE_CREAM_SHOP"
+      ],
+      [
+        "PET_CAFE",
+        "SMOOTHIE_SHOP"
+      ],
+      [
+        "PIZZA_SHOP",
+        "BRUNCH_SPOT"
+      ],
+      [
+        "PIZZA_SHOP",
+        "PET_CAFE"
+      ],
+      [
+        "SMOOTHIE_SHOP",
+        "BAKERY"
+      ],
+      [
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET"
+      ],
+      [
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP"
+      ],
+      [
+        "SMOOTHIE_SHOP",
+        "PET_CAFE"
+      ],
+      [
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP"
+      ]
+    ]
+  },
+  "106": {
+    "sells": {
+      "WHEAT": 18322,
+      "FERTILIZER": 10351,
+      "WOOL": 7199,
+      "MILK": 8269,
+      "MELON": 6072,
+      "EGG": 8084,
+      "STRAWBERRY": 6293,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "BAKERY",
+        "PET_CAFE"
+      ]
+    ]
+  },
+  "107": {
+    "sells": {
+      "WHEAT": 18322,
+      "FERTILIZER": 10351,
+      "WOOL": 7198,
+      "MILK": 8269,
+      "MELON": 6072,
+      "EGG": 8084,
+      "STRAWBERRY": 6293,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "BAKERY",
+        "PIZZA_SHOP"
+      ],
+      [
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP"
+      ],
+      [
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP"
+      ],
+      [
+        "PET_CAFE",
+        "PIZZA_SHOP"
+      ],
+      [
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP"
+      ]
+    ]
+  },
+  "108": {
+    "sells": {
+      "WHEAT": 18357,
+      "FERTILIZER": 10350,
+      "WOOL": 7222,
+      "MILK": 8314,
+      "MELON": 6072,
+      "EGG": 8112,
+      "STRAWBERRY": 6283,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "BAKERY",
+        "SMOOTHIE_SHOP"
+      ],
+      [
+        "ICE_CREAM_SHOP",
+        "PIZZA_SHOP"
+      ]
+    ]
+  },
+  "109": {
+    "sells": {
+      "WHEAT": 25293,
+      "FERTILIZER": 18343,
+      "WOOL": 12694,
+      "MILK": 9324,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13278,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    },
+    "shop_triggers": [
+      [
+        "BAKERY",
+        "YARN_STORE"
+      ],
+      [
+        "BRUNCH_SPOT",
+        "YARN_STORE"
+      ]
+    ]
+  },
+  "110": {
+    "sells": {
+      "WHEAT": 18347,
+      "FERTILIZER": 10340,
+      "WOOL": 7137,
+      "MILK": 8226,
+      "MELON": 6072,
+      "EGG": 8142,
+      "STRAWBERRY": 6258,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET"
+      ]
+    ]
+  },
+  "111": {
+    "sells": {
+      "WHEAT": 18379,
+      "FERTILIZER": 10357,
+      "WOOL": 7194,
+      "MILK": 8257,
+      "MELON": 6072,
+      "EGG": 8106,
+      "STRAWBERRY": 6256,
+      "CARROT": 18047,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "FARMERS_MARKET",
+        "BAKERY"
+      ]
+    ]
+  },
+  "112": {
+    "sells": {
+      "WHEAT": 19671,
+      "FERTILIZER": 10347,
+      "WOOL": 7218,
+      "MILK": 8275,
+      "MELON": 6072,
+      "EGG": 8111,
+      "STRAWBERRY": 6293,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "FARMERS_MARKET",
+        "BRUNCH_SPOT"
+      ]
+    ]
+  },
+  "113": {
+    "sells": {
+      "WHEAT": 18322,
+      "FERTILIZER": 10346,
+      "WOOL": 7198,
+      "MILK": 8260,
+      "MELON": 6072,
+      "EGG": 8088,
+      "STRAWBERRY": 6293,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "FARMERS_MARKET",
+        "PET_CAFE"
+      ]
+    ]
+  },
+  "114": {
+    "sells": {
+      "WHEAT": 18322,
+      "FERTILIZER": 10348,
+      "WOOL": 7198,
+      "MILK": 8257,
+      "MELON": 6072,
+      "EGG": 8088,
+      "STRAWBERRY": 6293,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "FARMERS_MARKET",
+        "YARN_STORE"
+      ]
+    ]
+  },
+  "115": {
+    "sells": {
+      "WHEAT": 18322,
+      "FERTILIZER": 10349,
+      "WOOL": 7198,
+      "MILK": 8254,
+      "MELON": 6072,
+      "EGG": 8084,
+      "STRAWBERRY": 6293,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "ICE_CREAM_SHOP",
+        "YARN_STORE"
+      ]
+    ]
+  },
+  "116": {
+    "sells": {
+      "WHEAT": 18322,
+      "FERTILIZER": 10349,
+      "WOOL": 7198,
+      "MILK": 8269,
+      "MELON": 6072,
+      "EGG": 8084,
+      "STRAWBERRY": 6293,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "PET_CAFE",
+        "BRUNCH_SPOT"
+      ]
+    ]
+  },
+  "117": {
+    "sells": {
+      "WHEAT": 18334,
+      "FERTILIZER": 10357,
+      "WOOL": 7191,
+      "MILK": 8259,
+      "MELON": 6072,
+      "EGG": 8133,
+      "STRAWBERRY": 6275,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "PET_CAFE",
+        "FARMERS_MARKET"
+      ]
+    ]
+  },
+  "118": {
+    "sells": {
+      "WHEAT": 18313,
+      "FERTILIZER": 10352,
+      "WOOL": 7184,
+      "MILK": 8274,
+      "MELON": 6072,
+      "EGG": 8079,
+      "STRAWBERRY": 6259,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "PET_CAFE",
+        "PET_CAFE"
+      ]
+    ]
+  },
+  "119": {
+    "sells": {
+      "WHEAT": 18322,
+      "FERTILIZER": 10349,
+      "WOOL": 7198,
+      "MILK": 8269,
+      "MELON": 6072,
+      "EGG": 8084,
+      "STRAWBERRY": 6293,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "PET_CAFE",
+        "YARN_STORE"
+      ],
+      [
+        "YARN_STORE",
+        "BAKERY"
+      ]
+    ]
+  },
+  "120": {
+    "sells": {
+      "WHEAT": 18351,
+      "FERTILIZER": 10352,
+      "WOOL": 7187,
+      "MILK": 8274,
+      "MELON": 6072,
+      "EGG": 8086,
+      "STRAWBERRY": 6263,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "PIZZA_SHOP",
+        "BAKERY"
+      ]
+    ]
+  },
+  "121": {
+    "sells": {
+      "WHEAT": 18324,
+      "FERTILIZER": 10357,
+      "WOOL": 7203,
+      "MILK": 8272,
+      "MELON": 6072,
+      "EGG": 8084,
+      "STRAWBERRY": 6304,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "PIZZA_SHOP",
+        "FARMERS_MARKET"
+      ],
+      [
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT"
+      ]
+    ]
+  },
+  "122": {
+    "sells": {
+      "WHEAT": 18357,
+      "FERTILIZER": 10350,
+      "WOOL": 7222,
+      "MILK": 8314,
+      "MELON": 6072,
+      "EGG": 8112,
+      "STRAWBERRY": 6283,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "PIZZA_SHOP",
+        "ICE_CREAM_SHOP"
+      ]
+    ]
+  },
+  "123": {
+    "sells": {
+      "WHEAT": 18322,
+      "FERTILIZER": 10348,
+      "WOOL": 7198,
+      "MILK": 8257,
+      "MELON": 6072,
+      "EGG": 8084,
+      "STRAWBERRY": 6293,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "PIZZA_SHOP",
+        "PIZZA_SHOP"
+      ]
+    ]
+  },
+  "124": {
+    "sells": {
+      "WHEAT": 19261,
+      "FERTILIZER": 10347,
+      "WOOL": 7194,
+      "MILK": 8286,
+      "MELON": 6072,
+      "EGG": 8096,
+      "STRAWBERRY": 6302,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP"
+      ]
+    ]
+  },
+  "125": {
+    "sells": {
+      "WHEAT": 18322,
+      "FERTILIZER": 10351,
+      "WOOL": 7200,
+      "MILK": 8269,
+      "MELON": 6072,
+      "EGG": 8084,
+      "STRAWBERRY": 6293,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "PIZZA_SHOP",
+        "YARN_STORE"
+      ],
+      [
+        "YARN_STORE",
+        "YARN_STORE"
+      ]
+    ]
+  },
+  "126": {
+    "sells": {
+      "WHEAT": 18310,
+      "FERTILIZER": 10339,
+      "WOOL": 7298,
+      "MILK": 8254,
+      "MELON": 6072,
+      "EGG": 8084,
+      "STRAWBERRY": 6293,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    },
+    "shop_triggers": [
+      [
+        "SMOOTHIE_SHOP",
+        "YARN_STORE"
+      ],
+      [
+        "YARN_STORE",
+        "BRUNCH_SPOT"
+      ],
+      [
+        "YARN_STORE",
+        "ICE_CREAM_SHOP"
+      ],
+      [
+        "YARN_STORE",
+        "PET_CAFE"
+      ],
+      [
+        "YARN_STORE",
+        "SMOOTHIE_SHOP"
+      ]
+    ]
+  },
+  "127": {
+    "sells": {
+      "WHEAT": 25293,
+      "FERTILIZER": 18343,
+      "WOOL": 12694,
+      "MILK": 9324,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13278,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    },
+    "shop_triggers": [
+      [
+        "YARN_STORE",
+        "FARMERS_MARKET"
+      ]
+    ]
+  },
+  "128": {
+    "sells": {
+      "WHEAT": 25293,
+      "FERTILIZER": 18349,
+      "WOOL": 12097,
+      "MILK": 9327,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13278,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    },
+    "shop_triggers": [
+      [
+        "YARN_STORE",
+        "PIZZA_SHOP"
+      ]
+    ]
+  }
+}

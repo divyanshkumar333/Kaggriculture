@@ -27,7 +27,7 @@ def _run_single_match(args):
 
     # Load inside process to ensure clean isolation
     def load_code(p):
-        ns = {}
+        ns = {'__file__': p}
         with open(p, "r", encoding="utf-8") as f:
             code = f.read()
         exec(compile(code, os.path.basename(p), "exec"), ns)
@@ -143,9 +143,9 @@ def run_fast_tournament(cand_path, population_paths, seeds=[42, 101, 2024, 777, 
 if __name__ == "__main__":
     cand = sys.argv[1] if len(sys.argv) > 1 else r"e:\Setup\kaggle\kaggriculture\agents\the_2945_farm.py"
     pop = [
-        r"e:\Setup\kaggle\kaggriculture\submission_v057_control.py",
-        r"e:\Setup\kaggle\kaggriculture\agents\public_v16_rc5.py",
-        r"e:\Setup\kaggle\kaggriculture\agents\013_robust_trace.py",
-        r"e:\Setup\kaggle\kaggriculture\agents\v081_kaggle_83k_trace.py"
+        r"e:\Setup\kaggle\kaggriculture\agents\v057_deep_frontrun.py",
+        r"e:\Setup\kaggle\kaggriculture\agents\v058_generalized_spoiler.py",
+        r"e:\Setup\kaggle\kaggriculture\agents\v061_ultimate_melon_spoiler.py",
+        r"e:\Setup\kaggle\kaggriculture\agents\v063_meta_router.py"
     ]
     run_fast_tournament(cand, pop, seeds=[42, 101, 2024, 777, 9999], max_workers=6)

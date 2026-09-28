@@ -1,0 +1,36 @@
+{
+  "actions": "list[3982]",
+  "actions_first_keys": [
+    "farmer",
+    "hands",
+    "market"
+  ],
+  "routes": "dict[41]",
+  "routes_keys": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "100",
+    "101",
+    "103",
+    "104",
+    "105",
+    "106",
+    "107"
+  ],
+  "shops": "list[64]",
+  "shops_first_keys": [
+    "shops",
+    "route"
+  ]
+}

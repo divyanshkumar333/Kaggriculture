@@ -1,0 +1,1609 @@
+{
+  "V104_episodes": [
+    {
+      "episode_id": 113186913,
+      "rewards": [
+        80585.0,
+        83090.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            8
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            3
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ]
+      ],
+      "final_cash": [
+        80585.0,
+        83090.0
+      ],
+      "midgame_cash_day15": [
+        19116.0,
+        19656.0
+      ]
+    },
+    {
+      "episode_id": 113177346,
+      "rewards": [
+        64409.0,
+        64408.0
+      ],
+      "winner": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        64409.0,
+        64408.0
+      ],
+      "midgame_cash_day15": [
+        19143.0,
+        19143.0
+      ]
+    },
+    {
+      "episode_id": 113162217,
+      "rewards": [
+        76662.0,
+        77567.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ]
+      ],
+      "final_cash": [
+        76662.0,
+        77567.0
+      ],
+      "midgame_cash_day15": [
+        23473.0,
+        23701.0
+      ]
+    },
+    {
+      "episode_id": 113161594,
+      "rewards": [
+        105933.0,
+        106766.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            7
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ]
+        ]
+      ],
+      "final_cash": [
+        105933.0,
+        106766.0
+      ],
+      "midgame_cash_day15": [
+        26711.0,
+        25374.0
+      ]
+    },
+    {
+      "episode_id": 113146367,
+      "rewards": [
+        97101.0,
+        80271.0
+      ],
+      "winner": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            7
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ]
+        ]
+      ],
+      "final_cash": [
+        97101.0,
+        80271.0
+      ],
+      "midgame_cash_day15": [
+        23885.0,
+        24089.0
+      ]
+    },
+    {
+      "episode_id": 113138783,
+      "rewards": [
+        113524.0,
+        116486.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ]
+      ],
+      "final_cash": [
+        113524.0,
+        116486.0
+      ],
+      "midgame_cash_day15": [
+        22681.0,
+        22467.0
+      ]
+    },
+    {
+      "episode_id": 113129899,
+      "rewards": [
+        103381.0,
+        98876.0
+      ],
+      "winner": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            13
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        103381.0,
+        98876.0
+      ],
+      "midgame_cash_day15": [
+        26073.0,
+        25794.0
+      ]
+    },
+    {
+      "episode_id": 113126811,
+      "rewards": [
+        138409.0,
+        137637.0
+      ],
+      "winner": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            7
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        138409.0,
+        137637.0
+      ],
+      "midgame_cash_day15": [
+        25944.0,
+        25911.0
+      ]
+    },
+    {
+      "episode_id": 113112280,
+      "rewards": [
+        81622.0,
+        80237.0
+      ],
+      "winner": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            5
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        81622.0,
+        80237.0
+      ],
+      "midgame_cash_day15": [
+        25657.0,
+        25651.0
+      ]
+    },
+    {
+      "episode_id": 113101893,
+      "rewards": [
+        111188.0,
+        116072.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            3
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            3
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            4
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            1
+          ]
+        ]
+      ],
+      "final_cash": [
+        111188.0,
+        116072.0
+      ],
+      "midgame_cash_day15": [
+        28963.0,
+        28836.0
+      ]
+    },
+    {
+      "episode_id": 113094106,
+      "rewards": [
+        79949.0,
+        79999.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            5
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ]
+      ],
+      "final_cash": [
+        79949.0,
+        79999.0
+      ],
+      "midgame_cash_day15": [
+        22090.0,
+        22140.0
+      ]
+    },
+    {
+      "episode_id": 113081440,
+      "rewards": [
+        130075.0,
+        130858.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        130075.0,
+        130858.0
+      ],
+      "midgame_cash_day15": [
+        26421.0,
+        26421.0
+      ]
+    },
+    {
+      "episode_id": 113080112,
+      "rewards": [
+        76741.0,
+        76741.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        76741.0,
+        76741.0
+      ],
+      "midgame_cash_day15": [
+        24294.0,
+        24294.0
+      ]
+    },
+    {
+      "episode_id": 113071683,
+      "rewards": [
+        97237.0,
+        95558.0
+      ],
+      "winner": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            5
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        97237.0,
+        95558.0
+      ],
+      "midgame_cash_day15": [
+        22763.0,
+        22747.0
+      ]
+    },
+    {
+      "episode_id": 113070698,
+      "rewards": [
+        82826.0,
+        84925.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            5
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            10
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        82826.0,
+        84925.0
+      ],
+      "midgame_cash_day15": [
+        19981.0,
+        19543.0
+      ]
+    },
+    {
+      "episode_id": 113061188,
+      "rewards": [
+        90678.0,
+        87271.0
+      ],
+      "winner": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            8
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            53
+          ]
+        ]
+      ],
+      "final_cash": [
+        90678.0,
+        87271.0
+      ],
+      "midgame_cash_day15": [
+        26623.0,
+        24405.0
+      ]
+    },
+    {
+      "episode_id": 113049768,
+      "rewards": [
+        110959.0,
+        109178.0
+      ],
+      "winner": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            7
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ]
+        ]
+      ],
+      "final_cash": [
+        110959.0,
+        109178.0
+      ],
+      "midgame_cash_day15": [
+        27077.0,
+        25124.0
+      ]
+    },
+    {
+      "episode_id": 113037951,
+      "rewards": [
+        128967.0,
+        130486.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            5
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ]
+      ],
+      "final_cash": [
+        128967.0,
+        130486.0
+      ],
+      "midgame_cash_day15": [
+        25651.0,
+        25737.0
+      ]
+    },
+    {
+      "episode_id": 113038018,
+      "rewards": [
+        68104.0,
+        68103.0
+      ],
+      "winner": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        68104.0,
+        68103.0
+      ],
+      "midgame_cash_day15": [
+        21201.0,
+        21201.0
+      ]
+    },
+    {
+      "episode_id": 113036067,
+      "rewards": [
+        106345.0,
+        106709.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            10
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            10
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        106345.0,
+        106709.0
+      ],
+      "midgame_cash_day15": [
+        18918.0,
+        19054.0
+      ]
+    }
+  ],
+  "V105_episodes": [
+    {
+      "episode_id": 113352265,
+      "rewards": [
+        103711.0,
+        99795.0
+      ],
+      "winner": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            13
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            30
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            30
+          ]
+        ]
+      ],
+      "final_cash": [
+        103711.0,
+        99795.0
+      ],
+      "midgame_cash_day15": [
+        28375.0,
+        26694.0
+      ]
+    },
+    {
+      "episode_id": 113351139,
+      "rewards": [
+        112167.0,
+        119896.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_SEED",
+            "WHEAT",
+            17
+          ],
+          [
+            "BUY_SEED",
+            "CARROT",
+            1
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            3
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            2
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        112167.0,
+        119896.0
+      ],
+      "midgame_cash_day15": [
+        6964.0,
+        22100.0
+      ]
+    },
+    {
+      "episode_id": 113349978,
+      "rewards": [
+        79780.0,
+        119309.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            13
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        79780.0,
+        119309.0
+      ],
+      "midgame_cash_day15": [
+        21093.0,
+        27187.0
+      ]
+    },
+    {
+      "episode_id": 113348839,
+      "rewards": [
+        40751.0,
+        67233.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            13
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        40751.0,
+        67233.0
+      ],
+      "midgame_cash_day15": [
+        22682.0,
+        22453.0
+      ]
+    },
+    {
+      "episode_id": 113347713,
+      "rewards": [
+        124513.0,
+        104491.0
+      ],
+      "winner": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            5
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            2
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            2
+          ],
+          [
+            "BUY_SEED",
+            "MELON",
+            11
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            6
+          ]
+        ]
+      ],
+      "final_cash": [
+        124513.0,
+        104491.0
+      ],
+      "midgame_cash_day15": [
+        29398.0,
+        15278.0
+      ]
+    },
+    {
+      "episode_id": 113346568,
+      "rewards": [
+        99576.0,
+        136159.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "MELON",
+            6
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            6
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            3
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        99576.0,
+        136159.0
+      ],
+      "midgame_cash_day15": [
+        15096.0,
+        31915.0
+      ]
+    },
+    {
+      "episode_id": 113345407,
+      "rewards": [
+        99900.0,
+        135729.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            2
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            2
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            7
+          ],
+          [
+            "BUY_SEED",
+            "MELON",
+            12
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            6
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        99900.0,
+        135729.0
+      ],
+      "midgame_cash_day15": [
+        11319.0,
+        29300.0
+      ]
+    },
+    {
+      "episode_id": 113344258,
+      "rewards": [
+        79858.0,
+        144876.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            2
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            2
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            7
+          ],
+          [
+            "BUY_SEED",
+            "MELON",
+            12
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        79858.0,
+        144876.0
+      ],
+      "midgame_cash_day15": [
+        16400.0,
+        20853.0
+      ]
+    },
+    {
+      "episode_id": 113343122,
+      "rewards": [
+        133917.0,
+        76093.0
+      ],
+      "winner": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ],
+        [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            11
+          ],
+          [
+            "BUY_SEED",
+            "MELON",
+            6
+          ]
+        ]
+      ],
+      "final_cash": [
+        133917.0,
+        76093.0
+      ],
+      "midgame_cash_day15": [
+        32108.0,
+        3612.0
+      ]
+    },
+    {
+      "episode_id": 113341974,
+      "rewards": [
+        54719.0,
+        158857.0
+      ],
+      "winner": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "opening_markets": [
+        [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            5
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            4
+          ],
+          [
+            "BUY_SEED",
+            "MELON",
+            5
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            5
+          ]
+        ],
+        [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ]
+        ]
+      ],
+      "final_cash": [
+        54719.0,
+        158857.0
+      ],
+      "midgame_cash_day15": [
+        1961.0,
+        30011.0
+      ]
+    }
+  ]
+}

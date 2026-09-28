@@ -1,3 +1,6 @@
+import os
+os.environ['OPENBLAS_NUM_THREADS'] = '1'
+os.environ['OMP_NUM_THREADS'] = '1'
 """
 Phase 7.5: Benchmark V057 against actual replay-derived agents from CURRENT_LIVE_STYLE_LEAGUE
 """

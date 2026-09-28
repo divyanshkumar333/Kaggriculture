@@ -20,11 +20,20 @@ def analyze_all_replays(replay_dir='kaggle_episodes'):
             print(f'Skipping incomplete replay {fname} ({total_steps} steps)')
             continue
         
+        info = data.get('info', {})
+        team_names = info.get('TeamNames', [])
+        p0_is_us = len(team_names) > 0 and team_names[0] == 'Divyansh Kumar'
+        p1_is_us = len(team_names) > 1 and team_names[1] == 'Divyansh Kumar'
+        
         final_step = steps[-1]
         p0_rew = final_step[0].get('reward', 0.0)
         p1_rew = final_step[1].get('reward', 0.0)
-        p0_win = p0_rew > p1_rew
-        p1_win = p1_rew > p0_rew
+        
+        our_rew = p0_rew if p0_is_us else p1_rew
+        opp_rew = p1_rew if p0_is_us else p0_rew
+        
+        us_win = our_rew > opp_rew
+        opp_win = opp_rew > our_rew
         
         # Track timeline statistics
         p0_max_hands = 0
@@ -74,41 +83,51 @@ def analyze_all_replays(replay_dir='kaggle_episodes'):
                         if isinstance(hand_act, list) and len(hand_act) >= 2 and hand_act[0] == 'PLANT':
                             p_crops[hand_act[1]] += 1
         
+        our_max_hands = p0_max_hands if p0_is_us else p1_max_hands
+        opp_max_hands = p1_max_hands if p0_is_us else p0_max_hands
+        our_max_quads = p0_max_quads if p0_is_us else p1_max_quads
+        opp_max_quads = p1_max_quads if p0_is_us else p0_max_quads
+        our_animals = dict(p0_animals_timeline) if p0_is_us else dict(p1_animals_timeline)
+        opp_animals = dict(p1_animals_timeline) if p0_is_us else dict(p0_animals_timeline)
+        our_crops = dict(p0_crops_planted_total) if p0_is_us else dict(p1_crops_planted_total)
+        opp_crops = dict(p1_crops_planted_total) if p0_is_us else dict(p0_crops_planted_total)
+        
         rec = {
             'file': fname,
-            'p0_rew': p0_rew,
-            'p1_rew': p1_rew,
-            'winner': 'P0 (Us)' if p0_win else 'P1 (Opponent)' if p1_win else 'Tie',
-            'p0_max_hands': p0_max_hands,
-            'p1_max_hands': p1_max_hands,
-            'p0_max_quads': p0_max_quads,
-            'p1_max_quads': p1_max_quads,
-            'p0_animals': dict(p0_animals_timeline),
-            'p1_animals': dict(p1_animals_timeline),
-            'p0_crops': dict(p0_crops_planted_total),
-            'p1_crops': dict(p1_crops_planted_total)
+            'our_rew': our_rew,
+            'opp_rew': opp_rew,
+            'winner': 'Us' if us_win else 'Opponent' if opp_win else 'Tie',
+            'our_max_hands': our_max_hands,
+            'opp_max_hands': opp_max_hands,
+            'our_max_quads': our_max_quads,
+            'opp_max_quads': opp_max_quads,
+            'our_animals': our_animals,
+            'opp_animals': opp_animals,
+            'our_crops': our_crops,
+            'opp_crops': opp_crops
         }
         summary_records.append(rec)
         
         print(f"=== {fname} ===")
-        print(f"Result: P0 = {p0_rew:8.0f} vs P1 = {p1_rew:8.0f} -> Winner: {rec['winner']}")
-        print(f"P0: max_hands={p0_max_hands}, quads={p0_max_quads}, animals={rec['p0_animals']}, crops_planted={rec['p0_crops']}")
-        print(f"P1: max_hands={p1_max_hands}, quads={p1_max_quads}, animals={rec['p1_animals']}, crops_planted={rec['p1_crops']}")
+        print(f"Result: Us = {our_rew:8.0f} vs Opp = {opp_rew:8.0f} -> Winner: {rec['winner']}")
+        print(f"Us: max_hands={our_max_hands}, quads={our_max_quads}, animals={rec['our_animals']}, crops_planted={rec['our_crops']}")
+        print(f"Opp: max_hands={opp_max_hands}, quads={opp_max_quads}, animals={rec['opp_animals']}, crops_planted={rec['opp_crops']}")
         print("-" * 80)
 
     # Aggregate stats
     total_games = len(summary_records)
-    p0_wins = sum(1 for r in summary_records if r['p0_rew'] > r['p1_rew'])
+    our_wins = sum(1 for r in summary_records if r['our_rew'] > r['opp_rew'])
     print(f"\n==================== AGGREGATE REAL KAGGLE STATS ({total_games} GAMES) ====================")
-    print(f"Our Win Rate: {p0_wins}/{total_games} ({p0_wins/total_games*100:.1f}%)")
-    print(f"Our Mean Bank: ${sum(r['p0_rew'] for r in summary_records)/total_games:,.0f}")
-    print(f"Opponent Mean Bank: ${sum(r['p1_rew'] for r in summary_records)/total_games:,.0f}")
+    print(f"Our Win Rate: {our_wins}/{total_games} ({our_wins/total_games*100:.1f}%)")
+    print(f"Our Mean Bank: ${sum(r['our_rew'] for r in summary_records)/total_games:,.0f}")
+    print(f"Opponent Mean Bank: ${sum(r['opp_rew'] for r in summary_records)/total_games:,.0f}")
     
     # Analyze what opponents did when they beat us
-    opp_wins = [r for r in summary_records if r['p1_rew'] > r['p0_rew']]
+    opp_wins = [r for r in summary_records if r['opp_rew'] > r['our_rew']]
     print(f"\nIn {len(opp_wins)} games where OPPONENT WON:")
     for r in opp_wins:
-        print(f"  {r['file']}: Opp earned ${r['p1_rew']:,.0f} vs our ${r['p0_rew']:,.0f} | Hands: {r['p1_max_hands']} | Quads: {r['p1_max_quads']} | Animals: {r['p1_animals']} | Crops: {r['p1_crops']}")
+        print(f"  {r['file']}: Opp earned ${r['opp_rew']:,.0f} vs our ${r['our_rew']:,.0f} | Opp Hands: {r['opp_max_hands']} | Opp Quads: {r['opp_max_quads']} | Opp Animals: {r['opp_animals']} | Opp Crops: {r['opp_crops']}")
+        print(f"      We had: Hands: {r['our_max_hands']} | Quads: {r['our_max_quads']} | Animals: {r['our_animals']} | Crops: {r['our_crops']}")
 
 if __name__ == '__main__':
     analyze_all_replays()

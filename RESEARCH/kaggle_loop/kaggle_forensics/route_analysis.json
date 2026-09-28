@@ -1,0 +1,907 @@
+{
+  "n_routes": 41,
+  "n_shops": 64,
+  "cow_sheep_melon_routes": [
+    {
+      "id": "0",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "1",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "2",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "3",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "4",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "5",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "6",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "7",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "8",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "9",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "10",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "11",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "12",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "100",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "101",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "103",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "104",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "105",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "106",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "107",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "108",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "109",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "110",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "111",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "112",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "113",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "114",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "115",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "116",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "117",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "118",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "119",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "120",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "121",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "122",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "123",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "124",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "125",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "126",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "127",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    },
+    {
+      "id": "128",
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "seeds": {
+        "MELON": 12,
+        "WHEAT": 7
+      }
+    }
+  ],
+  "shop_triggers": [
+    {
+      "shops": [
+        "BAKERY",
+        "BAKERY"
+      ],
+      "route": 101
+    },
+    {
+      "shops": [
+        "BAKERY",
+        "BRUNCH_SPOT"
+      ],
+      "route": 103
+    },
+    {
+      "shops": [
+        "BAKERY",
+        "FARMERS_MARKET"
+      ],
+      "route": 104
+    },
+    {
+      "shops": [
+        "BAKERY",
+        "ICE_CREAM_SHOP"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "BAKERY",
+        "PET_CAFE"
+      ],
+      "route": 106
+    },
+    {
+      "shops": [
+        "BAKERY",
+        "PIZZA_SHOP"
+      ],
+      "route": 107
+    },
+    {
+      "shops": [
+        "BAKERY",
+        "SMOOTHIE_SHOP"
+      ],
+      "route": 108
+    },
+    {
+      "shops": [
+        "BAKERY",
+        "YARN_STORE"
+      ],
+      "route": 109
+    },
+    {
+      "shops": [
+        "BRUNCH_SPOT",
+        "BAKERY"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT"
+      ],
+      "route": 103
+    },
+    {
+      "shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET"
+      ],
+      "route": 110
+    },
+    {
+      "shops": [
+        "BRUNCH_SPOT",
+        "ICE_CREAM_SHOP"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "BRUNCH_SPOT",
+        "PET_CAFE"
+      ],
+      "route": 101
+    },
+    {
+      "shops": [
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP"
+      ],
+      "route": 107
+    },
+    {
+      "shops": [
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "BRUNCH_SPOT",
+        "YARN_STORE"
+      ],
+      "route": 109
+    },
+    {
+      "shops": [
+        "FARMERS_MARKET",
+        "BAKERY"
+      ],
+      "route": 111
+    },
+    {
+      "shops": [
+        "FARMERS_MARKET",
+        "BRUNCH_SPOT"
+      ],
+      "route": 112
+    },
+    {
+      "shops": [
+        "FARMERS_MARKET",
+        "FARMERS_MARKET"
+      ],
+      "route": 104
+    },
+    {
+      "shops": [
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP"
+      ],
+      "route": 107
+    },
+    {
+      "shops": [
+        "FARMERS_MARKET",
+        "PET_CAFE"
+      ],
+      "route": 113
+    },
+    {
+      "shops": [
+        "FARMERS_MARKET",
+        "PIZZA_SHOP"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "FARMERS_MARKET",
+        "YARN_STORE"
+      ],
+      "route": 114
+    },
+    {
+      "shops": [
+        "ICE_CREAM_SHOP",
+        "BAKERY"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "ICE_CREAM_SHOP",
+        "BRUNCH_SPOT"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "ICE_CREAM_SHOP",
+        "ICE_CREAM_SHOP"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "ICE_CREAM_SHOP",
+        "PET_CAFE"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "ICE_CREAM_SHOP",
+        "PIZZA_SHOP"
+      ],
+      "route": 108
+    },
+    {
+      "shops": [
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "ICE_CREAM_SHOP",
+        "YARN_STORE"
+      ],
+      "route": 115
+    },
+    {
+      "shops": [
+        "PET_CAFE",
+        "BAKERY"
+      ],
+      "route": 103
+    },
+    {
+      "shops": [
+        "PET_CAFE",
+        "BRUNCH_SPOT"
+      ],
+      "route": 116
+    },
+    {
+      "shops": [
+        "PET_CAFE",
+        "FARMERS_MARKET"
+      ],
+      "route": 117
+    },
+    {
+      "shops": [
+        "PET_CAFE",
+        "ICE_CREAM_SHOP"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "PET_CAFE",
+        "PET_CAFE"
+      ],
+      "route": 118
+    },
+    {
+      "shops": [
+        "PET_CAFE",
+        "PIZZA_SHOP"
+      ],
+      "route": 107
+    },
+    {
+      "shops": [
+        "PET_CAFE",
+        "SMOOTHIE_SHOP"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "PET_CAFE",
+        "YARN_STORE"
+      ],
+      "route": 119
+    },
+    {
+      "shops": [
+        "PIZZA_SHOP",
+        "BAKERY"
+      ],
+      "route": 120
+    },
+    {
+      "shops": [
+        "PIZZA_SHOP",
+        "BRUNCH_SPOT"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "PIZZA_SHOP",
+        "FARMERS_MARKET"
+      ],
+      "route": 121
+    },
+    {
+      "shops": [
+        "PIZZA_SHOP",
+        "ICE_CREAM_SHOP"
+      ],
+      "route": 122
+    },
+    {
+      "shops": [
+        "PIZZA_SHOP",
+        "PET_CAFE"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "PIZZA_SHOP",
+        "PIZZA_SHOP"
+      ],
+      "route": 123
+    },
+    {
+      "shops": [
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP"
+      ],
+      "route": 124
+    },
+    {
+      "shops": [
+        "PIZZA_SHOP",
+        "YARN_STORE"
+      ],
+      "route": 125
+    },
+    {
+      "shops": [
+        "SMOOTHIE_SHOP",
+        "BAKERY"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT"
+      ],
+      "route": 121
+    },
+    {
+      "shops": [
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "SMOOTHIE_SHOP",
+        "PET_CAFE"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP"
+      ],
+      "route": 105
+    },
+    {
+      "shops": [
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP"
+      ],
+      "route": 107
+    },
+    {
+      "shops": [
+        "SMOOTHIE_SHOP",
+        "YARN_STORE"
+      ],
+      "route": 126
+    },
+    {
+      "shops": [
+        "YARN_STORE",
+        "BAKERY"
+      ],
+      "route": 119
+    },
+    {
+      "shops": [
+        "YARN_STORE",
+        "BRUNCH_SPOT"
+      ],
+      "route": 126
+    },
+    {
+      "shops": [
+        "YARN_STORE",
+        "FARMERS_MARKET"
+      ],
+      "route": 127
+    },
+    {
+      "shops": [
+        "YARN_STORE",
+        "ICE_CREAM_SHOP"
+      ],
+      "route": 126
+    },
+    {
+      "shops": [
+        "YARN_STORE",
+        "PET_CAFE"
+      ],
+      "route": 126
+    },
+    {
+      "shops": [
+        "YARN_STORE",
+        "PIZZA_SHOP"
+      ],
+      "route": 128
+    },
+    {
+      "shops": [
+        "YARN_STORE",
+        "SMOOTHIE_SHOP"
+      ],
+      "route": 126
+    },
+    {
+      "shops": [
+        "YARN_STORE",
+        "YARN_STORE"
+      ],
+      "route": 125
+    }
+  ]
+}
