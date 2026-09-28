@@ -1,0 +1,112 @@
+[
+  {
+    "route": 0,
+    "wins": 6,
+    "losses": 0,
+    "ties": 0,
+    "avg_cash": 79401.33333333333,
+    "avg_hires": 266.3333333333333,
+    "avg_melon": 6072.0,
+    "avg_wheat": 17376.666666666668
+  },
+  {
+    "route": 2,
+    "wins": 6,
+    "losses": 0,
+    "ties": 0,
+    "avg_cash": 79223.16666666667,
+    "avg_hires": 266.6666666666667,
+    "avg_melon": 6072.0,
+    "avg_wheat": 17377.166666666668
+  },
+  {
+    "route": 3,
+    "wins": 6,
+    "losses": 0,
+    "ties": 0,
+    "avg_cash": 68910.0,
+    "avg_hires": 280.8333333333333,
+    "avg_melon": 7072.0,
+    "avg_wheat": 24330.833333333332
+  },
+  {
+    "route": 9,
+    "wins": 6,
+    "losses": 0,
+    "ties": 0,
+    "avg_cash": 64583.833333333336,
+    "avg_hires": 280.8333333333333,
+    "avg_melon": 6072.0,
+    "avg_wheat": 17372.166666666668
+  },
+  {
+    "route": 100,
+    "wins": 6,
+    "losses": 0,
+    "ties": 0,
+    "avg_cash": 79268.66666666667,
+    "avg_hires": 268.6666666666667,
+    "avg_melon": 6072.0,
+    "avg_wheat": 17377.0
+  },
+  {
+    "route": 103,
+    "wins": 6,
+    "losses": 0,
+    "ties": 0,
+    "avg_cash": 81475.83333333333,
+    "avg_hires": 266.1666666666667,
+    "avg_melon": 6072.0,
+    "avg_wheat": 20678.666666666668
+  },
+  {
+    "route": 104,
+    "wins": 6,
+    "losses": 0,
+    "ties": 0,
+    "avg_cash": 81573.33333333333,
+    "avg_hires": 267.3333333333333,
+    "avg_melon": 6072.0,
+    "avg_wheat": 17793.666666666668
+  },
+  {
+    "route": 105,
+    "wins": 6,
+    "losses": 0,
+    "ties": 0,
+    "avg_cash": 81436.66666666667,
+    "avg_hires": 266.1666666666667,
+    "avg_melon": 6072.0,
+    "avg_wheat": 17399.333333333332
+  },
+  {
+    "route": 106,
+    "wins": 6,
+    "losses": 0,
+    "ties": 0,
+    "avg_cash": 81438.16666666667,
+    "avg_hires": 266.1666666666667,
+    "avg_melon": 6072.0,
+    "avg_wheat": 17399.333333333332
+  },
+  {
+    "route": 110,
+    "wins": 6,
+    "losses": 0,
+    "ties": 0,
+    "avg_cash": 80435.0,
+    "avg_hires": 273.0,
+    "avg_melon": 6084.0,
+    "avg_wheat": 17374.166666666668
+  },
+  {
+    "route": 128,
+    "wins": 6,
+    "losses": 0,
+    "ties": 0,
+    "avg_cash": 69088.16666666667,
+    "avg_hires": 281.5,
+    "avg_melon": 7072.0,
+    "avg_wheat": 24349.166666666668
+  }
+]

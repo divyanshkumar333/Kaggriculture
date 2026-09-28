@@ -1,42 +1,62 @@
 {
-  "timestamp": "2026-08-25T00:09:11.709626",
-  "agent1": "agents/v014_d_combined.py",
-  "agent2": "agents/melon_maxxer.py",
-  "games": 1,
+  "timestamp": "2026-09-28T16:36:16.744090",
+  "agent1": "submission_v104_quote_priority.py",
+  "agent2": "agents/final_v16_ranked.py",
+  "games": 3,
   "steps": 720,
-  "seed_start": 29,
-  "wins_a1": 1,
+  "seed_start": 42,
+  "wins_a1": 3,
   "wins_a2": 0,
   "ties": 0,
   "errors": 0,
   "a1_rewards": [
-    27268.0
+    118461.0,
+    130938.0,
+    164749.0
   ],
   "a2_rewards": [
-    3968.0
+    54431.0,
+    50274.0,
+    61861.0
   ],
   "game_logs": [
     {
       "game": 1,
-      "seed": 29,
-      "a1_reward": 27268.0,
-      "a2_reward": 3968.0,
-      "winner": "agents/v014_d_combined.py",
+      "seed": 42,
+      "a1_reward": 118461.0,
+      "a2_reward": 54431.0,
+      "winner": "submission_v104_quote_priority.py",
+      "p1_is_a1": true
+    },
+    {
+      "game": 2,
+      "seed": 43,
+      "a1_reward": 130938.0,
+      "a2_reward": 50274.0,
+      "winner": "submission_v104_quote_priority.py",
+      "p1_is_a1": false
+    },
+    {
+      "game": 3,
+      "seed": 44,
+      "a1_reward": 164749.0,
+      "a2_reward": 61861.0,
+      "winner": "submission_v104_quote_priority.py",
       "p1_is_a1": true
     }
   ],
   "stats_a1": {
-    "mean": 27268.0,
-    "median": 27268.0,
-    "std": 0.0,
-    "min": 27268.0,
-    "max": 27268.0
+    "mean": 138049.33333333334,
+    "median": 130938.0,
+    "std": 19554.590805116724,
+    "min": 118461.0,
+    "max": 164749.0
   },
   "stats_a2": {
-    "mean": 3968.0,
-    "median": 3968.0,
-    "std": 0.0,
-    "min": 3968.0,
-    "max": 3968.0
+    "mean": 55522.0,
+    "median": 54431.0,
+    "std": 4792.866435304312,
+    "min": 50274.0,
+    "max": 61861.0
   }
 }

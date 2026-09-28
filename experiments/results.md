@@ -2,5 +2,5 @@
 
 | Agent | Opponent | Games | Win % | Avg Bank | Median | Std | Min | Max |
 | ----- | -------- | ----: | ----: | -------: | -----: | --: | --: | --: |
-| agents/v014_d_combined.py | agents/melon_maxxer.py | 1 | 100.0% | $27268.00 | $27268.00 | $0.00 | $27268.00 | $27268.00 |
-| agents/melon_maxxer.py | agents/v014_d_combined.py | 1 | 0.0% | $3968.00 | $3968.00 | $0.00 | $3968.00 | $3968.00 |
+| submission_v104_quote_priority.py | agents/final_v16_ranked.py | 3 | 100.0% | $138049.33 | $130938.00 | $19554.59 | $118461.00 | $164749.00 |
+| agents/final_v16_ranked.py | submission_v104_quote_priority.py | 3 | 0.0% | $55522.00 | $54431.00 | $4792.87 | $50274.00 | $61861.00 |
